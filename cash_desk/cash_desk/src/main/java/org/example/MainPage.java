@@ -21,8 +21,30 @@ public class MainPage {
     }
 
     @FXML
-    void newCustomer(ActionEvent event) {
+    void newCustomer(ActionEvent event) throws IOException {
+        Scene addNewCustomer = new Scene(loadFXML("addCustomer"));
+        Stage prompt = new Stage();
+        prompt.setTitle("New customer");
+        prompt.setScene(addNewCustomer);
+        prompt.show();
+    }
 
+    @FXML
+    void RemoveCustomer(ActionEvent event) throws IOException{
+        Scene removeCustomer = new Scene(loadFXML("removeCustomer"));
+        Stage prompt = new Stage();
+        prompt.setTitle("Remove Customer");
+        prompt.setScene(removeCustomer);
+        prompt.show();
+    }
+
+    @FXML
+    void uploadBalance(ActionEvent event) throws IOException{
+        Scene uploadBalance = new Scene(loadFXML("uploadBalance"));
+        Stage prompt = new Stage();
+        prompt.setTitle("Upload balance");
+        prompt.setScene(uploadBalance);
+        prompt.show();
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

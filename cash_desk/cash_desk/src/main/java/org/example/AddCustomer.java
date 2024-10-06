@@ -22,4 +22,7 @@ public class AddCustomer {
     @FXML
     private Label numberOfLockets;
 
+    @FXML
+    private TextField uplodeBalance;
+
 }
