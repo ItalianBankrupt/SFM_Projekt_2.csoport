@@ -49,13 +49,12 @@ public class App extends Application {
 
     public static void main(String[] args) throws SQLException
     {
-
-        launch();
         StartDatabase();
+        launch();
         RestaurantUtils restaurantUtils = new RestaurantUtils();
         restaurantUtils.setrDAO(new JpaRestaurantDAO());
         restaurantUtils.runUtils();
-
+        StopDatabase();
 
 
 
@@ -69,5 +68,8 @@ public class App extends Application {
 
     private static void StartDatabase() throws SQLException{
         new Server().runTool("-tcp","-web","-ifNotExists");
+    }
+    private static void StopDatabase() throws SQLException{
+        new Server().shutdown();
     }
 }

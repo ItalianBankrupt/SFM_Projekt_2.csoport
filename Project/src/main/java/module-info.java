@@ -11,4 +11,5 @@ module org.example {
     opens org.example.Restaurant to javafx.fxml;
     exports org.example.Services;
     opens org.example.Services to javafx.fxml;
+    opens org.example.Cassa to javafx.fxml;
 }
