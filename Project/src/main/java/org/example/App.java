@@ -6,11 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.sql.SQLException;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+
+import org.example.Restaurant.JpaRestaurantDAO;
+import org.example.Restaurant.RestaurantUtils;
 import org.h2.tools.Server;
 import java.io.IOException;
+
+
+import org.example.*;
 
 /**
  * JavaFX App
@@ -21,9 +24,18 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+
         scene = new Scene(loadFXML("primary"), 640, 480);
         stage.setScene(scene);
         stage.show();
+        try {
+            Scene scene1 = PrimaryController.switchToSecondary();
+            stage.setScene(scene1);
+            stage.show();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -37,8 +49,9 @@ public class App extends Application {
 
     public static void main(String[] args) throws SQLException
     {
-        StartDatabase();
+
         launch();
+        StartDatabase();
         RestaurantUtils restaurantUtils = new RestaurantUtils();
         restaurantUtils.setrDAO(new JpaRestaurantDAO());
         restaurantUtils.runUtils();
