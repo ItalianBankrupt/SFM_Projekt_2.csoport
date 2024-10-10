@@ -55,7 +55,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example.Cassa.App</mainClass>
+                            <mainClass>org.example.Index</mainClass>
                         </configuration>
                     </execution>
                 </executions>

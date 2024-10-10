@@ -1,5 +1,6 @@
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Cassa\RemoveCustomer.java
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Restaurant\Restaurant.java
+D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Index.java
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Cassa\AddCustomer.java
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Services\ServicesDAO.java
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Cassa\CheckID.java
@@ -9,8 +10,6 @@ D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Cassa\UploadBalance.java
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Services\JpaServicesDAO.java
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\module-info.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\PrimaryController.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\SecondaryController.java
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Restaurant\JpaRestaurantDAO.java
 D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\Restaurant\RestaurantDAO.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\App.java
+D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\SFM_Projekt_2.csoport\Project\src\main\java\org\example\IndexController.java
