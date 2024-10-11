@@ -8,7 +8,7 @@ public class Services {
     @GeneratedValue
     private int id;
     private String item;
-    private String price;
+    private int price;
     @Enumerated(EnumType.STRING)
     private Type type;
 
@@ -16,7 +16,7 @@ public class Services {
         Belepo,Szolgaltatas;
     }
 
-    public Services(String price, String item, Type type) {
+    public Services(String item, int price,  Type type) {
         this.price = price;
         this.item = item;
         this.type = type;
@@ -30,11 +30,11 @@ public class Services {
         this.item = item;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
