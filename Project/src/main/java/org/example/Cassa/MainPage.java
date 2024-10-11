@@ -15,7 +15,7 @@ public class MainPage {
 
     @FXML
     void checkId(ActionEvent event) throws IOException {
-        Scene idChecker = new Scene(loadFXML("checkID"));
+        Scene idChecker = new Scene(loadFXML("/org/example/CassaGUI/checkID"));
         Stage prompt = new Stage();
         prompt.setTitle("Check ID");
         prompt.setScene(idChecker);
@@ -24,7 +24,7 @@ public class MainPage {
 
     @FXML
     void newCustomer(ActionEvent event) throws IOException {
-        Scene addNewCustomer = new Scene(loadFXML("addCustomer"));
+        Scene addNewCustomer = new Scene(loadFXML("/org/example/CassaGUI/addCustomer"));
         Stage prompt = new Stage();
         prompt.setTitle("New customer");
         prompt.setScene(addNewCustomer);
@@ -33,7 +33,7 @@ public class MainPage {
 
     @FXML
     void RemoveCustomer(ActionEvent event) throws IOException{
-        Scene removeCustomer = new Scene(loadFXML("removeCustomer"));
+        Scene removeCustomer = new Scene(loadFXML("/org/example/CassaGUI/removeCustomer"));
         Stage prompt = new Stage();
         prompt.setTitle("Remove Customer");
         prompt.setScene(removeCustomer);
@@ -42,7 +42,7 @@ public class MainPage {
 
     @FXML
     void uploadBalance(ActionEvent event) throws IOException{
-        Scene uploadBalance = new Scene(loadFXML("uploadBalance"));
+        Scene uploadBalance = new Scene(loadFXML("/org/example/CassaGUI/uploadBalance"));
         Stage prompt = new Stage();
         prompt.setTitle("Upload balance");
         prompt.setScene(uploadBalance);

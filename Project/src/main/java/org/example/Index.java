@@ -15,7 +15,7 @@ public class Index extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Főoldal");
         stage.setScene(scene);
