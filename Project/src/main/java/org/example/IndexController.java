@@ -21,7 +21,7 @@ public class IndexController {
     }
     @FXML
     public void openRestaurantMainPageGUI(ActionEvent actionEvent) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/CassaGUI/MainPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/RestGUI/identification.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("RestaurantGUI");
