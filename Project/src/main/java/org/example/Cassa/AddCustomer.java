@@ -13,6 +13,8 @@ import org.example.Index;
 import java.io.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddCustomer {
 
@@ -35,6 +37,8 @@ public class AddCustomer {
     @FXML
     void generateID(ActionEvent event) {
 
+        setAllTfToWhite(customer_name,customer_id,customer_post_code,customer_street,customer_city);
+
         String name = customer_name.getText();
         String postcode = customer_post_code.getText();
         String city = customer_city.getText();
@@ -42,29 +46,86 @@ public class AddCustomer {
         String id = customer_id.getText();
         Buyer buyer = new Buyer(id,name,city,street,postcode);
 
+        List missingInputs = new ArrayList<String>();
+        boolean emptyField = false;
 
+        if(name.isEmpty())
+        {
+            setBgToRed(customer_name);
+            missingInputs.add("Név");
+            emptyField = true;
+        }
+        if(postcode.isEmpty())
+        {
+            setBgToRed(customer_post_code);
+            missingInputs.add("Irányítószám");
+            emptyField = true;
+        }
+        if(city.isEmpty())
+        {
+            setBgToRed(customer_city);
+            missingInputs.add("Település");
+            emptyField = true;
+        }
+        if(street.isEmpty())
+        {
+            setBgToRed(customer_street);
+            missingInputs.add("Utca,házszám");
+            emptyField = true;
+        }
+        if(id.isEmpty())
+        {
+            setBgToRed(customer_id);
+            missingInputs.add("Szemlyégigazolvány szám");
+            emptyField = true;
+        }
 
+        if(emptyField)
+        {
+            MissingInputAlert(missingInputs);
+        }
 
         String correctInfoStatus = checkInfos(buyer.getPostCode(), buyer.getId());
 
-        if(!correctInfoStatus.equals("none")){
+        if(!correctInfoStatus.equals("none") && !emptyField){
             switch(correctInfoStatus)
             {
                 case "postcode":
-                    customer_post_code.setStyle("-fx-background-color: red;");
+                    setBgToRed(customer_post_code);
                     break;
                 case "ID":
-                    customer_id.setStyle("-fx-background-color: red;");
+                    setBgToRed(customer_id);
                     break;
             }
             WrongInputAlert(correctInfoStatus);
         }
     }
 
-    private  void MissingInputAlert()
+    private void setAllTfToWhite(TextField customerName, TextField customerId, TextField customerPostCode, TextField customerStreet, TextField customerCity)
+    {
+        setBgToWhite(customerName);
+        setBgToWhite(customerId);
+        setBgToWhite(customerPostCode);
+        setBgToWhite(customerStreet);
+        setBgToWhite(customerCity);
+    }
+
+    private void setBgToWhite(TextField tf)
+    {
+        tf.setStyle("-fx-background-color: white;");
+    }
+
+    //sets textfield background to red
+    private void setBgToRed(TextField tf)
+    {
+        tf.setStyle("-fx-background-color: red;");
+    }
+
+    private  void MissingInputAlert(List<String> list)
     {
         Alert missingData = new Alert(Alert.AlertType.ERROR);
-        missingData.setContentText("Valamelyik adat hiányos!");
+        String missingInfo = String.join(", ", list);
+        missingData.setContentText("A következő adat hiányos:"+ missingInfo);
         missingData.setHeaderText("Hiányos adatok!");
         missingData.setTitle("Hiányos vásárlói adatok");
         missingData.showAndWait();
