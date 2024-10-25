@@ -19,11 +19,11 @@
       <Label layoutX="14.0" layoutY="172.0" style="-fx-font-size: 18;" text="Irányítószám:" />
       <Label layoutX="14.0" layoutY="214.0" style="-fx-font-size: 18;" text="Település:" />
       <Label layoutX="14.0" layoutY="250.0" style="-fx-font-size: 18;" text="Utca,házszám:" />
-      <TextField fx:id="costumer_name" layoutX="85.0" layoutY="59.0" prefHeight="25.0" prefWidth="273.0" />
-      <TextField fx:id="costumer_id" layoutX="260.0" layoutY="99.0" prefHeight="25.0" prefWidth="296.0" />
-      <TextField fx:id="custumer_post_code" layoutX="156.0" layoutY="173.0" prefHeight="25.0" prefWidth="79.0" />
+      <TextField fx:id="customer_name" layoutX="85.0" layoutY="59.0" prefHeight="25.0" prefWidth="273.0" />
+      <TextField fx:id="customer_id" layoutX="260.0" layoutY="99.0" prefHeight="25.0" prefWidth="296.0" />
+      <TextField fx:id="customer_post_code" layoutX="156.0" layoutY="173.0" prefHeight="25.0" prefWidth="79.0" />
       <TextField fx:id="customer_city" layoutX="116.0" layoutY="215.0" prefHeight="25.0" prefWidth="264.0" />
-      <TextField fx:id="costumer_street" layoutX="144.0" layoutY="251.0" prefHeight="25.0" prefWidth="237.0" />
-      <Button fx:id="gen_Id" layoutX="530.0" layoutY="329.0" mnemonicParsing="false" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px;" text="Azonosító generálása" />
+      <TextField fx:id="customer_street" layoutX="144.0" layoutY="251.0" prefHeight="25.0" prefWidth="237.0" />
+      <Button layoutX="530.0" layoutY="329.0" mnemonicParsing="false" onAction="#generateID" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px;" text="Azonosító generálása" />
    </children>
 </AnchorPane>

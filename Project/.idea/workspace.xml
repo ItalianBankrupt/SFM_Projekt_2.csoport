@@ -4,18 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efb5e704-5b32-480b-a724-307fed6e85d0" name="Changes" comment="test">
+    <list default="true" id="efb5e704-5b32-480b-a724-307fed6e85d0" name="Changes" comment="new Gui for customer Add">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/Buyer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/AddCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/AddCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/AddCustomerController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/CassaGUI/addCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/CassaGUI/addCustomer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Cassa/AddCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Cassa/AddCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/CassaGUI/addCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/CassaGUI/addCustomer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -52,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev__ati",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Ati_mappa/egyetem/5.félév/msf/SFM_Projekt_2.csoport/Project",
+    "last_opened_file_path": "C:/Users/Ati/Downloads/StudentsRegister2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,6 +73,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Index" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Index" />
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Index" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,7 +111,7 @@
       <updated>1729866785186</updated>
       <workItem from="1729866787103" duration="281000" />
       <workItem from="1729867077712" duration="89000" />
-      <workItem from="1729867177354" duration="2321000" />
+      <workItem from="1729867177354" duration="9646000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -90,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729867385378</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new Gui for customer Add">
+      <option name="closed" value="true" />
+      <created>1729869673341</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729869673341</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +148,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="new Gui for customer Add" />
+    <option name="LAST_COMMIT_MESSAGE" value="new Gui for customer Add" />
   </component>
 </project>

@@ -5,6 +5,7 @@ module org.example {
     requires java.sql;
     requires com.h2database;
     requires org.hibernate.orm.core;
+    requires java.desktop;
 
     opens org.example to javafx.fxml;
     opens org.example.Cassa to javafx.fxml, org.hibernate.orm.core;
