@@ -1,28 +1,27 @@
 package org.example.Cassa;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class AddCustomer {
 
     @FXML
-    private TextField customerId;
+    private TextField costumer_id;
 
     @FXML
-    private TextField customerLocation;
+    private TextField costumer_name;
 
     @FXML
-    private TextField customerName;
+    private TextField costumer_street;
 
     @FXML
-    private RadioButton locketStatus;
+    private TextField customer_city;
 
     @FXML
-    private Label numberOfLockets;
+    private TextField custumer_post_code;
 
     @FXML
-    private TextField uplodeBalance;
+    private Button gen_Id;
 
 }
