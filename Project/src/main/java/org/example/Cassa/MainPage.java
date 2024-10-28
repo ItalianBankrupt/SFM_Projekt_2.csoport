@@ -41,6 +41,4 @@ public class MainPage {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
-
 }

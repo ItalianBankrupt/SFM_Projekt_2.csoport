@@ -9,13 +9,14 @@ public class IdHandler {
 
     @FXML
     private Label AmountToPay;
+    private Buyer buyer;
 
     @FXML
-    private ListView<?> ListOfIds;
+    private ListView<String> ListOfIds;
 
     @FXML
     void AddId(ActionEvent event) {
-
+        ListOfIds.getItems().add(buyer.getName());
     }
 
     @FXML
@@ -31,5 +32,10 @@ public class IdHandler {
     @FXML
     void RemoveId(ActionEvent event) {
 
+    }
+
+    public void sendBuyerInfos(Buyer buyer)
+    {
+        this.buyer = buyer;
     }
 }

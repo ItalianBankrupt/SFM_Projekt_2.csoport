@@ -54,31 +54,31 @@ public class AddCustomer {
 
         if(name.isEmpty())
         {
-            setBgToRed(customer_name);
+            changeBgColor(customer_name,"red");
             missingInputs.add("Név");
             emptyField = true;
         }
         if(postcode.isEmpty())
         {
-            setBgToRed(customer_post_code);
+            changeBgColor(customer_post_code, "red");
             missingInputs.add("Irányítószám");
             emptyField = true;
         }
         if(city.isEmpty())
         {
-            setBgToRed(customer_city);
+            changeBgColor(customer_city, "red");
             missingInputs.add("Település");
             emptyField = true;
         }
         if(street.isEmpty())
         {
-            setBgToRed(customer_street);
+            changeBgColor(customer_street,"red");
             missingInputs.add("Utca,házszám");
             emptyField = true;
         }
         if(id.isEmpty())
         {
-            setBgToRed(customer_id);
+            changeBgColor(customer_id, "red");
             missingInputs.add("Szemlyégigazolvány szám");
             emptyField = true;
         }
@@ -94,45 +94,47 @@ public class AddCustomer {
             switch(correctInfoStatus)
             {
                 case "postcode":
-                    setBgToRed(customer_post_code);
+                    changeBgColor(customer_post_code, "red");
                     break;
                 case "ID":
-                    setBgToRed(customer_id);
+                    changeBgColor(customer_id, "red");
                     break;
             }
             WrongInputAlert(correctInfoStatus);
         }
-        else
+        if(correctInfoStatus.equals("none") && !emptyField)
         {
-            Stage current = (Stage)((Node) event.getSource()).getScene().getWindow();
-            Scene IdHandler = new Scene(loadFXML("/org/example/CassaGUI/IdHandler"));
-            Stage prompt = new Stage();
-            prompt.setTitle("Id Handler");
-            prompt.setScene(IdHandler);
-            current.close();
-            prompt.show();
+            //open id handler with shared data
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/CassaGUI/IdHandler.fxml"));
+            Parent root = loader.load();
+            IdHandler idHandler = loader.getController();
+            idHandler.sendBuyerInfos(buyer);
+
+            Stage stage = new Stage();
+            stage.setTitle("Id Handler");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+            //close this window
+            Node node = (Node) event.getSource();
+            Stage currentStage = (Stage) node.getScene().getWindow();
+            currentStage.close();
         }
     }
 
 
     private void setAllTfToWhite(TextField customerName, TextField customerId, TextField customerPostCode, TextField customerStreet, TextField customerCity)
     {
-        setBgToWhite(customerName);
-        setBgToWhite(customerId);
-        setBgToWhite(customerPostCode);
-        setBgToWhite(customerStreet);
-        setBgToWhite(customerCity);
+        changeBgColor(customerName, "white");
+        changeBgColor(customerId, "white");
+        changeBgColor(customerPostCode, "white");
+        changeBgColor(customerStreet, "white");
+        changeBgColor(customerCity, "white");
     }
 
-    private void setBgToWhite(TextField tf)
+    private void changeBgColor(TextField tf, String color)
     {
-        tf.setStyle("-fx-background-color: white;");
-    }
-
-    //sets textfield background to red
-    private void setBgToRed(TextField tf)
-    {
-        tf.setStyle("-fx-background-color: red;");
+        tf.setStyle("-fx-background-color:" +color + ";");
     }
 
     private  void MissingInputAlert(List<String> list)
@@ -177,11 +179,6 @@ public class AddCustomer {
             }
         }
         return false;
-    }
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Index.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
     }
 
 }
