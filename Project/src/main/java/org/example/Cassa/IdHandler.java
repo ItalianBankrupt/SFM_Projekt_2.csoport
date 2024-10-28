@@ -38,4 +38,9 @@ public class IdHandler {
     {
         this.buyer = buyer;
     }
+
+    public void initialization()
+    {
+        ListOfIds.getItems().add(buyer.GenerateId());
+    }
 }

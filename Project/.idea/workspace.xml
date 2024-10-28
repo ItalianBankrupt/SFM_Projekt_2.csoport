@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efb5e704-5b32-480b-a724-307fed6e85d0" name="Changes" comment="more simple window handleing for main page">
+    <list default="true" id="efb5e704-5b32-480b-a724-307fed6e85d0" name="Changes" comment="Opening ID handler now close Add customer&#10;Add customer window now sends the buyer object to the IdHandler which can use its parameters and methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/AddCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/AddCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/CheckID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/CheckID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/Buyer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/IdHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/IdHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Cassa/AddCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Cassa/AddCustomer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Cassa/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Cassa/MainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Cassa/CheckID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Cassa/CheckID.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,7 @@
       <workItem from="1729867077712" duration="89000" />
       <workItem from="1729867177354" duration="10955000" />
       <workItem from="1730130051440" duration="3038000" />
-      <workItem from="1730134304253" duration="5373000" />
+      <workItem from="1730134304253" duration="6822000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -155,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730137707180</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Opening ID handler now close Add customer&#10;Add customer window now sends the buyer object to the IdHandler which can use its parameters and methods">
+      <option name="closed" value="true" />
+      <created>1730141495597</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730141495597</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +184,7 @@
     <MESSAGE value="customer Add now checks if the inputs are good" />
     <MESSAGE value="customer Add now checks if the textfield are empty or not" />
     <MESSAGE value="more simple window handleing for main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="more simple window handleing for main page" />
+    <MESSAGE value="Opening ID handler now close Add customer&#10;Add customer window now sends the buyer object to the IdHandler which can use its parameters and methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Opening ID handler now close Add customer&#10;Add customer window now sends the buyer object to the IdHandler which can use its parameters and methods" />
   </component>
 </project>

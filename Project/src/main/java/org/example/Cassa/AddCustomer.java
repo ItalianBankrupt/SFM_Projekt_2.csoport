@@ -109,6 +109,7 @@ public class AddCustomer {
             Parent root = loader.load();
             IdHandler idHandler = loader.getController();
             idHandler.sendBuyerInfos(buyer);
+            idHandler.initialization();
 
             Stage stage = new Stage();
             stage.setTitle("Id Handler");

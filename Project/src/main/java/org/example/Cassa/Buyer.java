@@ -34,4 +34,9 @@ public class Buyer {
     public String getPostCode() {
         return PostCode;
     }
+
+    public String GenerateId()
+    {
+       return "valami";
+    }
 }
