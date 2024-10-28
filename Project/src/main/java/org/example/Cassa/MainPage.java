@@ -15,43 +15,31 @@ public class MainPage {
 
     @FXML
     void checkId(ActionEvent event) throws IOException {
-        Scene idChecker = new Scene(loadFXML("/org/example/CassaGUI/checkID"));
-        Stage prompt = new Stage();
-        prompt.setTitle("Check ID");
-        prompt.setScene(idChecker);
-        prompt.show();
+        openScene("/org/example/CassaGUI/checkID.fxml", "Check ID");
     }
 
     @FXML
     void newCustomer(ActionEvent event) throws IOException {
-        Scene addNewCustomer = new Scene(loadFXML("/org/example/CassaGUI/addCustomer"));
-        Stage prompt = new Stage();
-        prompt.setTitle("New customer");
-        prompt.setScene(addNewCustomer);
-        prompt.show();
+        openScene("/org/example/CassaGUI/addCustomer.fxml", "New customer");
     }
 
     @FXML
     void RemoveCustomer(ActionEvent event) throws IOException{
-        Scene removeCustomer = new Scene(loadFXML("/org/example/CassaGUI/removeCustomer"));
-        Stage prompt = new Stage();
-        prompt.setTitle("Remove Customer");
-        prompt.setScene(removeCustomer);
-        prompt.show();
+        openScene("/org/example/CassaGUI/removeCustomer.fxml", "Remove Customer");
     }
 
     @FXML
     void uploadBalance(ActionEvent event) throws IOException{
-        Scene uploadBalance = new Scene(loadFXML("/org/example/CassaGUI/uploadBalance"));
-        Stage prompt = new Stage();
-        prompt.setTitle("Upload balance");
-        prompt.setScene(uploadBalance);
-        prompt.show();
+        openScene("/org/example/CassaGui/uploadBalance.fxml", "Upload balance");
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Index.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
+    private void openScene(String url, String title) throws IOException
+    {
+        Parent root = FXMLLoader.load(getClass().getResource(url));
+        Stage stage = new Stage();
+        stage.setTitle(title);
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
 

@@ -5,9 +5,12 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import org.example.Index;
 
 import java.io.*;
@@ -35,7 +38,7 @@ public class AddCustomer {
     private TextField customer_street;
 
     @FXML
-    void generateID(ActionEvent event) {
+    void nextToIdPage(ActionEvent event) throws IOException {
 
         setAllTfToWhite(customer_name,customer_id,customer_post_code,customer_street,customer_city);
 
@@ -99,7 +102,18 @@ public class AddCustomer {
             }
             WrongInputAlert(correctInfoStatus);
         }
+        else
+        {
+            Stage current = (Stage)((Node) event.getSource()).getScene().getWindow();
+            Scene IdHandler = new Scene(loadFXML("/org/example/CassaGUI/IdHandler"));
+            Stage prompt = new Stage();
+            prompt.setTitle("Id Handler");
+            prompt.setScene(IdHandler);
+            current.close();
+            prompt.show();
+        }
     }
+
 
     private void setAllTfToWhite(TextField customerName, TextField customerId, TextField customerPostCode, TextField customerStreet, TextField customerCity)
     {

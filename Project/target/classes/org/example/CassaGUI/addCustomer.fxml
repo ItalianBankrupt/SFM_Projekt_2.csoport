@@ -24,6 +24,6 @@
       <TextField fx:id="customer_post_code" layoutX="156.0" layoutY="173.0" prefHeight="25.0" prefWidth="79.0" />
       <TextField fx:id="customer_city" layoutX="116.0" layoutY="215.0" prefHeight="25.0" prefWidth="264.0" />
       <TextField fx:id="customer_street" layoutX="144.0" layoutY="251.0" prefHeight="25.0" prefWidth="237.0" />
-      <Button layoutX="530.0" layoutY="329.0" mnemonicParsing="false" onAction="#generateID" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px;" text="Azonosító generálása" />
+      <Button layoutX="530.0" layoutY="329.0" mnemonicParsing="false" onAction="#nextToIdPage" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px;" text="Tovább az azonosítókhoz" />
    </children>
 </AnchorPane>
