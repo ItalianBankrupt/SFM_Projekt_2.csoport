@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efb5e704-5b32-480b-a724-307fed6e85d0" name="Changes" comment="Opening ID handler now close Add customer&#10;Add customer window now sends the buyer object to the IdHandler which can use its parameters and methods">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/AddCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/AddCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cassa/IdHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cassa/IdHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Cassa/CheckID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Cassa/CheckID.class" afterDir="false" />
-    </list>
+    <list default="true" id="efb5e704-5b32-480b-a724-307fed6e85d0" name="Changes" comment="Pressing the button that opens IdHandler now also run the initialization method" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +105,7 @@
       <workItem from="1729867077712" duration="89000" />
       <workItem from="1729867177354" duration="10955000" />
       <workItem from="1730130051440" duration="3038000" />
-      <workItem from="1730134304253" duration="6822000" />
+      <workItem from="1730134304253" duration="6917000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -161,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730141495597</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pressing the button that opens IdHandler now also run the initialization method">
+      <option name="closed" value="true" />
+      <created>1730143216500</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730143216500</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +187,7 @@
     <MESSAGE value="customer Add now checks if the textfield are empty or not" />
     <MESSAGE value="more simple window handleing for main page" />
     <MESSAGE value="Opening ID handler now close Add customer&#10;Add customer window now sends the buyer object to the IdHandler which can use its parameters and methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Opening ID handler now close Add customer&#10;Add customer window now sends the buyer object to the IdHandler which can use its parameters and methods" />
+    <MESSAGE value="Pressing the button that opens IdHandler now also run the initialization method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pressing the button that opens IdHandler now also run the initialization method" />
   </component>
 </project>
