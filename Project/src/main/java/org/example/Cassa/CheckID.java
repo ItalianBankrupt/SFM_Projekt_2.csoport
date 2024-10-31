@@ -12,8 +12,7 @@ public class CheckID {
 
     @FXML
     void getWatchInformations(ActionEvent event) {
-        Stage stage = (Stage) watchId.getScene().getWindow();
-        stage.close();
+
     }
 
 }

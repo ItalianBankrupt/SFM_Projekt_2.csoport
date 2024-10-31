@@ -2,31 +2,28 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Cassa.AddCustomer">
+<AnchorPane prefHeight="403.0" prefWidth="736.0" style="-fx-background-color: #d5c990; -fx-border-color: black;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Cassa.AddCustomer">
    <children>
-      <Button layoutX="1129.0" layoutY="730.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-border-color: black; -fx-background-color: #c7b86b;" text="Véglegesítés" />
-      <Label layoutX="14.0" layoutY="14.0" prefHeight="36.0" prefWidth="235.0" style="-fx-font-size: 25; -fx-font-weight: bold;" text="Vásárlói adatok" textAlignment="CENTER" />
-      <Label layoutX="14.0" layoutY="62.0" prefHeight="17.0" prefWidth="150.0" style="-fx-font-size: 20;" text="Név:" />
-      <TextField fx:id="customerName" layoutX="64.0" layoutY="65.0" prefHeight="25.0" prefWidth="439.0" />
-      <Label layoutX="14.0" layoutY="109.0" style="-fx-font-size: 20;" text="Lakhely:" />
-      <Label layoutX="14.0" layoutY="159.0" style="-fx-font-size: 20;" text="Személyigazolvány szám:" />
-      <TextField fx:id="customerLocation" layoutX="107.0" layoutY="112.0" prefHeight="25.0" prefWidth="395.0" />
-      <TextField fx:id="customerId" layoutX="249.0" layoutY="162.0" prefHeight="25.0" prefWidth="255.0" />
-      <RadioButton fx:id="locketStatus" layoutX="11.0" layoutY="214.0" mnemonicParsing="false" style="-fx-font-size: 20; -fx-font-style: italic;" text="Kér szekrényt" />
-      <Label fx:id="numberOfLockets" layoutX="198.0" layoutY="214.0" style="-fx-font-size: 20;" text="Darabszám:" />
-      <TextField layoutX="328.0" layoutY="217.0" prefHeight="25.0" prefWidth="49.0" text="0 db" />
-      <RadioButton layoutX="11.0" layoutY="259.0" mnemonicParsing="false" style="-fx-font-size: 20; -fx-font-style: italic;" text="Kér számlát" />
-      <Button layoutX="1129.0" layoutY="666.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-border-color: black; -fx-background-color: #c7b86b;" text="Számla nyomtatás" />
-      <Label layoutX="29.0" layoutY="417.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Jegyek:" />
-      <Label layoutX="723.0" layoutY="20.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Szolgáltatások:" />
-      <ListView layoutX="723.0" layoutY="74.0" prefHeight="200.0" prefWidth="271.0" />
-      <ListView layoutX="29.0" layoutY="460.0" prefHeight="200.0" prefWidth="271.0" />
-      <Label layoutX="723.0" layoutY="355.0" style="-fx-font-size: 20;" text="Egyenleg feltöltése:" />
-      <TextField fx:id="uplodeBalance" layoutX="913.0" layoutY="358.0" prefHeight="25.0" prefWidth="302.0" text="0 Ft" />
+      <Label layoutX="14.0" layoutY="6.0" style="-fx-font-weight: bold;" text="Vásárló adatai">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="58.0" style="-fx-font-size: 18;" text="Neve:" />
+      <Label layoutX="14.0" layoutY="98.0" style="-fx-font-size: 18;" text="Személy igazolvány szám:" />
+      <Label layoutX="14.0" layoutY="138.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="Lakcím adatok" />
+      <Label layoutX="14.0" layoutY="172.0" style="-fx-font-size: 18;" text="Irányítószám:" />
+      <Label layoutX="14.0" layoutY="214.0" style="-fx-font-size: 18;" text="Település:" />
+      <Label layoutX="14.0" layoutY="250.0" style="-fx-font-size: 18;" text="Utca,házszám:" />
+      <TextField fx:id="customer_name" layoutX="85.0" layoutY="59.0" prefHeight="25.0" prefWidth="273.0" />
+      <TextField fx:id="customer_id" layoutX="260.0" layoutY="99.0" prefHeight="25.0" prefWidth="296.0" />
+      <TextField fx:id="customer_post_code" layoutX="156.0" layoutY="173.0" prefHeight="25.0" prefWidth="79.0" />
+      <TextField fx:id="customer_city" layoutX="116.0" layoutY="215.0" prefHeight="25.0" prefWidth="264.0" />
+      <TextField fx:id="customer_street" layoutX="144.0" layoutY="251.0" prefHeight="25.0" prefWidth="237.0" />
+      <Button layoutX="530.0" layoutY="329.0" mnemonicParsing="false" onAction="#nextToIdPage" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px;" text="Tovább az azonosítókhoz" />
    </children>
 </AnchorPane>
