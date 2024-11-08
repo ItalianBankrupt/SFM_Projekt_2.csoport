@@ -63,8 +63,9 @@ public class Buyer {
         min = (min.length() == 1) ? "0".concat(min) : min;
         String sec = calendar.get(Calendar.SECOND) + "";
         sec = (sec.length() == 1) ? "0".concat(sec) : sec;
+        String lastChar = (char)(this.NumberOfGeneratedId + 'A')+ "";
         String id = "";
-        id = year + month + day + this.Id + hour + min + sec + this.NumberOfGeneratedId;
+        id = year + month + day + this.Id + hour + min + sec + lastChar;
         NumberOfGeneratedId++;
         return id;
     }
