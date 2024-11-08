@@ -11,7 +11,7 @@ import java.io.IOException;
 public class IndexController {
     @FXML
     public void openCassaMainPageGUI(ActionEvent actionEvent) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/CassaGUI/MainPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/MainPage.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("CassaGUI");
@@ -20,7 +20,7 @@ public class IndexController {
     }
     @FXML
     public void openRestaurantMainPageGUI(ActionEvent actionEvent) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/RestGUI/identification.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RestGUI/identification.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("RestaurantGUI");
