@@ -45,8 +45,9 @@ public class Buyer {
         Date date = new Date();
         Calendar calendar = new GregorianCalendar();
         String year = (calendar.get(Calendar.YEAR) + "").substring(2);
-        String moth = calendar.get(Calendar.MONTH) + "";
-        String day = (calendar.get(Calendar.DAY_OF_MONTH)+1) + "";
+        String moth = (calendar.get(Calendar.MONTH)+1) + "";
+        String day = calendar.get(Calendar.DAY_OF_MONTH) + "";
+        day = (day.length() == 1) ? "0".concat(day) : day;
         String hour = calendar.get(Calendar.HOUR_OF_DAY) + "";
         String min = calendar.get(Calendar.MINUTE) + "";
         String sec = calendar.get(Calendar.SECOND) + "";
