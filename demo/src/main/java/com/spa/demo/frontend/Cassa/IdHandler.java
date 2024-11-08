@@ -1,6 +1,9 @@
 package com.spa.demo.frontend.Cassa;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,6 +19,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observer;
 
 public class IdHandler {
 
@@ -23,20 +27,14 @@ public class IdHandler {
     private Button AddId;
     private Label AmountToPay;
     private Buyer buyer;
-    private ObservableList<String> Ids = FXCollections.observableArrayList();
-    private String newID = "";
     private String RemoveId = "";
-
-
-
 
     @FXML
     private ListView<String> ListOfIds;
 
     @FXML
     void AddId(ActionEvent event) {
-        newID = buyer.GenerateId();
-        Ids.add(newID);
+        buyer.GenerateId();
     }
 
     @FXML
@@ -52,7 +50,7 @@ public class IdHandler {
     @FXML
     void RemoveId(ActionEvent event) {
         RemoveId = ListOfIds.getSelectionModel().getSelectedItem();
-        Ids.remove(RemoveId);
+        buyer.RemoveId(RemoveId);
         buyer.setNumberOfGeneratedId(buyer.getNumberOfGeneratedId()- 1);
     }
 
@@ -64,7 +62,7 @@ public class IdHandler {
         addCustomer.SendBuyerToAddCustomer(buyer);
 
         Stage stage = new Stage();
-        stage.setTitle("Id Handler");
+        stage.setTitle("Add Customer");
         stage.setScene(new Scene(root));
         stage.show();
 
@@ -75,14 +73,16 @@ public class IdHandler {
     }
 
 
-    public void sendBuyerInfos(Buyer buyer)
+    public void sendBuyerInfos(Buyer anotherBuyer)
     {
-        this.buyer = buyer;
+        this.buyer = anotherBuyer;
     }
 
     public void initialization()
     {
-        ListOfIds.setItems(Ids);
-        AddId.fire();
+        if(buyer.getIds().size() == 0) {
+            AddId.fire();
+        }
+        ListOfIds.setItems(buyer.getIds());
     }
 }

@@ -36,13 +36,17 @@ public class AddCustomer {
     @FXML
     private TextField customer_street;
 
-    public void SendBuyerToAddCustomer(Buyer buyer)
+    Buyer buyer = new Buyer("","","","","");
+
+
+    public void SendBuyerToAddCustomer(Buyer sentBuyer)
     {
-        customer_name.setText(buyer.getName());
-        customer_id.setText(buyer.getId());
-        customer_city.setText(buyer.getCity());
-        customer_street.setText(buyer.getStreet());
-        customer_post_code.setText(buyer.getPostCode());
+        customer_name.setText(sentBuyer.getName());
+        customer_id.setText(sentBuyer.getId());
+        customer_city.setText(sentBuyer.getCity());
+        customer_street.setText(sentBuyer.getStreet());
+        customer_post_code.setText(sentBuyer.getPostCode());
+        this.buyer = sentBuyer;
     }
 
     @FXML
@@ -55,7 +59,6 @@ public class AddCustomer {
         String city = customer_city.getText();
         String street = customer_street.getText();
         String id = customer_id.getText();
-        Buyer buyer = new Buyer(id,name,city,street,postcode);
 
         List missingInputs = new ArrayList<String>();
         boolean emptyField = false;
@@ -96,7 +99,7 @@ public class AddCustomer {
             MissingInputAlert(missingInputs);
         }
 
-        String correctInfoStatus = checkInfos(buyer.getPostCode(), buyer.getId());
+        String correctInfoStatus = checkInfos(postcode, id);
 
         if(!correctInfoStatus.equals("none") && !emptyField){
             switch(correctInfoStatus)
@@ -112,6 +115,19 @@ public class AddCustomer {
         }
         if(correctInfoStatus.equals("none") && !emptyField)
         {
+            if(!(buyer.getId().equals(id)))
+            {
+                buyer.setId(id);
+                buyer.setNumberOfGeneratedId(0);
+                buyer.UpdateList(buyer.getIds().size());
+            }
+
+            buyer.setName(name);
+            buyer.setPostCode(postcode);
+            buyer.setCity(city);
+            buyer.setStreet(street);
+
+
             //open id handler with shared data
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/IdHandler.fxml"));
             Parent root = loader.load();
