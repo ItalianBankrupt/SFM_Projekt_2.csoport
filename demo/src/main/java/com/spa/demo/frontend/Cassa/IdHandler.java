@@ -1,5 +1,7 @@
 package com.spa.demo.frontend.Cassa;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,7 +23,7 @@ public class IdHandler {
     private Button AddId;
     private Label AmountToPay;
     private Buyer buyer;
-    private List<String> Ids = new ArrayList<>();
+    private ObservableList<String> Ids = FXCollections.observableArrayList();
     private String newID = "";
     private String RemoveId = "";
 
@@ -32,7 +34,6 @@ public class IdHandler {
     void AddId(ActionEvent event) {
         newID = buyer.GenerateId();
         Ids.add(newID);
-        ListOfIds.getItems().add(newID);
     }
 
     @FXML
@@ -79,6 +80,7 @@ public class IdHandler {
 
     public void initialization()
     {
+        ListOfIds.setItems(Ids);
         AddId.fire();
     }
 }
