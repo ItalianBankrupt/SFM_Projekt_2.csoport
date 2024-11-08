@@ -14,22 +14,22 @@ public class MainPage {
 
     @FXML
     void checkId(ActionEvent event) throws IOException {
-        openScene("/org/example/CassaGUI/checkID.fxml", "Check ID");
+        openScene("/fxml/CassaGUI/checkID.fxml", "Check ID");
     }
 
     @FXML
     void newCustomer(ActionEvent event) throws IOException {
-        openScene("/org/example/CassaGUI/addCustomer.fxml", "New customer");
+        openScene("/fxml/CassaGUI/addCustomer.fxml", "New customer");
     }
 
     @FXML
     void RemoveCustomer(ActionEvent event) throws IOException{
-        openScene("/org/example/CassaGUI/removeCustomer.fxml", "Remove Customer");
+        openScene("/fxml/CassaGUI/removeCustomer.fxml", "Remove Customer");
     }
 
     @FXML
     void uploadBalance(ActionEvent event) throws IOException{
-        openScene("/org/example/CassaGui/uploadBalance.fxml", "Upload balance");
+        openScene("/fxml/CassaGui/uploadBalance.fxml", "Upload balance");
     }
 
     private void openScene(String url, String title) throws IOException
