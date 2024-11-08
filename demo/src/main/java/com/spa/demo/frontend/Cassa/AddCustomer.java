@@ -36,6 +36,15 @@ public class AddCustomer {
     @FXML
     private TextField customer_street;
 
+    public void SendBuyerToAddCustomer(Buyer buyer)
+    {
+        customer_name.setText(buyer.getName());
+        customer_id.setText(buyer.getId());
+        customer_city.setText(buyer.getCity());
+        customer_street.setText(buyer.getStreet());
+        customer_post_code.setText(buyer.getPostCode());
+    }
+
     @FXML
     void nextToIdPage(ActionEvent event) throws IOException {
 
