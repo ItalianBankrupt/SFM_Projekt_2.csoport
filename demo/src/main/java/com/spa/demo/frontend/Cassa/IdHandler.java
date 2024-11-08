@@ -27,6 +27,9 @@ public class IdHandler {
     private String newID = "";
     private String RemoveId = "";
 
+
+
+
     @FXML
     private ListView<String> ListOfIds;
 
@@ -51,7 +54,6 @@ public class IdHandler {
         RemoveId = ListOfIds.getSelectionModel().getSelectedItem();
         Ids.remove(RemoveId);
         buyer.setNumberOfGeneratedId(buyer.getNumberOfGeneratedId()- 1);
-        ListOfIds.getItems().remove(RemoveId);
     }
 
     @FXML
