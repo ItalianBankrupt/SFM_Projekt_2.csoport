@@ -36,6 +36,15 @@ public class AddCustomer {
     @FXML
     private TextField customer_street;
 
+    public void SendBuyerToAddCustomer(Buyer buyer)
+    {
+        customer_name.setText(buyer.getName());
+        customer_id.setText(buyer.getId());
+        customer_city.setText(buyer.getCity());
+        customer_street.setText(buyer.getStreet());
+        customer_post_code.setText(buyer.getPostCode());
+    }
+
     @FXML
     void nextToIdPage(ActionEvent event) throws IOException {
 
@@ -104,7 +113,7 @@ public class AddCustomer {
         if(correctInfoStatus.equals("none") && !emptyField)
         {
             //open id handler with shared data
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/CassaGUI/IdHandler.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/IdHandler.fxml"));
             Parent root = loader.load();
             IdHandler idHandler = loader.getController();
             idHandler.sendBuyerInfos(buyer);
@@ -163,7 +172,7 @@ public class AddCustomer {
     {
         if (postCode.length() != 4 || ContainsOnlyNumbers(postCode) )
             return "postcode";
-        else if (ID.length() != 11)
+        else if (ID.length() != 8)
             return "ID";
         else
             return "none";
