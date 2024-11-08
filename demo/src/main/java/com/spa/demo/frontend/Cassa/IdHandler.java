@@ -14,13 +14,17 @@ public class IdHandler {
     private Label AmountToPay;
     private Buyer buyer;
     private List<String> Ids = new ArrayList<>();
+    private String newID = "";
+    private String RemoveId = "";
 
     @FXML
     private ListView<String> ListOfIds;
 
     @FXML
     void AddId(ActionEvent event) {
-        ListOfIds.getItems().add(buyer.GenerateId());
+        newID = buyer.GenerateId();
+        Ids.add(newID);
+        ListOfIds.getItems().add(newID);
     }
 
     @FXML
@@ -35,8 +39,17 @@ public class IdHandler {
 
     @FXML
     void RemoveId(ActionEvent event) {
+        RemoveId = ListOfIds.getSelectionModel().getSelectedItem();
+        Ids.remove(RemoveId);
+        buyer.setNumberOfGeneratedId(buyer.getNumberOfGeneratedId()- 1);
+        ListOfIds.getItems().remove(RemoveId);
+    }
+
+    @FXML
+    void changeBuyerInfos(ActionEvent event) {
 
     }
+
 
     public void sendBuyerInfos(Buyer buyer)
     {
@@ -45,6 +58,8 @@ public class IdHandler {
 
     public void initialization()
     {
-
+        newID = buyer.GenerateId();
+        Ids.add(newID);
+        ListOfIds.getItems().add(newID);
     }
 }

@@ -20,6 +20,14 @@ public class Buyer {
         PostCode = postCode;
     }
 
+    public int getNumberOfGeneratedId() {
+        return NumberOfGeneratedId;
+    }
+
+    public void setNumberOfGeneratedId(int numberOfGeneratedId) {
+        NumberOfGeneratedId = numberOfGeneratedId;
+    }
+
     public String getId() {
         return Id;
     }
@@ -45,14 +53,18 @@ public class Buyer {
         Date date = new Date();
         Calendar calendar = new GregorianCalendar();
         String year = (calendar.get(Calendar.YEAR) + "").substring(2);
-        String moth = (calendar.get(Calendar.MONTH)+1) + "";
+        String month = (calendar.get(Calendar.MONTH)+1) + "";
+        month = (month.length() == 1) ? "0".concat(month) : month;
         String day = calendar.get(Calendar.DAY_OF_MONTH) + "";
         day = (day.length() == 1) ? "0".concat(day) : day;
         String hour = calendar.get(Calendar.HOUR_OF_DAY) + "";
+        hour = (hour.length() == 1) ? "0".concat(hour) : hour;
         String min = calendar.get(Calendar.MINUTE) + "";
+        min = (min.length() == 1) ? "0".concat(min) : min;
         String sec = calendar.get(Calendar.SECOND) + "";
+        sec = (sec.length() == 1) ? "0".concat(sec) : sec;
         String id = "";
-        id = year + moth + day + this.Id + hour + min + sec + this.NumberOfGeneratedId;
+        id = year + month + day + this.Id + hour + min + sec + this.NumberOfGeneratedId;
         NumberOfGeneratedId++;
         return id;
     }
