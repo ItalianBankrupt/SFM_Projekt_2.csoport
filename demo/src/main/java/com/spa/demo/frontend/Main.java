@@ -1,7 +1,7 @@
 package com.spa.demo.frontend;
 
 
-import com.spa.demo.Spring.SpringManager;
+import com.spa.demo.SpringManager;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
