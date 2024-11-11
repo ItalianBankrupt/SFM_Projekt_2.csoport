@@ -1,5 +1,7 @@
 package com.spa.demo;
 
+import com.spa.demo.backend.Restaurant;
+import com.spa.demo.backend.RestaurantRepository;
 import com.spa.demo.backend.Services;
 import com.spa.demo.backend.ServicesRepository;
 import com.spa.demo.frontend.Manager;
@@ -22,17 +24,19 @@ public class SpringManager implements Manager {
         context.stop();
     }
 
-    @Override
     public String getItemName() {
         ServicesRepository repo = context.getBean(ServicesRepository.class);
         return repo.findByName("Test").get(0).getName();
     }
 
-    @Override
-    public List<String> getItemType(String type) {
-        ServicesRepository repo = context.getBean(ServicesRepository.class);
-        return repo.findByType(type).stream().map(Services::getName).collect(Collectors.toList());
+    public List<String> getServicesItemType(String type) {
+        ServicesRepository servRepo = context.getBean(ServicesRepository.class);
+        return servRepo.findByType(type).stream().map(Services::getName).collect(Collectors.toList());
     }
 
+    public List<String> getRestaurantItemType(String type) {
+        RestaurantRepository restRepo = context.getBean(RestaurantRepository.class);
+        return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());
+    }
 
 }

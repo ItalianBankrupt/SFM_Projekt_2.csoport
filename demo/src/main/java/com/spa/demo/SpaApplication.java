@@ -4,6 +4,7 @@ import com.spa.demo.backend.Restaurant;
 import com.spa.demo.backend.RestaurantRepository;
 import com.spa.demo.backend.Services;
 import com.spa.demo.backend.ServicesRepository;
+import org.apache.tomcat.util.net.jsse.JSSEUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -70,15 +71,23 @@ public class SpaApplication implements CommandLineRunner {
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
+		System.out.printf("----------Szolgaltatasok----------");
 		//Szolgáltatások lekérdezése az adatbázisból
-		List<Services> Szolgaltatasok = servicesRepository.findByType("Szolgaltatas");
-		for (Services service : Szolgaltatasok) {
+		List<Services> szolgaltatasok = servicesRepository.findByType("Szolgaltatas");
+		for (Services service : szolgaltatasok) {
 			System.out.println(service.getName());
 		}
+		System.out.println("----------Belepok----------");
 		//Belépőjegyek lekérdezése az adatbázisból
-		List<Services> Belepok = servicesRepository.findByType("Belepo");
-		for (Services service : Belepok) {
+		List<Services> belepok = servicesRepository.findByType("Belepo");
+		for (Services service : belepok) {
 			System.out.println(service.getName());
+		}
+		System.out.println("----------Foetelek----------");
+		//Foetelek lekérdezése az adatbázisból
+		List<Restaurant> foetelek = restaurantRepository.findByType("Foetel");
+		for (Restaurant restaurant : foetelek) {
+			System.out.println(restaurant.getName());
 		}
 
 	}
