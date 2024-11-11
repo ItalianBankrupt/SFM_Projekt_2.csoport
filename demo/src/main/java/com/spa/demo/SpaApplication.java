@@ -66,6 +66,7 @@ public class SpaApplication implements CommandLineRunner {
 						.build();
 
 				restaurantRepository.save(restaurant);
+
 			}
 
 		} catch (Exception e) {
