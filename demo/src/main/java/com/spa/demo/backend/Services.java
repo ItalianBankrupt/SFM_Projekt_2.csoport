@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Services {
     @Id
     @GeneratedValue
-    private int id;
+    private long id;
     private String item;
     private int price;
     @Enumerated(EnumType.STRING)
