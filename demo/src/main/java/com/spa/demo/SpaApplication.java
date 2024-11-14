@@ -37,11 +37,13 @@ public class SpaApplication implements CommandLineRunner {
 				String name = values[0];
 				int price = Integer.parseInt(values[1]);
 				String type = values[2];
+				int ticketType = Integer.parseInt(values[3]);
 
 				Services service = Services.builder()
 						.name(name)
 						.price(price)
 						.type(type)
+						.ticketType(ticketType)
 						.build();
 
 				servicesRepository.save(service);

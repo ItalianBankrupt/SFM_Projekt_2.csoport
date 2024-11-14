@@ -1,7 +1,7 @@
 package com.spa.demo.backend;
 
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,12 +13,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Services {
+public class Registration {
     @Id
-    @GeneratedValue
-    private long id;
-    private String name;
-    private int price;
-    private String type;
-    private int ticketType;
+    private String Id;
+    private String Name;
+    private String City;
+    private String Street;
+    private String PostCode;
 }

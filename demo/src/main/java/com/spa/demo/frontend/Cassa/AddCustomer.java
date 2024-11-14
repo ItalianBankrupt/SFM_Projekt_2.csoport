@@ -1,5 +1,6 @@
 package com.spa.demo.frontend.Cassa;
 
+import com.spa.demo.backend.Registration;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -204,6 +205,16 @@ public class AddCustomer {
             }
         }
         return false;
+    }
+
+    private void saveCustomerToDatabase()
+    {
+        String id = customer_id.getText();
+        String name = customer_name.getText();
+        String city = customer_city.getText();
+        String street = customer_street.getText();
+        String postcode = customer_post_code.getText();
+
     }
 
 }
