@@ -1,6 +1,7 @@
 package com.spa.demo.frontend.Cassa;
 
 import com.spa.demo.backend.Registration;
+import com.spa.demo.backend.RegistrationRepository;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -12,6 +13,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
 
 import java.io.*;
 
@@ -19,8 +23,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Controller
+@ComponentScan("com.spa.demo.backend")
 public class AddCustomer {
-
 
     @FXML
     private TextField customer_city;
@@ -206,15 +211,4 @@ public class AddCustomer {
         }
         return false;
     }
-
-    private void saveCustomerToDatabase()
-    {
-        String id = customer_id.getText();
-        String name = customer_name.getText();
-        String city = customer_city.getText();
-        String street = customer_street.getText();
-        String postcode = customer_post_code.getText();
-
-    }
-
 }

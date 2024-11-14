@@ -1,12 +1,13 @@
 package com.spa.demo.backend;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -15,9 +16,16 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Registration {
     @Id
-    private String Id;
+    private Long Id;
     private String Name;
     private String City;
     private String Street;
     private String PostCode;
+    private int CostumerType; // 0 - Mindenkinek, 1 - Felnőtt, 2 - Diák, 3 - Nyugdíjjas
+
+    @OneToMany(mappedBy = "registration")
+    private List<Identification> identifications;
+
+    @ManyToMany
+    @JoinTable(name = "identification")
 }

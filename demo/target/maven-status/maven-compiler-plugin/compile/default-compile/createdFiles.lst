@@ -20,7 +20,10 @@ com\spa\demo\frontend\Cassa\RemoveCustomer.class
 com\spa\demo\frontend\Restaurant\RestaurantUtils.class
 com\spa\demo\backend\ServicesRepository.class
 com\spa\demo\backend\Restaurant$RestaurantBuilder.class
+com\spa\demo\backend\IdentificationRepository.class
 com\spa\demo\backend\Services$ServicesBuilder.class
 com\spa\demo\frontend\Cassa\IdHandler.class
+com\spa\demo\backend\Identification.class
 com\spa\demo\frontend\Restaurant\Food.class
+com\spa\demo\backend\Identification$IdentificationBuilder.class
 com\spa\demo\frontend\Restaurant\Restaurant.class
