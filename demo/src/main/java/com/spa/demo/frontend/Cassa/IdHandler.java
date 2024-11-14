@@ -25,32 +25,35 @@ public class IdHandler {
 
     @FXML
     private Button AddId;
-    private Label AmountToPay;
     private Buyer buyer;
-    private String RemoveId = "";
 
     @FXML
     private ListView<String> ListOfIds;
 
     @FXML
-    void AddId(ActionEvent event) {
-        buyer.GenerateId();
+    void AddId(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/StatusDecider.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = new Stage();
+        stage.setTitle("Add Customer");
+        stage.setScene(new Scene(root));
+        stage.showAndWait();
+
+        StatusDeciderController statusDeciderController = loader.getController();
+        buyer.GenerateId(statusDeciderController.Status);
+
     }
 
-    @FXML
-    void AddServices(ActionEvent event) {
-
-    }
-
-    @FXML
-    void AddTickets(ActionEvent event) {
-
+    public void GenID(int Status)
+    {
+        buyer.GenerateId(Status);
     }
 
     @FXML
     void RemoveId(ActionEvent event) {
-        RemoveId = ListOfIds.getSelectionModel().getSelectedItem();
-        buyer.RemoveId(RemoveId);
+        String removeId = ListOfIds.getSelectionModel().getSelectedItem();
+        buyer.RemoveId(removeId);
         buyer.setNumberOfGeneratedId(buyer.getNumberOfGeneratedId()- 1);
     }
 
@@ -80,7 +83,7 @@ public class IdHandler {
 
     public void initialization()
     {
-        if(buyer.getIds().size() == 0) {
+        if(buyer.getIds().isEmpty()) {
             AddId.fire();
         }
         ListOfIds.setItems(buyer.getIds());
