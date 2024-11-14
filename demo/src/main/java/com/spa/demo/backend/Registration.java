@@ -16,6 +16,7 @@ import java.util.List;
 @Entity
 public class Registration {
     @Id
+    @GeneratedValue
     private Long Id;
     private String Name;
     private String City;

@@ -1,6 +1,8 @@
 com\spa\demo\frontend\Cassa\AddCustomer.class
+com\spa\demo\backend\Cupboard.class
 com\spa\demo\frontend\Main.class
 com\spa\demo\frontend\Manager.class
+com\spa\demo\backend\CupboardRepository.class
 com\spa\demo\backend\RestaurantRepository.class
 com\spa\demo\frontend\Cassa\CheckID.class
 com\spa\demo\frontend\IndexController.class
@@ -27,3 +29,4 @@ com\spa\demo\backend\Identification.class
 com\spa\demo\frontend\Restaurant\Food.class
 com\spa\demo\backend\Identification$IdentificationBuilder.class
 com\spa\demo\frontend\Restaurant\Restaurant.class
+com\spa\demo\backend\Cupboard$CupboardBuilder.class

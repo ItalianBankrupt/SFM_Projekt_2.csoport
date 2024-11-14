@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Identification {
     @Id
+    @GeneratedValue
     private Long id;
     @ManyToOne
     @JoinColumn(name =" registration_id")

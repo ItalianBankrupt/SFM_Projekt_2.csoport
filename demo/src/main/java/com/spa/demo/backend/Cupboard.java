@@ -13,8 +13,9 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Cupboard {
     @Id
+    @GeneratedValue
     private Long id;
-    private String cupboardNumber;
+    private int cupboardNumber;
 
     @ManyToOne
     @JoinColumn(name = "registration_id")
