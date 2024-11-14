@@ -26,6 +26,5 @@ public class Registration {
     @OneToMany(mappedBy = "registration")
     private List<Identification> identifications;
 
-    @ManyToMany
-    @JoinTable(name = "identification")
+
 }
