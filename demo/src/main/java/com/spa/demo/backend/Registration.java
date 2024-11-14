@@ -17,7 +17,7 @@ import java.util.List;
 public class Registration {
     @Id
     @GeneratedValue
-    private Long IDNumber;
+    private String IDNumber;
     private String Name;
     private String City;
     private String Street;
