@@ -18,7 +18,7 @@ public class Identification {
     @GeneratedValue
     private Long id;
     @ManyToOne
-    @JoinColumn(name =" registration_id")
+    @JoinColumn(name =" registration_generatedId")
     private Registration registration;
 
     @ManyToOne

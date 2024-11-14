@@ -90,7 +90,11 @@ public class SpaApplication implements CommandLineRunner {
 		System.out.println("----------Belépők----------");
 		List<Services> belepok = servicesRepository.findByType("Belepo");
 		for (Services service : belepok) {
-			System.out.println(service.getName());
+				if(service.getTicketType() == 2)
+				{
+					System.out.println(service.getName());
+				}
+
 		}
 
 		System.out.println("----------Ételek----------");

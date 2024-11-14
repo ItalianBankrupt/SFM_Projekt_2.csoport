@@ -17,11 +17,12 @@ import java.util.List;
 public class Registration {
     @Id
     @GeneratedValue
-    private Long Id;
+    private Long IDNumber;
     private String Name;
     private String City;
     private String Street;
     private String PostCode;
+    private String GeneratedId;
     private int CostumerType; // 0 - Mindenkinek, 1 - Felnőtt, 2 - Diák, 3 - Nyugdíjjas
 
     @OneToMany(mappedBy = "registration")

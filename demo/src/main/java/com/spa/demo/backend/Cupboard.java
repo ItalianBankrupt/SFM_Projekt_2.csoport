@@ -14,9 +14,8 @@ import lombok.NoArgsConstructor;
 public class Cupboard {
     @Id
     @GeneratedValue
-    private Long id;
     private int cupboardNumber;
-
+    private int status;     // 1 - Foglalt, 0 - Nem foglalt
     @ManyToOne
     @JoinColumn(name = "registration_id")
     private Registration registration;
