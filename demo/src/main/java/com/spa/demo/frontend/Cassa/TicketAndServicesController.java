@@ -1,6 +1,8 @@
 package com.spa.demo.frontend.Cassa;
 
+import javafx.beans.binding.Bindings;
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -21,8 +23,7 @@ public class TicketAndServicesController {
 
     private List<PersonId> personIdList = new ArrayList<>();
     private Buyer buyer;
-    private IntegerProperty balance;
-
+    private IntegerProperty balanceProperty = new SimpleIntegerProperty(0);
     @FXML
     private Label balanceLabel;
 
@@ -47,7 +48,7 @@ public class TicketAndServicesController {
                 stage.setTitle("Ticket add");
                 stage.setScene(new Scene(root));
                 stage.showAndWait();
-                GetTicketInfosFromTicketControll(ticketAddController.personId);
+                GetTicketInfosFromTicketControll(ticketAddController.personId, ticketAddController.balance);
             }
         }
     }
@@ -66,10 +67,10 @@ public class TicketAndServicesController {
             personIdList.add(personId);
         }
         Ids.getSelectionModel().select(0);
-
+        balanceLabel.textProperty().bind(Bindings.convert(balanceProperty));
     }
 
-    public void GetTicketInfosFromTicketControll(PersonId anotherPersonId)
+    public void GetTicketInfosFromTicketControll(PersonId anotherPersonId, int anotherBalance)
     {
         String currentPersonId = anotherPersonId.getId();
         for (PersonId personId : personIdList) {
@@ -77,13 +78,9 @@ public class TicketAndServicesController {
                 personId = anotherPersonId;
             }
         }
-        balanceLabel.textProperty().addListener(new ChangeListener<String>() {
-
-            @Override
-            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                balanceLabel.setText(balance.toString());
-            }
-        });
+        int balance = balanceProperty.get() + anotherBalance;
+        balanceProperty.set(balance);
+        System.out.println(balanceProperty);
     }
 
 }
