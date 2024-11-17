@@ -3,9 +3,11 @@ package com.spa.demo.frontend.Cassa;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class PersonId
 {
     //Infos from buyerClass

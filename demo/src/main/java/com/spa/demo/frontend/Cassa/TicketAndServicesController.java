@@ -38,7 +38,8 @@ public class TicketAndServicesController {
                 Stage stage = new Stage();
                 stage.setTitle("Ticket add");
                 stage.setScene(new Scene(root));
-                stage.show();
+                stage.showAndWait();
+                GetTicketInfosFromTicketControll(ticketAddController.personId);
             }
         }
     }
@@ -55,6 +56,17 @@ public class TicketAndServicesController {
         {
             PersonId personId = new PersonId(buyer.getIds().get(i), buyer.getIds().get(0));
             personIdList.add(personId);
+        }
+        Ids.getSelectionModel().select(0);
+    }
+
+    public void GetTicketInfosFromTicketControll(PersonId anotherPersonId)
+    {
+        String currentPersonId = anotherPersonId.getId();
+        for (PersonId personId : personIdList) {
+            if (personId.getId().equals(currentPersonId)) {
+                personId = anotherPersonId;
+            }
         }
     }
 
