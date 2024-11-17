@@ -23,7 +23,7 @@ public class TicketAndServicesController {
 
     private List<PersonId> personIdList = new ArrayList<>();
     private Buyer buyer;
-    private IntegerProperty balanceProperty = new SimpleIntegerProperty(0);
+    private final IntegerProperty balanceProperty = new SimpleIntegerProperty(0);
     @FXML
     private Label balanceLabel;
 
@@ -34,6 +34,24 @@ public class TicketAndServicesController {
     void addServices(ActionEvent event) {
 
     }
+
+    @FXML
+    void FinalizePurchase(ActionEvent event) {
+
+    }
+
+    @FXML
+    void OpenSummary(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/Summary.fxml"));
+        Parent root = loader.load();
+        SummaryController summary = loader.getController();
+        summary.getPersonIdsFromTicketsAndServices(personIdList);
+        Stage stage = new Stage();
+        stage.setTitle("Summary");
+        stage.setScene(new Scene(root));
+        stage.showAndWait();
+    }
+
 
     @FXML
     void addTickets(ActionEvent event) throws IOException {
@@ -80,7 +98,6 @@ public class TicketAndServicesController {
         }
         int balance = balanceProperty.get() + anotherBalance;
         balanceProperty.set(balance);
-        System.out.println(balanceProperty);
     }
 
 }

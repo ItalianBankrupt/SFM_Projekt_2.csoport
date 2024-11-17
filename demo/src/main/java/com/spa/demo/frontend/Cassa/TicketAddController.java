@@ -41,7 +41,6 @@ public class TicketAddController {
         if(functionButton.getText().equals("Hozzáadd")) {
             SetPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem(), 1);
             int thisTicketPrice = QuaryTicketPrice(ListOfTickets.getSelectionModel().getSelectedItem());
-            personId.setBalance(personId.getBalance() + thisTicketPrice);
             balance += thisTicketPrice;
             ButtonTextStatus(1);
         }
@@ -49,7 +48,6 @@ public class TicketAddController {
         {
             SetPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem(), 0);
             int thisTicketPrice = QuaryTicketPrice(ListOfTickets.getSelectionModel().getSelectedItem());
-            personId.setBalance(personId.getBalance() + thisTicketPrice);
             balance -= thisTicketPrice;
             ButtonTextStatus(0);
         }
@@ -102,10 +100,7 @@ public class TicketAddController {
         ListOfTickets.setOnMouseClicked(mouseEvent -> {
             int stat = QuaryTicketStatus(ListOfTickets.getSelectionModel().getSelectedItem());
             ButtonTextStatus(stat);
-            System.out.println(personId.toString());
         });
-
-
 
     }
 
@@ -136,7 +131,7 @@ public class TicketAddController {
             case "Nyugdíjas belépő":
                     return personId.getRetiredTicket();
             case "Diák/Gyermek belépő":
-                    return personId.getStudendAndChildTicket();
+                    return personId.getStudentAndChildTicket();
             case "Aquapark normal belépő":
                     return personId.getAquaParkNormal();
             case "Aquapark minimal belépő":
@@ -166,7 +161,7 @@ public class TicketAddController {
                  personId.setRetiredTicket(status);
                  break;
             case "Diák/Gyermek belépő":
-                 personId.setStudendAndChildTicket(status);
+                 personId.setStudentAndChildTicket(status);
                  break;
             case "Aquapark normal belépő":
                  personId.setAquaParkNormal(status);
