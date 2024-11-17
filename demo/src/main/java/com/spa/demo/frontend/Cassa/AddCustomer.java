@@ -1,5 +1,7 @@
 package com.spa.demo.frontend.Cassa;
 
+import com.spa.demo.backend.Registration;
+import com.spa.demo.backend.RegistrationRepository;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -9,8 +11,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
 
 import java.io.*;
 
@@ -18,7 +25,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Controller
+@ComponentScan("com.spa.demo.backend")
 public class AddCustomer {
+
+    @FXML
+    private ToggleGroup BuyerInfo;
 
 
     @FXML
@@ -37,57 +49,107 @@ public class AddCustomer {
     private TextField customer_street;
 
     @FXML
+    private RadioButton radioButAdult;
+
+    @FXML
+    private RadioButton radioButRetired;
+
+    @FXML
+    private RadioButton radioButStudent;
+
+
+    Buyer buyer = new Buyer("","","","","",0);
+
+
+    public void SendBuyerToAddCustomer(Buyer sentBuyer)
+    {
+        customer_name.setText(sentBuyer.getName());
+        customer_id.setText(sentBuyer.getId());
+        customer_city.setText(sentBuyer.getCity());
+        customer_street.setText(sentBuyer.getStreet());
+        customer_post_code.setText(sentBuyer.getPostCode());
+        if(sentBuyer.getStatus() == 1)
+        {
+            radioButAdult.setSelected(true);
+        }
+        else if(sentBuyer.getStatus() == 2)
+        {
+            radioButStudent.setSelected(true);
+        }
+        else if(sentBuyer.getStatus() == 3)
+        {
+            radioButRetired.setSelected(true);
+        }
+        this.buyer = sentBuyer;
+    }
+
+    @FXML
     void nextToIdPage(ActionEvent event) throws IOException {
 
-        setAllTfToWhite(customer_name,customer_id,customer_post_code,customer_street,customer_city);
+        setAllTfToWhite(customer_name, customer_id, customer_post_code, customer_street, customer_city);
 
         String name = customer_name.getText();
         String postcode = customer_post_code.getText();
         String city = customer_city.getText();
         String street = customer_street.getText();
         String id = customer_id.getText();
-        Buyer buyer = new Buyer(id,name,city,street,postcode);
+        int status = 0;
+
+        if(radioButAdult.isSelected())
+        {
+            status = 1;
+        }
+        else if(radioButRetired.isSelected())
+        {
+            status = 3;
+        }
+        else if(radioButStudent.isSelected())
+        {
+            status = 2;
+        }
 
         List missingInputs = new ArrayList<String>();
         boolean emptyField = false;
 
-        if(name.isEmpty())
-        {
-            changeBgColor(customer_name,"red");
+        if (name.isEmpty()) {
+            changeBgColor(customer_name, "red");
             missingInputs.add("Név");
             emptyField = true;
         }
-        if(postcode.isEmpty())
-        {
+        if (postcode.isEmpty()) {
             changeBgColor(customer_post_code, "red");
             missingInputs.add("Irányítószám");
             emptyField = true;
         }
-        if(city.isEmpty())
-        {
+        if (city.isEmpty()) {
             changeBgColor(customer_city, "red");
             missingInputs.add("Település");
             emptyField = true;
         }
-        if(street.isEmpty())
-        {
-            changeBgColor(customer_street,"red");
+        if (street.isEmpty()) {
+            changeBgColor(customer_street, "red");
             missingInputs.add("Utca,házszám");
             emptyField = true;
         }
-        if(id.isEmpty())
-        {
+        if (id.isEmpty()) {
             changeBgColor(customer_id, "red");
             missingInputs.add("Szemlyégigazolvány szám");
             emptyField = true;
         }
 
-        if(emptyField)
+        if (BuyerInfo.getSelectedToggle() == null)
         {
+            missingInputs.add("diák/felnőtt/nyugdíjas");
+            changeBgColorRadioButtons("red");
+            emptyField = true;
+        }
+
+
+        if (emptyField) {
             MissingInputAlert(missingInputs);
         }
 
-        String correctInfoStatus = checkInfos(buyer.getPostCode(), buyer.getId());
+        String correctInfoStatus = checkInfos(postcode, id);
 
         if(!correctInfoStatus.equals("none") && !emptyField){
             switch(correctInfoStatus)
@@ -103,8 +165,31 @@ public class AddCustomer {
         }
         if(correctInfoStatus.equals("none") && !emptyField)
         {
+            if(!(buyer.getId().equals(id)))
+            {
+                buyer.setId(id);
+                buyer.setNumberOfGeneratedId(0);
+                buyer.UpdateList(buyer.getIds().size(), "All");
+            }
+
+            if(buyer.getStatus() != status)
+            {
+                buyer.setStatus(status);
+                buyer.UpdateList(buyer.getIds().size(), "FirstOnly");
+            }
+
+            buyer.setName(name);
+            buyer.setPostCode(postcode);
+            buyer.setCity(city);
+            buyer.setStreet(street);
+
+
+
+
+
+
             //open id handler with shared data
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/CassaGUI/IdHandler.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/IdHandler.fxml"));
             Parent root = loader.load();
             IdHandler idHandler = loader.getController();
             idHandler.sendBuyerInfos(buyer);
@@ -130,11 +215,18 @@ public class AddCustomer {
         changeBgColor(customerPostCode, "white");
         changeBgColor(customerStreet, "white");
         changeBgColor(customerCity, "white");
+        changeBgColorRadioButtons("white");
     }
 
     private void changeBgColor(TextField tf, String color)
     {
         tf.setStyle("-fx-background-color:" +color + ";");
+    }
+
+    private void changeBgColorRadioButtons(String color){
+        radioButAdult.setStyle("-fx-background-color:" +color + ";");
+        radioButRetired.setStyle("-fx-background-color:" +color + ";");
+        radioButStudent.setStyle("-fx-background-color:" +color + ";");
     }
 
     private  void MissingInputAlert(List<String> list)
@@ -163,7 +255,7 @@ public class AddCustomer {
     {
         if (postCode.length() != 4 || ContainsOnlyNumbers(postCode) )
             return "postcode";
-        else if (ID.length() != 11)
+        else if (ID.length() != 8)
             return "ID";
         else
             return "none";
@@ -180,5 +272,4 @@ public class AddCustomer {
         }
         return false;
     }
-
 }
