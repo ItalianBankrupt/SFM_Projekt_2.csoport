@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="working connection between database">
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="idHandler sends buyer class to TicketAndServicesController">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/IdHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/IdHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/csv/services.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csv/services.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -48,6 +56,10 @@
     "git-widget-placeholder": "dev__ati",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Ati_mappa/egyetem/5.félév/msf/demo/SFM_Projekt_2.csoport/demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -70,7 +82,7 @@
       <updated>1731618745550</updated>
       <workItem from="1731618746576" duration="86000" />
       <workItem from="1731618853214" duration="79000" />
-      <workItem from="1731843777619" duration="232000" />
+      <workItem from="1731843777619" duration="2123000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -80,7 +92,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731618916235</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="list of ids first element is not removable, could go to tickets and services with empty list of ids">
+      <option name="closed" value="true" />
+      <created>1731844228322</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731844228322</updated>
+    </task>
+    <task id="LOCAL-00003" summary="idHandler sends buyer class to TicketAndServicesController">
+      <option name="closed" value="true" />
+      <created>1731844560628</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731844560628</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,6 +116,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working connection between database" />
-    <option name="LAST_COMMIT_MESSAGE" value="working connection between database" />
+    <MESSAGE value="list of ids first element is not removable, could go to tickets and services with empty list of ids" />
+    <MESSAGE value="idHandler sends buyer class to TicketAndServicesController" />
+    <option name="LAST_COMMIT_MESSAGE" value="idHandler sends buyer class to TicketAndServicesController" />
   </component>
 </project>
