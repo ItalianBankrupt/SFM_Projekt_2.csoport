@@ -20,9 +20,9 @@ public class TicketAndServicesController {
 
     }
 
-    public void receiveListOfIds(ObservableList<String> ListOfIds)
+    public void receiveBuyer(Buyer otherBuyer)
     {
-        Ids.setItems(ListOfIds);
+        Buyer buyer = otherBuyer;
     }
 
 }

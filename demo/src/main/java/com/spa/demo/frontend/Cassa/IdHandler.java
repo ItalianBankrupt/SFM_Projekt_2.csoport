@@ -109,7 +109,7 @@ public class IdHandler {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/TicketsAndServices.fxml"));
         Parent root = loader.load();
         TicketAndServicesController ticketAndServicesController = loader.getController();
-        ticketAndServicesController.receiveListOfIds(buyer.getIds());
+        ticketAndServicesController.receiveBuyer(buyer);
 
         Stage stage = new Stage();
         stage.setTitle("Tickets and Services");
