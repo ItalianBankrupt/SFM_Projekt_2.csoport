@@ -14,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -62,6 +63,15 @@ public class IdHandler {
 
     @FXML
     void RemoveId(ActionEvent event) {
+        if(ListOfIds.getSelectionModel().getSelectedItem() == buyer.getIds().get(0))
+        {
+            Alert WrongInput = new Alert(Alert.AlertType.ERROR);
+            WrongInput.setContentText("Az első azonosító nem törölhető, módosítsd a vevő adatait!");
+            WrongInput.setHeaderText("Nem törölhető");
+            WrongInput.setTitle("Hiba");
+            WrongInput.showAndWait();
+            return;
+        }
         String removeId = ListOfIds.getSelectionModel().getSelectedItem();
         buyer.RemoveId(removeId);
         buyer.setNumberOfGeneratedId(buyer.getNumberOfGeneratedId()- 1);
@@ -87,25 +97,19 @@ public class IdHandler {
 
     @FXML
     void GoToTicketsAndServices(ActionEvent event) throws IOException {
+        if(!buyer.getIds().isEmpty())
+        {
+            Alert WrongInput = new Alert(Alert.AlertType.ERROR);
+            WrongInput.setContentText("Nincsenek legenerált ID-k");
+            WrongInput.setHeaderText("Nincs ID!");
+            WrongInput.setTitle("Hiba");
+            WrongInput.showAndWait();
+        }
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/TicketsAndServices.fxml"));
         Parent root = loader.load();
         TicketAndServicesController ticketAndServicesController = loader.getController();
         ticketAndServicesController.receiveListOfIds(buyer.getIds());
-
-        ConfigurableApplicationContext context = SpringManager.getApplicationContext();
-        registrationRepository = context.getBean(RegistrationRepository.class);
-
-
-        Registration registration = new Registration();
-        registration.setCity(buyer.getCity());
-        registration.setStreet(buyer.getStreet());
-        registration.setCostumerType(buyer.getStatus());
-        registration.setPostCode(buyer.getPostCode());
-        registration.setName(buyer.getName());
-        registration.setIDNumber(buyer.getId());
-        String generatedId = buyer.getIds().get(0);
-        registration.setGeneratedId(generatedId);
-        registrationRepository.save(registration);
 
         Stage stage = new Stage();
         stage.setTitle("Tickets and Services");
