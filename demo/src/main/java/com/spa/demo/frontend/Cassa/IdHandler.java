@@ -97,13 +97,14 @@ public class IdHandler {
 
     @FXML
     void GoToTicketsAndServices(ActionEvent event) throws IOException {
-        if(!buyer.getIds().isEmpty())
+        if(buyer.getIds().isEmpty())
         {
             Alert WrongInput = new Alert(Alert.AlertType.ERROR);
             WrongInput.setContentText("Nincsenek legenerált ID-k");
             WrongInput.setHeaderText("Nincs ID!");
             WrongInput.setTitle("Hiba");
             WrongInput.showAndWait();
+            return;
         }
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/TicketsAndServices.fxml"));
