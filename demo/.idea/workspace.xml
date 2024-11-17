@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="TicketAddController list tickets into Listview">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAddController.java" afterDir="false" />
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Add tickets to Customer">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAndServicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAndServicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/TicketAdd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/TicketAdd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/TicketsAndServices.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/TicketsAndServices.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +86,7 @@
       <updated>1731618745550</updated>
       <workItem from="1731618746576" duration="86000" />
       <workItem from="1731618853214" duration="79000" />
-      <workItem from="1731843777619" duration="11278000" />
+      <workItem from="1731843777619" duration="11609000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -132,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731852279711</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add tickets to Customer">
+      <option name="closed" value="true" />
+      <created>1731856911087</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731856911087</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +148,7 @@
     <MESSAGE value="idHandler sends buyer class to TicketAndServicesController" />
     <MESSAGE value="PersonId class added" />
     <MESSAGE value="TicketAddController list tickets into Listview" />
-    <option name="LAST_COMMIT_MESSAGE" value="TicketAddController list tickets into Listview" />
+    <MESSAGE value="Add tickets to Customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tickets to Customer" />
   </component>
 </project>
