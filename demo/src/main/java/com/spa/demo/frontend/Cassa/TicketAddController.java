@@ -25,6 +25,8 @@ import java.util.stream.Collectors;
 public class TicketAddController {
 
     public PersonId personId;
+    public int balance = 0;
+    private ServicesRepository servicesRepository;
     @FXML
     private ListView<String> ListOfTickets;
 
@@ -38,11 +40,17 @@ public class TicketAddController {
     void AddOrDelete(ActionEvent event) {
         if(functionButton.getText().equals("Hozzáadd")) {
             SetPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem(), 1);
+            int thisTicketPrice = QuaryTicketPrice(ListOfTickets.getSelectionModel().getSelectedItem());
+            personId.setBalance(personId.getBalance() + thisTicketPrice);
+            balance += thisTicketPrice;
             ButtonTextStatus(1);
         }
         else if(functionButton.getText().equals("Töröl"))
         {
             SetPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem(), 0);
+            int thisTicketPrice = QuaryTicketPrice(ListOfTickets.getSelectionModel().getSelectedItem());
+            personId.setBalance(personId.getBalance() + thisTicketPrice);
+            balance -= thisTicketPrice;
             ButtonTextStatus(0);
         }
     }
@@ -76,7 +84,7 @@ public class TicketAddController {
         idLabel.setText(personId.getId());
         SpringManager springManager = new SpringManager();
         ConfigurableApplicationContext context = SpringManager.getApplicationContext();
-        ServicesRepository servicesRepository = context.getBean(ServicesRepository.class);
+        servicesRepository = context.getBean(ServicesRepository.class);
         String idStatus = personId.getId().substring(0,2);
         int ticketType = identifyTicketType(idStatus);
         List<Services> listOfEveryTicket = servicesRepository.findByType("Belepo").stream().toList();
@@ -89,10 +97,10 @@ public class TicketAddController {
 
         ListOfTickets.setItems(FXCollections.observableList(ListOfTicketsByTicketType));
         ListOfTickets.getSelectionModel().select(0);
-        ButtonTextStatus(QuaryPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem()));
+        ButtonTextStatus(QuaryTicketStatus(ListOfTickets.getSelectionModel().getSelectedItem()));
 
         ListOfTickets.setOnMouseClicked(mouseEvent -> {
-            int stat = QuaryPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem());
+            int stat = QuaryTicketStatus(ListOfTickets.getSelectionModel().getSelectedItem());
             ButtonTextStatus(stat);
             System.out.println(personId.toString());
         });
@@ -114,7 +122,7 @@ public class TicketAddController {
         }
     }
 
-    private int QuaryPersonIdStatus(String ticketType)
+    private int QuaryTicketStatus(String ticketType)
     {
         switch (ticketType){
             case "Felnőtt élményfürdő belépő":
@@ -172,4 +180,16 @@ public class TicketAddController {
         }
     }
 
+    private int QuaryTicketPrice(String ticketName)
+    {
+        List<Services> listOfEveryTicket = servicesRepository.findByType("Belepo").stream().toList();
+        for (Services services:listOfEveryTicket)
+        {
+            if(services.getName().equals(ticketName))
+            {
+                return services.getPrice();
+            }
+        }
+        return 0;
+    }
 }
