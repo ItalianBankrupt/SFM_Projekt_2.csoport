@@ -1,11 +1,15 @@
 package com.spa.demo.frontend.Cassa;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
@@ -17,6 +21,10 @@ public class TicketAndServicesController {
 
     private List<PersonId> personIdList = new ArrayList<>();
     private Buyer buyer;
+    private IntegerProperty balance;
+
+    @FXML
+    private Label balanceLabel;
 
     @FXML
     private ListView<String> Ids;
@@ -58,6 +66,7 @@ public class TicketAndServicesController {
             personIdList.add(personId);
         }
         Ids.getSelectionModel().select(0);
+
     }
 
     public void GetTicketInfosFromTicketControll(PersonId anotherPersonId)
@@ -68,6 +77,13 @@ public class TicketAndServicesController {
                 personId = anotherPersonId;
             }
         }
+        balanceLabel.textProperty().addListener(new ChangeListener<String>() {
+
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                balanceLabel.setText(balance.toString());
+            }
+        });
     }
 
 }
