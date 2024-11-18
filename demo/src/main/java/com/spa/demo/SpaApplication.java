@@ -71,7 +71,6 @@ public class SpaApplication implements CommandLineRunner {
 						.build();
 
 				restaurantRepository.save(restaurant);
-
 			}
 		} catch (Exception e) {
 			throw new RuntimeException("Hiba történt a vendéglátóhelyek beolvasásakor", e);

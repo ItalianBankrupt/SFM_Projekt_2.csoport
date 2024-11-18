@@ -23,7 +23,8 @@ public class TicketAndServicesController {
 
     private List<PersonId> personIdList = new ArrayList<>();
     private Buyer buyer;
-    private IntegerProperty balanceProperty = new SimpleIntegerProperty(0);
+    private int balance;
+    private final IntegerProperty balanceProperty = new SimpleIntegerProperty(0);
     @FXML
     private Label balanceLabel;
 
@@ -31,9 +32,51 @@ public class TicketAndServicesController {
     private ListView<String> Ids;
 
     @FXML
-    void addServices(ActionEvent event) {
+    void addServices(ActionEvent event) throws IOException {
+        String selectedId = Ids.getSelectionModel().getSelectedItem();
+        for (PersonId personId : personIdList) {
+            if (personId.getId().equals(selectedId)) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/ServicesAdd.fxml"));
+                Parent root = loader.load();
+                ServicesAddController servicesAddController = loader.getController();
+                servicesAddController.getPersonIdFromTicketAndServices(personId);
+                Stage stage = new Stage();
+                stage.setTitle("Ticket add");
+                stage.setScene(new Scene(root));
+                stage.showAndWait();
+                GetTicketInfosFromServicesControll(servicesAddController.personId, servicesAddController.balance);
+            }
+        }
+    }
+
+    private void GetTicketInfosFromServicesControll(PersonId anotherPersonId, int anotherBalance) {
+        String currentPersonId = anotherPersonId.getId();
+        for (PersonId personId : personIdList) {
+            if (personId.getId().equals(currentPersonId)) {
+                personId = anotherPersonId;
+            }
+        }
+        balance = balanceProperty.get() + anotherBalance;
+        balanceProperty.set(balance);
+    }
+
+    @FXML
+    void FinalizePurchase(ActionEvent event) {
 
     }
+
+    @FXML
+    void OpenSummary(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/Summary.fxml"));
+        Parent root = loader.load();
+        SummaryController summary = loader.getController();
+        summary.getPersonIdsFromTicketsAndServices(personIdList);
+        Stage stage = new Stage();
+        stage.setTitle("Summary");
+        stage.setScene(new Scene(root));
+        stage.showAndWait();
+    }
+
 
     @FXML
     void addTickets(ActionEvent event) throws IOException {
@@ -78,9 +121,8 @@ public class TicketAndServicesController {
                 personId = anotherPersonId;
             }
         }
-        int balance = balanceProperty.get() + anotherBalance;
+        balance = balanceProperty.get() + anotherBalance;
         balanceProperty.set(balance);
-        System.out.println(balanceProperty);
     }
 
 }

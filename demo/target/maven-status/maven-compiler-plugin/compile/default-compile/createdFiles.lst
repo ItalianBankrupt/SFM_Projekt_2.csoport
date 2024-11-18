@@ -1,3 +1,5 @@
+com\spa\demo\frontend\Cassa\ServicesAddController.class
+com\spa\demo\frontend\Cassa\SummaryController.class
 com\spa\demo\backend\Cupboard.class
 com\spa\demo\frontend\Main.class
 com\spa\demo\frontend\Manager.class

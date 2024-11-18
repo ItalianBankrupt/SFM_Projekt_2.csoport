@@ -41,7 +41,6 @@ public class TicketAddController {
         if(functionButton.getText().equals("Hozzáadd")) {
             SetPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem(), 1);
             int thisTicketPrice = QuaryTicketPrice(ListOfTickets.getSelectionModel().getSelectedItem());
-            personId.setBalance(personId.getBalance() + thisTicketPrice);
             balance += thisTicketPrice;
             ButtonTextStatus(1);
         }
@@ -49,7 +48,6 @@ public class TicketAddController {
         {
             SetPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem(), 0);
             int thisTicketPrice = QuaryTicketPrice(ListOfTickets.getSelectionModel().getSelectedItem());
-            personId.setBalance(personId.getBalance() + thisTicketPrice);
             balance -= thisTicketPrice;
             ButtonTextStatus(0);
         }
@@ -102,10 +100,7 @@ public class TicketAddController {
         ListOfTickets.setOnMouseClicked(mouseEvent -> {
             int stat = QuaryTicketStatus(ListOfTickets.getSelectionModel().getSelectedItem());
             ButtonTextStatus(stat);
-            System.out.println(personId.toString());
         });
-
-
 
     }
 
@@ -124,27 +119,18 @@ public class TicketAddController {
 
     private int QuaryTicketStatus(String ticketType)
     {
-        switch (ticketType){
-            case "Felnőtt élményfürdő belépő":
-                    return personId.getAdultFelling();
-            case "Diák élményfürdő belépő":
-                    return personId.getStudentFelling();
-            case "Gyermek belépő":
-                    return personId.getChildTicket();
-            case "Fürdő belépő":
-                    return personId.getBeachTicket();
-            case "Nyugdíjas belépő":
-                    return personId.getRetiredTicket();
-            case "Diák/Gyermek belépő":
-                    return personId.getStudendAndChildTicket();
-            case "Aquapark normal belépő":
-                    return personId.getAquaParkNormal();
-            case "Aquapark minimal belépő":
-                    return personId.getAquaParkMinimal();
-            case "Prémium belépőjegy":
-                    return personId.getPremiumTicket();
-            default: return -1;
-        }
+        return switch (ticketType) {
+            case "Felnőtt élményfürdő belépő" -> personId.getAdultFelling();
+            case "Diák élményfürdő belépő" -> personId.getStudentFelling();
+            case "Gyermek belépő" -> personId.getChildTicket();
+            case "Fürdő belépő" -> personId.getBeachTicket();
+            case "Nyugdíjas belépő" -> personId.getRetiredTicket();
+            case "Diák/Gyermek belépő" -> personId.getStudentAndChildTicket();
+            case "Aquapark normal belépő" -> personId.getAquaParkNormal();
+            case "Aquapark minimal belépő" -> personId.getAquaParkMinimal();
+            case "Prémium belépőjegy" -> personId.getPremiumTicket();
+            default -> -1;
+        };
     }
 
     private void SetPersonIdStatus(String ticketType, int status)
@@ -166,7 +152,7 @@ public class TicketAddController {
                  personId.setRetiredTicket(status);
                  break;
             case "Diák/Gyermek belépő":
-                 personId.setStudendAndChildTicket(status);
+                 personId.setStudentAndChildTicket(status);
                  break;
             case "Aquapark normal belépő":
                  personId.setAquaParkNormal(status);
