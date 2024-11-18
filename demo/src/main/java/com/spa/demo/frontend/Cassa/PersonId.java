@@ -81,7 +81,7 @@ public class PersonId
         for(String element: list)
         {
             String[] info = element.split(":");
-            if(info[1].equals("1"))
+            if(!(info[1].equals("0")))
             {
                 newList.add(element);
             }

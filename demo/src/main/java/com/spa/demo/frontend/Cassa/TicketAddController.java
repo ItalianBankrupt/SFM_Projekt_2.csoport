@@ -119,27 +119,18 @@ public class TicketAddController {
 
     private int QuaryTicketStatus(String ticketType)
     {
-        switch (ticketType){
-            case "Felnőtt élményfürdő belépő":
-                    return personId.getAdultFelling();
-            case "Diák élményfürdő belépő":
-                    return personId.getStudentFelling();
-            case "Gyermek belépő":
-                    return personId.getChildTicket();
-            case "Fürdő belépő":
-                    return personId.getBeachTicket();
-            case "Nyugdíjas belépő":
-                    return personId.getRetiredTicket();
-            case "Diák/Gyermek belépő":
-                    return personId.getStudentAndChildTicket();
-            case "Aquapark normal belépő":
-                    return personId.getAquaParkNormal();
-            case "Aquapark minimal belépő":
-                    return personId.getAquaParkMinimal();
-            case "Prémium belépőjegy":
-                    return personId.getPremiumTicket();
-            default: return -1;
-        }
+        return switch (ticketType) {
+            case "Felnőtt élményfürdő belépő" -> personId.getAdultFelling();
+            case "Diák élményfürdő belépő" -> personId.getStudentFelling();
+            case "Gyermek belépő" -> personId.getChildTicket();
+            case "Fürdő belépő" -> personId.getBeachTicket();
+            case "Nyugdíjas belépő" -> personId.getRetiredTicket();
+            case "Diák/Gyermek belépő" -> personId.getStudentAndChildTicket();
+            case "Aquapark normal belépő" -> personId.getAquaParkNormal();
+            case "Aquapark minimal belépő" -> personId.getAquaParkMinimal();
+            case "Prémium belépőjegy" -> personId.getPremiumTicket();
+            default -> -1;
+        };
     }
 
     private void SetPersonIdStatus(String ticketType, int status)

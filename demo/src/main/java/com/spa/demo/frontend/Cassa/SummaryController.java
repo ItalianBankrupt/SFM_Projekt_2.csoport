@@ -3,9 +3,13 @@ package com.spa.demo.frontend.Cassa;
 import com.spa.demo.SpringManager;
 import com.spa.demo.backend.Services;
 import com.spa.demo.backend.ServicesRepository;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 import org.springframework.context.ConfigurableApplicationContext;
+
 
 import java.util.List;
 
@@ -16,6 +20,14 @@ public class SummaryController {
 
     @FXML
     private TextArea SummaryBox;
+
+    @FXML
+    void Close(ActionEvent event) {
+        Node node = (Node) event.getSource();
+        Stage currentStage = (Stage) node.getScene().getWindow();
+        currentStage.close();
+    }
+
 
     public void getPersonIdsFromTicketsAndServices(List<PersonId> PersonIdList)
     {
@@ -34,7 +46,7 @@ public class SummaryController {
             {
                 String singleTicketInfo = "";
                 String[] info = ticket.split(":");
-                int Price = QuaryPrice(info[0], "Belepo");
+                int Price = QuaryPrice(info[0], "Belepo") * Integer.parseInt(info[1]);
                 singleTicketInfo = "\t" + ticket + " db Ár: " + Price + "Ft\n";
                 balance += Price;
                 tickets.append(singleTicketInfo);
@@ -45,7 +57,7 @@ public class SummaryController {
             {
                 String singleServiceInfo = "";
                 String[] info = service.split(":");
-                int Price = QuaryPrice(info[0], "Szolgaltatas");
+                int Price = QuaryPrice(info[0], "Szolgaltatas") * Integer.parseInt(info[1]);
                 singleServiceInfo = "\t" + service + " db Ár: " + Price + "Ft\n";
                 balance += Price;
                 services.append(singleServiceInfo);
