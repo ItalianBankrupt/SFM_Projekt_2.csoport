@@ -4,25 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="balance label change when balance is changing">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/SummaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/Summary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Summary added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/ServicesAddController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/ServicesAdd.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAndServicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAndServicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/csv/services.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csv/services.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/IdHandler.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/IdHandler.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/MainPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/TicketsAndServices.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/TicketsAndServices.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/addCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/addCustomer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/removeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/removeCustomer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csv/services.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/csv/services.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/TicketsAndServices.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/TicketsAndServices.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/IdHandler.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/IdHandler.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/MainPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/addCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/addCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/removeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/removeCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -111,7 +102,8 @@
       <workItem from="1731867687430" duration="5230000" />
       <workItem from="1731873564761" duration="1630000" />
       <workItem from="1731875221432" duration="249000" />
-      <workItem from="1731875536049" duration="1039000" />
+      <workItem from="1731875536049" duration="1478000" />
+      <workItem from="1731951438318" duration="955000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -177,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731859202732</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Summary added">
+      <option name="closed" value="true" />
+      <created>1731876791468</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731876791468</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +192,7 @@
     <MESSAGE value="Add tickets to Customer" />
     <MESSAGE value="addListener to balanceLabel" />
     <MESSAGE value="balance label change when balance is changing" />
-    <option name="LAST_COMMIT_MESSAGE" value="balance label change when balance is changing" />
+    <MESSAGE value="Summary added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Summary added" />
   </component>
 </project>
