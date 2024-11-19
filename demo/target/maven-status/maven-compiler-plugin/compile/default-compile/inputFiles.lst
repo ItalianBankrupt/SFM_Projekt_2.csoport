@@ -1,32 +1,33 @@
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Cupboard.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\CupboardRepository.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Identification.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\IdentificationRepository.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Registration.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\RegistrationRepository.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Restaurant.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\RestaurantRepository.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Services.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\ServicesRepository.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\AddCustomer.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\Buyer.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\CheckID.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\IdHandler.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\MainPage.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\PersonId.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\RemoveCustomer.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\ServicesAddController.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\StatusDeciderController.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\SummaryController.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\TicketAddController.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\TicketAndServicesController.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\UploadBalance.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\IndexController.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Main.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Manager.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Restaurant\Food.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Restaurant\identificationController.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Restaurant\Restaurant.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Restaurant\RestaurantUtils.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\SpaApplication.java
-D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\SpringManager.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Cupboard.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\CupboardRepository.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Identification.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\IdentificationRepository.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Registration.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\RegistrationRepository.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Restaurant.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\RestaurantRepository.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\Services.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\backend\ServicesRepository.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\AddCustomer.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\Buyer.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\CheckID.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\IdHandler.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\MainPage.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\PersonId.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\RemoveCustomer.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\ServicesAddController.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\StatusDeciderController.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\SummaryController.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\TicketAddController.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\TicketAndServicesController.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Cassa\UploadBalance.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\IndexController.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Main.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Manager.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Restaurant\Food.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Restaurant\identificationController.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Restaurant\Restaurant.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\frontend\Restaurant\RestaurantUtils.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\SpaApplication.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\SpringManager.java
+C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\java\com\spa\demo\web\WebController.java

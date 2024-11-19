@@ -20,6 +20,7 @@ com\spa\demo\frontend\Restaurant\identificationController.class
 com\spa\demo\backend\Registration$RegistrationBuilder.class
 com\spa\demo\backend\Restaurant.class
 com\spa\demo\frontend\Restaurant\Restaurant$Type.class
+com\spa\demo\web\WebController.class
 com\spa\demo\backend\Services.class
 com\spa\demo\backend\Registration.class
 com\spa\demo\SpringManager.class
