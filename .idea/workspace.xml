@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Guess whos back">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/web/WebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/bgimage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/map.jpg" afterDir="false" />
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/PersonId.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/PersonId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/ServicesAddController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/ServicesAddController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/SummaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/SummaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/TicketAddController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/TicketAddController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/ServicesAdd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/ServicesAdd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/Summary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/Summary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/bgimage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/bgimage.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/map.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/map.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
     "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -82,6 +75,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\static" />
       <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\templates" />
     </key>
   </component>
@@ -103,7 +97,7 @@
       <updated>1731953169709</updated>
       <workItem from="1731953171442" duration="2339000" />
       <workItem from="1731957050985" duration="307000" />
-      <workItem from="1732007204842" duration="855000" />
+      <workItem from="1732007204842" duration="1467000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -121,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731954876773</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Web .v1">
+      <option name="closed" value="true" />
+      <created>1732008099445</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732008099445</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +132,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />
     <MESSAGE value="Guess whos back" />
-    <option name="LAST_COMMIT_MESSAGE" value="Guess whos back" />
+    <MESSAGE value="Web .v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web .v1" />
   </component>
 </project>
