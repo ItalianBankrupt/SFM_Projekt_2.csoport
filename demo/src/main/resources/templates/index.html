@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kód Beírás</title>
+    <style>
+        body {
+            background-image: url('bgimage.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 70px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        #map {
+            margin-top: 20px;
+            display: none; /* Kezdetben nem látszik */
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Karszalag Beírás</h1>
+    <form id="codeForm">
+        <input type="text" id="codeInput" placeholder="Írd be az azonosítót" required>
+        <br><br>
+        <input type="submit" value="Küldés">
+    </form>
+
+    <div id="result"></div>
+    <div id="map">
+        <img src="map.jpg" alt="Térkép">
+    </div>
+</div>
+<footer> <a href="https://hungarospa.hu/" target="_blank" > Forrás</a></footer>
+<script>
+    document.getElementById('codeForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var code = document.getElementById('codeInput').value.trim();
+
+        var resultDiv = document.getElementById('result');
+        var mapDiv = document.getElementById('map');
+        mapDiv.style.display = 'none';
+        resultDiv.innerHTML = '';
+
+        if (code === "LK23W4X2") {
+            resultDiv.innerHTML = "<p><strong>Karszalaghoz tartozó adatok:</strong></p>" +
+                "<p>Egyenleg: 1450 Ft</p>" +
+                "<p>Belépési jogosultság: Strandfürdő, Aquapark</p>";
+            mapDiv.style.display = 'block';
+        } else {
+            resultDiv.innerHTML = "<p>Érvénytelen karszalag azonosító! Kérlek próbáld újra.</p>";
+        }
+    });
+</script>
+
+</body>
+</html>
