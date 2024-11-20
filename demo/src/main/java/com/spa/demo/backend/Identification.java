@@ -18,8 +18,7 @@ import java.util.List;
 @Entity
 public class Identification {
     @Id
-    private String BuyerId;                     // Kapcsolat a Registration tábla GeneratedId rekordjával
-    private String PersonId;                    //
+    private String PersonId;
     private int ExperienceAdultTicket;
     private int ExperienceStudentTicket;
     private int ExperiencePensionerTicket;
@@ -38,4 +37,8 @@ public class Identification {
     private int AquaParkTicket;
     private int PremiumTicket;
     private int Locker;
+
+    @ManyToOne
+    @JoinColumn(name = "BuyerId", referencedColumnName = "GeneratedId")
+    private Registration registration;
 }
