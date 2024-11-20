@@ -1,5 +1,9 @@
 package com.spa.demo.frontend.Cassa;
 
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.IdentificationRepository;
+import com.spa.demo.backend.Registration;
+import com.spa.demo.backend.RegistrationRepository;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -14,12 +18,19 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TicketAndServicesController {
+
+    private ConfigurableApplicationContext context;
+    private RegistrationRepository registrationRepository;
+    private IdentificationRepository identificationRepository;
 
     private List<PersonId> personIdList = new ArrayList<>();
     private Buyer buyer;
@@ -62,7 +73,19 @@ public class TicketAndServicesController {
 
     @FXML
     void FinalizePurchase(ActionEvent event) {
-
+        SpringManager springManager = new SpringManager();
+        context = springManager.getApplicationContext();
+        registrationRepository = context.getBean(RegistrationRepository.class);
+        Registration reg = Registration.builder()
+                .City(buyer.getCity())
+                .CostumerType(buyer.getStatus())
+                .Name(buyer.getName())
+                .IDNumber(buyer.getId())
+                .PostCode(buyer.getPostCode())
+                .Street(buyer.getStreet())
+                .build();
+        System.out.println(reg.toString());
+        registrationRepository.save(reg);
     }
 
     @FXML
