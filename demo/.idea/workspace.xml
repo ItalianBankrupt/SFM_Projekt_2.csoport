@@ -7,13 +7,18 @@
     <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/ServicesAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/ServicesAddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/SummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/SummaryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAndServicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAndServicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/ServicesAdd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/ServicesAdd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/Summary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/Summary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/csv/services.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csv/services.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/csv/services.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/csv/services.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/IdHandler.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/IdHandler.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/MainPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/TicketsAndServices.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/TicketsAndServices.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/addCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/addCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/removeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/removeCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/statusDecider.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/statusDecider.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +40,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -188,6 +194,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working connection between database" />

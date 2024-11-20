@@ -21,18 +21,20 @@ public class PersonId
     //Tickets and Services 0-if doesn't have that type 1-if have
     private int AdultFelling = 0;
     private int StudentFelling = 0;
-    private int ChildTicket = 0;
-    private int BeachTicket = 0;
-    private int RetiredTicket = 0;
-    private int StudentAndChildTicket = 0;
+    private int RetiredFelling = 0;
+    private int AdultBeachTicket = 0;
+    private int StudentBeachTicket = 0;
+    private int RetiredBeachTicket = 0;
+    private int AdultThermalTicket = 0;
+    private int StudentThermalTicket = 0;
+    private int RetiredThermalTicket = 0;
     private int Sauna = 0;
     private int SafeDeposit = 0;
     private int Lounger = 0;
     private int SunBed = 0;
     private int SunBedOnBeach = 0;
     private int Baldachin = 0;
-    private int AquaParkMinimal = 0;
-    private int AquaParkNormal = 0;
+    private int AquaParkTicket = 0;
     private int PremiumTicket = 0;
     private int Locker = 0;
 
@@ -64,12 +66,14 @@ public class PersonId
         List<String> infoList = new ArrayList<String>();
         infoList.add("Felnőtt élményfürdő belépő:" + getAdultFelling());
         infoList.add("Diák élményfürdő belépő:" + getStudentFelling());
-        infoList.add("Gyermek belépő:" + getChildTicket());
-        infoList.add("Fürdő belépő:" + getBeachTicket());
-        infoList.add("Nyugdíjas belépő:" + getRetiredTicket());
-        infoList.add("Diák/Gyermek belépő:" + getStudentAndChildTicket());
-        infoList.add("Aquapark normal belépő:" + getAquaParkNormal());
-        infoList.add("Aquapark minimal belépő:" + getAquaParkMinimal());
+        infoList.add("Nyugdijas élményfürdő belépő:" + getRetiredFelling());
+        infoList.add("Diák belépő:" + getStudentBeachTicket());
+        infoList.add("Felnőtt belépő:" + getAdultBeachTicket());
+        infoList.add("Nyugdíjas belépő:" + getRetiredBeachTicket());
+        infoList.add("Diák Thermal belépő:" + getStudentThermalTicket());
+        infoList.add("Felnőtt Thermal belépő:" + getAdultThermalTicket());
+        infoList.add("Nyugdíjas Thermal belépő:" + getRetiredThermalTicket());
+        infoList.add("Aquapark belépő:" +  getAquaParkTicket());
         infoList.add("Prémium belépőjegy:" + getPremiumTicket());
         List<String> removedList = removeZeroValue(infoList);
         return removedList;
