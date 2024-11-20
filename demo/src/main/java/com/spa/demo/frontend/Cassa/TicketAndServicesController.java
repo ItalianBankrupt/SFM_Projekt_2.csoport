@@ -78,6 +78,7 @@ public class TicketAndServicesController {
         context = springManager.getApplicationContext();
         registrationRepository = context.getBean(RegistrationRepository.class);
         identificationRepository = context.getBean(IdentificationRepository.class);
+        //----------Vásárló adatinak mentése
         Registration reg = Registration.builder()
                 .City(buyer.getCity())
                 .CostumerType(buyer.getStatus())
@@ -88,6 +89,7 @@ public class TicketAndServicesController {
                 .GeneratedId(personIdList.get(0).getId())
                 .build();
         registrationRepository.save(reg);
+        //----------------------------------
     }
 
     @FXML

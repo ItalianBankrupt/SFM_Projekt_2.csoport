@@ -17,8 +17,14 @@ import java.util.List;
 @Data
 @Entity
 public class Identification {
+    //----------Kapcsolat a Reg. táblával---
+    @ManyToOne
+    @JoinColumn(name = "BuyerId", referencedColumnName = "GeneratedId")
+    private Registration registration;
+    //----------Egyedi azonosító------------
     @Id
     private String PersonId;
+    //----------Jegyek----------------------
     private int ExperienceAdultTicket;
     private int ExperienceStudentTicket;
     private int ExperiencePensionerTicket;
@@ -28,17 +34,14 @@ public class Identification {
     private int OutsideAdultTicket;
     private int OutsideStudentTicket;
     private int OutsidePensionerTicket;
+    private int AquaParkTicket;
+    private int PremiumTicket;
+    //----------Szolgáltatások--------------
     private int Sauna;
     private int SafeDeposit;
     private int Lounger;
     private int SunBed;
     private int SunBedAtTheBeach;
     private int Baldachin;
-    private int AquaParkTicket;
-    private int PremiumTicket;
     private int Locker;
-
-    @ManyToOne
-    @JoinColumn(name = "BuyerId", referencedColumnName = "GeneratedId")
-    private Registration registration;
 }

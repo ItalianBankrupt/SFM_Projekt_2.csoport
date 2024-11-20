@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 public class Restaurant {
+    //----------Ételek, italok és üdítők----
     @Id
     @GeneratedValue
     private long id;
