@@ -21,18 +21,13 @@ public class SpaApplication implements CommandLineRunner {
 	@Autowired
 	private RestaurantRepository restaurantRepository;
 
-
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpaApplication.class, args);
 	}
 
-
-
 	@Override
 	public void run(String... args) throws Exception {
-
-		// Beolvassuk a szolgáltatásokat
+		//----------Szolgáltatások és jegyek beolvasása----
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/csv/services.csv"))) {
 			String line;
 			while ((line = br.readLine()) != null) {
@@ -54,8 +49,7 @@ public class SpaApplication implements CommandLineRunner {
 		} catch (Exception e) {
 			throw new RuntimeException("Hiba történt a szolgáltatások beolvasásakor", e);
 		}
-
-		// Beolvassuk a restaurant adatokat
+		//-----------Ételek, italok és üdítők beolvasása---
 		try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/csv/restaurant.csv"))) {
 			String line;
 			while ((line = br.readLine()) != null) {
@@ -75,13 +69,5 @@ public class SpaApplication implements CommandLineRunner {
 		} catch (Exception e) {
 			throw new RuntimeException("Hiba történt a vendéglátóhelyek beolvasásakor", e);
 		}
-
-
-
 	}
-
-
-
-
-
 }

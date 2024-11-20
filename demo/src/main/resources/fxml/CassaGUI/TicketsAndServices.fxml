@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #d5c990;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Cassa.TicketAndServicesController">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #d5c990;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Cassa.TicketAndServicesController">
    <children>
       <ListView fx:id="Ids" layoutX="14.0" layoutY="58.0" prefHeight="217.0" prefWidth="199.0" />
       <Button layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#addServices" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Szolgáltatás hozzáadás" />
@@ -17,5 +15,7 @@
          </font></Label>
       <Label layoutX="300.0" layoutY="36.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Fizetendő összeg:" />
       <Label fx:id="balanceLabel" layoutX="479.0" layoutY="43.0" text="Label" />
+      <Button layoutX="594.0" layoutY="325.0" mnemonicParsing="false" onAction="#OpenSummary" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Összegzés" />
+      <Button layoutX="594.0" layoutY="383.0" mnemonicParsing="false" onAction="#FinalizePurchase" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Fizetés" />
    </children>
 </AnchorPane>

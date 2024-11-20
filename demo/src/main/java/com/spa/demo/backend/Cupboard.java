@@ -12,11 +12,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 public class Cupboard {
+    //----------Szekrények------------------
     @Id
     @GeneratedValue
     private int cupboardNumber;
     private int status;     // 1 - Foglalt, 0 - Nem foglalt
-    @ManyToOne
-    @JoinColumn(name = "registration_id")
-    private Registration registration;
 }
