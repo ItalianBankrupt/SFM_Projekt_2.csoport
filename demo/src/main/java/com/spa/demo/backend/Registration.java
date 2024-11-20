@@ -15,12 +15,12 @@ import java.util.List;
 @Builder
 @Entity
 public class Registration {
+    @Id
+    private String GeneratedId;
     private String IDNumber;
     private String Name;
     private String City;
     private String Street;
     private String PostCode;
-    @Id
-    private String GeneratedId;
     private int CostumerType; // 0 - Mindenkinek, 1 - Felnőtt, 2 - Diák, 3 - Nyugdíjjas
 }

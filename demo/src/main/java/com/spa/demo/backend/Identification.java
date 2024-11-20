@@ -18,8 +18,8 @@ import java.util.List;
 @Entity
 public class Identification {
     @Id
-    private String BuyerId;
-    private String PersonId;
+    private String BuyerId;                     // Kapcsolat a Registration tábla GeneratedId rekordjával
+    private String PersonId;                    //
     private int ExperienceAdultTicket;
     private int ExperienceStudentTicket;
     private int ExperiencePensionerTicket;
