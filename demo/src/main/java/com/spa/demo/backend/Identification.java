@@ -7,6 +7,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,16 +18,24 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Identification {
     @Id
-    @GeneratedValue
-    private Long id;
-    @ManyToOne
-    @JoinColumn(name =" registration_generatedId")
-    private Registration registration;
-
-    @ManyToOne
-    @JoinColumn(name = "services_id")
-    private Services services;
-
-    private int darabszam;
-    private int ticketType;
+    private String BuyerId;
+    private String PersonId;
+    private int ExperienceAdultTicket;
+    private int ExperienceStudentTicket;
+    private int ExperiencePensionerTicket;
+    private int MedicalAdultTicket;
+    private int MedicalStudentTicket;
+    private int MedicalPensionerTicket;
+    private int OutsideAdultTicket;
+    private int OutsideStudentTicket;
+    private int OutsidePensionerTicket;
+    private int Sauna;
+    private int SafeDeposit;
+    private int Lounger;
+    private int SunBed;
+    private int SunBedAtTheBeach;
+    private int Baldachin;
+    private int AquaParkTicket;
+    private int PremiumTicket;
+    private int Locker;
 }

@@ -1,6 +1,7 @@
 package com.spa.demo.frontend.Cassa;
 
 import com.spa.demo.SpringManager;
+import com.spa.demo.backend.Identification;
 import com.spa.demo.backend.IdentificationRepository;
 import com.spa.demo.backend.Registration;
 import com.spa.demo.backend.RegistrationRepository;
@@ -76,6 +77,7 @@ public class TicketAndServicesController {
         SpringManager springManager = new SpringManager();
         context = springManager.getApplicationContext();
         registrationRepository = context.getBean(RegistrationRepository.class);
+        identificationRepository = context.getBean(IdentificationRepository.class);
         Registration reg = Registration.builder()
                 .City(buyer.getCity())
                 .CostumerType(buyer.getStatus())
@@ -83,8 +85,8 @@ public class TicketAndServicesController {
                 .IDNumber(buyer.getId())
                 .PostCode(buyer.getPostCode())
                 .Street(buyer.getStreet())
+                .GeneratedId(buyer.getId())
                 .build();
-        System.out.println(reg.toString());
         registrationRepository.save(reg);
     }
 
