@@ -126,7 +126,7 @@ public class ServicesAddController {
             case "Értékmegőrző" -> personId.getSafeDeposit();
             case "Pihenőágy" -> personId.getLounger();
             case "Napozóágy" -> personId.getSunBed();
-            case "Napozóágy a tengerparton" -> personId.getSunBedOnBeach();
+            case "Napozóágy a tengerparton" -> personId.getSunBedAtBeach();
             case "Baldachin a tengerparton" -> personId.getBaldachin();
             case "Szekrény" -> personId.getLocker();
             default -> -1;
@@ -150,7 +150,7 @@ public class ServicesAddController {
                 personId.setSunBed(personId.getSunBed() + UpOrDown);
                 break;
             case "Napozóágy a tengerparton":
-                personId.setSunBedOnBeach(personId.getSunBedOnBeach() + UpOrDown);
+                personId.setSunBedAtBeach(personId.getSunBedAtBeach() + UpOrDown);
                 break;
             case "Baldachin a tengerparton":
                 personId.setBaldachin(personId.getBaldachin() + UpOrDown);

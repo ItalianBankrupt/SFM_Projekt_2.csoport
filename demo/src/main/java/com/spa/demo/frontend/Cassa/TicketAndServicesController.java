@@ -1,10 +1,7 @@
 package com.spa.demo.frontend.Cassa;
 
 import com.spa.demo.SpringManager;
-import com.spa.demo.backend.Identification;
-import com.spa.demo.backend.IdentificationRepository;
-import com.spa.demo.backend.Registration;
-import com.spa.demo.backend.RegistrationRepository;
+import com.spa.demo.backend.*;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -14,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -31,6 +29,7 @@ public class TicketAndServicesController {
     private ConfigurableApplicationContext context;
     private RegistrationRepository registrationRepository;
     private IdentificationRepository identificationRepository;
+    private CupboardRepository cupboardRepository;
 
     private List<PersonId> personIdList = new ArrayList<>();
     private Buyer buyer;
@@ -85,12 +84,8 @@ public class TicketAndServicesController {
 
     @FXML
     void FinalizePurchase(ActionEvent event) {
-        SpringManager springManager = new SpringManager();
-        context = springManager.getApplicationContext();
-        registrationRepository = context.getBean(RegistrationRepository.class);
-        identificationRepository = context.getBean(IdentificationRepository.class);
         //----------Vásárló adatinak mentése
-        Registration reg = Registration.builder()
+        Registration registration = Registration.builder()
                 .City(buyer.getCity())
                 .CostumerType(buyer.getStatus())
                 .Name(buyer.getName())
@@ -99,8 +94,45 @@ public class TicketAndServicesController {
                 .Street(buyer.getStreet())
                 .GeneratedId(personIdList.get(0).getId())
                 .build();
-        registrationRepository.save(reg);
+        registrationRepository.save(registration);
         //----------------------------------
+
+        //---------Azonosítók mentése
+        for (PersonId personId : personIdList) {
+            Identification identification = Identification.builder()
+                    .PersonId(personId.getId())
+                    .AdultFellingTicket(personId.getAdultFellingTicket())
+                    .StudentFellingTicket(personId.getStudentFellingTicket())
+                    .AdultThermalTicket(personId.getAdultThermalTicket())
+                    .PensionerThermalTicket(personId.getPensionerThermalTicket())
+                    .StudentThermalTicket(personId.getStudentThermalTicket())
+                    .AdultBeachTicket(personId.getAdultBeachTicket())
+                    .PensionerBeachTicket(personId.getPensionerBeachTicket())
+                    .StudentBeachTicket(personId.getStudentBeachTicket())
+                    .AquaParkTicket(personId.getAquaParkTicket())
+                    .PremiumTicket(personId.getPremiumTicket())
+                    .Sauna(personId.getSauna())
+                    .SafeDeposit(personId.getSafeDeposit())
+                    .Lounger(personId.getLounger())
+                    .SunBed(personId.getSunBed())
+                    .SunBedAtTheBeach(personId.getSunBedAtBeach())
+                    .Baldachin(personId.getBaldachin())
+                    .Locker(personId.getLocker()).build();
+            identificationRepository.save(identification);
+            if(personId.getLocker() != 0)
+            {
+                for (int i = 0; i < personId.getLocker(); i++)
+                {
+                    Cupboard cupboard = Cupboard.builder()
+                            .status(1)
+                            .PersonId(personId.getId()).build();
+                    cupboardRepository.save(cupboard);
+                }
+            }
+        }
+        Node node = (Node) event.getSource();
+        Stage currentStage = (Stage) node.getScene().getWindow();
+        currentStage.close();
     }
 
     @FXML
@@ -138,6 +170,7 @@ public class TicketAndServicesController {
     void balanceAddButton(ActionEvent event) {
         int updateMoney = Integer.parseInt(idBalanceTextBox.getText());
         updateBalance(updateMoney);
+        balanceProperty.set(balanceProperty.get() + updateMoney);
         idBalanceTextBox.setText("");
     }
 
@@ -152,6 +185,7 @@ public class TicketAndServicesController {
         }
         else{
             updateBalance(-1*Integer.parseInt(idBalanceTextBox.getText()));
+            balanceProperty.set(balanceProperty.get() - Integer.parseInt(idBalanceTextBox.getText()));
         }
         idBalanceTextBox.setText("");
     }
@@ -179,6 +213,11 @@ public class TicketAndServicesController {
         Ids.setOnMouseClicked(mouseEvent -> {
             idBalanceLabel.textProperty().bind(Bindings.convert(identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance()));
         });
+
+        context = SpringManager.getApplicationContext();
+        registrationRepository = context.getBean(RegistrationRepository.class);
+        identificationRepository = context.getBean(IdentificationRepository.class);
+        cupboardRepository = context.getBean(CupboardRepository.class);
     }
 
     private void updateBalance(int balance)

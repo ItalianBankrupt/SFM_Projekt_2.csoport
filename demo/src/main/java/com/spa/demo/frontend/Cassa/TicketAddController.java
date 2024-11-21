@@ -120,15 +120,15 @@ public class TicketAddController {
     private int QuaryTicketStatus(String ticketType)
     {
         return switch (ticketType) {
-            case "Felnőtt élményfürdő belépő" -> personId.getAdultFelling();
-            case "Diák élményfürdő belépő" -> personId.getStudentFelling();
-            case "Nyugdijas élményfürdő belépő" -> personId.getRetiredFelling();
+            case "Felnőtt élményfürdő belépő" -> personId.getAdultFellingTicket();
+            case "Diák élményfürdő belépő" -> personId.getStudentFellingTicket();
+            case "Nyugdijas élményfürdő belépő" -> personId.getFeelingPensionerTicket();
             case "Diák belépő" -> personId.getStudentBeachTicket();
             case "Felnőtt belépő" -> personId.getAdultBeachTicket();
-            case "Nyugdíjas belépő" -> personId.getRetiredBeachTicket();
+            case "Nyugdíjas belépő" -> personId.getPensionerBeachTicket();
             case "Diák Thermal belépő" -> personId.getStudentThermalTicket();
             case "Felnőtt Thermal belépő" -> personId.getAdultThermalTicket();
-            case "Nyugdíjas Thermal belépő" -> personId.getRetiredThermalTicket();
+            case "Nyugdíjas Thermal belépő" -> personId.getPensionerThermalTicket();
             case "Aquapark belépő" -> personId.getAquaParkTicket();
             case "Prémium belépőjegy" -> personId.getPremiumTicket();
             default -> -1;
@@ -139,13 +139,13 @@ public class TicketAddController {
     {
         switch (ticketType){
             case "Felnőtt élményfürdő belépő":
-                personId.setAdultFelling(status);
+                personId.setAdultFellingTicket(status);
                 break;
             case "Diák élményfürdő belépő":
-                personId.setStudentFelling(status);
+                personId.setStudentFellingTicket(status);
                 break;
             case "Nyugdijas élményfürdő belépő":
-                personId.setRetiredFelling(status);
+                personId.setFeelingPensionerTicket(status);
                 break;
             case "Diák belépő":
                 personId.setStudentBeachTicket(status);
@@ -154,7 +154,7 @@ public class TicketAddController {
                 personId.setAdultBeachTicket(status);
                 break;
             case "Nyugdíjas belépő":
-                personId.setRetiredBeachTicket(status);
+                personId.setPensionerBeachTicket(status);
                 break;
             case "Diák Thermal belépő":
                 personId.setStudentThermalTicket(status);
@@ -163,7 +163,7 @@ public class TicketAddController {
                 personId.setAdultThermalTicket(status);
                 break;
             case "Nyugdíjas Thermal belépő":
-                personId.setRetiredThermalTicket((status));
+                personId.setPensionerThermalTicket((status));
                 break;
             case "Aquapark belépő":
                 personId.setAquaParkTicket(status);
