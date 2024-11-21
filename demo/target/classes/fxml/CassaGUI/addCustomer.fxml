@@ -27,7 +27,7 @@
       <TextField fx:id="customer_city" layoutX="145.0" layoutY="215.0" prefHeight="25.0" prefWidth="264.0" />
       <TextField fx:id="customer_street" layoutX="145.0" layoutY="251.0" prefHeight="25.0" prefWidth="237.0" />
       <Button layoutX="540.0" layoutY="377.0" mnemonicParsing="false" onAction="#nextToIdPage" prefHeight="44.0" prefWidth="170.0" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Tovább az azonosítókhoz" />
-      <RadioButton fx:id="radioButAdult" layoutX="16.0" layoutY="324.0" mnemonicParsing="false" text="Felnőtt">
+      <RadioButton fx:id="radioButAdult" layoutX="16.0" layoutY="324.0" mnemonicParsing="false" text="Felnőtt" toggleGroup="$BuyerInfo">
          <toggleGroup>
             <ToggleGroup fx:id="BuyerInfo" />
          </toggleGroup>
