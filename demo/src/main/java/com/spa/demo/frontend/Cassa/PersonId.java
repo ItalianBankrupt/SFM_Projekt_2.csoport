@@ -1,5 +1,7 @@
 package com.spa.demo.frontend.Cassa;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,7 +41,7 @@ public class PersonId
     private int Locker = 0;
 
     //Balance info
-    private int Balance = 0;
+    private IntegerProperty Balance = new SimpleIntegerProperty(0);
 
     public PersonId(String id,String buyerId)
     {

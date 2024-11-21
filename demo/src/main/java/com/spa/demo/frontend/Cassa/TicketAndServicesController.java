@@ -16,8 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -35,10 +34,19 @@ public class TicketAndServicesController {
 
     private List<PersonId> personIdList = new ArrayList<>();
     private Buyer buyer;
-    private int balance;
+    private int CheckoutBalance;
     private final IntegerProperty balanceProperty = new SimpleIntegerProperty(0);
+
+
     @FXML
-    private Label balanceLabel;
+    private Label idBalanceLabel;
+
+    @FXML
+    private TextField idBalanceTextBox;
+
+
+    @FXML
+    private Label checkoutBalanceLabel;
 
     @FXML
     private ListView<String> Ids;
@@ -61,6 +69,9 @@ public class TicketAndServicesController {
         }
     }
 
+
+
+
     private void GetTicketInfosFromServicesControll(PersonId anotherPersonId, int anotherBalance) {
         String currentPersonId = anotherPersonId.getId();
         for (PersonId personId : personIdList) {
@@ -68,8 +79,8 @@ public class TicketAndServicesController {
                 personId = anotherPersonId;
             }
         }
-        balance = balanceProperty.get() + anotherBalance;
-        balanceProperty.set(balance);
+        CheckoutBalance = balanceProperty.get() + anotherBalance;
+        balanceProperty.set(CheckoutBalance);
     }
 
     @FXML
@@ -123,6 +134,29 @@ public class TicketAndServicesController {
         }
     }
 
+    @FXML
+    void balanceAddButton(ActionEvent event) {
+        int updateMoney = Integer.parseInt(idBalanceTextBox.getText());
+        updateBalance(updateMoney);
+        idBalanceTextBox.setText("");
+    }
+
+    @FXML
+    void balanceDeleteButton(ActionEvent event) {
+        if(Integer.parseInt(idBalanceTextBox.getText())  > identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance().getValue()){
+            Alert WrongInput = new Alert(Alert.AlertType.ERROR);
+            WrongInput.setContentText("A beírt egyenleg nagyobb mint a meglévő egyenleg");
+            WrongInput.setHeaderText("Hibás egyenleg törlés!");
+            WrongInput.setTitle("Hibás egyenleg törlés");
+            WrongInput.showAndWait();
+        }
+        else{
+            updateBalance(-1*Integer.parseInt(idBalanceTextBox.getText()));
+        }
+        idBalanceTextBox.setText("");
+    }
+
+
     public void receiveBuyer(Buyer otherBuyer)
     {
         buyer = otherBuyer;
@@ -137,7 +171,30 @@ public class TicketAndServicesController {
             personIdList.add(personId);
         }
         Ids.getSelectionModel().select(0);
-        balanceLabel.textProperty().bind(Bindings.convert(balanceProperty));
+        checkoutBalanceLabel.textProperty().bind(Bindings.convert(balanceProperty));
+
+        idBalanceLabel.textProperty().bind(Bindings.convert(identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance()));
+
+
+        Ids.setOnMouseClicked(mouseEvent -> {
+            idBalanceLabel.textProperty().bind(Bindings.convert(identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance()));
+        });
+    }
+
+    private void updateBalance(int balance)
+    {
+        int currentBalance = identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance().getValue();
+        identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance().setValue(currentBalance + balance);
+    }
+
+    private PersonId identifyPerson(String id)
+    {
+        for (PersonId personId : personIdList) {
+            if (personId.getId().equals(id)) {
+                return personId;
+            }
+        }
+        return null;
     }
 
     public void GetTicketInfosFromTicketControll(PersonId anotherPersonId, int anotherBalance)
@@ -148,8 +205,8 @@ public class TicketAndServicesController {
                 personId = anotherPersonId;
             }
         }
-        balance = balanceProperty.get() + anotherBalance;
-        balanceProperty.set(balance);
+        CheckoutBalance = balanceProperty.get() + anotherBalance;
+        balanceProperty.set(CheckoutBalance);
     }
 
 }
