@@ -35,7 +35,7 @@ public class SummaryController {
         for (PersonId personId : PersonIdList)
         {
             List<String> Services = personId.listServicesInfo();
-            List<String> Tickets = personId.listTicketInfos();
+            List<String> Tickets = personId.listTicketsWithoutZeroValues();
             System.out.println(Services.toString());
             System.out.printf(Tickets.toString());
 

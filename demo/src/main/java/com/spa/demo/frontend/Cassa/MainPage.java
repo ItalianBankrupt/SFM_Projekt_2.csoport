@@ -19,7 +19,16 @@ public class MainPage {
 
     @FXML
     void newCustomer(ActionEvent event) throws IOException {
-        openScene("/fxml/CassaGUI/addCustomer.fxml", "New customer");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/AddCustomer.fxml"));
+        Parent root = loader.load();
+        AddCustomer addCustomer = loader.getController();
+        addCustomer.initialize();
+        Stage stage = new Stage();
+        stage.setTitle("Add Customer");
+        stage.setScene(new Scene(root));
+        stage.show();
+
+
     }
 
     @FXML

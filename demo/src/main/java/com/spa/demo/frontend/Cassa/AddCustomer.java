@@ -61,6 +61,45 @@ public class AddCustomer {
     Buyer buyer = new Buyer("","","","","",0);
 
 
+    public void initialize()
+    {
+        customer_post_code.textProperty().addListener(new ChangeListener<String>()
+        {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
+                boolean isDigit = true;
+                if(newValue.length() > oldValue.length())
+                {
+                    isDigit = Character.isDigit(newValue.charAt(newValue.length()-1));
+                }
+                if(newValue.length() < 5 && isDigit)
+                {
+                    customer_post_code.setText(newValue);
+                }
+                else
+                {
+                    customer_post_code.setText(oldValue);
+                }
+            }
+        });
+        customer_id.textProperty().addListener(new ChangeListener<String>()
+        {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
+                if(newValue.length() > 8)
+                {
+                    customer_id.setText(oldValue);
+                }
+                else
+                {
+                    customer_id.setText(newValue);
+                }
+            }
+        });
+    }
+
+
+
     public void SendBuyerToAddCustomer(Buyer sentBuyer)
     {
         customer_name.setText(sentBuyer.getName());

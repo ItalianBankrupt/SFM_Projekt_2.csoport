@@ -63,6 +63,7 @@ public class PersonId
         return removedList;
     }
 
+
     public List<String> listTicketInfos()
     {
         List<String> infoList = new ArrayList<String>();
@@ -77,8 +78,14 @@ public class PersonId
         infoList.add("Nyugdíjas Thermal belépő:" + getPensionerBeachTicket());
         infoList.add("Aquapark belépő:" +  getAquaParkTicket());
         infoList.add("Prémium belépőjegy:" + getPremiumTicket());
-        List<String> removedList = removeZeroValue(infoList);
-        return removedList;
+        return infoList;
+    }
+
+    public List<String> listTicketsWithoutZeroValues()
+    {
+        List<String> list = listTicketInfos();
+        List<String> removed = removeZeroValue(list);
+        return removed;
     }
 
     private List<String> removeZeroValue(List<String> list)

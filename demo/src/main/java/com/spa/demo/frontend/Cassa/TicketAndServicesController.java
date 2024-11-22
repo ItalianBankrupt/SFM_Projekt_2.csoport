@@ -84,6 +84,32 @@ public class TicketAndServicesController {
 
     @FXML
     void FinalizePurchase(ActionEvent event) {
+        List<String> wrongIds = new ArrayList<>();
+        for(PersonId personId:personIdList)
+        {
+            boolean zeroValue = true;
+            for (String tickets:personId.listTicketInfos())
+            {
+                String[] info = tickets.split(":");
+                if(!info[1].equals("0"))
+                {
+                    zeroValue = false;
+                    break;
+                }
+            }
+            if (zeroValue){wrongIds.add(personId.getId());}
+        }
+        if(!wrongIds.isEmpty())
+        {
+            Alert missingData = new Alert(Alert.AlertType.ERROR);
+            String stringOfWrongIds = String.join(", ", wrongIds);
+            missingData.setContentText("A következő id(k) nem tartalmaznak jegyeket:" +stringOfWrongIds);
+            missingData.setHeaderText("Rossz id(k)!");
+            missingData.setTitle("Rossz id");
+            missingData.showAndWait();
+            return;
+        }
+
         //----------Vásárló adatinak mentése
         Registration registration = Registration.builder()
                 .City(buyer.getCity())
