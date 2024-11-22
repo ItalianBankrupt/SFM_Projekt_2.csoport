@@ -1,5 +1,6 @@
 com\spa\demo\frontend\Cassa\ServicesAddController.class
 com\spa\demo\frontend\Cassa\SummaryController.class
+com\spa\demo\frontend\Cassa\AddCustomer$2.class
 com\spa\demo\backend\Cupboard.class
 com\spa\demo\frontend\Main.class
 com\spa\demo\frontend\Manager.class
@@ -9,6 +10,7 @@ com\spa\demo\backend\RegistrationRepository.class
 com\spa\demo\frontend\Cassa\UploadBalance.class
 com\spa\demo\SpaApplication.class
 com\spa\demo\frontend\Cassa\RemoveCustomer.class
+com\spa\demo\frontend\Cassa\AddCustomer$1.class
 com\spa\demo\frontend\Cassa\PersonId.class
 com\spa\demo\backend\IdentificationRepository.class
 com\spa\demo\backend\Services$ServicesBuilder.class
