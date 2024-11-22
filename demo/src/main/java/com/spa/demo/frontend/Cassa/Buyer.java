@@ -40,18 +40,18 @@ public class Buyer {
         {
             helperList.addAll(Ids);
             Ids.clear();
-            for (int i = 0; i < helperList.size(); i++)
-            {
-                String status = helperList.get(i).substring(0,1);
-                if(status.equals("FE"))
-                {
-                    GenerateId(1);
-                }
-                else if(status.equals("NY")){
-                    GenerateId(3);
-                }
-                else if(status.equals("DI")){
-                    GenerateId(2);
+            for (String s : helperList) {
+                String status = s.substring(0, 2);
+                switch (status) {
+                    case "FE" -> {
+                        GenerateId(1);
+                    }
+                    case "NY" -> {
+                        GenerateId(3);
+                    }
+                    case "DI" -> {
+                        GenerateId(2);
+                    }
                 }
             }
 
@@ -64,10 +64,7 @@ public class Buyer {
             }
             Ids.clear();
             GenerateId(this.Status);
-            for (int i = 0; i < helperList.size(); i++)
-            {
-                Ids.add(helperList.get(i));
-            }
+            Ids.addAll(helperList);
 
         }
     }

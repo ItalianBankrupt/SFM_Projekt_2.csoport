@@ -17,4 +17,5 @@ public class Cupboard {
     @GeneratedValue
     private int cupboardNumber;
     private int status;     // 1 - Foglalt, 0 - Nem foglalt
+    private String PersonId;
 }

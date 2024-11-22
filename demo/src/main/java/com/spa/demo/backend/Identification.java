@@ -19,21 +19,21 @@ import java.util.List;
 public class Identification {
     //----------Kapcsolat a Reg. táblával---
     @ManyToOne
-    @JoinColumn(name = "BuyerId", referencedColumnName = "GeneratedId")
+    @JoinColumn( name = "registration_GeneratedId")
     private Registration registration;
     //----------Egyedi azonosító------------
     @Id
     private String PersonId;
     //----------Jegyek----------------------
-    private int ExperienceAdultTicket;
-    private int ExperienceStudentTicket;
-    private int ExperiencePensionerTicket;
-    private int MedicalAdultTicket;
-    private int MedicalStudentTicket;
-    private int MedicalPensionerTicket;
-    private int OutsideAdultTicket;
-    private int OutsideStudentTicket;
-    private int OutsidePensionerTicket;
+    private int AdultFellingTicket;
+    private int StudentFellingTicket;
+    private int FeelingPensionerTicket;
+    private int AdultBeachTicket;
+    private int StudentBeachTicket;
+    private int PensionerBeachTicket;
+    private int AdultThermalTicket;
+    private int StudentThermalTicket;
+    private int PensionerThermalTicket;
     private int AquaParkTicket;
     private int PremiumTicket;
     //----------Szolgáltatások--------------
