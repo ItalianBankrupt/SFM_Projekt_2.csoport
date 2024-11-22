@@ -1,0 +1,93 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"94faa4e2-9401-4c54-ad14-dce7b5d83590\" name=\"Changes\" comment=\"Web .v2\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/demo/src/main/resources/static/map.jpg\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/demo/src/main/resources/static/map.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/demo/src/main/resources/templates/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/demo/src/main/resources/templates/index.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;LKristof7&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport&quot;,\r\n    &quot;accountId&quot;: &quot;9b2d5faa-b6a1-4134-ba2d-1350e8b8c383&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2p29BSOxSVzIon5WNvFROfAcZ15\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;dev__kristof&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\lorin\\Desktop\\Egyetem\\5 félév\\SFM\\Projekt\\SFM_Projekt_2.csoport\\demo\\src\\main\\resources\\static\" />\r\n      <recent name=\"C:\\Users\\lorin\\Desktop\\Egyetem\\5 félév\\SFM\\Projekt\\SFM_Projekt_2.csoport\\demo\\src\\main\\resources\\templates\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"94faa4e2-9401-4c54-ad14-dce7b5d83590\" name=\"Changes\" comment=\"\" />\r\n      <created>1731953169709</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1731953169709</updated>\r\n      <workItem from=\"1731953171442\" duration=\"2339000\" />\r\n      <workItem from=\"1731957050985\" duration=\"307000\" />\r\n      <workItem from=\"1732007204842\" duration=\"2803000\" />\r\n      <workItem from=\"1732010039890\" duration=\"402000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731953333591</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731953333591</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Guess whos back\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731954876773</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731954876773</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Web .v1\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732008099445</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732008099445</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Web .v2\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732008708095</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732008708095</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Commit\" />\r\n    <MESSAGE value=\"Guess whos back\" />\r\n    <MESSAGE value=\"Web .v1\" />\r\n    <MESSAGE value=\"Web .v2\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Web .v2\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c48d6d4d452d62ca725576b3cc334c586c39cab8)
++++ b/.idea/workspace.xml	(date 1732115560182)
+@@ -4,11 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v2">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/map.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/map.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" afterDir="false" />
+-    </list>
++    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v3" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -29,6 +25,7 @@
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="RESET_MODE" value="HARD" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+   &quot;lastFilter&quot;: {
+@@ -57,7 +54,6 @@
+     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+     &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;dev__kristof&quot;,
+     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+@@ -95,7 +91,11 @@
+       <workItem from="1731953171442" duration="2339000" />
+       <workItem from="1731957050985" duration="307000" />
+       <workItem from="1732007204842" duration="2803000" />
+-      <workItem from="1732010039890" duration="402000" />
++      <workItem from="1732010039890" duration="478000" />
++      <workItem from="1732110760171" duration="429000" />
++      <workItem from="1732114430992" duration="192000" />
++      <workItem from="1732114639377" duration="741000" />
++      <workItem from="1732115405077" duration="154000" />
+     </task>
+     <task id="LOCAL-00001" summary="Commit">
+       <option name="closed" value="true" />
+@@ -129,17 +129,37 @@
+       <option name="project" value="LOCAL" />
+       <updated>1732008708095</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="Web .v3">
++      <option name="closed" value="true" />
++      <created>1732010512452</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1732010512452</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Commit" />
+     <MESSAGE value="Guess whos back" />
+     <MESSAGE value="Web .v1" />
+     <MESSAGE value="Web .v2" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Web .v2" />
++    <MESSAGE value="Web .v3" />
++    <option name="LAST_COMMIT_MESSAGE" value="Web .v3" />
+   </component>
+ </project>
+\ No newline at end of file
