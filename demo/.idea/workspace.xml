@@ -4,16 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Working">
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Clarified persistence between Registration and Identification">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024__11__21__20_01_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024__11__21__20_01_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024__11__21__20_01__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024__11__22__9_01_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024__11__22__9_01_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024__11__22__9_01__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdb.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/ServicesAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/ServicesAddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/SummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/SummaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAddController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Cupboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Cupboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Identification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Identification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Registration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAndServicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/TicketAndServicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/ServicesAdd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/ServicesAdd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/Summary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/Summary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Cupboard$CupboardBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Cupboard$CupboardBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Cupboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Cupboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Registration$RegistrationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Registration$RegistrationBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Registration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +45,10 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="main" />
+        <entry key="$PROJECT_DIR$/.." value="dev_ati" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -62,22 +79,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev__ati&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Ati_mappa/egyetem/5.félév/msf/demo/SFM_Projekt_2.csoport/demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev__csabi",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Ati_mappa/egyetem/5.félév/msf/demo/SFM_Projekt_2.csoport/demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.appearance",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -102,6 +119,11 @@
       <workItem from="1731875221432" duration="249000" />
       <workItem from="1731875536049" duration="1478000" />
       <workItem from="1731951438318" duration="5169000" />
+      <workItem from="1732120357457" duration="670000" />
+      <workItem from="1732121287796" duration="378000" />
+      <workItem from="1732121946876" duration="77000" />
+      <workItem from="1732202457085" duration="10096000" />
+      <workItem from="1732214005232" duration="1389000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -183,11 +205,102 @@
       <option name="project" value="LOCAL" />
       <updated>1731952423344</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Working">
+      <option name="closed" value="true" />
+      <created>1731959901652</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731959901652</updated>
+    </task>
+    <task id="LOCAL-00012" summary="openSummary and FinializePurchase buttons added">
+      <option name="closed" value="true" />
+      <created>1732100053394</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732100053394</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Buyer informations save to database">
+      <option name="closed" value="true" />
+      <created>1732101357780</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732101357780</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Modified Identification class and .csv">
+      <option name="closed" value="true" />
+      <created>1732108641390</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732108641390</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Modified Identification class and .csv">
+      <option name="closed" value="true" />
+      <created>1732108789023</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732108789023</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Modified Identification">
+      <option name="closed" value="true" />
+      <created>1732110060039</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732110060039</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Clear code vol. 1">
+      <option name="closed" value="true" />
+      <created>1732111225387</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732111225387</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add and delete balance">
+      <option name="closed" value="true" />
+      <created>1732206255824</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732206255824</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add and delete balance">
+      <option name="closed" value="true" />
+      <created>1732206457426</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732206457426</updated>
+    </task>
+    <task id="LOCAL-00020" summary="bugfix in buyer class">
+      <option name="closed" value="true" />
+      <created>1732209296781</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732209296781</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working connection between database" />
@@ -200,6 +313,14 @@
     <MESSAGE value="balance label change when balance is changing" />
     <MESSAGE value="Summary added" />
     <MESSAGE value="Working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working" />
+    <MESSAGE value="openSummary and FinializePurchase buttons added" />
+    <MESSAGE value="Buyer informations save to database" />
+    <MESSAGE value="Modified Identification class and .csv" />
+    <MESSAGE value="Modified Identification" />
+    <MESSAGE value="Clear code vol. 1" />
+    <MESSAGE value="add and delete balance" />
+    <MESSAGE value="bugfix in buyer class" />
+    <MESSAGE value="Clarified persistence between Registration and Identification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clarified persistence between Registration and Identification" />
   </component>
 </project>

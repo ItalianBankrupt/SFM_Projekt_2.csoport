@@ -15,16 +15,11 @@
       <Button layoutX="280.0" layoutY="331.0" mnemonicParsing="false" onAction="#RemoveId" prefHeight="25.0" prefWidth="176.0" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Azonosító törlése" />
       <Button layoutX="280.0" layoutY="68.0" mnemonicParsing="false" onAction="#changeBuyerInfos" prefHeight="25.0" prefWidth="176.0" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Vásárló adatainak módosítása" />
       <Button layoutX="503.0" layoutY="344.0" mnemonicParsing="false" onAction="#GoToTicketsAndServices" prefHeight="27.0" prefWidth="217.0" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Tovább a jegyek/szolgáltatásokhoz" />
-      <AnchorPane layoutX="306.0" layoutY="172.0" prefHeight="133.0" prefWidth="125.0" style="-fx-background-color: #d5c990;" visible="false">
-         <children>
-            <RadioButton fx:id="radioButtonStudent" layoutX="14.0" layoutY="28.0" mnemonicParsing="false"  text="Diák" />
-            <RadioButton fx:id="radioButtonAdult" layoutX="14.0" layoutY="71.0" mnemonicParsing="false"  text="Felnőtt" />
-            <RadioButton fx:id="radioButtonRetired" layoutX="14.0" layoutY="106.0" mnemonicParsing="false" text="Nyugdíjas">
-               <toggleGroup>
-                  <ToggleGroup fx:id="StatusInfo" />
-               </toggleGroup>
-            </RadioButton>
-         </children>
-      </AnchorPane>
+      <RadioButton fx:id="StudentRadioButton" layoutX="280.0" layoutY="180.0" mnemonicParsing="false" text="Diák (6-14)">
+         <toggleGroup>
+            <ToggleGroup fx:id="StatusInfo" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="AdultRadioButton" layoutX="280.0" layoutY="211.0" mnemonicParsing="false" text="Felnőtt" toggleGroup="$StatusInfo" />
+      <RadioButton fx:id="RetiredRadioButton" layoutX="280.0" layoutY="239.0" mnemonicParsing="false" text="Nyugdíjas" toggleGroup="$StatusInfo" />
    </children>
 </AnchorPane>

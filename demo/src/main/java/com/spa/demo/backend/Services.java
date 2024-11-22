@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 public class Services {
+    //----------Jegyek és Szolgáltatások----
     @Id
     @GeneratedValue
     private long id;

@@ -14,17 +14,34 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 public class Identification {
-    @Id
-    @GeneratedValue
-    private Long id;
+    //----------Kapcsolat a Reg. táblával---
     @ManyToOne
-    @JoinColumn(name =" registration_generatedId")
+    @JoinColumn( name = "registration_GeneratedId")
     private Registration registration;
-
-    @ManyToOne
-    @JoinColumn(name = "services_id")
-    private Services services;
-
-    private int darabszam;
-    private int ticketType;
+    //----------Egyedi azonosító------------
+    @Id
+    private String PersonId;
+    //----------Jegyek----------------------
+    private int AdultFellingTicket;
+    private int StudentFellingTicket;
+    private int FeelingPensionerTicket;
+    private int AdultBeachTicket;
+    private int StudentBeachTicket;
+    private int PensionerBeachTicket;
+    private int AdultThermalTicket;
+    private int StudentThermalTicket;
+    private int PensionerThermalTicket;
+    private int AquaParkTicket;
+    private int PremiumTicket;
+    //----------Szolgáltatások--------------
+    private int Sauna;
+    private int SafeDeposit;
+    private int Lounger;
+    private int SunBed;
+    private int SunBedAtTheBeach;
+    private int Baldachin;
+    //----------Kapcsolat a Cupb. táblával--
+    @OneToOne(mappedBy = "identification", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Cupboard locker;
+    private int Money;
 }

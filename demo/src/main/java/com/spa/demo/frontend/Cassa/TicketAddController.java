@@ -120,14 +120,16 @@ public class TicketAddController {
     private int QuaryTicketStatus(String ticketType)
     {
         return switch (ticketType) {
-            case "Felnőtt élményfürdő belépő" -> personId.getAdultFelling();
-            case "Diák élményfürdő belépő" -> personId.getStudentFelling();
-            case "Gyermek belépő" -> personId.getChildTicket();
-            case "Fürdő belépő" -> personId.getBeachTicket();
-            case "Nyugdíjas belépő" -> personId.getRetiredTicket();
-            case "Diák/Gyermek belépő" -> personId.getStudentAndChildTicket();
-            case "Aquapark normal belépő" -> personId.getAquaParkNormal();
-            case "Aquapark minimal belépő" -> personId.getAquaParkMinimal();
+            case "Felnőtt élményfürdő belépő" -> personId.getAdultFellingTicket();
+            case "Diák élményfürdő belépő" -> personId.getStudentFellingTicket();
+            case "Nyugdijas élményfürdő belépő" -> personId.getFeelingPensionerTicket();
+            case "Diák belépő" -> personId.getStudentBeachTicket();
+            case "Felnőtt belépő" -> personId.getAdultBeachTicket();
+            case "Nyugdíjas belépő" -> personId.getPensionerBeachTicket();
+            case "Diák Thermal belépő" -> personId.getStudentThermalTicket();
+            case "Felnőtt Thermal belépő" -> personId.getAdultThermalTicket();
+            case "Nyugdíjas Thermal belépő" -> personId.getPensionerThermalTicket();
+            case "Aquapark belépő" -> personId.getAquaParkTicket();
             case "Prémium belépőjegy" -> personId.getPremiumTicket();
             default -> -1;
         };
@@ -137,32 +139,38 @@ public class TicketAddController {
     {
         switch (ticketType){
             case "Felnőtt élményfürdő belépő":
-                 personId.setAdultFelling(status);
-                 break;
+                personId.setAdultFellingTicket(status);
+                break;
             case "Diák élményfürdő belépő":
-                 personId.setStudentFelling(status);
-                 break;
-            case "Gyermek belépő":
-                 personId.setChildTicket(status);
-                 break;
-            case "Fürdő belépő":
-                 personId.setBeachTicket(status);
-                 break;
+                personId.setStudentFellingTicket(status);
+                break;
+            case "Nyugdijas élményfürdő belépő":
+                personId.setFeelingPensionerTicket(status);
+                break;
+            case "Diák belépő":
+                personId.setStudentBeachTicket(status);
+                break;
+            case "Felnőtt belépő":
+                personId.setAdultBeachTicket(status);
+                break;
             case "Nyugdíjas belépő":
-                 personId.setRetiredTicket(status);
-                 break;
-            case "Diák/Gyermek belépő":
-                 personId.setStudentAndChildTicket(status);
-                 break;
-            case "Aquapark normal belépő":
-                 personId.setAquaParkNormal(status);
-                 break;
-            case "Aquapark minimal belépő":
-                 personId.setAquaParkMinimal(status);
-                 break;
+                personId.setPensionerBeachTicket(status);
+                break;
+            case "Diák Thermal belépő":
+                personId.setStudentThermalTicket(status);
+                break;
+            case "Felnőtt Thermal belépő":
+                personId.setAdultThermalTicket(status);
+                break;
+            case "Nyugdíjas Thermal belépő":
+                personId.setPensionerThermalTicket((status));
+                break;
+            case "Aquapark belépő":
+                personId.setAquaParkTicket(status);
+                break;
             case "Prémium belépőjegy":
-                 personId.setPremiumTicket(status);
-                 break;
+                personId.setPremiumTicket(status);
+                break;
         }
     }
 
