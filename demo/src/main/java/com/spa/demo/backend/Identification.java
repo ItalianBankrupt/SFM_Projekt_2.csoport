@@ -7,9 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -43,5 +40,8 @@ public class Identification {
     private int SunBed;
     private int SunBedAtTheBeach;
     private int Baldachin;
-    private int Locker;
+    //----------Kapcsolat a Cupb. táblával--
+    @OneToOne(mappedBy = "identification", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Cupboard locker;
+    private int Money;
 }
