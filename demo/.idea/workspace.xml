@@ -6,26 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="MainPage, AddCustomer, IdHandler code fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/CheckID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/CheckID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/RemoveCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/RemoveCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/removeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/removeCustomer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/Buyer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/PersonId.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/SummaryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAddController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/IdHandler.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/ServicesAdd.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/Summary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/TicketAdd.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/TicketsAndServices.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/addCustomer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/removeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/removeCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="D:\Egyetem\Felevek\5.felev\Szoftverfejlesztes\Projekt\SFM_Projekt_2.csoport\demo\htmlReport" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,12 +49,12 @@
     &quot;assignee&quot;: &quot;veresattila2002&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git",
-    "accountId": "d071ed22-ca39-46c7-9caa-a999ca77e980"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git&quot;,
+    &quot;accountId&quot;: &quot;d071ed22-ca39-46c7-9caa-a999ca77e980&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" root0="SKIP_INSPECTION" />
   </component>
@@ -70,23 +69,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Ati_mappa/egyetem/5.félév/msf/demo/SFM_Projekt_2.csoport/demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.SpaApplication.executor": "Coverage",
+    "git-widget-placeholder": "dev__csabi",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Egyetem/Felevek/5.felev/Szoftverfejlesztes/Mockito",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Ati_mappa\egyetem\5.félév\msf\demo\SFM_Projekt_2.csoport\demo\src\main\resources\fxml\CassaGUI\addCustomerViews" />
@@ -372,5 +376,10 @@
     <MESSAGE value="WindowHandlerUtils added" />
     <MESSAGE value="MainPage, AddCustomer, IdHandler code fix" />
     <option name="LAST_COMMIT_MESSAGE" value="MainPage, AddCustomer, IdHandler code fix" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/demo$SpaApplication.ic" NAME="SpaApplication Coverage Results" MODIFIED="1732382987243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.spa.demo.*</FILTER>
+    </SUITE>
   </component>
 </project>

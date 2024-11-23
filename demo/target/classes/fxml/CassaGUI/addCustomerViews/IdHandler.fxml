@@ -7,7 +7,7 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #d5c990; -fx-border-color: black;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Cassa.IdHandlerController">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #d5c990; -fx-border-color: black;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Cassa.addcustomerControllers.IdHandlerController">
    <children>
       <ListView fx:id="ListOfIds" layoutX="14.0" layoutY="68.0" prefHeight="303.0" prefWidth="234.0" />
       <Label layoutX="77.0" layoutY="26.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="Azonosító(k)" />

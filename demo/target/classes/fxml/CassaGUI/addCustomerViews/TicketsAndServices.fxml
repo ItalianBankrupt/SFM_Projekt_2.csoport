@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="906.0" style="-fx-background-color: #d5c990;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Cassa.TicketAndServicesController">
+<AnchorPane prefHeight="450.0" prefWidth="906.0" style="-fx-background-color: #d5c990;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Cassa.addcustomerControllers.TicketAndServicesController">
    <children>
       <ListView fx:id="Ids" layoutX="14.0" layoutY="58.0" prefHeight="217.0" prefWidth="199.0" />
       <Button layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#addServices" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: #f1edda; -fx-border-color: black; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Szolgáltatás hozzáadás" />
