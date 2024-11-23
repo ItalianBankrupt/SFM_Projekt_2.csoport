@@ -5,7 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.List;
-import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 public class ServicesRepositoryTest {
@@ -22,8 +23,14 @@ public class ServicesRepositoryTest {
         services.setId(1);
         servicesRepository.save(services);
 
-        List<Services> found = servicesRepository.findByName("Teszt belepo");
+        List<Services> teszt = servicesRepository.findByName("Teszt belepo");
 
+        assertFalse(teszt.isEmpty(), "A találati lista nem lehet üres.");
+        assertEquals(1, teszt.size(), "Pontosan egy találatot kell kapni.");
+        Services foundService = teszt.get(0);
+        assertEquals("Teszt belepo", foundService.getName());
+        assertEquals(100, foundService.getPrice());
+        assertEquals("Belepo", foundService.getType());
     }
 
 
