@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="ServicesRepository tesztelése">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -61,10 +62,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.All in demo.executor": "Run",
+    "JUnit.All in demo.executor": "Coverage",
     "JUnit.ServicesRepositoryTest.executor": "Run",
+    "JUnit.java in demo.executor": "Run",
+    "Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report-integration].executor": "Run",
     "Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report].executor": "Run",
     "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "Maven.demo [test].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -98,7 +102,7 @@
       <recent name="com.spa.demo.frontend.Cassa.addcustomerControllers" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.java in demo">
     <configuration name="All in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <option name="PACKAGE_NAME" value="" />
@@ -107,8 +111,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in demo" />
         <item itemvalue="JUnit.All in demo" />
       </list>
     </recent_temporary>
@@ -145,7 +158,7 @@
       <workItem from="1732217113735" duration="300000" />
       <workItem from="1732300709764" duration="6691000" />
       <workItem from="1732357263157" duration="19166000" />
-      <workItem from="1732383721374" duration="1951000" />
+      <workItem from="1732383721374" duration="2807000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -379,7 +392,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732384932841</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="ServicesRepository tesztelése">
+      <option name="closed" value="true" />
+      <created>1732385766129</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732385766129</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,5 +449,6 @@
     <SUITE FILE_PATH="coverage/demo$SpaApplication.ic" NAME="SpaApplication Coverage Results" MODIFIED="1732382987243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.spa.demo.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/demo$All_in_demo.ic" NAME="All in demo Coverage Results" MODIFIED="1732385857412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
