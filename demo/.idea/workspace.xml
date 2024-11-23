@@ -6,11 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="IdentificationRepository test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Identification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Identification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/IdentificationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/IdentificationRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/RegistrationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/RegistrationRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/RestaurantRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/RestaurantRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/ServicesRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/ServicesRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/RegistrationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/RegistrationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Registration$RegistrationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Registration$RegistrationBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Registration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.SpaApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.SpaApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.IdentificationRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.IdentificationRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.RegistrationRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.RegistrationRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.RestaurantRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.RestaurantRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.ServicesRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.ServicesRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.SpaApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.SpaApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.IdentificationRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.IdentificationRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.RegistrationRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.RegistrationRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.RestaurantRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.RestaurantRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.ServicesRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.ServicesRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/spa/demo/backend/IdentificationRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/spa/demo/backend/IdentificationRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/spa/demo/backend/RegistrationRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/spa/demo/backend/RegistrationRepositoryTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,12 +85,15 @@
   "keyToString": {
     "JUnit.All in demo.executor": "Coverage",
     "JUnit.IdentificationRepositoryTest.executor": "Run",
+    "JUnit.RegistrationRepositoryTest.executor": "Run",
     "JUnit.ServicesRepositoryTest.executor": "Run",
     "JUnit.java in demo.executor": "Run",
     "Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report-integration].executor": "Run",
     "Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report].executor": "Run",
     "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "Maven.demo [test].executor": "Run",
+    "Notification.DisplayName-DoNotAsk-Database detector": "Database detector",
+    "Notification.DoNotAsk-Database detector": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -106,7 +127,7 @@
       <recent name="com.spa.demo.frontend.Cassa.addcustomerControllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServicesRepositoryTest">
+  <component name="RunManager" selected="JUnit.RegistrationRepositoryTest">
     <configuration name="All in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <option name="PACKAGE_NAME" value="" />
@@ -125,6 +146,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.spa.demo.backend" />
       <option name="MAIN_CLASS_NAME" value="com.spa.demo.backend.IdentificationRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spa.demo.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.spa.demo.backend" />
+      <option name="MAIN_CLASS_NAME" value="com.spa.demo.backend.RegistrationRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,8 +191,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServicesRepositoryTest" />
+        <item itemvalue="JUnit.RegistrationRepositoryTest" />
         <item itemvalue="JUnit.IdentificationRepositoryTest" />
+        <item itemvalue="JUnit.ServicesRepositoryTest" />
         <item itemvalue="JUnit.java in demo" />
         <item itemvalue="JUnit.All in demo" />
       </list>
@@ -195,7 +232,8 @@
       <workItem from="1732300709764" duration="6691000" />
       <workItem from="1732357263157" duration="19166000" />
       <workItem from="1732383721374" duration="2894000" />
-      <workItem from="1732386694483" duration="2529000" />
+      <workItem from="1732386694483" duration="2885000" />
+      <workItem from="1732389618957" duration="3189000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -461,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732388144628</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="IdentificationRepository test">
+      <option name="closed" value="true" />
+      <created>1732389271071</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1732389271071</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

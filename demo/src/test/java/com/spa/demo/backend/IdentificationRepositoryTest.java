@@ -13,17 +13,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 public class IdentificationRepositoryTest {
-    private ConfigurableApplicationContext context;
+    @Autowired
     private IdentificationRepository identificationRepository;
-    private RegistrationRepository registrationRepository;
 
 
     @Test
     void testSave(){
-        context = SpringManager.getApplicationContext();
-        identificationRepository = context.getBean(IdentificationRepository.class);
-        registrationRepository = context.getBean(RegistrationRepository.class);
-
         Identification identification = new Identification();
         identification.setBaldachin(1);
         identification.setLounger(1);

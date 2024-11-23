@@ -20,7 +20,7 @@ public class Identification {
     private Registration registration;
     //----------Egyedi azonosító------------
     @Id
-    private String PersonId;
+    private String personId;
     //----------Jegyek----------------------
     private int AdultFellingTicket;
     private int StudentFellingTicket;
