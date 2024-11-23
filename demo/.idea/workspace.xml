@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Modified RegistrationRepositoryTest">
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Remove Custumer from spa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/RemoveCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/RemoveCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/IdentificationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/IdentificationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/spa/demo/backend/IdentificationRepositoryTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +211,7 @@
       <workItem from="1732357263157" duration="19166000" />
       <workItem from="1732383721374" duration="2894000" />
       <workItem from="1732386694483" duration="2885000" />
-      <workItem from="1732389618957" duration="7194000" />
+      <workItem from="1732389618957" duration="7705000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -513,7 +509,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732394180978</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Remove Custumer from spa">
+      <option name="closed" value="true" />
+      <created>1732397197949</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1732397197949</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Remove Custumer from spa">
+      <option name="closed" value="true" />
+      <created>1732397526591</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1732397526591</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TicketAddController list tickets into Listview" />
     <MESSAGE value="Add tickets to Customer" />
     <MESSAGE value="addListener to balanceLabel" />
     <MESSAGE value="balance label change when balance is changing" />
@@ -556,7 +567,8 @@
     <MESSAGE value="RegistrationRepository and RestaurantRepository test" />
     <MESSAGE value="IdentificationRepository test" />
     <MESSAGE value="Modified RegistrationRepositoryTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified RegistrationRepositoryTest" />
+    <MESSAGE value="Remove Custumer from spa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Custumer from spa" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/demo$SpaApplication.ic" NAME="SpaApplication Coverage Results" MODIFIED="1732382987243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

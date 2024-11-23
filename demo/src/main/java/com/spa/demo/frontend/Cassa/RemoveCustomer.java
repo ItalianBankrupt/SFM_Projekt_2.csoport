@@ -29,12 +29,15 @@ public class RemoveCustomer {
 
     @FXML
     void removeCustomerFromTable(ActionEvent event) {
+        //karszalag sorszámánának bekérése
         String customerId = this.customerId.getText();
         if(!customerId.isEmpty())
         {
            boolean success = false;
+           //Az adatbázisban szereplők számának lekérése
            int numbers = identificationRepository.findAll().size();
             for (int i = 0; i < numbers; i++) {
+                //létező karszalagszám az adatbázisban
                 if (identificationRepository.findAll().get(i).getPersonId().equals(customerId)) {
                     success = true;
                     break;
@@ -42,6 +45,7 @@ public class RemoveCustomer {
             }
             if(success)
             {
+                //sorszám törlése az adatbázisból
                 identificationRepository.deleteByPersonId(customerId);
                 showAlert("Sikeres kiléptetés!","A vendég sikeresen kiléptetve!", AlertType.INFORMATION);
                 this.customerId.clear();
@@ -61,6 +65,7 @@ public class RemoveCustomer {
 
     public void initialize()
     {
+        //repository-k inicializálása
         context = SpringManager.getApplicationContext();
         identificationRepository = context.getBean(IdentificationRepository.class);
     }
