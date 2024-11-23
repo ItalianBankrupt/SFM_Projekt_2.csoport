@@ -15,5 +15,11 @@ public class CheckID {
 
     }
 
+    public void initialize()
+    {
+
+    }
+
+
 }
 

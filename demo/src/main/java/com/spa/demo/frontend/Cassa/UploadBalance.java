@@ -30,4 +30,10 @@ public class UploadBalance {
         cupboardRepository = context.getBean(CupboardRepository.class);
     }
 
+    public void initialize()
+    {
+
+    }
+
+
 }

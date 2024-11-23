@@ -240,9 +240,8 @@ public class AddCustomer {
             stage.show();
 
             //close this window
-            Node node = (Node) event.getSource();
-            Stage currentStage = (Stage) node.getScene().getWindow();
-            currentStage.close();
+
+
         }
     }
 

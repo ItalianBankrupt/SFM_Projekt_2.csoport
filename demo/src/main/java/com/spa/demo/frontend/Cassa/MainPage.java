@@ -1,52 +1,60 @@
 package com.spa.demo.frontend.Cassa;
 
-import javafx.application.Application;
+import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
+import javafx.scene.Node;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 public class MainPage {
 
+    private FXMLLoader loader;
+    private Node node;
+
+    //Gomb nyomására betölti a checkId-hoz tartozó fxml-t és meghívja a initalize metodusát
+    //Bezárja a MainPage scene-t is
     @FXML
     void checkId(ActionEvent event) throws IOException {
-        openScene("/fxml/CassaGUI/checkID.fxml", "Check ID");
+        node = (Node) event.getSource();
+        loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGUI/checkID.fxml");
+        CheckID checkID = loader.getController();
+        checkID.initialize();
+        WindowHandlerUtils.OpenScene(loader, "Id ellenőrzés");
     }
 
+    //Gomb nyomására betölti a newCustomer-hoz tartozó fxml-t és meghívja a initalize metodusát
+    //Bezárja a MainPage scene-t is
     @FXML
-    void newCustomer(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/AddCustomer.fxml"));
-        Parent root = loader.load();
+    void newCustomer(ActionEvent event) throws IOException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        node = (Node) event.getSource();
+        loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGUI/addCustomer.fxml");
         AddCustomer addCustomer = loader.getController();
         addCustomer.initialize();
-        Stage stage = new Stage();
-        stage.setTitle("Add Customer");
-        stage.setScene(new Scene(root));
-        stage.show();
-
-
+        WindowHandlerUtils.OpenScene(loader, "Új vásárló hozzáadása", node);
     }
 
+    //Gomb nyomására betölti a removeCustomer-hoz tartozó fxml-t és meghívja a initalize metodusát
+    //Bezárja a MainPage scene-t is
     @FXML
-    void RemoveCustomer(ActionEvent event) throws IOException{
-        openScene("/fxml/CassaGUI/removeCustomer.fxml", "Remove Customer");
+    void removeCustomer(ActionEvent event) throws IOException{
+        node = (Node) event.getSource();
+        loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGUI/removeCustomer.fxml");
+        RemoveCustomer removeCustomer = loader.getController();
+        removeCustomer.initialize();
+        WindowHandlerUtils.OpenScene(loader, "Vásárló kiléptetése");
     }
 
+    //Gomb nyomására betölti a uploadBalance-hoz tartozó fxml-t és meghívja a initalize metodusát
+    //Bezárja a MainPage scene-t is
     @FXML
     void uploadBalance(ActionEvent event) throws IOException{
-        openScene("/fxml/CassaGui/uploadBalance.fxml", "Upload balance");
+        node = (Node) event.getSource();
+        loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGui/uploadBalance.fxml");
+        UploadBalance uploadBalance = loader.getController();
+        uploadBalance.initialize();
+        WindowHandlerUtils.OpenScene(loader, "Egyenleg feltöltése");
     }
 
-    private void openScene(String url, String title) throws IOException
-    {
-        Parent root = FXMLLoader.load(getClass().getResource(url));
-        Stage stage = new Stage();
-        stage.setTitle(title);
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
 }

@@ -9,6 +9,7 @@ com\spa\demo\frontend\IndexController.class
 com\spa\demo\backend\RegistrationRepository.class
 com\spa\demo\frontend\Cassa\UploadBalance.class
 com\spa\demo\SpaApplication.class
+com\spa\demo\frontend\Cassa\Utils\WindowHandlerUtils.class
 com\spa\demo\frontend\Cassa\RemoveCustomer.class
 com\spa\demo\frontend\Cassa\AddCustomer$1.class
 com\spa\demo\frontend\Cassa\PersonId.class
