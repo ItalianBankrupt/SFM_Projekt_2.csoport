@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Modified RegistrationRepositoryTest" />
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Modified RegistrationRepositoryTest">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/RemoveCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/RemoveCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/IdentificationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/IdentificationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/spa/demo/backend/IdentificationRepositoryTest.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +65,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.All in demo.executor": "Run",
+    "JUnit.All in demo.executor": "Debug",
     "JUnit.IdentificationRepositoryTest.executor": "Run",
     "JUnit.RegistrationRepositoryTest.executor": "Run",
     "JUnit.ServicesRepositoryTest.executor": "Run",
@@ -208,7 +215,7 @@
       <workItem from="1732357263157" duration="19166000" />
       <workItem from="1732383721374" duration="2894000" />
       <workItem from="1732386694483" duration="2885000" />
-      <workItem from="1732389618957" duration="4160000" />
+      <workItem from="1732389618957" duration="7194000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -498,7 +505,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732394114410</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Modified RegistrationRepositoryTest">
+      <option name="closed" value="true" />
+      <created>1732394180978</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1732394180978</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
