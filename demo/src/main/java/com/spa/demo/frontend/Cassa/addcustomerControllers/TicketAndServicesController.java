@@ -132,7 +132,7 @@ public class TicketAndServicesController {
         //---------Azonosítók mentése-------
         for (PersonId personId : personIdList) {
             Identification identification = Identification.builder()
-                    .PersonId(personId.getId())
+                    .personId(personId.getId())
                     .AdultFellingTicket(personId.getAdultFellingTicket())
                     .StudentFellingTicket(personId.getStudentFellingTicket())
                     .AdultThermalTicket(personId.getAdultThermalTicket())
@@ -149,7 +149,7 @@ public class TicketAndServicesController {
                     .SunBed(personId.getSunBed())
                     .SunBedAtTheBeach(personId.getSunBedAtBeach())
                     .Baldachin(personId.getBaldachin())
-                    .Money(personId.getBalance().getValue())
+                    .money(personId.getBalance().getValue())
                     .registration(registration)
                     .build();
 
@@ -164,6 +164,7 @@ public class TicketAndServicesController {
                             .status(1)
                             .identification(identification)
                             .build();
+
 
                     cupboardRepository.save(cupboard);
                 }

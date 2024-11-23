@@ -1,9 +1,6 @@
 package com.spa.demo;
 
-import com.spa.demo.backend.Restaurant;
-import com.spa.demo.backend.RestaurantRepository;
-import com.spa.demo.backend.Services;
-import com.spa.demo.backend.ServicesRepository;
+import com.spa.demo.backend.*;
 import com.spa.demo.frontend.Manager;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +15,6 @@ public class SpringManager implements Manager {
     @Override
     public void startBackend() {
         context = SpringApplication.run(SpaApplication.class);
-
     }
 
     public static  ConfigurableApplicationContext getApplicationContext() {
@@ -44,5 +40,6 @@ public class SpringManager implements Manager {
         RestaurantRepository restRepo = context.getBean(RestaurantRepository.class);
         return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());
     }
+
 
 }
