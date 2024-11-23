@@ -1,13 +1,14 @@
-com\spa\demo\frontend\Cassa\ServicesAddController.class
+com\spa\demo\frontend\Cassa\addcustomerControllers\TicketAndServicesController.class
 com\spa\demo\frontend\Cassa\SummaryController.class
 com\spa\demo\backend\Cupboard.class
+com\spa\demo\frontend\Cassa\addcustomerControllers\ServicesAddController.class
 com\spa\demo\frontend\Main.class
-com\spa\demo\frontend\Cassa\IdHandlerController.class
 com\spa\demo\frontend\Manager.class
 com\spa\demo\backend\RestaurantRepository.class
 com\spa\demo\frontend\Cassa\MainPageController.class
 com\spa\demo\frontend\IndexController.class
 com\spa\demo\backend\RegistrationRepository.class
+com\spa\demo\frontend\Cassa\addcustomerControllers\IdHandlerController.class
 com\spa\demo\frontend\Cassa\UploadBalance.class
 com\spa\demo\SpaApplication.class
 com\spa\demo\frontend\Cassa\Utils\WindowHandlerUtils.class
@@ -16,6 +17,7 @@ com\spa\demo\frontend\Cassa\RemoveCustomer.class
 com\spa\demo\frontend\Cassa\PersonId.class
 com\spa\demo\backend\IdentificationRepository.class
 com\spa\demo\backend\Services$ServicesBuilder.class
+com\spa\demo\frontend\Cassa\addcustomerControllers\TicketAndServicesController$1.class
 com\spa\demo\frontend\Cassa\Utils\PopUpWindows.class
 com\spa\demo\backend\Identification$IdentificationBuilder.class
 com\spa\demo\backend\CupboardRepository.class
@@ -33,7 +35,6 @@ com\spa\demo\SpringManager.class
 com\spa\demo\frontend\Cassa\Buyer.class
 com\spa\demo\frontend\Restaurant\RestaurantUtils.class
 com\spa\demo\backend\ServicesRepository.class
-com\spa\demo\frontend\Cassa\TicketAndServicesController.class
 com\spa\demo\backend\Restaurant$RestaurantBuilder.class
 com\spa\demo\backend\Identification.class
 com\spa\demo\frontend\Cassa\addcustomerControllers\AddCustomerController.class

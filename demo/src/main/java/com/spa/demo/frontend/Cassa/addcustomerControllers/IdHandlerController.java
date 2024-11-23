@@ -1,8 +1,7 @@
 package com.spa.demo.frontend.Cassa.addcustomerControllers;
 
 import com.spa.demo.backend.RegistrationRepository;
-import com.spa.demo.frontend.Cassa.Buyer;
-import com.spa.demo.frontend.Cassa.TicketAndServicesController;
+import com.spa.demo.frontend.Cassa.Models.Buyer;
 import com.spa.demo.frontend.Cassa.Utils.JavaFxElementModifier;
 import com.spa.demo.frontend.Cassa.Utils.PopUpWindows;
 import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
@@ -130,7 +129,7 @@ public class IdHandlerController {
             return;
         }
 
-        FXMLLoader loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGUI/TicketsAndServices.fxml");
+        FXMLLoader loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGUI/addCustomerViews/TicketsAndServices.fxml");
         TicketAndServicesController ticketAndServicesController = loader.getController();
         ticketAndServicesController.receiveBuyer(buyer);
         Node node = (Node) event.getSource();

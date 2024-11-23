@@ -1,15 +1,13 @@
-package com.spa.demo.frontend.Cassa;
+package com.spa.demo.frontend.Cassa.Models;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -43,12 +41,16 @@ public class PersonId
     //Balance info
     private IntegerProperty Balance = new SimpleIntegerProperty(0);
 
+    //Konstruktor csak két paramétert vár, első paraméter az egyedi azonosító, a második pedig a vevő azonosítója
+    //A többi érték alapból 0-ra van állítva
     public PersonId(String id,String buyerId)
     {
         this.id = id;
         this.buyerId = buyerId;
     }
 
+    //Listázza a personId-hoz tartózó szolgáltatások darabszámát szolgáltatásnév:darabszám szerint egy listába, de csak azokat aminek nem 0 a darabszáma
+    //Visszatérési értéke egy lista
     public List<String> listServicesInfo()
     {
         List<String> infoList = new ArrayList<String>();
@@ -63,7 +65,8 @@ public class PersonId
         return removedList;
     }
 
-
+    //Listázza a personId-hoz tartozó jegyek darabszámát jegynév:darabszám szerint egy listába
+    //Visszatérési értéke egy lista
     public List<String> listTicketInfos()
     {
         List<String> infoList = new ArrayList<String>();
@@ -81,6 +84,7 @@ public class PersonId
         return infoList;
     }
 
+    //Nem kell paraméter, a personId-hoz tartozó jegyek egy olyan listáját adja vissza amiben csak azok a jegyek szerepelnek aminek a darabszáma nem 0
     public List<String> listTicketsWithoutZeroValues()
     {
         List<String> list = listTicketInfos();
@@ -88,6 +92,9 @@ public class PersonId
         return removed;
     }
 
+
+    //A paraméterül kapott listából kitörli azokat az értéket amiben a kettőspont után 0 érték van
+    //Visszatérési értéke a modosított lista
     private List<String> removeZeroValue(List<String> list)
     {
         List<String> newList = new ArrayList<>();

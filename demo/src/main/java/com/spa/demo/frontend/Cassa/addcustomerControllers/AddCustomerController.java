@@ -1,6 +1,6 @@
 package com.spa.demo.frontend.Cassa.addcustomerControllers;
 
-import com.spa.demo.frontend.Cassa.Buyer;
+import com.spa.demo.frontend.Cassa.Models.Buyer;
 import com.spa.demo.frontend.Cassa.Utils.JavaFxElementModifier;
 import com.spa.demo.frontend.Cassa.Utils.PopUpWindows;
 import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;

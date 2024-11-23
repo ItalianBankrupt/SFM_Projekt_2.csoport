@@ -11,4 +11,13 @@ public class PopUpWindows {
         missingData.setTitle(title);
         missingData.showAndWait();
     }
+
+    public static void InfoWindow(String contentText, String title, String headerText)
+    {
+        Alert missingData = new Alert(Alert.AlertType.INFORMATION);
+        missingData.setContentText(contentText);
+        missingData.setHeaderText(headerText);
+        missingData.setTitle(title);
+        missingData.showAndWait();
+    }
 }

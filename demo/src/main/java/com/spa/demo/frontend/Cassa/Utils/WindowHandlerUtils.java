@@ -11,7 +11,6 @@ public class WindowHandlerUtils
 {
     private static Parent root;
     private static Stage stage;
-    private static Node node;
 
     //Visszatérési értekéül egy FXMLLoader-t add ami rá van állítva a paraméterként megadott fxml-re
     //illet a Parent tipusú root-ba betölti az FXML dokumentumot
@@ -28,6 +27,15 @@ public class WindowHandlerUtils
         stage.setTitle(Title);
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    //Ha paraméterként van még egy String aminek az értéke wait akkor megnyitás után vár még a bezárásra is
+    public static void OpenScene(FXMLLoader fxmlLoader, String Title, String command) throws IOException {
+        if(!command.equals("wait")){return;}
+        stage = new Stage();
+        stage.setTitle(Title);
+        stage.setScene(new Scene(root));
+        stage.showAndWait();
     }
 
     //Ha paraméterként az FXMLLoader és title mellett kap egy Node paramétert is, akkor a metodus bezárja az adott ablakot
