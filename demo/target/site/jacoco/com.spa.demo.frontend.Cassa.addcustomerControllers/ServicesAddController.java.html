@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ServicesAddController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa.addcustomerControllers</a> &gt; <span class="el_source">ServicesAddController.java</span></div><h1>ServicesAddController.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa.addcustomerControllers;
+
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.Services;
+import com.spa.demo.backend.ServicesRepository;
+import com.spa.demo.frontend.Cassa.Models.PersonId;
+import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="nc" id="L20">public class ServicesAddController {</span>
+
+    public PersonId personId;
+<span class="nc" id="L23">    public int balance = 0;</span>
+    private ServicesRepository servicesRepository;
+
+    @FXML
+    private Label Label_Amount;
+
+    @FXML
+    private Label Label_Id;
+
+    @FXML
+    private Button deleteButton;
+
+    @FXML
+    private ListView&lt;String&gt; ServicesList;
+
+    @FXML
+    private Label amountLabel;
+
+    //personId példányba a kiválasztott szolgáltatáshoz tartozó értéket eggyel növeli
+    //Ha ez 0 volt akkor a deleteButton-t kittanthatóvá teszi
+    //Továbbá növeli a balance-értélet és megváltoztatja a label-t
+    @FXML
+    void AddServices(ActionEvent event) {
+<span class="nc" id="L46">        String serviceName = ServicesList.getSelectionModel().getSelectedItem();</span>
+<span class="nc" id="L47">        SetServiceStatus(serviceName, 1);</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        if(deleteButton.isDisable())</span>
+        {
+<span class="nc" id="L50">            deleteButton.setDisable(false);</span>
+        }
+<span class="nc" id="L52">        changeAmountLabel(QuaryServiceStatus(serviceName));</span>
+<span class="nc" id="L53">        balance += QuaryServicePrice(serviceName);</span>
+<span class="nc" id="L54">    }</span>
+
+    //gombnyomására bezárja az ablakot
+    @FXML
+    void Finalize(ActionEvent event) {
+<span class="nc" id="L59">        Node node = (Node) event.getSource();</span>
+<span class="nc" id="L60">        WindowHandlerUtils.CloseScene(node);</span>
+<span class="nc" id="L61">    }</span>
+
+    //personId példányba a kiválasztott szolgáltatáshoz tartozó értéket eggyel csökkent
+    //Ha ez 0 lesz akkor a deleteButton-t megnyomását tiltja
+    //Továbbá csökkent a balance-értélet és megváltoztatja a label-t
+    @FXML
+    void RemoveServices(ActionEvent event) {
+<span class="nc" id="L68">        String serviceName = ServicesList.getSelectionModel().getSelectedItem();</span>
+<span class="nc" id="L69">        SetServiceStatus(serviceName, -1);</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">        if(QuaryServiceStatus(serviceName) == 0)</span>
+        {
+<span class="nc" id="L72">            deleteButton.setDisable(true);</span>
+        }
+<span class="nc" id="L74">        changeAmountLabel(QuaryServiceStatus(serviceName));</span>
+<span class="nc" id="L75">        balance -= QuaryServicePrice(serviceName);</span>
+<span class="nc" id="L76">    }</span>
+
+    //Publikus metodus segitségével a TicketsAndServicesControllertől megkapja a personId példányt
+    public void getPersonIdFromTicketAndServices(PersonId AnotherpersonId) {
+<span class="nc" id="L80">        personId = AnotherpersonId;</span>
+<span class="nc" id="L81">        init();</span>
+<span class="nc" id="L82">    }</span>
+
+    //Label értékét modosítja a paraméterként megadott értékkel
+    private void changeAmountLabel(int status)
+    {
+<span class="nc" id="L87">        String base = &quot;Mennyiség:&quot;;</span>
+<span class="nc" id="L88">        Label_Amount.setText(base.concat(status + &quot;&quot;));</span>
+<span class="nc" id="L89">    }</span>
+
+    //Paraméterként megadott szolgáltatás névehez tartozó personId példányba lévő értéket adja vissza
+    //ha nincs ilyen érték -1-et ad vissza
+    private int QuaryServiceStatus(String serviceName) {
+<span class="nc bnc" id="L94" title="All 8 branches missed.">        return switch (serviceName) {</span>
+<span class="nc" id="L95">            case &quot;Szauna&quot; -&gt; personId.getSauna();</span>
+<span class="nc" id="L96">            case &quot;Értékmegőrző&quot; -&gt; personId.getSafeDeposit();</span>
+<span class="nc" id="L97">            case &quot;Pihenőágy&quot; -&gt; personId.getLounger();</span>
+<span class="nc" id="L98">            case &quot;Napozóágy&quot; -&gt; personId.getSunBed();</span>
+<span class="nc" id="L99">            case &quot;Napozóágy a tengerparton&quot; -&gt; personId.getSunBedAtBeach();</span>
+<span class="nc" id="L100">            case &quot;Baldachin a tengerparton&quot; -&gt; personId.getBaldachin();</span>
+<span class="nc" id="L101">            case &quot;Szekrény&quot; -&gt; personId.getLocker();</span>
+<span class="nc" id="L102">            default -&gt; -1;</span>
+        };
+    }
+
+    //A paraméterként megadott szolgáltatást változtatja meg a personId példányba a második paraméter alapján
+    private void SetServiceStatus(String serviceName, int UpOrDown)
+    {
+<span class="nc bnc" id="L109" title="All 8 branches missed.">        switch (serviceName)</span>
+        {
+            case &quot;Szauna&quot;:
+<span class="nc" id="L112">                personId.setSauna(personId.getSauna() + UpOrDown);</span>
+<span class="nc" id="L113">                break;</span>
+            case &quot;Értékmegőrző&quot;:
+<span class="nc" id="L115">                personId.setSafeDeposit(personId.getSafeDeposit() + UpOrDown);</span>
+<span class="nc" id="L116">                break;</span>
+            case &quot;Pihenőágy&quot;:
+<span class="nc" id="L118">                personId.setLounger(personId.getLounger() + UpOrDown);</span>
+<span class="nc" id="L119">                break;</span>
+            case &quot;Napozóágy&quot;:
+<span class="nc" id="L121">                personId.setSunBed(personId.getSunBed() + UpOrDown);</span>
+<span class="nc" id="L122">                break;</span>
+            case &quot;Napozóágy a tengerparton&quot;:
+<span class="nc" id="L124">                personId.setSunBedAtBeach(personId.getSunBedAtBeach() + UpOrDown);</span>
+<span class="nc" id="L125">                break;</span>
+            case &quot;Baldachin a tengerparton&quot;:
+<span class="nc" id="L127">                personId.setBaldachin(personId.getBaldachin() + UpOrDown);</span>
+<span class="nc" id="L128">                break;</span>
+            case &quot;Szekrény&quot;:
+<span class="nc" id="L130">                personId.setLocker(personId.getLocker() + UpOrDown);</span>
+                break;
+        }
+<span class="nc" id="L133">    }</span>
+
+    //Paraméterként megadott szolgáltatás árát adja vissza, amit a serviceRepositoryval kér le
+    private int QuaryServicePrice(String serviceName) {
+<span class="nc" id="L137">        List&lt;Services&gt; listOfEveryTicket = servicesRepository.findByType(&quot;Szolgaltatas&quot;).stream().toList();</span>
+<span class="nc bnc" id="L138" title="All 2 branches missed.">        for (Services services : listOfEveryTicket) {</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">            if (services.getName().equals(serviceName)) {</span>
+<span class="nc" id="L140">                return services.getPrice();</span>
+            }
+<span class="nc" id="L142">        }</span>
+<span class="nc" id="L143">        return 0;</span>
+    }
+
+    //Listview beállítása, labelökhöz értékek rendelése, gombok tiltása/engedélyezése
+    private void init() {
+<span class="nc" id="L148">        Label_Id.setText(personId.getId());</span>
+
+<span class="nc" id="L150">        ConfigurableApplicationContext context = SpringManager.getApplicationContext();</span>
+<span class="nc" id="L151">        servicesRepository = context.getBean(ServicesRepository.class);</span>
+        //Lekérdezi a servicesRepositoryval a szolgáltatások neveit
+<span class="nc" id="L153">        List&lt;Services&gt; ListOfSevices = servicesRepository.findByType(&quot;Szolgaltatas&quot;).stream().toList();</span>
+<span class="nc" id="L154">        List&lt;String&gt; services = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L155" title="All 2 branches missed.">        for (Services service : ListOfSevices) {</span>
+<span class="nc" id="L156">            services.add(service.getName());</span>
+<span class="nc" id="L157">        }</span>
+        //listview feltöltése a szolgáltatásokkal, első elemet kiválasztottra állítani, deleteButton tiltása
+<span class="nc" id="L159">        ServicesList.setItems(FXCollections.observableList(services));</span>
+<span class="nc" id="L160">        ServicesList.getSelectionModel().select(0);</span>
+<span class="nc" id="L161">        changeAmountLabel(QuaryServiceStatus(ServicesList.getSelectionModel().getSelectedItem()));</span>
+<span class="nc" id="L162">        deleteButton.setDisable(true);</span>
+
+        //Gombnyomásra változzon a label ami a kiválasztott szolgáltatás darabszámát tartalmazza
+<span class="nc" id="L165">        ServicesList.setOnMouseClicked(event -&gt; {</span>
+<span class="nc" id="L166">            int status = QuaryServiceStatus(ServicesList.getSelectionModel().getSelectedItem());</span>
+<span class="nc" id="L167">            changeAmountLabel(status);</span>
+<span class="nc bnc" id="L168" title="All 2 branches missed.">            if(status == 0)</span>
+            {
+<span class="nc" id="L170">                deleteButton.setDisable(true);</span>
+            }
+<span class="nc bnc" id="L172" title="All 2 branches missed.">            if(status &gt; 0)</span>
+            {
+<span class="nc" id="L174">                deleteButton.setDisable(false);</span>
+            }
+<span class="nc" id="L176">        });</span>
+<span class="nc" id="L177">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

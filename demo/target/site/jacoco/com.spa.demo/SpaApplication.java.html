@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SpaApplication.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo</a> &gt; <span class="el_source">SpaApplication.java</span></div><h1>SpaApplication.java</h1><pre class="source lang-java linenums">package com.spa.demo;
+
+import com.spa.demo.backend.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+
+@SpringBootApplication
+<span class="fc" id="L16">public class SpaApplication implements CommandLineRunner {</span>
+
+	@Autowired
+	private ServicesRepository servicesRepository;
+
+	@Autowired
+	private RestaurantRepository restaurantRepository;
+
+	public static void main(String[] args) {
+<span class="nc" id="L25">		SpringApplication.run(SpaApplication.class, args);</span>
+<span class="nc" id="L26">	}</span>
+
+	@Override
+	public void run(String... args) throws Exception {
+		//----------Szolgáltatások és jegyek beolvasása----
+<span class="fc" id="L31">		try (BufferedReader br = new BufferedReader(new FileReader(&quot;src/main/resources/csv/services.csv&quot;))) {</span>
+			String line;
+<span class="fc bfc" id="L33" title="All 2 branches covered.">			while ((line = br.readLine()) != null) {</span>
+<span class="fc" id="L34">				String[] values = line.split(&quot;,&quot;);</span>
+<span class="fc" id="L35">				String name = values[0];</span>
+<span class="fc" id="L36">				int price = Integer.parseInt(values[1]);</span>
+<span class="fc" id="L37">				String type = values[2];</span>
+<span class="fc" id="L38">				int ticketType = Integer.parseInt(values[3]);</span>
+
+<span class="fc" id="L40">				Services service = Services.builder()</span>
+<span class="fc" id="L41">						.name(name)</span>
+<span class="fc" id="L42">						.price(price)</span>
+<span class="fc" id="L43">						.type(type)</span>
+<span class="fc" id="L44">						.ticketType(ticketType)</span>
+<span class="fc" id="L45">						.build();</span>
+
+<span class="fc" id="L47">				servicesRepository.save(service);</span>
+<span class="fc" id="L48">			}</span>
+<span class="nc" id="L49">		} catch (Exception e) {</span>
+<span class="nc" id="L50">			throw new RuntimeException(&quot;Hiba történt a szolgáltatások beolvasásakor&quot;, e);</span>
+<span class="fc" id="L51">		}</span>
+		//-----------Ételek, italok és üdítők beolvasása---
+<span class="fc" id="L53">		try (BufferedReader br = new BufferedReader(new FileReader(&quot;src/main/resources/csv/restaurant.csv&quot;))) {</span>
+			String line;
+<span class="fc bfc" id="L55" title="All 2 branches covered.">			while ((line = br.readLine()) != null) {</span>
+<span class="fc" id="L56">				String[] values = line.split(&quot;,&quot;);</span>
+<span class="fc" id="L57">				String name = values[0];</span>
+<span class="fc" id="L58">				int price = Integer.parseInt(values[1]);</span>
+<span class="fc" id="L59">				String type = values[2];</span>
+
+<span class="fc" id="L61">				Restaurant restaurant = Restaurant.builder()</span>
+<span class="fc" id="L62">						.name(name)</span>
+<span class="fc" id="L63">						.price(price)</span>
+<span class="fc" id="L64">						.type(type)</span>
+<span class="fc" id="L65">						.build();</span>
+
+<span class="fc" id="L67">				restaurantRepository.save(restaurant);</span>
+<span class="fc" id="L68">			}</span>
+<span class="nc" id="L69">		} catch (Exception e) {</span>
+<span class="nc" id="L70">			throw new RuntimeException(&quot;Hiba történt a vendéglátóhelyek beolvasásakor&quot;, e);</span>
+<span class="fc" id="L71">		}</span>
+<span class="fc" id="L72">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

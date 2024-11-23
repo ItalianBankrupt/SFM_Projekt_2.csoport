@@ -1,19 +1,26 @@
 package com.spa.demo.backend;
 
 
+import com.spa.demo.SpringManager;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.context.ConfigurableApplicationContext;
+
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 public class RegistrationRepositoryTest {
-    @Autowired
+    private ConfigurableApplicationContext context;
+    private IdentificationRepository identificationRepository;
     private RegistrationRepository registrationRepository;
 
     @Test
     void testSave(){
+        context = SpringManager.getApplicationContext();
+        identificationRepository = context.getBean(IdentificationRepository.class);
+        registrationRepository = context.getBean(RegistrationRepository.class);
+
         Registration registration = Registration.builder()
                 .Name("Teszt Elek")
                 .City("Debrecen")

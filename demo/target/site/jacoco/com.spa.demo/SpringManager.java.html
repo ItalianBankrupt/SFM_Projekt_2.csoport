@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SpringManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo</a> &gt; <span class="el_source">SpringManager.java</span></div><h1>SpringManager.java</h1><pre class="source lang-java linenums">package com.spa.demo;
+
+import com.spa.demo.backend.Restaurant;
+import com.spa.demo.backend.RestaurantRepository;
+import com.spa.demo.backend.Services;
+import com.spa.demo.backend.ServicesRepository;
+import com.spa.demo.frontend.Manager;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+<span class="fc" id="L15">public class SpringManager implements Manager {</span>
+    private static ConfigurableApplicationContext context;
+
+    @Override
+    public void startBackend() {
+<span class="nc" id="L20">        context = SpringApplication.run(SpaApplication.class);</span>
+
+<span class="nc" id="L22">    }</span>
+
+    public static  ConfigurableApplicationContext getApplicationContext() {
+<span class="nc" id="L25">        return context;</span>
+    }
+
+    @Override
+    public void stopBackend() {
+<span class="nc" id="L30">        context.stop();</span>
+<span class="nc" id="L31">    }</span>
+
+    public String getItemName() {
+<span class="nc" id="L34">        ServicesRepository repo = context.getBean(ServicesRepository.class);</span>
+<span class="nc" id="L35">        return repo.findByName(&quot;Test&quot;).get(0).getName();</span>
+    }
+
+    public List&lt;String&gt; getServicesItemType(String type) {
+<span class="nc" id="L39">        ServicesRepository servRepo = context.getBean(ServicesRepository.class);</span>
+<span class="nc" id="L40">        return servRepo.findByType(type).stream().map(Services::getName).collect(Collectors.toList());</span>
+    }
+
+    public List&lt;String&gt; getRestaurantItemType(String type) {
+<span class="nc" id="L44">        RestaurantRepository restRepo = context.getBean(RestaurantRepository.class);</span>
+<span class="nc" id="L45">        return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

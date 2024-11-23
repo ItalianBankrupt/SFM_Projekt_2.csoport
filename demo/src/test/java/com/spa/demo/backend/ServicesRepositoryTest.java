@@ -21,11 +21,11 @@ public class ServicesRepositoryTest {
         services.setId(1);
         servicesRepository.save(services);
 
-        List<Services> teszt = servicesRepository.findByName("Teszt belepo");
+        List<Services> test = servicesRepository.findByName("Teszt belepo");
 
-        assertFalse(teszt.isEmpty());
-        assertEquals(1, teszt.size());
-        Services foundService = teszt.get(0);
+        assertFalse(test.isEmpty());
+        assertEquals(1, test.size());
+        Services foundService = test.get(0);
         assertEquals("Teszt belepo", foundService.getName());
         assertEquals(100, foundService.getPrice());
         assertEquals("Belepo", foundService.getType());

@@ -1,23 +1,29 @@
 package com.spa.demo.backend;
 
 
+import com.spa.demo.SpringManager;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 public class IdentificationRepositoryTest {
-    @Autowired
+    private ConfigurableApplicationContext context;
     private IdentificationRepository identificationRepository;
-    @Autowired
     private RegistrationRepository registrationRepository;
+
 
     @Test
     void testSave(){
+        context = SpringManager.getApplicationContext();
+        identificationRepository = context.getBean(IdentificationRepository.class);
+        registrationRepository = context.getBean(RegistrationRepository.class);
+
         Identification identification = new Identification();
         identification.setBaldachin(1);
         identification.setLounger(1);

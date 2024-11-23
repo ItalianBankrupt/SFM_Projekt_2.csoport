@@ -12,6 +12,7 @@ public class RestaurantRepositoryTest {
     @Autowired
     private RestaurantRepository restaurantRepository;
 
+    @Test
     void testFindByName() {
         Restaurant restaurant = Restaurant.builder()
                 .name("Alma leves")
