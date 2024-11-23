@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="jUnit Jupiter maven dependency added">
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="ServicesRepository tesztelése">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/ServicesRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/ServicesRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +61,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.All in demo.executor": "Run",
+    "JUnit.ServicesRepositoryTest.executor": "Run",
+    "Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report].executor": "Run",
     "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -77,6 +80,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.6827586",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
@@ -91,6 +97,21 @@
       <recent name="com.spa.demo.frontend.Cassa.Models" />
       <recent name="com.spa.demo.frontend.Cassa.addcustomerControllers" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="All in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in demo" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -124,7 +145,7 @@
       <workItem from="1732217113735" duration="300000" />
       <workItem from="1732300709764" duration="6691000" />
       <workItem from="1732357263157" duration="19166000" />
-      <workItem from="1732383721374" duration="1185000" />
+      <workItem from="1732383721374" duration="1951000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -350,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732384743862</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="ServicesRepository tesztelése">
+      <option name="closed" value="true" />
+      <created>1732384932841</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1732384932841</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +397,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="working connection between database" />
     <MESSAGE value="list of ids first element is not removable, could go to tickets and services with empty list of ids" />
     <MESSAGE value="idHandler sends buyer class to TicketAndServicesController" />
     <MESSAGE value="PersonId class added" />
@@ -393,7 +421,8 @@
     <MESSAGE value="Jacoco maven dependecy added" />
     <MESSAGE value="Jacoco maven plugin added" />
     <MESSAGE value="jUnit Jupiter maven dependency added" />
-    <option name="LAST_COMMIT_MESSAGE" value="jUnit Jupiter maven dependency added" />
+    <MESSAGE value="ServicesRepository tesztelése" />
+    <option name="LAST_COMMIT_MESSAGE" value="ServicesRepository tesztelése" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/demo$SpaApplication.ic" NAME="SpaApplication Coverage Results" MODIFIED="1732382987243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
