@@ -1,0 +1,36 @@
+package com.spa.demo.backend;
+
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+
+import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
+
+@DataJpaTest
+public class IdentificationRepositoryTest {
+    @Autowired
+    private IdentificationRepository identificationRepository;
+    @Autowired
+    private RegistrationRepository registrationRepository;
+
+    @Test
+    void testSave(){
+        Identification identification = new Identification();
+        identification.setBaldachin(1);
+        identification.setLounger(1);
+        identification.setMoney(1000);
+        identification.setPensionerBeachTicket(1);
+        identificationRepository.save(identification);
+
+        List<Identification> identifications = identificationRepository.findAll();
+        assertEquals(1, identifications.size());
+        Identification identification1 = identifications.get(0);
+        assertEquals(identification.getBaldachin(), identification1.getBaldachin());
+        assertEquals(identification.getLounger(), identification1.getLounger());
+        assertEquals(identification.getMoney(), identification1.getMoney());
+
+    }
+}
