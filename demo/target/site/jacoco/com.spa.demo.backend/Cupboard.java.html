@@ -6,19 +6,22 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-<span class="nc bnc" id="L9" title="All 18 branches missed.">@Data</span>
-<span class="nc" id="L10">@AllArgsConstructor</span>
-<span class="fc" id="L11">@NoArgsConstructor</span>
-<span class="nc" id="L12">@Builder</span>
+import java.util.List;
+
+<span class="nc bnc" id="L11" title="All 18 branches missed.">@Data</span>
+<span class="nc" id="L12">@AllArgsConstructor</span>
+<span class="nc" id="L13">@NoArgsConstructor</span>
+<span class="nc" id="L14">@Builder</span>
 @Entity
 public class Cupboard {
     //----------Szekrények------------------
     @Id
     @GeneratedValue
-<span class="nc" id="L18">    private int cupboardNumber;</span>
-<span class="nc" id="L19">    private int status;     // 1 - Foglalt, 0 - Nem foglalt</span>
-    @OneToOne
-    @MapsId
-<span class="nc" id="L22">    private Identification identification;</span>
+<span class="nc" id="L20">    private int cupboardNumber;</span>
+<span class="nc" id="L21">    private int status;     // 1 - Foglalt, 0 - Nem foglalt</span>
+
+    @ManyToOne
+    @JoinColumn( name = &quot;identification_personId&quot;)
+<span class="nc" id="L25">    private Identification identification;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

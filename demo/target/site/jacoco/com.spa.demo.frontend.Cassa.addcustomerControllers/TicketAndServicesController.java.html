@@ -118,7 +118,7 @@ import java.util.List;
 <span class="nc" id="L118">        Registration registration = Registration.builder()</span>
 <span class="nc" id="L119">                .City(buyer.getCity())</span>
 <span class="nc" id="L120">                .CostumerType(buyer.getStatus())</span>
-<span class="nc" id="L121">                .Name(buyer.getName())</span>
+<span class="nc" id="L121">                .name(buyer.getName())</span>
 <span class="nc" id="L122">                .IDNumber(buyer.getId())</span>
 <span class="nc" id="L123">                .PostCode(buyer.getPostCode())</span>
 <span class="nc" id="L124">                .Street(buyer.getStreet())</span>
@@ -132,7 +132,7 @@ import java.util.List;
         //---------Azonosítók mentése-------
 <span class="nc bnc" id="L133" title="All 2 branches missed.">        for (PersonId personId : personIdList) {</span>
 <span class="nc" id="L134">            Identification identification = Identification.builder()</span>
-<span class="nc" id="L135">                    .PersonId(personId.getId())</span>
+<span class="nc" id="L135">                    .personId(personId.getId())</span>
 <span class="nc" id="L136">                    .AdultFellingTicket(personId.getAdultFellingTicket())</span>
 <span class="nc" id="L137">                    .StudentFellingTicket(personId.getStudentFellingTicket())</span>
 <span class="nc" id="L138">                    .AdultThermalTicket(personId.getAdultThermalTicket())</span>

@@ -29,7 +29,7 @@ public class RegistrationRepositoryTest {
         registration.setCity(buyer.getCity());
         registration.setStreet(buyer.getStreet());
         registration.setPostCode(buyer.getPostCode());
-        registration.setGeneratedId(buyer.getId());
+        registration.setGeneratedId("FE1123123456FA2126A");
 
         registrationRepository.save(registration);
         List<Registration> registrations = registrationRepository.findByName(registration.getName());
@@ -39,6 +39,6 @@ public class RegistrationRepositoryTest {
         assertEquals("Debrecen", registrations.get(0).getCity());
         assertEquals("Laktanya utca 6", registrations.get(0).getStreet());
         assertEquals("4200", registrations.get(0).getPostCode());
-        assertEquals("123456FA", registrations.get(0).getIDNumber());
+        assertEquals("FE1123123456FA2126A", registrations.get(0).getGeneratedId());
     }
 }

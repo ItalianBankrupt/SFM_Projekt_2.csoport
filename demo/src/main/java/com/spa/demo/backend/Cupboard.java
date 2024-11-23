@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,7 +19,8 @@ public class Cupboard {
     @GeneratedValue
     private int cupboardNumber;
     private int status;     // 1 - Foglalt, 0 - Nem foglalt
-    @OneToOne
-    @MapsId
+
+    @ManyToOne
+    @JoinColumn( name = "identification_personId")
     private Identification identification;
 }
