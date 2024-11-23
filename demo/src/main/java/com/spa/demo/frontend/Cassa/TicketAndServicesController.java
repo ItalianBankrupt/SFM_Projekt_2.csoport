@@ -145,6 +145,7 @@ public class TicketAndServicesController {
                     .SunBed(personId.getSunBed())
                     .SunBedAtTheBeach(personId.getSunBedAtBeach())
                     .Baldachin(personId.getBaldachin())
+                    .Money(personId.getBalance().getValue())
                     .registration(registration)
                     .build();
 
