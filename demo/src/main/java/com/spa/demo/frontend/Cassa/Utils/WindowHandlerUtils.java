@@ -46,4 +46,9 @@ public class WindowHandlerUtils
         currentStage.close();
     }
 
+    public static void BackToCassaMainPage(Node node) throws IOException {
+        FXMLLoader loader = getFXMLoader("/fxml/CassaGUI/MainPage.fxml");
+        OpenScene(loader, "CassaGUI", node);
+    }
+
 }
