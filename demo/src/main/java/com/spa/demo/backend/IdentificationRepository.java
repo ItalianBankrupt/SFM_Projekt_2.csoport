@@ -9,8 +9,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IdentificationRepository extends JpaRepository<Identification, String> {
-    @Transactional
-    @Modifying
-    @Query("update Identification  i set i.money = :money where i.PersonId = :personID")
-    int updateMoneyForPerson(int money, String personId);
+
 }
