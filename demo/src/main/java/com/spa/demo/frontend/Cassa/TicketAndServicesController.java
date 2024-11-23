@@ -119,11 +119,13 @@ public class TicketAndServicesController {
                 .PostCode(buyer.getPostCode())
                 .Street(buyer.getStreet())
                 .GeneratedId(personIdList.get(0).getId())
+                .identifications(new ArrayList<>())
                 .build();
+
         registrationRepository.save(registration);
         //----------------------------------
 
-        //---------Azonosítók mentése
+        //---------Azonosítók mentése-------
         for (PersonId personId : personIdList) {
             Identification identification = Identification.builder()
                     .PersonId(personId.getId())
@@ -143,15 +145,21 @@ public class TicketAndServicesController {
                     .SunBed(personId.getSunBed())
                     .SunBedAtTheBeach(personId.getSunBedAtBeach())
                     .Baldachin(personId.getBaldachin())
-                    .Locker(personId.getLocker()).build();
+                    .registration(registration)
+                    .build();
+
+            registration.getIdentifications().add(identification);
             identificationRepository.save(identification);
+            //----------Szekrények személyhez rendelése------
             if(personId.getLocker() != 0)
             {
                 for (int i = 0; i < personId.getLocker(); i++)
                 {
                     Cupboard cupboard = Cupboard.builder()
                             .status(1)
-                            .PersonId(personId.getId()).build();
+                            .identification(identification)
+                            .build();
+
                     cupboardRepository.save(cupboard);
                 }
             }
