@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="ServicesRepository tesztelése">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/RegistrationRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/RestaurantRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/RegistrationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/RegistrationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/ServicesRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/ServicesRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/AddCustomer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/AddCustomer$2.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,37 +64,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.All in demo.executor": "Coverage",
-    "JUnit.ServicesRepositoryTest.executor": "Run",
-    "JUnit.java in demo.executor": "Run",
-    "Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report-integration].executor": "Run",
-    "Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report].executor": "Run",
-    "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
-    "Maven.demo [test].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.SpaApplication.executor": "Coverage",
-    "git-widget-placeholder": "dev__csabi",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Egyetem/Felevek/5.felev/Szoftverfejlesztes/Projekt/SFM_Projekt_2.csoport/demo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.6827586",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in demo.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ServicesRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in demo.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report-integration].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [test].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SpaApplication.executor&quot;: &quot;Coverage&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev__csabi&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Egyetem/Felevek/5.felev/Szoftverfejlesztes/Projekt/SFM_Projekt_2.csoport/demo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.6827586&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Ati_mappa\egyetem\5.félév\msf\demo\SFM_Projekt_2.csoport\demo\src\main\resources\fxml\CassaGUI\addCustomerViews" />
@@ -158,7 +162,8 @@
       <workItem from="1732217113735" duration="300000" />
       <workItem from="1732300709764" duration="6691000" />
       <workItem from="1732357263157" duration="19166000" />
-      <workItem from="1732383721374" duration="2807000" />
+      <workItem from="1732383721374" duration="2894000" />
+      <workItem from="1732386694483" duration="993000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -400,7 +405,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732385766129</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="ServicesRepository tesztelése">
+      <option name="closed" value="true" />
+      <created>1732386604724</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1732386604724</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
