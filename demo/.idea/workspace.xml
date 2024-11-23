@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Jacoco maven dependecy added">
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Jacoco maven plugin added">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/backend/ServicesRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/ServicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/ServicesRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +126,7 @@
       <workItem from="1732217113735" duration="300000" />
       <workItem from="1732300709764" duration="6691000" />
       <workItem from="1732357263157" duration="19166000" />
-      <workItem from="1732383721374" duration="68000" />
+      <workItem from="1732383721374" duration="993000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -334,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732383682401</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Jacoco maven plugin added">
+      <option name="closed" value="true" />
+      <created>1732383809099</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732383809099</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +385,8 @@
     <MESSAGE value="WindowHandlerUtils added" />
     <MESSAGE value="MainPage, AddCustomer, IdHandler code fix" />
     <MESSAGE value="Jacoco maven dependecy added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jacoco maven dependecy added" />
+    <MESSAGE value="Jacoco maven plugin added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jacoco maven plugin added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/demo$SpaApplication.ic" NAME="SpaApplication Coverage Results" MODIFIED="1732382987243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
