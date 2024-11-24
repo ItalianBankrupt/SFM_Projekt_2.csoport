@@ -24,14 +24,12 @@ import java.util.List;
 
 public class TicketAndServicesController {
 
-    private ConfigurableApplicationContext context;
     private RegistrationRepository registrationRepository;
     private IdentificationRepository identificationRepository;
     private CupboardRepository cupboardRepository;
 
-    private List<PersonId> personIdList = new ArrayList<>();
+    private final List<PersonId> personIdList = new ArrayList<>();
     private Buyer buyer;
-    private int CheckoutBalance;
     private final IntegerProperty balanceProperty = new SimpleIntegerProperty(0);
 
 
@@ -80,15 +78,15 @@ public class TicketAndServicesController {
                 personId = anotherPersonId;
             }
         }
-        CheckoutBalance = balanceProperty.get() + anotherBalance;
-        balanceProperty.set(CheckoutBalance);
+        int checkoutBalance = balanceProperty.get() + anotherBalance;
+        balanceProperty.set(checkoutBalance);
     }
 
     //Gombnyomás után ellenörzi hogy az összes Id-hoz van e rendelve jegy, ha nem alert-et dob
     //Ha van akkor a buyer példány adatait feltölti a Registration táblába, a personId példányokat az Identification táblába a szekrényadatokat meg a CupBoard táblába
     //Info alert-tel jelzi a sikeres feltöltést
     @FXML
-    void FinalizePurchase(ActionEvent event) {
+    void FinalizePurchase(ActionEvent event) throws IOException {
         List<String> wrongIds = new ArrayList<>();
         for(PersonId personId:personIdList)
         {
@@ -106,7 +104,6 @@ public class TicketAndServicesController {
         }
         if(!wrongIds.isEmpty())
         {
-            String stringOfWrongIds = String.join(", ", wrongIds);
             String contentText ="A következő id(k) nem tartalmaznak jegyeket:" + String.join(", ",wrongIds);
             String headerText = "Rossz id(k)!";
             String title = "Rossz id";
@@ -118,7 +115,7 @@ public class TicketAndServicesController {
         Registration registration = Registration.builder()
                 .City(buyer.getCity())
                 .CostumerType(buyer.getStatus())
-                .Name(buyer.getName())
+                .name(buyer.getName())
                 .IDNumber(buyer.getId())
                 .PostCode(buyer.getPostCode())
                 .Street(buyer.getStreet())
@@ -132,7 +129,7 @@ public class TicketAndServicesController {
         //---------Azonosítók mentése-------
         for (PersonId personId : personIdList) {
             Identification identification = Identification.builder()
-                    .PersonId(personId.getId())
+                    .personId(personId.getId())
                     .AdultFellingTicket(personId.getAdultFellingTicket())
                     .StudentFellingTicket(personId.getStudentFellingTicket())
                     .AdultThermalTicket(personId.getAdultThermalTicket())
@@ -149,7 +146,7 @@ public class TicketAndServicesController {
                     .SunBed(personId.getSunBed())
                     .SunBedAtTheBeach(personId.getSunBedAtBeach())
                     .Baldachin(personId.getBaldachin())
-                    .Money(personId.getBalance().getValue())
+                    .money(personId.getBalance().getValue())
                     .registration(registration)
                     .build();
 
@@ -165,6 +162,7 @@ public class TicketAndServicesController {
                             .identification(identification)
                             .build();
 
+
                     cupboardRepository.save(cupboard);
                 }
             }
@@ -173,7 +171,7 @@ public class TicketAndServicesController {
         String headerText = "Sikeres vásárlás";
         PopUpWindows.InfoWindow(contentText,headerText,headerText);
         Node node = (Node) event.getSource();
-        WindowHandlerUtils.CloseScene(node);
+        WindowHandlerUtils.BackToCassaMainPage(node);
     }
 
     //Gomb megnyomására megnyit egy ablakot ami a summary.fxml ad, és a SummaryController publikus metodusának átküldi a personId példányokat
@@ -298,7 +296,7 @@ public class TicketAndServicesController {
         });
 
         //repository-k inicializálása
-        context = SpringManager.getApplicationContext();
+        ConfigurableApplicationContext context = SpringManager.getApplicationContext();
         registrationRepository = context.getBean(RegistrationRepository.class);
         identificationRepository = context.getBean(IdentificationRepository.class);
         cupboardRepository = context.getBean(CupboardRepository.class);
