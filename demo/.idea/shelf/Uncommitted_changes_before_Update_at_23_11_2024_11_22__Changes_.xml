@@ -1,0 +1,32 @@
+<changelist name="Uncommitted_changes_before_Update_at_23_11_2024_11_22_[Changes]" date="1732357369345" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2024_11_22_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 23/11/2024 11:22 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" />
+    <option name="AFTER_PATH" value="target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2024_11_22_[Changes]/TicketAndServicesController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" />
+    <option name="AFTER_PATH" value="target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2024_11_22_[Changes]/Identification$IdentificationBuilder.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/backend/Cupboard$CupboardBuilder.class" />
+    <option name="AFTER_PATH" value="target/classes/com/spa/demo/backend/Cupboard$CupboardBuilder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2024_11_22_[Changes]/Cupboard$CupboardBuilder.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/frontend/Cassa/StatusDeciderController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/backend/Cupboard.class" />
+    <option name="AFTER_PATH" value="target/classes/com/spa/demo/backend/Cupboard.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2024_11_22_[Changes]/Cupboard.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/backend/Identification.class" />
+    <option name="AFTER_PATH" value="target/classes/com/spa/demo/backend/Identification.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_2024_11_22_[Changes]/Identification.class" />
+  </binary>
+</changelist>
