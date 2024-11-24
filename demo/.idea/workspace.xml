@@ -4,30 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="MainPage, AddCustomer, IdHandler code fix">
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="UpdateBalance">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/SpringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/SpringManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Cupboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Cupboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Identification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/Identification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/CheckID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/CheckID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/Models/PersonId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/Models/PersonId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/SpringManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/SpringManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Cupboard$CupboardBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Cupboard$CupboardBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Cupboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Cupboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/Identification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/IdentificationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/IdentificationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/removeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/removeCustomer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +40,12 @@
     &quot;assignee&quot;: &quot;veresattila2002&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git",
-    "accountId": "7024f4e8-b639-4c2d-a2e8-a40482eda1c1"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git&quot;,
+    &quot;accountId&quot;: &quot;7024f4e8-b639-4c2d-a2e8-a40482eda1c1&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" root0="SKIP_INSPECTION" />
   </component>
@@ -137,7 +120,9 @@
       <workItem from="1732217113735" duration="300000" />
       <workItem from="1732300709764" duration="6691000" />
       <workItem from="1732357263157" duration="19166000" />
-      <workItem from="1732400078355" duration="322000" />
+      <workItem from="1732400078355" duration="378000" />
+      <workItem from="1732400485814" duration="16000" />
+      <workItem from="1732440673070" duration="4860000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -339,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732369920554</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="UpdateBalance">
+      <option name="closed" value="true" />
+      <created>1732400453864</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1732400453864</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +372,7 @@
     <MESSAGE value="money added to database" />
     <MESSAGE value="WindowHandlerUtils added" />
     <MESSAGE value="MainPage, AddCustomer, IdHandler code fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="MainPage, AddCustomer, IdHandler code fix" />
+    <MESSAGE value="UpdateBalance" />
+    <option name="LAST_COMMIT_MESSAGE" value="UpdateBalance" />
   </component>
 </project>

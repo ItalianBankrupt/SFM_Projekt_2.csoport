@@ -52,19 +52,31 @@ public class UploadBalance {
             }
         }
         else{
-            Identification searchedIdentification = new Identification();
+            Identification searchedIdentification = null;
             List<Identification> identifications = identificationRepository.findAll();
             for (Identification identification : identifications) {
                 if(identification.getPersonId().equals(TextField_Id.getText())){
                     searchedIdentification = identification;
                 }
             }
-            searchedIdentification.setMoney(Integer.parseInt(TextField_Balance.getText()) + searchedIdentification.getMoney());
-            identificationRepository.updateByPersonId(searchedIdentification.getPersonId(), searchedIdentification.getMoney());
-            String contentText = "Sikeres módosítás!\nA " + searchedIdentification.getPersonId() + "-hoz tartozó új egyenleg: "+ searchedIdentification.getMoney();
-            String headerText = "Sikeres feltöltés";
-            String title = "Sikeres";
-            PopUpWindows.InfoWindow(contentText, headerText, title);
+            if(searchedIdentification != null){
+                searchedIdentification.setMoney(Integer.parseInt(TextField_Balance.getText()) + searchedIdentification.getMoney());
+                identificationRepository.updateByPersonId(searchedIdentification.getPersonId(), searchedIdentification.getMoney());
+                TextField_Balance.textProperty().set("");
+                String contentText = "Sikeres módosítás!\nA " + searchedIdentification.getPersonId() + "-hoz tartozó új egyenleg: "+ searchedIdentification.getMoney();
+                String headerText = "Sikeres feltöltés";
+                String title = "Sikeres";
+                PopUpWindows.InfoWindow(contentText, headerText, title);
+            }
+            else
+            {
+                TextField_Balance.textProperty().set("");
+                TextField_Id.textProperty().set("");
+                String contentText = "Nincs ilyen azonosító";
+                String headerText = "Hibás azonosító";
+                String title = "Hiba";
+                PopUpWindows.AlertWindow(contentText, headerText, title);
+            }
         }
 
     }
@@ -101,7 +113,6 @@ public class UploadBalance {
         ListView_ids.setItems(ids);
 
         TextField_Balance.textProperty().addListener((observable, oldValue, newValue) -> {
-            filter();
             if(newValue.length() > oldValue.length())
             {
                 if(Character.isDigit(newValue.charAt(newValue.length() - 1))) {
@@ -114,6 +125,10 @@ public class UploadBalance {
 
 
         });
+
+        TextField_Id.textProperty().addListener((observableValue, oldValue, newValue) -> {
+            filter();
+        }  );
 
         ListView_ids.setOnMouseClicked(event -> {
             TextField_Id.setText(ListView_ids.getSelectionModel().getSelectedItem());
