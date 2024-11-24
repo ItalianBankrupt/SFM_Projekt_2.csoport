@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="UpdateBalance">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/SpringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/SpringManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/CheckID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/CheckID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/Models/PersonId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/Models/PersonId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" afterDir="false" />
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Check_id added">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/SpringManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/SpringManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,7 @@
       <workItem from="1732357263157" duration="19166000" />
       <workItem from="1732400078355" duration="378000" />
       <workItem from="1732400485814" duration="16000" />
-      <workItem from="1732440673070" duration="4860000" />
+      <workItem from="1732440673070" duration="5163000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -332,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732400453864</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Check_id added">
+      <option name="closed" value="true" />
+      <created>1732445976891</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732445976891</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,6 +379,7 @@
     <MESSAGE value="WindowHandlerUtils added" />
     <MESSAGE value="MainPage, AddCustomer, IdHandler code fix" />
     <MESSAGE value="UpdateBalance" />
-    <option name="LAST_COMMIT_MESSAGE" value="UpdateBalance" />
+    <MESSAGE value="Check_id added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check_id added" />
   </component>
 </project>

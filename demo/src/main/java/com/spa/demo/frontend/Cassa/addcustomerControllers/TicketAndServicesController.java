@@ -88,7 +88,7 @@ public class TicketAndServicesController {
     //Ha van akkor a buyer példány adatait feltölti a Registration táblába, a personId példányokat az Identification táblába a szekrényadatokat meg a CupBoard táblába
     //Info alert-tel jelzi a sikeres feltöltést
     @FXML
-    void FinalizePurchase(ActionEvent event) {
+    void FinalizePurchase(ActionEvent event) throws IOException {
         List<String> wrongIds = new ArrayList<>();
         for(PersonId personId:personIdList)
         {
@@ -174,7 +174,7 @@ public class TicketAndServicesController {
         String headerText = "Sikeres vásárlás";
         PopUpWindows.InfoWindow(contentText,headerText,headerText);
         Node node = (Node) event.getSource();
-        WindowHandlerUtils.CloseScene(node);
+        WindowHandlerUtils.BackToCassaMainPage(node);
     }
 
     //Gomb megnyomására megnyit egy ablakot ami a summary.fxml ad, és a SummaryController publikus metodusának átküldi a personId példányokat
