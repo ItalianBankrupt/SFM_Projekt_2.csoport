@@ -24,14 +24,12 @@ import java.util.List;
 
 public class TicketAndServicesController {
 
-    private ConfigurableApplicationContext context;
     private RegistrationRepository registrationRepository;
     private IdentificationRepository identificationRepository;
     private CupboardRepository cupboardRepository;
 
-    private List<PersonId> personIdList = new ArrayList<>();
+    private final List<PersonId> personIdList = new ArrayList<>();
     private Buyer buyer;
-    private int CheckoutBalance;
     private final IntegerProperty balanceProperty = new SimpleIntegerProperty(0);
 
 
@@ -80,8 +78,8 @@ public class TicketAndServicesController {
                 personId = anotherPersonId;
             }
         }
-        CheckoutBalance = balanceProperty.get() + anotherBalance;
-        balanceProperty.set(CheckoutBalance);
+        int checkoutBalance = balanceProperty.get() + anotherBalance;
+        balanceProperty.set(checkoutBalance);
     }
 
     //Gombnyomás után ellenörzi hogy az összes Id-hoz van e rendelve jegy, ha nem alert-et dob
@@ -106,7 +104,6 @@ public class TicketAndServicesController {
         }
         if(!wrongIds.isEmpty())
         {
-            String stringOfWrongIds = String.join(", ", wrongIds);
             String contentText ="A következő id(k) nem tartalmaznak jegyeket:" + String.join(", ",wrongIds);
             String headerText = "Rossz id(k)!";
             String title = "Rossz id";
@@ -299,7 +296,7 @@ public class TicketAndServicesController {
         });
 
         //repository-k inicializálása
-        context = SpringManager.getApplicationContext();
+        ConfigurableApplicationContext context = SpringManager.getApplicationContext();
         registrationRepository = context.getBean(RegistrationRepository.class);
         identificationRepository = context.getBean(IdentificationRepository.class);
         cupboardRepository = context.getBean(CupboardRepository.class);
