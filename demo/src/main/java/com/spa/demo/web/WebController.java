@@ -24,7 +24,9 @@ public class WebController {
     public String showHomePage(Model model){
         List<Identification> identificationList=identificationRepository.findAll();
         model.addAttribute("identificationList", identificationList);
+        System.out.println("Identifications: " + identificationList);
         return "index";
+
     }
 
     @GetMapping("/services")

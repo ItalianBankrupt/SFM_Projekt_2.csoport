@@ -4,36 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v4?">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/web/IdentificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v5?">
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/static/js/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/SpringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/SpringManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/backend/IdentificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/backend/IdentificationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/web/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/SpringManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/SpringManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/backend/Identification$IdentificationBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/backend/Identification.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/backend/Identification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/StatusDeciderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/TicketAndServicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/backend/IdentificationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/backend/IdentificationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/web/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/web/WebController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/csv/restaurant.csv" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/csv/restaurant.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/MainPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/TicketAdd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/TicketAdd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/checkID.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/removeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/removeCustomer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/statusDecider.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/identification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/identification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/temporary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/temporary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -82,35 +62,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SpaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev__kristof&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lorin/Downloads/bootstrap_cs12-main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.SpaApplication.executor": "Run",
+    "git-widget-placeholder": "dev__kristof",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lorin/Desktop/Egyetem/5 félév/SFM/Projekt/SFM_Projekt_2.csoport/demo/src/main/resources/templates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\static" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\static\js" />
+      <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\templates" />
+      <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\static" />
     </key>
   </component>
   <component name="RunManager">
@@ -153,7 +137,8 @@
       <workItem from="1732293993647" duration="5616000" />
       <workItem from="1732300614258" duration="181000" />
       <workItem from="1732307584572" duration="5135000" />
-      <workItem from="1732457266653" duration="607000" />
+      <workItem from="1732457266653" duration="1014000" />
+      <workItem from="1732458311788" duration="6400000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -211,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732284356299</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Web .v5?">
+      <option name="closed" value="true" />
+      <created>1732457931884</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732457931884</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +216,8 @@
     <MESSAGE value="Web .v1" />
     <MESSAGE value="Web .v2" />
     <MESSAGE value="Web .v4?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Web .v4?" />
+    <MESSAGE value="Web .v5?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web .v5?" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
