@@ -19,7 +19,7 @@ public class Registration {
     @Id
     private String GeneratedId;
     private String IDNumber;
-    private String Name;
+    private String name;
     private String City;
     private String Street;
     private String PostCode;

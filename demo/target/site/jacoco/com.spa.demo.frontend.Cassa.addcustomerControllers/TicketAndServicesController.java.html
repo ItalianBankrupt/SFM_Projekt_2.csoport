@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TicketAndServicesController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa.addcustomerControllers</a> &gt; <span class="el_source">TicketAndServicesController.java</span></div><h1>TicketAndServicesController.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa.addcustomerControllers;
+
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.*;
+import com.spa.demo.frontend.Cassa.Models.Buyer;
+import com.spa.demo.frontend.Cassa.Models.PersonId;
+import com.spa.demo.frontend.Cassa.Utils.PopUpWindows;
+import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="nc" id="L25">public class TicketAndServicesController {</span>
+
+    private ConfigurableApplicationContext context;
+    private RegistrationRepository registrationRepository;
+    private IdentificationRepository identificationRepository;
+    private CupboardRepository cupboardRepository;
+
+<span class="nc" id="L32">    private List&lt;PersonId&gt; personIdList = new ArrayList&lt;&gt;();</span>
+    private Buyer buyer;
+    private int CheckoutBalance;
+<span class="nc" id="L35">    private final IntegerProperty balanceProperty = new SimpleIntegerProperty(0);</span>
+
+
+    @FXML
+    private Label Label_CheckOut;
+
+    @FXML
+    private Label Label_balance;
+
+    @FXML
+    private TextField TextField_IdBalance;
+
+    @FXML
+    private ListView&lt;String&gt; Ids;
+
+    Node node;
+
+    //Bezárja azt az ablakot és visszatölti a MainPage-et
+    @FXML
+    void backToMainPage(ActionEvent event) throws IOException {
+<span class="nc" id="L55">        node = (Node) event.getSource();</span>
+<span class="nc" id="L56">        WindowHandlerUtils.BackToCassaMainPage(node);</span>
+<span class="nc" id="L57">    }</span>
+
+    //A kiválasztott azonosítóhoz tartózó PersonId példányt átküldi a ServicesAddController-nek és megnyitja az ehhez tartozó ablakot
+    //Miután az be lesz zárva, beolvassa a servicessAddContorller personId példányát és összegét és meghívja a GetTicketInfosFromServicesControll metodust.
+    @FXML
+    void addServices(ActionEvent event) throws IOException {
+<span class="nc" id="L63">        String selectedId = Ids.getSelectionModel().getSelectedItem();</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">        for (PersonId personId : personIdList) {</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">            if (personId.getId().equals(selectedId)) {</span>
+<span class="nc" id="L66">                FXMLLoader loader = WindowHandlerUtils.getFXMLoader(&quot;/fxml/CassaGUI/addCustomerViews/ServicesAdd.fxml&quot;);</span>
+<span class="nc" id="L67">                ServicesAddController servicesAddController = loader.getController();</span>
+<span class="nc" id="L68">                servicesAddController.getPersonIdFromTicketAndServices(personId);</span>
+<span class="nc" id="L69">                WindowHandlerUtils.OpenScene(loader,&quot;Jegy hozzáadása&quot;, &quot;wait&quot;);</span>
+<span class="nc" id="L70">                GetTicketInfosAdd(servicesAddController.personId, servicesAddController.balance);</span>
+            }
+<span class="nc" id="L72">        }</span>
+<span class="nc" id="L73">    }</span>
+
+    //Modosítja azt a PersonId példányt aminek az id-ja megegyezik a paraméterként kapott példány id-jával és modosítja a balance propertyt.
+    private void GetTicketInfosAdd(PersonId anotherPersonId, int anotherBalance) {
+<span class="nc" id="L77">        String currentPersonId = anotherPersonId.getId();</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">        for (PersonId personId : personIdList) {</span>
+<span class="nc bnc" id="L79" title="All 2 branches missed.">            if (personId.getId().equals(currentPersonId)) {</span>
+<span class="nc" id="L80">                personId = anotherPersonId;</span>
+            }
+<span class="nc" id="L82">        }</span>
+<span class="nc" id="L83">        CheckoutBalance = balanceProperty.get() + anotherBalance;</span>
+<span class="nc" id="L84">        balanceProperty.set(CheckoutBalance);</span>
+<span class="nc" id="L85">    }</span>
+
+    //Gombnyomás után ellenörzi hogy az összes Id-hoz van e rendelve jegy, ha nem alert-et dob
+    //Ha van akkor a buyer példány adatait feltölti a Registration táblába, a personId példányokat az Identification táblába a szekrényadatokat meg a CupBoard táblába
+    //Info alert-tel jelzi a sikeres feltöltést
+    @FXML
+    void FinalizePurchase(ActionEvent event) {
+<span class="nc" id="L92">        List&lt;String&gt; wrongIds = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L93" title="All 2 branches missed.">        for(PersonId personId:personIdList)</span>
+        {
+<span class="nc" id="L95">            boolean zeroValue = true;</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">            for (String tickets:personId.listTicketInfos())</span>
+            {
+<span class="nc" id="L98">                String[] info = tickets.split(&quot;:&quot;);</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">                if(!info[1].equals(&quot;0&quot;))</span>
+                {
+<span class="nc" id="L101">                    zeroValue = false;</span>
+<span class="nc" id="L102">                    break;</span>
+                }
+<span class="nc" id="L104">            }</span>
+<span class="nc bnc" id="L105" title="All 2 branches missed.">            if (zeroValue){wrongIds.add(personId.getId());}</span>
+<span class="nc" id="L106">        }</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">        if(!wrongIds.isEmpty())</span>
+        {
+<span class="nc" id="L109">            String stringOfWrongIds = String.join(&quot;, &quot;, wrongIds);</span>
+<span class="nc" id="L110">            String contentText =&quot;A következő id(k) nem tartalmaznak jegyeket:&quot; + String.join(&quot;, &quot;,wrongIds);</span>
+<span class="nc" id="L111">            String headerText = &quot;Rossz id(k)!&quot;;</span>
+<span class="nc" id="L112">            String title = &quot;Rossz id&quot;;</span>
+<span class="nc" id="L113">            PopUpWindows.AlertWindow(contentText,headerText,title);</span>
+<span class="nc" id="L114">            return;</span>
+        }
+
+        //----------Vásárló adatinak mentése
+<span class="nc" id="L118">        Registration registration = Registration.builder()</span>
+<span class="nc" id="L119">                .City(buyer.getCity())</span>
+<span class="nc" id="L120">                .CostumerType(buyer.getStatus())</span>
+<span class="nc" id="L121">                .name(buyer.getName())</span>
+<span class="nc" id="L122">                .IDNumber(buyer.getId())</span>
+<span class="nc" id="L123">                .PostCode(buyer.getPostCode())</span>
+<span class="nc" id="L124">                .Street(buyer.getStreet())</span>
+<span class="nc" id="L125">                .GeneratedId(personIdList.get(0).getId())</span>
+<span class="nc" id="L126">                .identifications(new ArrayList&lt;&gt;())</span>
+<span class="nc" id="L127">                .build();</span>
+
+<span class="nc" id="L129">        registrationRepository.save(registration);</span>
+        //----------------------------------
+
+        //---------Azonosítók mentése-------
+<span class="nc bnc" id="L133" title="All 2 branches missed.">        for (PersonId personId : personIdList) {</span>
+<span class="nc" id="L134">            Identification identification = Identification.builder()</span>
+<span class="nc" id="L135">                    .personId(personId.getId())</span>
+<span class="nc" id="L136">                    .AdultFellingTicket(personId.getAdultFellingTicket())</span>
+<span class="nc" id="L137">                    .StudentFellingTicket(personId.getStudentFellingTicket())</span>
+<span class="nc" id="L138">                    .AdultThermalTicket(personId.getAdultThermalTicket())</span>
+<span class="nc" id="L139">                    .PensionerThermalTicket(personId.getPensionerThermalTicket())</span>
+<span class="nc" id="L140">                    .StudentThermalTicket(personId.getStudentThermalTicket())</span>
+<span class="nc" id="L141">                    .AdultBeachTicket(personId.getAdultBeachTicket())</span>
+<span class="nc" id="L142">                    .PensionerBeachTicket(personId.getPensionerBeachTicket())</span>
+<span class="nc" id="L143">                    .StudentBeachTicket(personId.getStudentBeachTicket())</span>
+<span class="nc" id="L144">                    .AquaParkTicket(personId.getAquaParkTicket())</span>
+<span class="nc" id="L145">                    .PremiumTicket(personId.getPremiumTicket())</span>
+<span class="nc" id="L146">                    .Sauna(personId.getSauna())</span>
+<span class="nc" id="L147">                    .SafeDeposit(personId.getSafeDeposit())</span>
+<span class="nc" id="L148">                    .Lounger(personId.getLounger())</span>
+<span class="nc" id="L149">                    .SunBed(personId.getSunBed())</span>
+<span class="nc" id="L150">                    .SunBedAtTheBeach(personId.getSunBedAtBeach())</span>
+<span class="nc" id="L151">                    .Baldachin(personId.getBaldachin())</span>
+<span class="nc" id="L152">                    .Money(personId.getBalance().getValue())</span>
+<span class="nc" id="L153">                    .registration(registration)</span>
+<span class="nc" id="L154">                    .build();</span>
+
+<span class="nc" id="L156">            registration.getIdentifications().add(identification);</span>
+<span class="nc" id="L157">            identificationRepository.save(identification);</span>
+            //----------Szekrények személyhez rendelése------
+<span class="nc bnc" id="L159" title="All 2 branches missed.">            if(personId.getLocker() != 0)</span>
+            {
+<span class="nc bnc" id="L161" title="All 2 branches missed.">                for (int i = 0; i &lt; personId.getLocker(); i++)</span>
+                {
+<span class="nc" id="L163">                    Cupboard cupboard = Cupboard.builder()</span>
+<span class="nc" id="L164">                            .status(1)</span>
+<span class="nc" id="L165">                            .identification(identification)</span>
+<span class="nc" id="L166">                            .build();</span>
+
+<span class="nc" id="L168">                    cupboardRepository.save(cupboard);</span>
+                }
+            }
+<span class="nc" id="L171">        }</span>
+<span class="nc" id="L172">        String contentText = &quot;Azonosítók sikeres regisztrálása&quot;;</span>
+<span class="nc" id="L173">        String headerText = &quot;Sikeres vásárlás&quot;;</span>
+<span class="nc" id="L174">        PopUpWindows.InfoWindow(contentText,headerText,headerText);</span>
+<span class="nc" id="L175">        Node node = (Node) event.getSource();</span>
+<span class="nc" id="L176">        WindowHandlerUtils.CloseScene(node);</span>
+<span class="nc" id="L177">    }</span>
+
+    //Gomb megnyomására megnyit egy ablakot ami a summary.fxml ad, és a SummaryController publikus metodusának átküldi a personId példányokat
+    //tartalmazó listát.
+    @FXML
+    void OpenSummary(ActionEvent event) throws IOException {
+<span class="nc" id="L183">        FXMLLoader loader = WindowHandlerUtils.getFXMLoader(&quot;/fxml/CassaGUI/addCustomerViews/Summary.fxml&quot;);</span>
+<span class="nc" id="L184">        SummaryController summary = loader.getController();</span>
+<span class="nc" id="L185">        summary.getPersonIdsFromTicketsAndServices(personIdList);</span>
+<span class="nc" id="L186">        WindowHandlerUtils.OpenScene(loader,&quot;Azonosítók összegzése&quot;, &quot;wait&quot;);</span>
+<span class="nc" id="L187">    }</span>
+
+    //A kiválasztott azonosítóhoz tartózó PersonId példányt átküldi a TicketsAddController-nek és megnyitja az ehhez tartozó ablakot
+    //Miután az be lesz zárva, beolvassa a ticketsAddController personId példányát és összegét és meghívja a GetTicketInfosFromServicesControll metodust.
+    @FXML
+    void addTickets(ActionEvent event) throws IOException {
+<span class="nc" id="L193">        String selectedId = Ids.getSelectionModel().getSelectedItem();</span>
+<span class="nc bnc" id="L194" title="All 2 branches missed.">        for (PersonId personId : personIdList) {</span>
+<span class="nc bnc" id="L195" title="All 2 branches missed.">            if (personId.getId().equals(selectedId)) {</span>
+<span class="nc" id="L196">                FXMLLoader loader = WindowHandlerUtils.getFXMLoader(&quot;/fxml/CassaGUI/addCustomerViews/TicketAdd.fxml&quot;);</span>
+<span class="nc" id="L197">                TicketsAddController ticketsAddController = loader.getController();</span>
+<span class="nc" id="L198">                ticketsAddController.getPersonIdFromTicketAndServices(personId);</span>
+<span class="nc" id="L199">                WindowHandlerUtils.OpenScene(loader,&quot;Jegy hozzáadása&quot;, &quot;wait&quot;);</span>
+<span class="nc" id="L200">                GetTicketInfosAdd(ticketsAddController.personId, ticketsAddController.balance);</span>
+            }
+<span class="nc" id="L202">        }</span>
+<span class="nc" id="L203">    }</span>
+
+    //A textFieldbe írt értéket kiolvassa és modositja a personId pédányhoz tartozó egyenleget
+    @FXML
+    void balanceAddButton(ActionEvent event) {
+<span class="nc" id="L208">        int updateMoney = Integer.parseInt(TextField_IdBalance.getText());</span>
+<span class="nc" id="L209">        updateBalance(updateMoney);</span>
+<span class="nc" id="L210">        balanceProperty.set(balanceProperty.get() + updateMoney);</span>
+<span class="nc" id="L211">        TextField_IdBalance.setText(&quot;&quot;);</span>
+<span class="nc" id="L212">    }</span>
+
+    //Ellenörzi hogy a personId példány egyenlegéből kivonható-e az összeg ha nem Alert-et dob
+    //Ha kivonható akkor modosítja a personId példány egyenlegét
+    @FXML
+    void balanceDeleteButton(ActionEvent event) {
+<span class="nc bnc" id="L218" title="All 2 branches missed.">        if(Integer.parseInt(TextField_IdBalance.getText())  &gt; identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance().getValue())</span>
+        {
+<span class="nc" id="L220">            String contentText = &quot;A beírt egyenleg nagyobb mint a meglévő egyenleg&quot;;</span>
+<span class="nc" id="L221">            String headerText = &quot;Hibás egyenleg törlés!&quot;;</span>
+<span class="nc" id="L222">            String title = &quot;Hibás egyenleg törlés&quot;;</span>
+<span class="nc" id="L223">            PopUpWindows.AlertWindow(contentText,headerText,title);</span>
+<span class="nc" id="L224">        }</span>
+        else{
+<span class="nc" id="L226">            updateBalance(-1*Integer.parseInt(TextField_IdBalance.getText()));</span>
+<span class="nc" id="L227">            balanceProperty.set(balanceProperty.get() - Integer.parseInt(TextField_IdBalance.getText()));</span>
+        }
+<span class="nc" id="L229">        TextField_IdBalance.setText(&quot;&quot;);</span>
+<span class="nc" id="L230">    }</span>
+
+    //IdHandlertől kapott buyer példány beolvasása initialization() metodus meghívása
+    public void receiveBuyer(Buyer otherBuyer)
+    {
+<span class="nc" id="L235">        buyer = otherBuyer;</span>
+<span class="nc" id="L236">        initialization();</span>
+<span class="nc" id="L237">    }</span>
+
+    //Balance label értékének megváltoztatása a paraméterként kapott int-tel
+    private void updateBalance(int balance)
+    {
+<span class="nc" id="L242">        int currentBalance = identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance().getValue();</span>
+<span class="nc" id="L243">        identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance().setValue(currentBalance + balance);</span>
+<span class="nc" id="L244">    }</span>
+
+    //Paraméterként kapott string alapján (feltételezve hogy az id) visszadja a megfelelő personId példányt
+    //ha nem talál ilyet akkor null-t ad vissza
+    private PersonId identifyPerson(String id)
+    {
+<span class="nc bnc" id="L250" title="All 2 branches missed.">        for (PersonId personId : personIdList) {</span>
+<span class="nc bnc" id="L251" title="All 2 branches missed.">            if (personId.getId().equals(id)) {</span>
+<span class="nc" id="L252">                return personId;</span>
+            }
+<span class="nc" id="L254">        }</span>
+<span class="nc" id="L255">        return null;</span>
+    }
+
+    //Listview beállítása, label-ök integerPropertyhez kötése
+    private void initialization() {
+        //Ids id-jű listViewra beállítja a buyer példányhoz tartozó observable listet
+<span class="nc" id="L261">        Ids.setItems(buyer.getIds());</span>
+        //Létrehozza az azonosítókból a personId példányokat
+<span class="nc bnc" id="L263" title="All 2 branches missed.">        for(int i = 0; i &lt; buyer.getIds().size(); i++)</span>
+        {
+<span class="nc" id="L265">            PersonId personId = new PersonId(buyer.getIds().get(i), buyer.getIds().get(0));</span>
+<span class="nc" id="L266">            personIdList.add(personId);</span>
+        }
+<span class="nc" id="L268">        Ids.getSelectionModel().select(0);</span>
+        //Összeköti a checkout és balance labelöket StringPropertykel így azok értéke ha modosul akkor a label értéke is fog
+<span class="nc" id="L270">        Label_CheckOut.textProperty().bind(Bindings.convert(balanceProperty));</span>
+
+<span class="nc" id="L272">        Label_balance.textProperty().bind(Bindings.convert(identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance()));</span>
+
+        //TextFieldbe csak számokat lehessen írni, ezért listener ráállítása
+<span class="nc" id="L275">        TextField_IdBalance.textProperty().addListener(new ChangeListener&lt;String&gt;()</span>
+<span class="nc" id="L276">        {</span>
+            @Override
+            public void changed(ObservableValue&lt;? extends String&gt; observableValue, String oldValue, String newValue) {
+<span class="nc" id="L279">                boolean isDigit = true;</span>
+<span class="nc bnc" id="L280" title="All 2 branches missed.">                if(newValue.length() &gt; oldValue.length())</span>
+                {
+<span class="nc" id="L282">                    isDigit = Character.isDigit(newValue.charAt(newValue.length()-1));</span>
+                }
+<span class="nc bnc" id="L284" title="All 2 branches missed.">                if(isDigit)</span>
+                {
+<span class="nc" id="L286">                    TextField_IdBalance.setText(newValue);</span>
+                }
+                else
+                {
+<span class="nc" id="L290">                    TextField_IdBalance.setText(oldValue);</span>
+                }
+<span class="nc" id="L292">            }</span>
+        });
+
+        //HA a listviewba új id-t választunk ki akkor a balance label-t annak az personId példányhoz tartozó balanceval köti össze
+<span class="nc" id="L296">        Ids.setOnMouseClicked(mouseEvent -&gt; {</span>
+<span class="nc" id="L297">            Label_balance.textProperty().bind(Bindings.convert(identifyPerson(Ids.getSelectionModel().getSelectedItem()).getBalance()));</span>
+<span class="nc" id="L298">        });</span>
+
+        //repository-k inicializálása
+<span class="nc" id="L301">        context = SpringManager.getApplicationContext();</span>
+<span class="nc" id="L302">        registrationRepository = context.getBean(RegistrationRepository.class);</span>
+<span class="nc" id="L303">        identificationRepository = context.getBean(IdentificationRepository.class);</span>
+<span class="nc" id="L304">        cupboardRepository = context.getBean(CupboardRepository.class);</span>
+<span class="nc" id="L305">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

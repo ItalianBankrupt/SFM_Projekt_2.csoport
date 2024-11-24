@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SummaryController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa.addcustomerControllers</a> &gt; <span class="el_source">SummaryController.java</span></div><h1>SummaryController.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa.addcustomerControllers;
+
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.Services;
+import com.spa.demo.backend.ServicesRepository;
+import com.spa.demo.frontend.Cassa.Models.PersonId;
+import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.control.TextArea;
+import org.springframework.context.ConfigurableApplicationContext;
+
+
+import java.util.List;
+
+<span class="nc" id="L17">public class SummaryController {</span>
+
+    ServicesRepository servicesRepository;
+    ConfigurableApplicationContext context;
+
+    @FXML
+    private TextArea TextArea_SummaryBox;
+
+    //Gombnyomásra bezárja az ablakot
+    @FXML
+    void Close(ActionEvent event) {
+<span class="nc" id="L28">        Node node = (Node) event.getSource();</span>
+<span class="nc" id="L29">        WindowHandlerUtils.CloseScene(node);</span>
+<span class="nc" id="L30">    }</span>
+
+    //Parametere egy personId-kat tartalmazó lista
+    //ezekhez a personIdhoz tartozó infokat írja ki egy textArea-ba
+    public void getPersonIdsFromTicketsAndServices(List&lt;PersonId&gt; PersonIdList)
+    {
+<span class="nc" id="L36">        int balance = 0;</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        for (PersonId personId : PersonIdList)</span>
+        {
+            //az adott personId-hoz tartozó nem nulla darabszámú jegyek és szolgáltatások listája
+<span class="nc" id="L40">            List&lt;String&gt; Services = personId.listServicesInfo();</span>
+<span class="nc" id="L41">            List&lt;String&gt; Tickets = personId.listTicketsWithoutZeroValues();</span>
+
+<span class="nc" id="L43">            String main = personId.getId() + &quot;:\n&quot;;</span>
+<span class="nc" id="L44">            StringBuilder tickets = new StringBuilder(&quot;Jegyek:\n&quot;);</span>
+            //Jegyek neve darabszáma és ára
+<span class="nc bnc" id="L46" title="All 2 branches missed.">            for(String ticket : Tickets)</span>
+            {
+<span class="nc" id="L48">                String singleTicketInfo = &quot;&quot;;</span>
+<span class="nc" id="L49">                String[] info = ticket.split(&quot;:&quot;);</span>
+<span class="nc" id="L50">                int Price = QuaryPrice(info[0], &quot;Belepo&quot;) * Integer.parseInt(info[1]);</span>
+<span class="nc" id="L51">                singleTicketInfo = &quot;\t&quot; + ticket + &quot; db Ár: &quot; + Price + &quot;Ft\n&quot;;</span>
+<span class="nc" id="L52">                balance += Price;</span>
+<span class="nc" id="L53">                tickets.append(singleTicketInfo);</span>
+<span class="nc" id="L54">            }</span>
+            //Szolgáltatások neve darabszáma és ára
+<span class="nc" id="L56">            StringBuilder services = new StringBuilder(&quot;Szolgáltatások:\n&quot;);</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">            for(String service : Services)</span>
+            {
+<span class="nc" id="L59">                String singleServiceInfo = &quot;&quot;;</span>
+<span class="nc" id="L60">                String[] info = service.split(&quot;:&quot;);</span>
+<span class="nc" id="L61">                int Price = QuaryPrice(info[0], &quot;Szolgaltatas&quot;) * Integer.parseInt(info[1]);</span>
+<span class="nc" id="L62">                singleServiceInfo = &quot;\t&quot; + service + &quot; db Ár: &quot; + Price + &quot;Ft\n&quot;;</span>
+<span class="nc" id="L63">                balance += Price;</span>
+<span class="nc" id="L64">                services.append(singleServiceInfo);</span>
+<span class="nc" id="L65">            }</span>
+<span class="nc" id="L66">            TextArea_SummaryBox.appendText(main + tickets + services);</span>
+<span class="nc" id="L67">            Tickets.clear();</span>
+<span class="nc" id="L68">            Services.clear();</span>
+<span class="nc" id="L69">        }</span>
+<span class="nc" id="L70">        String pay = &quot;Fizetendő összeg: &quot; + balance + &quot;\n&quot;;</span>
+<span class="nc" id="L71">        TextArea_SummaryBox.appendText(pay);</span>
+<span class="nc" id="L72">    }</span>
+
+    //Az első paraméter a jegy/szolgáltatás nevét határozza meg, a második paraméter, hogy mi a tipusa, ez lehet Szolgaltatas vagy Belepo
+    //Visszatérési értéke az adott jegy vagy szolgáltatás ára
+    private int QuaryPrice(String name, String type)
+    {
+<span class="nc" id="L78">        context = SpringManager.getApplicationContext();</span>
+<span class="nc" id="L79">        servicesRepository = context.getBean(ServicesRepository.class);</span>
+<span class="nc" id="L80">        List&lt;Services&gt; listOfServices = servicesRepository.findByType(type).stream().toList();</span>
+<span class="nc bnc" id="L81" title="All 2 branches missed.">        for (Services services:listOfServices)</span>
+        {
+<span class="nc bnc" id="L83" title="All 2 branches missed.">            if(services.getName().equals(name))</span>
+            {
+<span class="nc" id="L85">                return services.getPrice();</span>
+            }
+<span class="nc" id="L87">        }</span>
+<span class="nc" id="L88">        return 0;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

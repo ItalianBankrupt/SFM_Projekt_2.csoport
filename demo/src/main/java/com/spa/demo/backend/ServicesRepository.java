@@ -9,4 +9,6 @@ import java.util.List;
 public interface ServicesRepository extends JpaRepository<Services, Long> {
     List<Services> findByName(String name);
     List<Services> findByType(String type); // Szolgaltatas | Belepo
+
+
 }

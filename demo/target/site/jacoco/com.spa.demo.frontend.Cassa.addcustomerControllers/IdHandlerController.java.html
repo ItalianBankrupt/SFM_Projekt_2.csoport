@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IdHandlerController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa.addcustomerControllers</a> &gt; <span class="el_source">IdHandlerController.java</span></div><h1>IdHandlerController.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa.addcustomerControllers;
+
+import com.spa.demo.backend.RegistrationRepository;
+import com.spa.demo.frontend.Cassa.Models.Buyer;
+import com.spa.demo.frontend.Cassa.Utils.JavaFxElementModifier;
+import com.spa.demo.frontend.Cassa.Utils.PopUpWindows;
+import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import org.springframework.stereotype.Controller;
+
+import java.io.IOException;
+import java.util.Objects;
+
+@Controller
+<span class="fc" id="L19">public class IdHandlerController {</span>
+
+    public RegistrationRepository registrationRepository;
+
+    @FXML
+    private Button AddId;
+    private Buyer buyer;
+
+    @FXML
+    private ListView&lt;String&gt; ListOfIds;
+
+    @FXML
+    private RadioButton RadioButton_Adult;
+
+    @FXML
+    private RadioButton RadioButton_Pensioner;
+
+    @FXML
+    private RadioButton RadioButton_Student;
+
+    @FXML
+    private ToggleGroup buyerAgeRange;
+
+    Node node;
+
+    //Bezárja azt az ablakot és visszatölti a MainPage-et
+    @FXML
+    void backToMainPage(ActionEvent event) throws IOException {
+<span class="nc" id="L47">        node = (Node) event.getSource();</span>
+<span class="nc" id="L48">        WindowHandlerUtils.BackToCassaMainPage(node);</span>
+<span class="nc" id="L49">    }</span>
+
+    //Leellenörzi, hogy a toogleGroupba tartozó rádiógombok közül ki lett e választva valamelyik, ha nem Alert-et dob
+    //Ha lett kiválasztva akkor azzal létrehoz egy azonosított
+    @FXML
+    void AddId(ActionEvent event) throws IOException {
+<span class="nc bnc" id="L55" title="All 2 branches missed.">        if (buyerAgeRange.getSelectedToggle() == null)</span>
+        {
+<span class="nc" id="L57">            JavaFxElementModifier.changeRadioButtonBackgroundColor(&quot;red&quot;, RadioButton_Adult,RadioButton_Pensioner,RadioButton_Student);</span>
+<span class="nc" id="L58">            String contentText = &quot;Válassza a jegy típusát:Diák/felnőtt/nyugdíjas&quot;;</span>
+<span class="nc" id="L59">            String headerText = &quot;Nincs kiválasztott típus&quot;;</span>
+<span class="nc" id="L60">            String title = &quot;Hiba&quot;;</span>
+<span class="nc" id="L61">            PopUpWindows.AlertWindow(contentText,headerText,title);</span>
+<span class="nc" id="L62">        }</span>
+        else{
+<span class="nc" id="L64">            JavaFxElementModifier.changeRadioButtonBackgroundColor(&quot;#d5c990&quot;,RadioButton_Student,RadioButton_Adult,RadioButton_Pensioner);</span>
+<span class="nc" id="L65">            int status = -1;</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">            if(RadioButton_Student.isSelected())</span>
+            {
+<span class="nc" id="L68">                status = 2;</span>
+<span class="nc" id="L69">                RadioButton_Student.setSelected(false);</span>
+            }
+<span class="nc bnc" id="L71" title="All 2 branches missed.">            else if(RadioButton_Adult.isSelected())</span>
+            {
+<span class="nc" id="L73">                status = 1;</span>
+<span class="nc" id="L74">                RadioButton_Adult.setSelected(false);</span>
+            }
+<span class="nc bnc" id="L76" title="All 2 branches missed.">            else if(RadioButton_Pensioner.isSelected())</span>
+            {
+<span class="nc" id="L78">                status = 3;</span>
+<span class="nc" id="L79">                RadioButton_Pensioner.setSelected(false);</span>
+            }
+<span class="nc" id="L81">            buyer.GenerateId(status);</span>
+        }
+<span class="nc" id="L83">    }</span>
+
+    public void GenID(int Status)
+    {
+<span class="nc" id="L87">        buyer.GenerateId(Status);</span>
+<span class="nc" id="L88">    }</span>
+
+    //Leellenörzi, hogy nem az elsőt akarjuk e törölni, ha igen akkor Alert-et dob fel
+    //Ellenkező esetben törli a kivalasztott azonositot a listabol és a legenerált azonositok számát csökkenti eggyel
+    @FXML
+    void RemoveId(ActionEvent event) {
+<span class="nc bnc" id="L94" title="All 2 branches missed.">        if(Objects.equals(ListOfIds.getSelectionModel().getSelectedItem(), buyer.getIds().get(0)))</span>
+        {
+<span class="nc" id="L96">            String contentText = &quot;Az első azonosító nem törölhető, módosítsd a vevő adatait!&quot;;</span>
+<span class="nc" id="L97">            String headerText = &quot;Nem törölhető&quot;;</span>
+<span class="nc" id="L98">            String title = &quot;Hiba&quot;;</span>
+<span class="nc" id="L99">            PopUpWindows.AlertWindow(contentText, headerText, title);</span>
+<span class="nc" id="L100">            return;</span>
+        }
+<span class="nc" id="L102">        String removeId = ListOfIds.getSelectionModel().getSelectedItem();</span>
+<span class="nc" id="L103">        buyer.RemoveId(removeId);</span>
+<span class="nc" id="L104">        buyer.setNumberOfGeneratedId(buyer.getNumberOfGeneratedId()- 1);</span>
+<span class="nc" id="L105">    }</span>
+
+    //A gomb megnyomása után AddCustomerController publikus metodusát meghívja, ezzel beállítva annak a buyer példányt
+    //megnyitja az új ablakot és bezárja ezt
+    @FXML
+    void changeBuyerInfos(ActionEvent event) throws IOException {
+<span class="nc" id="L111">        FXMLLoader loader = WindowHandlerUtils.getFXMLoader(&quot;/fxml/CassaGUI/addCustomerViews/addCustomer.fxml&quot;);</span>
+<span class="nc" id="L112">        AddCustomerController addCustomerController = loader.getController();</span>
+<span class="nc" id="L113">        addCustomerController.SendBuyerToAddCustomer(buyer);</span>
+<span class="nc" id="L114">        Node node = (Node) event.getSource();</span>
+<span class="nc" id="L115">        WindowHandlerUtils.OpenScene(loader,&quot;Új vásárló hozzáadása&quot;, node);</span>
+<span class="nc" id="L116">    }</span>
+
+    //Gomb megnyomása után leellenorzi hogy van e generált azonosító (elméletbe nem történhet meg, de kitudja), ha nincs
+    //akkor alert meghivása.
+    //Ha nincs hiba akkor a következő ablak megnyitása(ez a TicketsAndServices) buyer példány átküldése és jelenlegi ablak bezárása
+    @FXML
+    void GoToTicketsAndServices(ActionEvent event) throws IOException {
+<span class="nc bnc" id="L123" title="All 2 branches missed.">        if(buyer.getIds().isEmpty())</span>
+        {
+<span class="nc" id="L125">            String contentText =&quot;Nincsenek legenerált ID-k&quot;;</span>
+<span class="nc" id="L126">            String headerText =&quot;Nincs ID!&quot;;</span>
+<span class="nc" id="L127">            String title =&quot;Hiba&quot;;</span>
+<span class="nc" id="L128">            PopUpWindows.AlertWindow(contentText,headerText,title);</span>
+<span class="nc" id="L129">            return;</span>
+        }
+
+<span class="nc" id="L132">        FXMLLoader loader = WindowHandlerUtils.getFXMLoader(&quot;/fxml/CassaGUI/addCustomerViews/TicketsAndServices.fxml&quot;);</span>
+<span class="nc" id="L133">        TicketAndServicesController ticketAndServicesController = loader.getController();</span>
+<span class="nc" id="L134">        ticketAndServicesController.receiveBuyer(buyer);</span>
+<span class="nc" id="L135">        Node node = (Node) event.getSource();</span>
+<span class="nc" id="L136">        WindowHandlerUtils.OpenScene(loader, &quot;Jegyek és szolgáltatások hozzáadása&quot;, node);</span>
+<span class="nc" id="L137">    }</span>
+
+    //Ezzel a publikus metodussal &quot;küldi&quot; át az AddCustomerController a buyer példányt
+    public void sendBuyerInfos(Buyer anotherBuyer)
+    {
+<span class="nc" id="L142">        this.buyer = anotherBuyer;</span>
+<span class="nc" id="L143">    }</span>
+
+    //Inicializáláskor a buyer példányba található observable listet beállítja a ListOfIds nevű listview-ra
+    //És ha üres a listview(első megnyitás, tehát nem a már modosított adatos) akkor betölti az első azonosítot ami
+    //a buyer azonosítója lesz
+    public void initialization()
+    {
+<span class="nc bnc" id="L150" title="All 2 branches missed.">        if(buyer.getIds().isEmpty()) {</span>
+<span class="nc" id="L151">            AddId.fire();</span>
+        }
+<span class="nc" id="L153">        ListOfIds.setItems(buyer.getIds());</span>
+<span class="nc" id="L154">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

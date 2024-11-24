@@ -115,7 +115,7 @@ public class TicketAndServicesController {
         Registration registration = Registration.builder()
                 .City(buyer.getCity())
                 .CostumerType(buyer.getStatus())
-                .Name(buyer.getName())
+                .name(buyer.getName())
                 .IDNumber(buyer.getId())
                 .PostCode(buyer.getPostCode())
                 .Street(buyer.getStreet())
