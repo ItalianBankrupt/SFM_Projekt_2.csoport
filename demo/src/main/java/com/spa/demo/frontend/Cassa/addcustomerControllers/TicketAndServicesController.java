@@ -118,7 +118,7 @@ public class TicketAndServicesController {
         Registration registration = Registration.builder()
                 .City(buyer.getCity())
                 .CostumerType(buyer.getStatus())
-                .Name(buyer.getName())
+                .name(buyer.getName())
                 .IDNumber(buyer.getId())
                 .PostCode(buyer.getPostCode())
                 .Street(buyer.getStreet())
@@ -132,7 +132,7 @@ public class TicketAndServicesController {
         //---------Azonosítók mentése-------
         for (PersonId personId : personIdList) {
             Identification identification = Identification.builder()
-                    .PersonId(personId.getId())
+                    .personId(personId.getId())
                     .AdultFellingTicket(personId.getAdultFellingTicket())
                     .StudentFellingTicket(personId.getStudentFellingTicket())
                     .AdultThermalTicket(personId.getAdultThermalTicket())

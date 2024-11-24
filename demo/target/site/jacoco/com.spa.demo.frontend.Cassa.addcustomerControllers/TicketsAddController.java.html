@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TicketsAddController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa.addcustomerControllers</a> &gt; <span class="el_source">TicketsAddController.java</span></div><h1>TicketsAddController.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa.addcustomerControllers;
+
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.Services;
+import com.spa.demo.backend.ServicesRepository;
+import com.spa.demo.frontend.Cassa.Models.PersonId;
+import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+<span class="nc" id="L21">public class TicketsAddController {</span>
+
+    public PersonId personId;
+<span class="nc" id="L24">    public int balance = 0;</span>
+    private ServicesRepository servicesRepository;
+    @FXML
+    private ListView&lt;String&gt; ListOfTickets;
+
+    @FXML
+    private Button functionButton;
+
+    @FXML
+    private Label Label_ID;
+
+    //Gombnyomására megnézi, hogy a gomb az Hozzáad vagy Töröl
+    //Ha hozzáad akkor a personId példányba a kiválasztott jegy típust 1-re állítja, lekérdezi az árát és a balance-ot növeli
+    //HA töröl akkor a personId példányba a kiválasztott jegy típust 0-ra állítja, lekérdezi az árát és a balance-ot csökkenti
+    @FXML
+    void AddOrDelete(ActionEvent event) {
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        if(functionButton.getText().equals(&quot;Hozzáadd&quot;)) {</span>
+<span class="nc" id="L41">            SetPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem(), 1);</span>
+<span class="nc" id="L42">            int thisTicketPrice = QuaryTicketPrice(ListOfTickets.getSelectionModel().getSelectedItem());</span>
+<span class="nc" id="L43">            balance += thisTicketPrice;</span>
+<span class="nc" id="L44">            ButtonTextStatus(1);</span>
+<span class="nc" id="L45">        }</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        else if(functionButton.getText().equals(&quot;Töröl&quot;))</span>
+        {
+<span class="nc" id="L48">            SetPersonIdStatus(ListOfTickets.getSelectionModel().getSelectedItem(), 0);</span>
+<span class="nc" id="L49">            int thisTicketPrice = QuaryTicketPrice(ListOfTickets.getSelectionModel().getSelectedItem());</span>
+<span class="nc" id="L50">            balance -= thisTicketPrice;</span>
+<span class="nc" id="L51">            ButtonTextStatus(0);</span>
+        }
+<span class="nc" id="L53">    }</span>
+
+    //Gombnyomásra bezárja az ablakot
+    @FXML
+    void Finish(ActionEvent event) {
+<span class="nc" id="L58">        Node node = (Node) event.getSource();</span>
+<span class="nc" id="L59">        WindowHandlerUtils.CloseScene(node);</span>
+<span class="nc" id="L60">    }</span>
+
+    //Publikus metodus segitségével a TicketsAndServicesControllertől megkapja a personId példányt
+    public void getPersonIdFromTicketAndServices(PersonId AnotherpersonId)
+    {
+<span class="nc" id="L65">        personId = AnotherpersonId;</span>
+<span class="nc" id="L66">        init();</span>
+<span class="nc" id="L67">    }</span>
+
+    //Paraméterül kapott érték alapján modosítja a functionButton-t
+    //Ha 0 akkor Hozzáadd-ra ha 1 akkor Töröl-re
+    private void ButtonTextStatus(int Status)
+    {
+<span class="nc bnc" id="L73" title="All 2 branches missed.">        if(Status == 0)</span>
+        {
+<span class="nc" id="L75">            functionButton.setText(&quot;Hozzáadd&quot;);</span>
+        }
+<span class="nc bnc" id="L77" title="All 2 branches missed.">        else if(Status == 1){</span>
+<span class="nc" id="L78">            functionButton.setText(&quot;Töröl&quot;);</span>
+        }
+<span class="nc" id="L80">    }</span>
+
+
+    //A paraméterül adott String alapján meghatározza a jegyek típusát
+    //1-es add vissza FE-re azaz felnőtt
+    //2-est add vissza a DI-re azaz diák
+    //3-ast add vissza a NY-re azaz nyugdíjasra
+    //Ellenkező esetben 0-át add vissza
+    private int identifyTicketType(String idStatus) {
+<span class="nc bnc" id="L89" title="All 4 branches missed.">        switch (idStatus){</span>
+            case &quot;FE&quot;:
+<span class="nc" id="L91">                return 1;</span>
+            case &quot;DI&quot;:
+<span class="nc" id="L93">                return 2;</span>
+            case &quot;NY&quot;:
+<span class="nc" id="L95">                return 3;</span>
+            default:
+<span class="nc" id="L97">                return 0;</span>
+        }
+    }
+
+    //Paraméterként megadott jegytipushoz tartozó darabszámot adja vissza a PersonId példányban
+    //Ha nincs ilyen jegytipus akkor -1-et add vissza, amúgy meg van 1-et vagy 0-át
+    private int QuaryTicketStatus(String ticketType)
+    {
+<span class="nc bnc" id="L105" title="All 12 branches missed.">        return switch (ticketType) {</span>
+<span class="nc" id="L106">            case &quot;Felnőtt élményfürdő belépő&quot; -&gt; personId.getAdultFellingTicket();</span>
+<span class="nc" id="L107">            case &quot;Diák élményfürdő belépő&quot; -&gt; personId.getStudentFellingTicket();</span>
+<span class="nc" id="L108">            case &quot;Nyugdijas élményfürdő belépő&quot; -&gt; personId.getFeelingPensionerTicket();</span>
+<span class="nc" id="L109">            case &quot;Diák belépő&quot; -&gt; personId.getStudentBeachTicket();</span>
+<span class="nc" id="L110">            case &quot;Felnőtt belépő&quot; -&gt; personId.getAdultBeachTicket();</span>
+<span class="nc" id="L111">            case &quot;Nyugdíjas belépő&quot; -&gt; personId.getPensionerBeachTicket();</span>
+<span class="nc" id="L112">            case &quot;Diák Thermal belépő&quot; -&gt; personId.getStudentThermalTicket();</span>
+<span class="nc" id="L113">            case &quot;Felnőtt Thermal belépő&quot; -&gt; personId.getAdultThermalTicket();</span>
+<span class="nc" id="L114">            case &quot;Nyugdíjas Thermal belépő&quot; -&gt; personId.getPensionerThermalTicket();</span>
+<span class="nc" id="L115">            case &quot;Aquapark belépő&quot; -&gt; personId.getAquaParkTicket();</span>
+<span class="nc" id="L116">            case &quot;Prémium belépőjegy&quot; -&gt; personId.getPremiumTicket();</span>
+<span class="nc" id="L117">            default -&gt; -1;</span>
+        };
+    }
+
+    //Első paraméter a jegytipus amit a personId példány megfelelő attributumához tartozó értéket modosítja a második paraméter alapján
+    //Második paraméter vagy 1 vagy 0
+    private void SetPersonIdStatus(String ticketType, int status)
+    {
+<span class="nc bnc" id="L125" title="All 12 branches missed.">        switch (ticketType){</span>
+            case &quot;Felnőtt élményfürdő belépő&quot;:
+<span class="nc" id="L127">                personId.setAdultFellingTicket(status);</span>
+<span class="nc" id="L128">                break;</span>
+            case &quot;Diák élményfürdő belépő&quot;:
+<span class="nc" id="L130">                personId.setStudentFellingTicket(status);</span>
+<span class="nc" id="L131">                break;</span>
+            case &quot;Nyugdijas élményfürdő belépő&quot;:
+<span class="nc" id="L133">                personId.setFeelingPensionerTicket(status);</span>
+<span class="nc" id="L134">                break;</span>
+            case &quot;Diák belépő&quot;:
+<span class="nc" id="L136">                personId.setStudentBeachTicket(status);</span>
+<span class="nc" id="L137">                break;</span>
+            case &quot;Felnőtt belépő&quot;:
+<span class="nc" id="L139">                personId.setAdultBeachTicket(status);</span>
+<span class="nc" id="L140">                break;</span>
+            case &quot;Nyugdíjas belépő&quot;:
+<span class="nc" id="L142">                personId.setPensionerBeachTicket(status);</span>
+<span class="nc" id="L143">                break;</span>
+            case &quot;Diák Thermal belépő&quot;:
+<span class="nc" id="L145">                personId.setStudentThermalTicket(status);</span>
+<span class="nc" id="L146">                break;</span>
+            case &quot;Felnőtt Thermal belépő&quot;:
+<span class="nc" id="L148">                personId.setAdultThermalTicket(status);</span>
+<span class="nc" id="L149">                break;</span>
+            case &quot;Nyugdíjas Thermal belépő&quot;:
+<span class="nc" id="L151">                personId.setPensionerThermalTicket((status));</span>
+<span class="nc" id="L152">                break;</span>
+            case &quot;Aquapark belépő&quot;:
+<span class="nc" id="L154">                personId.setAquaParkTicket(status);</span>
+<span class="nc" id="L155">                break;</span>
+            case &quot;Prémium belépőjegy&quot;:
+<span class="nc" id="L157">                personId.setPremiumTicket(status);</span>
+                break;
+        }
+<span class="nc" id="L160">    }</span>
+
+    //Paraméterként megkapott jegyhez tartozó árat kéri le a servicesRepositoryból
+    //visszatérési értéke az ár, ha nincs olyen jegytipus akkor 0-val tér vissza
+    private int QuaryTicketPrice(String ticketName)
+    {
+<span class="nc" id="L166">        List&lt;Services&gt; listOfEveryTicket = servicesRepository.findByType(&quot;Belepo&quot;).stream().toList();</span>
+<span class="nc bnc" id="L167" title="All 2 branches missed.">        for (Services services:listOfEveryTicket)</span>
+        {
+<span class="nc bnc" id="L169" title="All 2 branches missed.">            if(services.getName().equals(ticketName))</span>
+            {
+<span class="nc" id="L171">                return services.getPrice();</span>
+            }
+<span class="nc" id="L173">        }</span>
+<span class="nc" id="L174">        return 0;</span>
+    }
+
+    //Labelök és button-ok beállítása, Listview feltöltése
+    private void init()
+    {
+<span class="nc" id="L180">        Label_ID.setText(personId.getId());</span>
+
+<span class="nc" id="L182">        ConfigurableApplicationContext context = SpringManager.getApplicationContext();</span>
+<span class="nc" id="L183">        servicesRepository = context.getBean(ServicesRepository.class);</span>
+
+        //Felnőtt, gyerek, nyugdijas meghatározása
+<span class="nc" id="L186">        String idStatus = personId.getId().substring(0,2);</span>
+<span class="nc" id="L187">        int ticketType = identifyTicketType(idStatus);</span>
+        //Megfelelő jegyek listázása
+<span class="nc" id="L189">        List&lt;Services&gt; listOfEveryTicket = servicesRepository.findByType(&quot;Belepo&quot;).stream().toList();</span>
+<span class="nc" id="L190">        List&lt;String&gt; ListOfTicketsByTicketType = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L191" title="All 2 branches missed.">        for (Services service : listOfEveryTicket) {</span>
+<span class="nc bnc" id="L192" title="All 4 branches missed.">            if(service.getTicketType() == ticketType || service.getTicketType() == 0 ){</span>
+<span class="nc" id="L193">                ListOfTicketsByTicketType.add(service.getName());</span>
+            }
+<span class="nc" id="L195">        }</span>
+        //Listview-ba értékek feltöltése, első kiválasztottra tétele
+<span class="nc" id="L197">        ListOfTickets.setItems(FXCollections.observableList(ListOfTicketsByTicketType));</span>
+<span class="nc" id="L198">        ListOfTickets.getSelectionModel().select(0);</span>
+<span class="nc" id="L199">        ButtonTextStatus(QuaryTicketStatus(ListOfTickets.getSelectionModel().getSelectedItem()));</span>
+
+        //Gombnyomásra változzon meg a jegyhez tartozó megfelelő darabszám
+<span class="nc" id="L202">        ListOfTickets.setOnMouseClicked(mouseEvent -&gt; {</span>
+<span class="nc" id="L203">            int stat = QuaryTicketStatus(ListOfTickets.getSelectionModel().getSelectedItem());</span>
+<span class="nc" id="L204">            ButtonTextStatus(stat);</span>
+<span class="nc" id="L205">        });</span>
+
+<span class="nc" id="L207">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
