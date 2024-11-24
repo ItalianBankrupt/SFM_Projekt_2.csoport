@@ -33,6 +33,7 @@ com\spa\demo\frontend\Cassa\Utils\JavaFxElementModifier.class
 com\spa\demo\backend\Services.class
 com\spa\demo\backend\Registration.class
 com\spa\demo\SpringManager.class
+com\spa\demo\frontend\Restaurant\ItemBoxController.class
 com\spa\demo\frontend\Restaurant\RestaurantUtils.class
 com\spa\demo\backend\ServicesRepository.class
 com\spa\demo\backend\Restaurant$RestaurantBuilder.class
