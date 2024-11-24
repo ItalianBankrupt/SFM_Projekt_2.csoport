@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JavaFxElementModifier.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa.Utils</a> &gt; <span class="el_source">JavaFxElementModifier.java</span></div><h1>JavaFxElementModifier.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa.Utils;
+
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+
+<span class="nc" id="L6">public class JavaFxElementModifier {</span>
+
+    //Paraméterül egy Stringet vár ami a színt határozza meg, illetve egy vagy több TextFieldet aminek a hátterét akarjuk
+    //modosítani
+    public static void changeTextFieldBackgroundColor(String color, TextField... textFields)
+    {
+<span class="nc bnc" id="L12" title="All 2 branches missed.">        for (TextField textField : textFields)</span>
+        {
+<span class="nc" id="L14">            textField.setStyle(&quot;-fx-background-color:&quot; +color + &quot;;&quot;);</span>
+        }
+<span class="nc" id="L16">    }</span>
+
+    //Paraméterül egy Stringet vár ami a színt határozza meg, illetve egy vagy több RadioButton-t aminek a hátterét akarjuk
+    //modosítani
+    public static void changeRadioButtonBackgroundColor(String color, RadioButton... radioButtons)
+    {
+<span class="nc bnc" id="L22" title="All 2 branches missed.">        for (RadioButton radioButton : radioButtons){</span>
+<span class="nc" id="L23">            radioButton.setStyle(&quot;-fx-background-color:&quot; +color + &quot;;&quot;);</span>
+        }
+<span class="nc" id="L25">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

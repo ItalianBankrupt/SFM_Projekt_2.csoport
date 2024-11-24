@@ -15,7 +15,7 @@ public class SpringManager implements Manager {
     @Override
     public void startBackend() {
         context = SpringApplication.run(SpaApplication.class);
-
+        test();
     }
 
     public static  ConfigurableApplicationContext getApplicationContext() {
@@ -42,5 +42,13 @@ public class SpringManager implements Manager {
         return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());
     }
 
+    private void test()
+    {
+        IdentificationRepository repo = context.getBean(IdentificationRepository.class);
+        Identification identification = Identification.builder().PremiumTicket(1).SunBedAtTheBeach(1).Lounger(1).StudentFellingTicket(0).PensionerThermalTicket(0).money(0).personId("alma").build();
+        repo.save(identification);
+        Identification identificatio1n = Identification.builder().PremiumTicket(1).SunBedAtTheBeach(0).Lounger(0).StudentFellingTicket(0).PensionerThermalTicket(1).money(0).personId("körte").build();
+        repo.save(identificatio1n);
+    }
 
 }

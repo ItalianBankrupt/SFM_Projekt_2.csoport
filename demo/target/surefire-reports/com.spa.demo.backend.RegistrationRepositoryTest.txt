@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.spa.demo.backend.RegistrationRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.044 s <<< FAILURE! -- in com.spa.demo.backend.RegistrationRepositoryTest
+com.spa.demo.backend.RegistrationRepositoryTest.testSave -- Time elapsed: 0.013 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.springframework.context.ConfigurableApplicationContext.getBean(java.lang.Class)" because "this.context" is null
+	at com.spa.demo.backend.RegistrationRepositoryTest.testSave(RegistrationRepositoryTest.java:21)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

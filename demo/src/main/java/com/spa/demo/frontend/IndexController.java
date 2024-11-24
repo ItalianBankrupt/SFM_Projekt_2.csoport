@@ -17,7 +17,7 @@ public class IndexController {
     @FXML
     public void openCassaMainPageGUI(ActionEvent actionEvent) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/CassaGUI/MainPage.fxml"));
-       // fxmlLoader.setControllerFactory(SpringManager.getApplicationContext()::getBean);
+
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("CassaGUI");

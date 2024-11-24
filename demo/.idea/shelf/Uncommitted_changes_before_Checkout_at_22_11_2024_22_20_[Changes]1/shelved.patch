@@ -1,0 +1,25 @@
+Index: target/classes/fxml/CassaGUI/statusDecider.fxml
+===================================================================
+diff --git a/target/classes/fxml/CassaGUI/statusDecider.fxml b/target/classes/fxml/CassaGUI/statusDecider.fxml
+deleted file mode 100644
+--- a/target/classes/fxml/CassaGUI/statusDecider.fxml	(revision bf35ecc591d5a8ca23918cf1a986acf3e9b28ee0)
++++ /dev/null	(revision bf35ecc591d5a8ca23918cf1a986acf3e9b28ee0)
+@@ -1,18 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-
+-<?import javafx.scene.control.RadioButton?>
+-<?import javafx.scene.control.ToggleGroup?>
+-<?import javafx.scene.layout.AnchorPane?>
+-
+-
+-<AnchorPane prefHeight="176.0" prefWidth="125.0" style="-fx-background-color: #d5c990;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Cassa.StatusDeciderController">
+-   <children>
+-      <RadioButton fx:id="radioButtonStudent" layoutX="14.0" layoutY="28.0" mnemonicParsing="false" onAction="#sendBackStatus" text="Diák">
+-         <toggleGroup>
+-            <ToggleGroup fx:id="StatusInfo" />
+-         </toggleGroup>
+-      </RadioButton>
+-      <RadioButton fx:id="radioButtonAdult" layoutX="14.0" layoutY="71.0" mnemonicParsing="false" onAction="#sendBackStatus" text="Felnőtt" toggleGroup="$StatusInfo" />
+-      <RadioButton fx:id="radioButtonRetired" layoutX="14.0" layoutY="106.0" mnemonicParsing="false" onAction="#sendBackStatus" text="Nyugdíjas" toggleGroup="$StatusInfo" />
+-   </children>
+-</AnchorPane>
