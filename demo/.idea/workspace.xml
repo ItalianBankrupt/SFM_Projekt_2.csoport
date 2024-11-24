@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Check_id added">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/SpringManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/SpringManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/CassaGUI/checkID.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +24,7 @@
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="dev_ati" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -58,23 +55,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev__ati&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Ati_mappa/egyetem/5.félév/msf/demo/SFM_Projekt_2.csoport/demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "dev__csabi",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Ati_mappa/egyetem/5.félév/msf/demo/SFM_Projekt_2.csoport/demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.appearance",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Ati_mappa\egyetem\5.félév\msf\demo\SFM_Projekt_2.csoport\demo\src\main\resources\fxml\CassaGUI\addCustomerViews" />

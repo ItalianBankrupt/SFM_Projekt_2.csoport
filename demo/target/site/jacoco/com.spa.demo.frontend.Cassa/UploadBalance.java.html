@@ -1,50 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UploadBalance.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa</a> &gt; <span class="el_source">UploadBalance.java</span></div><h1>UploadBalance.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa;
-
 import com.spa.demo.SpringManager;
-import com.spa.demo.backend.CupboardRepository;
+import com.spa.demo.backend.Identification;
 import com.spa.demo.backend.IdentificationRepository;
-import com.spa.demo.backend.RegistrationRepository;
+import com.spa.demo.frontend.Cassa.Utils.JavaFxElementModifier;
+import com.spa.demo.frontend.Cassa.Utils.PopUpWindows;
 import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import java.io.IOException;
 
-<span class="nc" id="L16">public class UploadBalance {</span>
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="nc" id="L22">public class UploadBalance {</span>
 
     private Node node;
+
+<span class="nc" id="L26">    private ObservableList&lt;String&gt; ids = FXCollections.observableArrayList();</span>
     private ConfigurableApplicationContext context;
-    private RegistrationRepository registrationRepository;
     private IdentificationRepository identificationRepository;
-    private CupboardRepository cupboardRepository;
-    @FXML
-    private TextField balanceToUpload;
 
     @FXML
-    private TextField customerId;
+    private ListView&lt;String&gt; ListView_ids;
+
+    @FXML
+    private TextField TextField_Balance;
+
+    @FXML
+    private TextField TextField_Id;
 
     @FXML
     void uploadBalance(ActionEvent event) {
-<span class="nc" id="L31">        context = SpringManager.getApplicationContext();</span>
-<span class="nc" id="L32">        registrationRepository = context.getBean(RegistrationRepository.class);</span>
-<span class="nc" id="L33">        identificationRepository = context.getBean(IdentificationRepository.class);</span>
-<span class="nc" id="L34">        cupboardRepository = context.getBean(CupboardRepository.class);</span>
-<span class="nc" id="L35">    }</span>
+<span class="nc" id="L41">        JavaFxElementModifier.changeTextFieldBackgroundColor(&quot;white&quot;, TextField_Balance,TextField_Id);</span>
+<span class="nc bnc" id="L42" title="All 4 branches missed.">        if(TextField_Balance.getText().isEmpty() || TextField_Id.getText().isEmpty()) {</span>
+<span class="nc" id="L43">            String contentText = &quot;Hiányzik a feltöltendő egyenleg vagy az azonosító&quot;;</span>
+<span class="nc" id="L44">            String headerText = &quot;Hiányos adat&quot;;</span>
+<span class="nc" id="L45">            String title = &quot;Hiba&quot;;</span>
+<span class="nc" id="L46">            PopUpWindows.AlertWindow(contentText, headerText, title);</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">            if(TextField_Balance.getText().isEmpty()){</span>
+<span class="nc" id="L48">                JavaFxElementModifier.changeTextFieldBackgroundColor(&quot;red&quot;, TextField_Balance);</span>
+            }
+<span class="nc bnc" id="L50" title="All 2 branches missed.">            if(TextField_Id.getText().isEmpty()){</span>
+<span class="nc" id="L51">                JavaFxElementModifier.changeTextFieldBackgroundColor(&quot;red&quot;, TextField_Id);</span>
+            }
+<span class="nc" id="L53">        }</span>
+        else{
+<span class="nc" id="L55">            Identification searchedIdentification = null;</span>
+<span class="nc" id="L56">            List&lt;Identification&gt; identifications = identificationRepository.findAll();</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">            for (Identification identification : identifications) {</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">                if(identification.getPersonId().equals(TextField_Id.getText())){</span>
+<span class="nc" id="L59">                    searchedIdentification = identification;</span>
+                }
+<span class="nc" id="L61">            }</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">            if(searchedIdentification != null){</span>
+<span class="nc" id="L63">                searchedIdentification.setMoney(Integer.parseInt(TextField_Balance.getText()) + searchedIdentification.getMoney());</span>
+<span class="nc" id="L64">                identificationRepository.updateByPersonId(searchedIdentification.getPersonId(), searchedIdentification.getMoney());</span>
+<span class="nc" id="L65">                TextField_Balance.textProperty().set(&quot;&quot;);</span>
+<span class="nc" id="L66">                String contentText = &quot;Sikeres módosítás!\nA &quot; + searchedIdentification.getPersonId() + &quot;-hoz tartozó új egyenleg: &quot;+ searchedIdentification.getMoney();</span>
+<span class="nc" id="L67">                String headerText = &quot;Sikeres feltöltés&quot;;</span>
+<span class="nc" id="L68">                String title = &quot;Sikeres&quot;;</span>
+<span class="nc" id="L69">                PopUpWindows.InfoWindow(contentText, headerText, title);</span>
+<span class="nc" id="L70">            }</span>
+            else
+            {
+<span class="nc" id="L73">                TextField_Balance.textProperty().set(&quot;&quot;);</span>
+<span class="nc" id="L74">                TextField_Id.textProperty().set(&quot;&quot;);</span>
+<span class="nc" id="L75">                String contentText = &quot;Nincs ilyen azonosító&quot;;</span>
+<span class="nc" id="L76">                String headerText = &quot;Hibás azonosító&quot;;</span>
+<span class="nc" id="L77">                String title = &quot;Hiba&quot;;</span>
+<span class="nc" id="L78">                PopUpWindows.AlertWindow(contentText, headerText, title);</span>
+            }
+        }
+
+<span class="nc" id="L82">    }</span>
 
 
     @FXML
     void backToMainPage(ActionEvent event) throws IOException {
-<span class="nc" id="L40">        node = (Node) event.getSource();</span>
-<span class="nc" id="L41">        WindowHandlerUtils.BackToCassaMainPage(node);</span>
-<span class="nc" id="L42">    }</span>
+<span class="nc" id="L87">        node = (Node) event.getSource();</span>
+<span class="nc" id="L88">        WindowHandlerUtils.BackToCassaMainPage(node);</span>
+<span class="nc" id="L89">    }</span>
+
+    private void filter()
+    {
+<span class="nc" id="L93">        String typedString = TextField_Id.getText();</span>
+<span class="nc" id="L94">        ObservableList&lt;String&gt; filteredIds = FXCollections.observableArrayList();</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        for (String id : ids) {</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">            if(id.contains(typedString))</span>
+            {
+<span class="nc" id="L98">                filteredIds.add(id);</span>
+            }
+<span class="nc" id="L100">        }</span>
+<span class="nc" id="L101">        ListView_ids.setItems(filteredIds);</span>
+
+<span class="nc" id="L103">    }</span>
 
     public void initialize()
     {
+<span class="nc" id="L107">        context = SpringManager.getApplicationContext();</span>
+<span class="nc" id="L108">        identificationRepository = context.getBean(IdentificationRepository.class);</span>
+<span class="nc" id="L109">        List&lt;Identification&gt; quaryId = identificationRepository.findAll().stream().toList();</span>
+<span class="nc bnc" id="L110" title="All 2 branches missed.">        for (Identification id : quaryId) {</span>
+<span class="nc" id="L111">            ids.add(id.getPersonId());</span>
+<span class="nc" id="L112">        }</span>
+<span class="nc" id="L113">        ListView_ids.setItems(ids);</span>
 
-<span class="nc" id="L47">    }</span>
+<span class="nc" id="L115">        TextField_Balance.textProperty().addListener((observable, oldValue, newValue) -&gt; {</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">            if(newValue.length() &gt; oldValue.length())</span>
+            {
+<span class="nc bnc" id="L118" title="All 2 branches missed.">                if(Character.isDigit(newValue.charAt(newValue.length() - 1))) {</span>
+<span class="nc" id="L119">                    TextField_Balance.setText(newValue);</span>
+                }
+                else{
+<span class="nc" id="L122">                    TextField_Balance.setText(oldValue);</span>
+                }
+            }
+
+
+<span class="nc" id="L127">        });</span>
+
+<span class="nc" id="L129">        TextField_Id.textProperty().addListener((observableValue, oldValue, newValue) -&gt; {</span>
+<span class="nc" id="L130">            filter();</span>
+<span class="nc" id="L131">        }  );</span>
+
+<span class="nc" id="L133">        ListView_ids.setOnMouseClicked(event -&gt; {</span>
+<span class="nc" id="L134">            TextField_Id.setText(ListView_ids.getSelectionModel().getSelectedItem());</span>
+<span class="nc" id="L135">        });</span>
+<span class="nc" id="L136">    }</span>
 
 
 }

@@ -1,35 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RemoveCustomer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa</a> &gt; <span class="el_source">RemoveCustomer.java</span></div><h1>RemoveCustomer.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa;
 
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.CupboardRepository;
+import com.spa.demo.backend.Identification;
+import com.spa.demo.backend.IdentificationRepository;
+import com.spa.demo.backend.RegistrationRepository;
 import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import jakarta.transaction.Transactional;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
+import org.springframework.context.ConfigurableApplicationContext;
+
 
 import java.io.IOException;
 
-<span class="nc" id="L11">public class RemoveCustomer {</span>
+<span class="nc" id="L21">public class RemoveCustomer {</span>
 
     private Node node;
+    private ConfigurableApplicationContext context;
+    private IdentificationRepository identificationRepository;
 
     @FXML
     private TextField customerId;
 
     @FXML
     void removeCustomerFromTable(ActionEvent event) {
-
-<span class="nc" id="L21">    }</span>
-
-    @FXML
+<span class="nc" id="L32">        //karszalag sorszámánának bekérése</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">        String customerId = this.customerId.getText();</span>
+        if(!customerId.isEmpty())
+<span class="nc" id="L35">        {</span>
+<span class="nc" id="L36">           boolean success = false;</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">           //Az adatbázisban szereplők számának lekérése</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">           int numbers = identificationRepository.findAll().size();</span>
+<span class="nc" id="L39">            for (int i = 0; i &lt; numbers; i++) {</span>
+<span class="nc" id="L40">                //létező karszalagszám az adatbázisban</span>
+                if (identificationRepository.findAll().get(i).getPersonId().equals(customerId)) {
+                    success = true;
+<span class="nc bnc" id="L43" title="All 2 branches missed.">                    break;</span>
+                }
+<span class="nc" id="L45">            }</span>
+<span class="nc" id="L46">            if(success)</span>
+<span class="nc" id="L47">            {</span>
+                //sorszám törlése az adatbázisból
+                identificationRepository.deleteByPersonId(customerId);
+                showAlert(&quot;Sikeres kiléptetés!&quot;,&quot;A vendég sikeresen kiléptetve!&quot;, AlertType.INFORMATION);
+<span class="nc" id="L51">                this.customerId.clear();</span>
+            }
+            else
+<span class="nc" id="L54">            {</span>
+                showAlert(&quot;Sikertelen kiléptetés!&quot;,&quot;Sikertelen kiléptetés!&quot;, AlertType.ERROR);
+            }
+        }
+<span class="nc" id="L58">    }</span>
+<span class="nc" id="L59"></span>
+<span class="nc" id="L60">    @FXML</span>
     void backToMainPage(ActionEvent event) throws IOException {
-<span class="nc" id="L25">        node = (Node) event.getSource();</span>
-<span class="nc" id="L26">        WindowHandlerUtils.BackToCassaMainPage(node);</span>
-<span class="nc" id="L27">    }</span>
-
-    public void initialize()
+        node = (Node) event.getSource();
+        WindowHandlerUtils.BackToCassaMainPage(node);
+<span class="nc" id="L64">    }</span>
+<span class="nc" id="L65"></span>
+<span class="nc" id="L66">    public void initialize()</span>
     {
-
-<span class="nc" id="L32">    }</span>
-
+        //repository-k inicializálása
+<span class="nc" id="L69">        context = SpringManager.getApplicationContext();</span>
+<span class="nc" id="L70">        identificationRepository = context.getBean(IdentificationRepository.class);</span>
+<span class="nc" id="L71">    }</span>
+<span class="nc" id="L72"></span>
+<span class="nc" id="L73">    private void showAlert(String title, String message, AlertType type) {</span>
+<span class="nc" id="L74">        Alert alert = new Alert(type);</span>
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
