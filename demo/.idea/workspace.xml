@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="MainPage, AddCustomer, IdHandler code fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/CheckID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/CheckID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/RemoveCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/RemoveCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/UploadBalance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/checkID.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/removeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/removeCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/Buyer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/CheckID.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/PersonId.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/SummaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/TicketAddController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/UploadBalance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="dev_ati" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;veresattila2002&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git",
+    "accountId": "d071ed22-ca39-46c7-9caa-a999ca77e980"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/PersonId.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2orDLZ6gPaXU4Bp3YbOy2fshfZ3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Ati_mappa/egyetem/5.félév/msf/demo/SFM_Projekt_2.csoport/demo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ati_mappa\egyetem\5.félév\msf\demo\SFM_Projekt_2.csoport\demo\src\main\resources\fxml\CassaGUI\addCustomerViews" />
+      <recent name="D:\Ati_mappa\egyetem\5.félév\msf\demo\SFM_Projekt_2.csoport\demo\src\main\resources\fxml\CassaGUI.addCustomerViews" />
+      <recent name="D:\Ati_mappa\egyetem\5.félév\msf\demo\SFM_Projekt_2.csoport\demo\src\main\resources\fxml\CassaGUI/addCustomerViews" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.spa.demo.frontend.Cassa.Models" />
+      <recent name="com.spa.demo.frontend.Cassa.addcustomerControllers" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="" />
+      <created>1731618745550</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731618745550</updated>
+      <workItem from="1731618746576" duration="86000" />
+      <workItem from="1731618853214" duration="79000" />
+      <workItem from="1731843777619" duration="13683000" />
+      <workItem from="1731867687430" duration="5230000" />
+      <workItem from="1731873564761" duration="1630000" />
+      <workItem from="1731875221432" duration="249000" />
+      <workItem from="1731875536049" duration="1478000" />
+      <workItem from="1731951438318" duration="5169000" />
+      <workItem from="1732120357457" duration="670000" />
+      <workItem from="1732121287796" duration="378000" />
+      <workItem from="1732121946876" duration="77000" />
+      <workItem from="1732202457085" duration="10096000" />
+      <workItem from="1732214005232" duration="1613000" />
+      <workItem from="1732217113735" duration="300000" />
+      <workItem from="1732300709764" duration="6691000" />
+      <workItem from="1732357263157" duration="19166000" />
+    </task>
+    <task id="LOCAL-00001" summary="working connection between database">
+      <option name="closed" value="true" />
+      <created>1731618916235</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731618916235</updated>
+    </task>
+    <task id="LOCAL-00002" summary="list of ids first element is not removable, could go to tickets and services with empty list of ids">
+      <option name="closed" value="true" />
+      <created>1731844228322</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731844228322</updated>
+    </task>
+    <task id="LOCAL-00003" summary="idHandler sends buyer class to TicketAndServicesController">
+      <option name="closed" value="true" />
+      <created>1731844560628</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731844560628</updated>
+    </task>
+    <task id="LOCAL-00004" summary="PersonId class added">
+      <option name="closed" value="true" />
+      <created>1731846849686</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731846849686</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TicketAddController list tickets into Listview">
+      <option name="closed" value="true" />
+      <created>1731852279711</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731852279711</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add tickets to Customer">
+      <option name="closed" value="true" />
+      <created>1731856911087</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731856911087</updated>
+    </task>
+    <task id="LOCAL-00007" summary="addListener to balanceLabel">
+      <option name="closed" value="true" />
+      <created>1731857296381</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731857296381</updated>
+    </task>
+    <task id="LOCAL-00008" summary="balance label change when balance is changing">
+      <option name="closed" value="true" />
+      <created>1731859202732</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731859202732</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Summary added">
+      <option name="closed" value="true" />
+      <created>1731876791468</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731876791468</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Working">
+      <option name="closed" value="true" />
+      <created>1731952423343</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731952423344</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Working">
+      <option name="closed" value="true" />
+      <created>1731959901652</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731959901652</updated>
+    </task>
+    <task id="LOCAL-00012" summary="openSummary and FinializePurchase buttons added">
+      <option name="closed" value="true" />
+      <created>1732100053394</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732100053394</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Buyer informations save to database">
+      <option name="closed" value="true" />
+      <created>1732101357780</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732101357780</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Modified Identification class and .csv">
+      <option name="closed" value="true" />
+      <created>1732108641390</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732108641390</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Modified Identification class and .csv">
+      <option name="closed" value="true" />
+      <created>1732108789023</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732108789023</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Modified Identification">
+      <option name="closed" value="true" />
+      <created>1732110060039</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732110060039</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Clear code vol. 1">
+      <option name="closed" value="true" />
+      <created>1732111225387</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732111225387</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add and delete balance">
+      <option name="closed" value="true" />
+      <created>1732206255824</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732206255824</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add and delete balance">
+      <option name="closed" value="true" />
+      <created>1732206457426</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732206457426</updated>
+    </task>
+    <task id="LOCAL-00020" summary="bugfix in buyer class">
+      <option name="closed" value="true" />
+      <created>1732209296781</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732209296781</updated>
+    </task>
+    <task id="LOCAL-00021" summary="wrong save">
+      <option name="closed" value="true" />
+      <created>1732215636136</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732215636136</updated>
+    </task>
+    <task id="LOCAL-00022" summary="addListener to customer_post_code and customer_id in AddCustomer&#10;Fixed finallizy in TicketAndServicesController">
+      <option name="closed" value="true" />
+      <created>1732307310879</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732307310879</updated>
+    </task>
+    <task id="LOCAL-00023" summary="money added to database">
+      <option name="closed" value="true" />
+      <created>1732357889828</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732357889828</updated>
+    </task>
+    <task id="LOCAL-00024" summary="WindowHandlerUtils added">
+      <option name="closed" value="true" />
+      <created>1732362776785</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732362776785</updated>
+    </task>
+    <task id="LOCAL-00025" summary="MainPage, AddCustomer, IdHandler code fix">
+      <option name="closed" value="true" />
+      <created>1732369920554</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732369920554</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working connection between database" />
+    <MESSAGE value="list of ids first element is not removable, could go to tickets and services with empty list of ids" />
+    <MESSAGE value="idHandler sends buyer class to TicketAndServicesController" />
+    <MESSAGE value="PersonId class added" />
+    <MESSAGE value="TicketAddController list tickets into Listview" />
+    <MESSAGE value="Add tickets to Customer" />
+    <MESSAGE value="addListener to balanceLabel" />
+    <MESSAGE value="balance label change when balance is changing" />
+    <MESSAGE value="Summary added" />
+    <MESSAGE value="Working" />
+    <MESSAGE value="openSummary and FinializePurchase buttons added" />
+    <MESSAGE value="Buyer informations save to database" />
+    <MESSAGE value="Modified Identification class and .csv" />
+    <MESSAGE value="Modified Identification" />
+    <MESSAGE value="Clear code vol. 1" />
+    <MESSAGE value="add and delete balance" />
+    <MESSAGE value="bugfix in buyer class" />
+    <MESSAGE value="wrong save" />
+    <MESSAGE value="addListener to customer_post_code and customer_id in AddCustomer&#10;Fixed finallizy in TicketAndServicesController" />
+    <MESSAGE value="money added to database" />
+    <MESSAGE value="WindowHandlerUtils added" />
+    <MESSAGE value="MainPage, AddCustomer, IdHandler code fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="MainPage, AddCustomer, IdHandler code fix" />
+  </component>
+</project>
