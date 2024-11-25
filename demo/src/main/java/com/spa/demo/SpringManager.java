@@ -23,21 +23,6 @@ public class SpringManager implements Manager {
 
     @Override
     public void stopBackend() {
-        context.stop();
-    }
-
-    public String getItemName() {
-        ServicesRepository repo = context.getBean(ServicesRepository.class);
-        return repo.findByName("Test").get(0).getName();
-    }
-
-    public List<String> getServicesItemType(String type) {
-        ServicesRepository servRepo = context.getBean(ServicesRepository.class);
-        return servRepo.findByType(type).stream().map(Services::getName).collect(Collectors.toList());
-    }
-
-    public List<String> getRestaurantItemType(String type) {
-        RestaurantRepository restRepo = context.getBean(RestaurantRepository.class);
-        return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());
+        context.close();
     }
 }

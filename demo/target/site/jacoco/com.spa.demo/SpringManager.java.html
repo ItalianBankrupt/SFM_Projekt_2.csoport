@@ -15,41 +15,30 @@ import java.util.stream.Collectors;
     @Override
     public void startBackend() {
 <span class="nc" id="L17">        context = SpringApplication.run(SpaApplication.class);</span>
-<span class="nc" id="L18">        test();</span>
-<span class="nc" id="L19">    }</span>
+<span class="nc" id="L18">    }</span>
 
     public static  ConfigurableApplicationContext getApplicationContext() {
-<span class="nc" id="L22">        return context;</span>
+<span class="nc" id="L21">        return context;</span>
     }
 
     @Override
     public void stopBackend() {
-<span class="nc" id="L27">        context.stop();</span>
-<span class="nc" id="L28">    }</span>
+<span class="nc" id="L26">        context.stop();</span>
+<span class="nc" id="L27">    }</span>
 
     public String getItemName() {
-<span class="nc" id="L31">        ServicesRepository repo = context.getBean(ServicesRepository.class);</span>
-<span class="nc" id="L32">        return repo.findByName(&quot;Test&quot;).get(0).getName();</span>
+<span class="nc" id="L30">        ServicesRepository repo = context.getBean(ServicesRepository.class);</span>
+<span class="nc" id="L31">        return repo.findByName(&quot;Test&quot;).get(0).getName();</span>
     }
 
     public List&lt;String&gt; getServicesItemType(String type) {
-<span class="nc" id="L36">        ServicesRepository servRepo = context.getBean(ServicesRepository.class);</span>
-<span class="nc" id="L37">        return servRepo.findByType(type).stream().map(Services::getName).collect(Collectors.toList());</span>
+<span class="nc" id="L35">        ServicesRepository servRepo = context.getBean(ServicesRepository.class);</span>
+<span class="nc" id="L36">        return servRepo.findByType(type).stream().map(Services::getName).collect(Collectors.toList());</span>
     }
 
     public List&lt;String&gt; getRestaurantItemType(String type) {
-<span class="nc" id="L41">        RestaurantRepository restRepo = context.getBean(RestaurantRepository.class);</span>
-<span class="nc" id="L42">        return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());</span>
+<span class="nc" id="L40">        RestaurantRepository restRepo = context.getBean(RestaurantRepository.class);</span>
+<span class="nc" id="L41">        return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());</span>
     }
-
-    private void test()
-    {
-<span class="nc" id="L47">        IdentificationRepository repo = context.getBean(IdentificationRepository.class);</span>
-<span class="nc" id="L48">        Identification identification = Identification.builder().PremiumTicket(1).SunBedAtTheBeach(1).Lounger(1).StudentFellingTicket(0).PensionerThermalTicket(0).money(0).personId(&quot;alma&quot;).build();</span>
-<span class="nc" id="L49">        repo.save(identification);</span>
-<span class="nc" id="L50">        Identification identificatio1n = Identification.builder().PremiumTicket(1).SunBedAtTheBeach(0).Lounger(0).StudentFellingTicket(0).PensionerThermalTicket(1).money(0).personId(&quot;körte&quot;).build();</span>
-<span class="nc" id="L51">        repo.save(identificatio1n);</span>
-<span class="nc" id="L52">    }</span>
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

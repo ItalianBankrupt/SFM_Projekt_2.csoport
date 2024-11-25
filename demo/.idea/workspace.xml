@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Testing">
+    <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="Modified deleteByPersonID void">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/backend/IdentificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/SpringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/SpringManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/SpringManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/SpringManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/IdentificationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/backend/IdentificationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/RemoveCustomer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/RemoveCustomer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/RemoveCustomer.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/RemoveCustomer.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpringManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpringManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpringManager.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpringManager.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +72,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JUnit.java in demo.executor&quot;: &quot;Run&quot;,
     &quot;Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report].executor&quot;: &quot;Run&quot;,
     &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -84,6 +99,21 @@
       <recent name="com.spa.demo.frontend.Cassa.Models" />
       <recent name="com.spa.demo.frontend.Cassa.addcustomerControllers" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="java in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.java in demo" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -121,7 +151,9 @@
       <workItem from="1732400485814" duration="16000" />
       <workItem from="1732440673070" duration="5163000" />
       <workItem from="1732461872886" duration="158000" />
-      <workItem from="1732463040975" duration="286000" />
+      <workItem from="1732463040975" duration="325000" />
+      <workItem from="1732471820891" duration="813000" />
+      <workItem from="1732546316675" duration="2834000" />
     </task>
     <task id="LOCAL-00001" summary="working connection between database">
       <option name="closed" value="true" />
@@ -355,7 +387,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732461684408</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Modified deleteByPersonID void">
+      <option name="closed" value="true" />
+      <created>1732463358012</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732463358012</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="list of ids first element is not removable, could go to tickets and services with empty list of ids" />
     <MESSAGE value="idHandler sends buyer class to TicketAndServicesController" />
     <MESSAGE value="PersonId class added" />
     <MESSAGE value="TicketAddController list tickets into Listview" />
@@ -398,6 +437,7 @@
     <MESSAGE value="Check_id added" />
     <MESSAGE value="Remove Custumer from spa" />
     <MESSAGE value="Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing" />
+    <MESSAGE value="Modified deleteByPersonID void" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified deleteByPersonID void" />
   </component>
 </project>
