@@ -12,13 +12,13 @@ function findId() {
     document.getElementById('codeForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Ne küldje el a formot
 
-        var personId = document.getElementById('codeInput').value.trim();
+        var inputpersonId = document.getElementById('codeInput').value.trim();
         var resultDiv = document.getElementById('result');
         resultDiv.innerHTML = ''; // Ürítsük ki az eredmény mezőt
 
 
         // Keresés a listában
-        const record = identificationData.find(item => item.personId === personId);
+        const record = identificationData.find(item => item.personId === inputpersonId);
 
         if (record) {
             let output = `<h3>Talált azonosító:</h3>
@@ -32,7 +32,7 @@ function findId() {
             // Jegyek listája
             const tickets = {
                 "adultFellingTicket": "Felnőtt élmény belépő",
-                "StudentFellingTicket": "Diák élmény belépő",
+                "studentFellingTicket": "Diák élmény belépő",
                 "feelingPensionerTicket": "Pensioner élmény belépő",
                 "adultBeachTicket": "Felnőtt strand belépő",
                 "studentBeachTicket": "Diák strand belépő",

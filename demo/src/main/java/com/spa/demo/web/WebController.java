@@ -2,10 +2,7 @@ package com.spa.demo.web;
 
 
 
-import com.spa.demo.backend.Identification;
-import com.spa.demo.backend.IdentificationRepository;
-import com.spa.demo.backend.Services;
-import com.spa.demo.backend.ServicesRepository;
+import com.spa.demo.backend.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,13 +19,16 @@ public class WebController {
     private ServicesRepository servicesRepository;
     @Autowired
     private IdentificationRepository identificationRepository;
+    @Autowired
+    private RegistrationRepository registrationRepository;
 
     @GetMapping("/")
     public String showHomePage(Model model){
-
+      //  List<Registration> registrationList=registrationRepository.findAll();
         List<Identification>  identificationList=identificationRepository.findAll();
-        model.addAttribute("identificationList", identificationList);
-        System.out.println("Identifications: " + identificationList);
+      model.addAttribute("identificationList", identificationList);
+     //   model.addAttribute("registrationList", registrationList);
+     //   System.out.println("Identifications: " + identificationList);
         System.out.println("Betölt");
         return "index";
 
@@ -37,6 +37,7 @@ public class WebController {
     @GetMapping("/services")
     public String listServices(Model model){
         List<Services> serviceslist = servicesRepository.findAll();
+
         model.addAttribute("servicesList",serviceslist);
         return "services";
     }
