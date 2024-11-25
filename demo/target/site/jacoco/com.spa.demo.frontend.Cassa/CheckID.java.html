@@ -1,37 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CheckID.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa</a> &gt; <span class="el_source">CheckID.java</span></div><h1>CheckID.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa;
 
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.Identification;
+import com.spa.demo.backend.IdentificationRepository;
+import com.spa.demo.frontend.Cassa.Models.PersonId;
+import com.spa.demo.frontend.Cassa.Utils.PopUpWindows;
 import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
-<span class="nc" id="L12">public class CheckID {</span>
+<span class="nc" id="L24">public class CheckID {</span>
 
     private Node node;
-    @FXML
-    private TextField watchId;
+    private IdentificationRepository identificationRepository;
+<span class="nc" id="L28">    private ObservableList&lt;String&gt; ids = FXCollections.observableArrayList();</span>
+<span class="nc" id="L29">    List&lt;Identification&gt; quaryList = new ArrayList&lt;&gt;();</span>
 
     @FXML
-    void getWatchInformations(ActionEvent event) {
+    private ListView&lt;String&gt; ListView_ID;
 
-<span class="nc" id="L21">    }</span>
+    @FXML
+    private TextArea TextArea_Info;
+
+    @FXML
+    private TextField TextField_ID;
+
+    @FXML
+    void QuaryInfos(ActionEvent event) {
+<span class="nc" id="L42">        TextArea_Info.clear();</span>
+
+<span class="nc bnc" id="L44" title="All 2 branches missed.">        if(TextField_ID.getText().isEmpty()) {</span>
+<span class="nc" id="L45">            String contentText = &quot;Nincs azonosító beírva a kereséshez&quot;;</span>
+<span class="nc" id="L46">            String headerText = &quot;Azonosító hiba&quot;;</span>
+<span class="nc" id="L47">            String title = &quot;Hiba&quot;;</span>
+<span class="nc" id="L48">            PopUpWindows.AlertWindow(contentText, headerText, title);</span>
+        }
+
+<span class="nc" id="L51">        PersonId personId = null;</span>
+
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        for (Identification id : quaryList) {</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">            if(Objects.equals(id.getPersonId(), TextField_ID.getText())) {</span>
+<span class="nc" id="L55">                personId = new PersonId(id);</span>
+            }
+<span class="nc" id="L57">        }</span>
+
+<span class="nc" id="L59">        List&lt;String&gt; ticketInfos = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L60">        List&lt;String&gt; servicesInfos = new ArrayList&lt;&gt;();</span>
+
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        if(personId != null) {</span>
+<span class="nc" id="L63">            ticketInfos = personId.listTicketsWithoutZeroValues();</span>
+<span class="nc" id="L64">            servicesInfos = personId.listServicesInfo();</span>
+
+<span class="nc" id="L66">            StringBuilder information = new StringBuilder(&quot;Jegyek:\n&quot;);</span>
+<span class="nc bnc" id="L67" title="All 2 branches missed.">            for (String ticket : ticketInfos) {</span>
+<span class="nc" id="L68">                information.append(ticket).append(&quot;\n&quot;);</span>
+<span class="nc" id="L69">            }</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">            if(!servicesInfos.isEmpty()) {</span>
+<span class="nc" id="L71">                information.append(&quot;Szolgáltatások:\n&quot;);</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">                for (String service : servicesInfos) {</span>
+<span class="nc" id="L73">                    information.append(service).append(&quot;\n&quot;);</span>
+<span class="nc" id="L74">                }</span>
+            }
+
+<span class="nc" id="L77">            information.append(&quot;Egyenleg: &quot; + personId.getBalance().getValue() );</span>
+<span class="nc" id="L78">            TextArea_Info.setText(information.toString());</span>
+<span class="nc" id="L79">        }</span>
+        else
+        {
+<span class="nc" id="L82">            String contentText = &quot;Nem található ilyen azonosító!&quot;;</span>
+<span class="nc" id="L83">            String headerText = &quot;Hibás azonosító&quot;;</span>
+<span class="nc" id="L84">            String title = &quot;Hiba&quot;;</span>
+<span class="nc" id="L85">            PopUpWindows.AlertWindow(contentText, headerText, title);</span>
+        }
+<span class="nc" id="L87">    }</span>
 
     @FXML
     void backToMainPage(ActionEvent event) throws IOException {
-<span class="nc" id="L25">        node = (Node) event.getSource();</span>
-<span class="nc" id="L26">        WindowHandlerUtils.BackToCassaMainPage(node);</span>
-<span class="nc" id="L27">    }</span>
+<span class="nc" id="L91">        node = (Node) event.getSource();</span>
+<span class="nc" id="L92">        WindowHandlerUtils.BackToCassaMainPage(node);</span>
+<span class="nc" id="L93">    }</span>
+
+    private void filter()
+    {
+<span class="nc" id="L97">        String typedString = TextField_ID.getText();</span>
+<span class="nc" id="L98">        ObservableList&lt;String&gt; filteredIds = FXCollections.observableArrayList();</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">        for (String id : ids) {</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">            if(id.contains(typedString))</span>
+            {
+<span class="nc" id="L102">                filteredIds.add(id);</span>
+            }
+<span class="nc" id="L104">        }</span>
+<span class="nc" id="L105">        ListView_ID.setItems(filteredIds);</span>
+
+<span class="nc" id="L107">    }</span>
 
     public void initialize()
     {
+<span class="nc" id="L111">        TextArea_Info.setEditable(false);</span>
+<span class="nc" id="L112">        ConfigurableApplicationContext context = SpringManager.getApplicationContext();</span>
+<span class="nc" id="L113">        identificationRepository = context.getBean(IdentificationRepository.class);</span>
+<span class="nc" id="L114">        quaryList = identificationRepository.findAll();</span>
 
-<span class="nc" id="L32">    }</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">        for (Identification id : quaryList) {</span>
+<span class="nc" id="L117">            ids.add(id.getPersonId());</span>
+<span class="nc" id="L118">        }</span>
+<span class="nc" id="L119">        ListView_ID.setItems(ids);</span>
 
+<span class="nc" id="L121">        ListView_ID.setOnMouseClicked(event -&gt; {</span>
+<span class="nc" id="L122">            TextField_ID.setText(ListView_ID.getSelectionModel().getSelectedItem());</span>
+<span class="nc" id="L123">        });</span>
 
+<span class="nc" id="L125">        TextField_ID.textProperty().addListener((observable, oldValue, newValue) -&gt; {</span>
+<span class="nc" id="L126">            filter();</span>
+<span class="nc" id="L127">        });</span>
+
+<span class="nc" id="L129">    }</span>
 }
 
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

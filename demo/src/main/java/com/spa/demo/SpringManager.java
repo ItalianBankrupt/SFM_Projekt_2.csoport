@@ -15,7 +15,6 @@ public class SpringManager implements Manager {
     @Override
     public void startBackend() {
         context = SpringApplication.run(SpaApplication.class);
-        test();
     }
 
     public static  ConfigurableApplicationContext getApplicationContext() {
@@ -24,31 +23,6 @@ public class SpringManager implements Manager {
 
     @Override
     public void stopBackend() {
-        context.stop();
+        context.close();
     }
-
-    public String getItemName() {
-        ServicesRepository repo = context.getBean(ServicesRepository.class);
-        return repo.findByName("Test").get(0).getName();
-    }
-
-    public List<String> getServicesItemType(String type) {
-        ServicesRepository servRepo = context.getBean(ServicesRepository.class);
-        return servRepo.findByType(type).stream().map(Services::getName).collect(Collectors.toList());
-    }
-
-    public List<String> getRestaurantItemType(String type) {
-        RestaurantRepository restRepo = context.getBean(RestaurantRepository.class);
-        return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());
-    }
-
-    private void test()
-    {
-        IdentificationRepository repo = context.getBean(IdentificationRepository.class);
-        Identification identification = Identification.builder().PremiumTicket(1).SunBedAtTheBeach(1).Lounger(1).StudentFellingTicket(1).PensionerThermalTicket(0).money(1500).personId("alma").build();
-        repo.save(identification);
-        Identification identificatio1n = Identification.builder().PremiumTicket(1).SunBedAtTheBeach(0).Lounger(0).StudentFellingTicket(0).PensionerThermalTicket(1).money(0).personId("körte").build();
-        repo.save(identificatio1n);
-    }
-
 }

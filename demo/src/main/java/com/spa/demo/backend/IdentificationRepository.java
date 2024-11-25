@@ -17,7 +17,7 @@ public interface IdentificationRepository extends JpaRepository<Identification, 
     @Modifying
     @Query("Update Identification identification set identification.money = :money where identification.personId = :personId")
     void updateByPersonId(String personId, int money);
-
+    @Transactional
     void deleteByPersonId(String customerId);
 }
 
