@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hu" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <title>Karszalag lekérdezés</title>
+    <script>
+        // Amikor az oldal betöltődik, küld egy GET kérést a "/refresh" útvonalra
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("/refresh")
+                .then(response => {
+                    if (!response.ok) {
+                        console.error("Error refreshing the page.");
+                    } else {
+                        console.log("Refreshed successfully.");
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+        });
+    </script>
+
+    <script type="text/javascript" th:src="@{/js/actions.js}"></script>
+    <script defer th:inline="javascript">
+        const identificationData = /*[[${identificationList}]]*/ [];
+        console.log(identificationData);
+    </script>
+
+    <style>
+        body {
+            background-image: url('/bgimage.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 70px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        #map {
+            margin-top: 20px;
+            display: none; /* Kezdetben nem látszik */
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+        a {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Karszalag Beírás</h1>
+    <form id="codeForm">
+        <input type="text" id="codeInput" placeholder="Írja be az azonosítót" required>
+        <br><br>
+        <input type="submit" value="Keresés" th:onclick="findId()">
+    </form>
+
+    <div id="result"></div>
+    <div id="map">
+        <img src="/map.jpg" alt="Térkép">
+    </div>
+    <a href="https://hungarospa.hu/" target="_blank" > Forrás</a>
+    <a href="https://chatgpt.com/" th:href="@{/services}">Services List</a>
+
+</div>
+
+</body>
+</html>
