@@ -10,7 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -22,9 +25,11 @@ public class WebController {
 
     @GetMapping("/")
     public String showHomePage(Model model){
-        List<Identification> identificationList=identificationRepository.findAll();
+
+        List<Identification>  identificationList=identificationRepository.findAll();
         model.addAttribute("identificationList", identificationList);
         System.out.println("Identifications: " + identificationList);
+        System.out.println("Betölt");
         return "index";
 
     }
@@ -35,4 +40,11 @@ public class WebController {
         model.addAttribute("servicesList",serviceslist);
         return "services";
     }
+
+    @GetMapping ("/refresh")
+    public String addIdentification() {
+
+        return "redirect:/";  // A főoldal újra megjeleníti az adatokat
+    }
+
 }

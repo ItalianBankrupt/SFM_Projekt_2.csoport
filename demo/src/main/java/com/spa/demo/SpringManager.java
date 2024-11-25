@@ -45,7 +45,7 @@ public class SpringManager implements Manager {
     private void test()
     {
         IdentificationRepository repo = context.getBean(IdentificationRepository.class);
-        Identification identification = Identification.builder().PremiumTicket(1).SunBedAtTheBeach(1).Lounger(1).StudentFellingTicket(0).PensionerThermalTicket(0).money(0).personId("alma").build();
+        Identification identification = Identification.builder().PremiumTicket(1).SunBedAtTheBeach(1).Lounger(1).StudentFellingTicket(1).PensionerThermalTicket(0).money(1500).personId("alma").build();
         repo.save(identification);
         Identification identificatio1n = Identification.builder().PremiumTicket(1).SunBedAtTheBeach(0).Lounger(0).StudentFellingTicket(0).PensionerThermalTicket(1).money(0).personId("körte").build();
         repo.save(identificatio1n);

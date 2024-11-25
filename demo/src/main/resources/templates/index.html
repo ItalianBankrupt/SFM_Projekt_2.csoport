@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
     <title>Karszalag lekérdezés</title>
+    <script>
+        // Amikor az oldal betöltődik, küld egy GET kérést a "/refresh" útvonalra
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("/refresh")
+                .then(response => {
+                    if (!response.ok) {
+                        console.error("Error refreshing the page.");
+                    } else {
+                        console.log("Refreshed successfully.");
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+        });
+    </script>
+
     <script type="text/javascript" th:src="@{/js/actions.js}"></script>
     <script defer th:inline="javascript">
         const identificationData = /*[[${identificationList}]]*/ [];
-        console.log("identificationData:", identificationData);
-        console.log(/*[[${identificationList}]]*/);
+        console.log(identificationData);
     </script>
 
     <style>
@@ -78,42 +92,17 @@
 
     <h1>Karszalag Beírás</h1>
     <form id="codeForm">
-        <input type="text" id="codeInput" placeholder="Írd be az azonosítót" required>
+        <input type="text" id="codeInput" placeholder="Írja be az azonosítót" required>
         <br><br>
         <input type="submit" value="Keresés" th:onclick="findId()">
     </form>
 
     <div id="result"></div>
-
-    <table class="table table-bordered">
-        <thead class="table-dark">
-        <tr>
-            <th>ID</th>
-            <th>Szolgáltatás neve</th>
-            <th>Ár</th>
-            <th>Típus</th>
-            <th>Jegy típusa</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Iterálunk a 'servicesList' változón, amit a controller ad át -->
-       <!-- <th:block th:each="identification : ${identificationList}">
-            <tr>
-                <td th:text="${identification.getMoney()}">1</td>
-                <td th:text="${identification.getPersonId()}">Szolgáltatás neve</td>
-                <td th:text="${identification.getBaldachin()}">1000</td>
-                <td th:text="${identification.getAdultFellingTicket()}">Típus</td>
-                <td th:text="${identification.getAdultBeachTicket()}">Jegy típus</td>
-            </tr>
-        </th:block> -->
-        </tbody>
-    </table>
     <div id="map">
         <img src="/map.jpg" alt="Térkép">
     </div>
     <a href="https://hungarospa.hu/" target="_blank" > Forrás</a>
     <a href="https://chatgpt.com/" th:href="@{/services}">Services List</a>
-
 
 </div>
 
