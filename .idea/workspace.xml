@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Itembox added">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/ItemBoxController.java" afterDir="false" />
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant update">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/identificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/identificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/ItemBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/ItemBox.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/identification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/identification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/temporary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/identificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/identificationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/identification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/identification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/csv/restaurant.csv" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/csv/restaurant.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +36,12 @@
     &quot;assignee&quot;: &quot;LKristof7&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git",
-    "accountId": "52032e0b-e70b-419c-b931-6f193b99de91"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git&quot;,
+    &quot;accountId&quot;: &quot;52032e0b-e70b-419c-b931-6f193b99de91&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -61,29 +54,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "dev__gergo",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/rakge/IdeaProjects/SFM_Projekt_2.csoport/demo/src/main/resources/fxml/RestGUI",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev__gergo&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rakge/IdeaProjects/SFM_Projekt_2.csoport/demo/src/main/resources/fxml/RestGUI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rakge\IdeaProjects\SFM_Projekt_2.csoport\demo\src\main\resources\fxml\RestGUI" />
@@ -126,7 +119,8 @@
       <workItem from="1731957050985" duration="307000" />
       <workItem from="1732007204842" duration="2803000" />
       <workItem from="1732010039890" duration="402000" />
-      <workItem from="1732411834171" duration="7752000" />
+      <workItem from="1732411834171" duration="9876000" />
+      <workItem from="1732968624951" duration="3908000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -168,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732411783220</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Restaurant update">
+      <option name="closed" value="true" />
+      <created>1732436831059</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732436831059</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +193,7 @@
     <MESSAGE value="Web .v1" />
     <MESSAGE value="Web .v2" />
     <MESSAGE value="Itembox added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Itembox added" />
+    <MESSAGE value="Restaurant update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant update" />
   </component>
 </project>
