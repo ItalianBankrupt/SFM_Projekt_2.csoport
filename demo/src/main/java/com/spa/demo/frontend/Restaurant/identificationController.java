@@ -1,13 +1,35 @@
 package com.spa.demo.frontend.Restaurant;
 
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.Restaurant;
+import com.spa.demo.backend.RestaurantRepository;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+import java.util.List;
+
+
+
+@Component
 public class identificationController {
+
+
+    private ConfigurableApplicationContext context;
+
+    @Autowired
+    private RestaurantRepository restaurantRepository;
 
     @FXML
     private Label bandID1;
@@ -49,36 +71,64 @@ public class identificationController {
     private TableView<?> smallBasket;
 
 
-    @FXML
-    void loadCoffe(ActionEvent event) {
+    void loadFoodGrid(String itemType) throws IOException {
+        panelGridPane.getChildren().clear();
+        context = SpringManager.getApplicationContext();
+        restaurantRepository = context.getBean(RestaurantRepository.class);
+        List<Restaurant> Items = restaurantRepository.findByType(itemType);
+        int col = 0;
+        int row = 0;
+        for (Restaurant item : Items) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RestGUI/ItemBox.fxml"));
+            AnchorPane pane = loader.load();
 
+            ItemBoxController controller = loader.getController();
+            String name = item.getName();
+            String type = item.getType();
+            int price = item.getPrice();
+
+            Label foodName = controller.getProdName();
+            foodName.setText(name);
+            System.out.println(name);//teszt
+            ImageView imageView = controller.getProdImage();
+            imageView.setImage(new Image(getClass().getResourceAsStream("/fxml/RestGUI/backg.png")));
+            Label foodPrice = controller.getProdPrice();
+            foodPrice.setText(String.valueOf(price));
+            panelGridPane.add(pane, row, col++);
+
+            if (col == 2){
+                col = 0;
+                row+=2;
+            }
+        }
     }
 
     @FXML
-    void loadDessert(ActionEvent event) {
-
+    void loadCoffe(ActionEvent event) throws IOException{
+        loadFoodGrid("Kave");
     }
 
     @FXML
-    void loadDrinks(ActionEvent event) {
+    void loadDessert(ActionEvent event) throws IOException{
+        loadFoodGrid("Desszert");
     }
 
     @FXML
-    void loadMainCourse(ActionEvent event) {
-
+    void loadDrinks(ActionEvent event) throws IOException{
+        loadFoodGrid("Udito");
     }
 
     @FXML
-    void loadPreFood(ActionEvent event) {
+    void loadMainCourse(ActionEvent event) throws IOException{
+        loadFoodGrid("Foetel");
     }
 
     @FXML
-    void loadSoup(ActionEvent event) {
+    void loadPreFood(ActionEvent event) throws IOException{
     }
 
     @FXML
-    void loadRestaurantItems(String category){
-
+    void loadSoup(ActionEvent event) throws IOException{
     }
 
     @FXML
