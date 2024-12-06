@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v6? js2.0">
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v7? js4.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/SpringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/SpringManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/web/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/js/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/SpringManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/SpringManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/web/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/web/WebController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/static/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/static/js/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +23,8 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="TypeScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -83,11 +73,15 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/lorin/Desktop/Egyetem/5 félév/SFM/Projekt/SFM_Projekt_2.csoport/demo/src/main/resources/templates&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -146,6 +140,12 @@
       <workItem from="1732458311788" duration="7287000" />
       <workItem from="1732466406201" duration="7746000" />
       <workItem from="1732543616377" duration="5956000" />
+      <workItem from="1732556409654" duration="97000" />
+      <workItem from="1732556980042" duration="1576000" />
+      <workItem from="1732558587699" duration="695000" />
+      <workItem from="1732559315719" duration="489000" />
+      <workItem from="1733485598556" duration="3390000" />
+      <workItem from="1733489054126" duration="171000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -235,7 +235,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732552769687</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Web .v6? js3.0">
+      <option name="closed" value="true" />
+      <created>1732556495223</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732556495223</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Web .v7? js4.0">
+      <option name="closed" value="true" />
+      <created>1733488525905</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733488525905</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +266,9 @@
     <MESSAGE value="Web .v5?" />
     <MESSAGE value="Web .v6? js 1.0" />
     <MESSAGE value="Web .v6? js2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Web .v6? js2.0" />
+    <MESSAGE value="Web .v6? js3.0" />
+    <MESSAGE value="Web .v7? js4.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web .v7? js4.0" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

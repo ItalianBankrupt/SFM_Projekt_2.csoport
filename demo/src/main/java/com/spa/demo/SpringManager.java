@@ -26,7 +26,7 @@ public class SpringManager implements Manager {
     public void stopBackend() {
         context.close();
     }
-  /*  public static void test() {
+    public static void test() {
         Registration reg=Registration.builder().City("asd").name("asd").Street("asd").PostCode("1232").GeneratedId("alma").build();
         RegistrationRepository regRepo=context.getBean(RegistrationRepository.class);
         regRepo.save(reg);
@@ -34,5 +34,5 @@ public class SpringManager implements Manager {
         IdentificationRepository idRepo=context.getBean(IdentificationRepository.class);
         idRepo.save(identification);
 
-    }*/
+    }
 }
