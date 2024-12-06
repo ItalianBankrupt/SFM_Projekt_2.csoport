@@ -84,7 +84,7 @@ function findId() {
             // Összegzés
             resultDiv.innerHTML = output + ticketOutput + serviceOutput;
         } else {
-            resultDiv.innerHTML = '<p>Nem található adat az adott azonosítóval!</p>';
+            resultDiv.innerHTML = '<p>Nem !!!!található adat az adott azonosítóval!</p>';
             //Map rejtve marad
             mapElement.style.display = 'none';
         }
