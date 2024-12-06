@@ -11,15 +11,14 @@
   <div class="container">
     <h1 class="h3">Árlista</h1>
     <a href="/" class="btn btn-primary mb-3">Vissza a főoldalra</a>
-    <table class="table table-bordered">
-      <thead class="table-dark">
+    <table class="table table-bordered table-hover shadow-sm rounded border">
+      <thead class="bg-primary text-white">
       <tr>
         <th>Jegy típusa</th>
         <th>Ár (Ft)</th>
       </tr>
       </thead>
       <tbody>
-      <!-- Iterálunk a 'servicesList' változón, amit a controller ad át -->
       <th:block th:each="service : ${servicesList}">
         <tr>
           <td th:text="${service.name}">Jegy</td>
