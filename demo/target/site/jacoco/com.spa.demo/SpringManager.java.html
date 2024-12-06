@@ -9,7 +9,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import java.util.List;
 import java.util.stream.Collectors;
 
-<span class="nc" id="L12">public class SpringManager implements Manager {</span>
+<span class="fc" id="L12">public class SpringManager implements Manager {</span>
     private static ConfigurableApplicationContext context;
 
     @Override
@@ -23,22 +23,7 @@ import java.util.stream.Collectors;
 
     @Override
     public void stopBackend() {
-<span class="nc" id="L26">        context.stop();</span>
+<span class="nc" id="L26">        context.close();</span>
 <span class="nc" id="L27">    }</span>
-
-    public String getItemName() {
-<span class="nc" id="L30">        ServicesRepository repo = context.getBean(ServicesRepository.class);</span>
-<span class="nc" id="L31">        return repo.findByName(&quot;Test&quot;).get(0).getName();</span>
-    }
-
-    public List&lt;String&gt; getServicesItemType(String type) {
-<span class="nc" id="L35">        ServicesRepository servRepo = context.getBean(ServicesRepository.class);</span>
-<span class="nc" id="L36">        return servRepo.findByType(type).stream().map(Services::getName).collect(Collectors.toList());</span>
-    }
-
-    public List&lt;String&gt; getRestaurantItemType(String type) {
-<span class="nc" id="L40">        RestaurantRepository restRepo = context.getBean(RestaurantRepository.class);</span>
-<span class="nc" id="L41">        return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());</span>
-    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
