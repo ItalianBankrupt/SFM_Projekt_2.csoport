@@ -10,19 +10,19 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 
-<span class="nc" id="L13">@AllArgsConstructor</span>
-<span class="nc" id="L14">@NoArgsConstructor</span>
-<span class="nc" id="L15">@Builder</span>
+<span class="fc" id="L13">@AllArgsConstructor</span>
+<span class="fc" id="L14">@NoArgsConstructor</span>
+<span class="pc" id="L15">@Builder</span>
 <span class="nc bnc" id="L16" title="All 66 branches missed.">@Data</span>
 @Entity
 public class Identification {
     //----------Kapcsolat a Reg. táblával---
     @ManyToOne
     @JoinColumn( name = &quot;registration_GeneratedId&quot;)
-<span class="nc" id="L22">    private Registration registration;</span>
+<span class="fc" id="L22">    private Registration registration;</span>
     //----------Egyedi azonosító------------
     @Id
-<span class="nc" id="L25">    private String personId;</span>
+<span class="fc" id="L25">    private String personId;</span>
     //----------Jegyek----------------------
 <span class="nc" id="L27">    private int AdultFellingTicket;</span>
 <span class="nc" id="L28">    private int StudentFellingTicket;</span>
@@ -46,6 +46,6 @@ public class Identification {
 
     @OneToMany(mappedBy = &quot;identification&quot;, cascade = CascadeType.ALL, orphanRemoval = true)
 <span class="nc" id="L48">    private List&lt;Cupboard&gt; locker;</span>
-<span class="nc" id="L49">    private int Money;</span>
+<span class="nc" id="L49">    private int money;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

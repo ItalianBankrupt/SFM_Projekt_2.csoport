@@ -12,12 +12,12 @@ import java.util.*;
 <span class="nc" id="L12">@Setter</span>
 
 public class Buyer {
-<span class="nc" id="L15">    private String Id;</span>
-<span class="nc" id="L16">    private String Name;</span>
-<span class="nc" id="L17">    private String City;</span>
-<span class="nc" id="L18">    private String Street;</span>
-<span class="nc" id="L19">    private String PostCode;</span>
-<span class="nc" id="L20">    private int Status; //1-adult 2-student 3-pensioner</span>
+<span class="fc" id="L15">    private String Id;</span>
+<span class="fc" id="L16">    private String Name;</span>
+<span class="fc" id="L17">    private String City;</span>
+<span class="fc" id="L18">    private String Street;</span>
+<span class="fc" id="L19">    private String PostCode;</span>
+<span class="fc" id="L20">    private int Status; //1-adult 2-student 3-pensioner</span>
 <span class="pc" id="L21">    private int NumberOfGeneratedId = 0;</span>
 <span class="pc" id="L22">    public ObservableList&lt;String&gt; Ids = FXCollections.observableArrayList();</span>
 
@@ -87,22 +87,22 @@ public class Buyer {
     //A legenerált azonosítót hozzáadja az Ids listához
     public void GenerateId(int status)
     {
-<span class="nc" id="L90">        Date date = new Date();</span>
-<span class="nc" id="L91">        Calendar calendar = new GregorianCalendar();</span>
-<span class="nc" id="L92">        String month = (calendar.get(Calendar.MONTH)+1) + &quot;&quot;;</span>
-<span class="nc bnc" id="L93" title="All 2 branches missed.">        month = (month.length() == 1) ? &quot;0&quot;.concat(month) : month;</span>
-<span class="nc" id="L94">        String day = calendar.get(Calendar.DAY_OF_MONTH) + &quot;&quot;;</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">        day = (day.length() == 1) ? &quot;0&quot;.concat(day) : day;</span>
-<span class="nc" id="L96">        String hour = calendar.get(Calendar.HOUR_OF_DAY) + &quot;&quot;;</span>
-<span class="nc bnc" id="L97" title="All 2 branches missed.">        hour = (hour.length() == 1) ? &quot;0&quot;.concat(hour) : hour;</span>
-<span class="nc" id="L98">        String min = calendar.get(Calendar.MINUTE) + &quot;&quot;;</span>
-<span class="nc bnc" id="L99" title="All 2 branches missed.">        min = (min.length() == 1) ? &quot;0&quot;.concat(min) : min;</span>
-<span class="nc" id="L100">        String sec = calendar.get(Calendar.SECOND) + &quot;&quot;;</span>
-<span class="nc" id="L101">        String lastChar = (char)(this.NumberOfGeneratedId + 'A')+ &quot;&quot;;</span>
-<span class="nc" id="L102">        String statusChar = &quot;&quot;;</span>
-<span class="nc bnc" id="L103" title="All 2 branches missed.">        if (status == 1)</span>
+<span class="fc" id="L90">        Date date = new Date();</span>
+<span class="fc" id="L91">        Calendar calendar = new GregorianCalendar();</span>
+<span class="fc" id="L92">        String month = (calendar.get(Calendar.MONTH)+1) + &quot;&quot;;</span>
+<span class="pc bpc" id="L93" title="1 of 2 branches missed.">        month = (month.length() == 1) ? &quot;0&quot;.concat(month) : month;</span>
+<span class="fc" id="L94">        String day = calendar.get(Calendar.DAY_OF_MONTH) + &quot;&quot;;</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">        day = (day.length() == 1) ? &quot;0&quot;.concat(day) : day;</span>
+<span class="fc" id="L96">        String hour = calendar.get(Calendar.HOUR_OF_DAY) + &quot;&quot;;</span>
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">        hour = (hour.length() == 1) ? &quot;0&quot;.concat(hour) : hour;</span>
+<span class="fc" id="L98">        String min = calendar.get(Calendar.MINUTE) + &quot;&quot;;</span>
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">        min = (min.length() == 1) ? &quot;0&quot;.concat(min) : min;</span>
+<span class="fc" id="L100">        String sec = calendar.get(Calendar.SECOND) + &quot;&quot;;</span>
+<span class="fc" id="L101">        String lastChar = (char)(this.NumberOfGeneratedId + 'A')+ &quot;&quot;;</span>
+<span class="fc" id="L102">        String statusChar = &quot;&quot;;</span>
+<span class="pc bpc" id="L103" title="1 of 2 branches missed.">        if (status == 1)</span>
         {
-<span class="nc" id="L105">            statusChar = &quot;FE&quot;;</span>
+<span class="fc" id="L105">            statusChar = &quot;FE&quot;;</span>
         }
 <span class="nc bnc" id="L107" title="All 2 branches missed.">        else if (status == 2)</span>
         {
@@ -112,11 +112,11 @@ public class Buyer {
         {
 <span class="nc" id="L113">            statusChar = &quot;NY&quot;;</span>
         }
-<span class="nc" id="L115">        String id = &quot;&quot;;</span>
-<span class="nc" id="L116">        id = statusChar + month + day + this.Id + hour + min  + lastChar;</span>
-<span class="nc" id="L117">        NumberOfGeneratedId++;</span>
-<span class="nc" id="L118">        Ids.add(id);</span>
-<span class="nc" id="L119">    }</span>
+<span class="fc" id="L115">        String id = &quot;&quot;;</span>
+<span class="fc" id="L116">        id = statusChar + month + day + this.Id + hour + min  + lastChar;</span>
+<span class="fc" id="L117">        NumberOfGeneratedId++;</span>
+<span class="fc" id="L118">        Ids.add(id);</span>
+<span class="fc" id="L119">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

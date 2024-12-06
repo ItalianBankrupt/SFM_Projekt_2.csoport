@@ -10,22 +10,22 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
-<span class="nc bnc" id="L13" title="All 64 branches missed.">@Data</span>
-<span class="nc" id="L14">@AllArgsConstructor</span>
-<span class="nc" id="L15">@NoArgsConstructor</span>
-<span class="nc" id="L16">@Builder</span>
+<span class="pc bpc" id="L13" title="44 of 64 branches missed.">@Data</span>
+<span class="fc" id="L14">@AllArgsConstructor</span>
+<span class="fc" id="L15">@NoArgsConstructor</span>
+<span class="pc" id="L16">@Builder</span>
 @Entity
 public class Registration {
     @Id
-<span class="nc" id="L20">    private String GeneratedId;</span>
-<span class="nc" id="L21">    private String IDNumber;</span>
-<span class="nc" id="L22">    private String name;</span>
-<span class="nc" id="L23">    private String City;</span>
-<span class="nc" id="L24">    private String Street;</span>
-<span class="nc" id="L25">    private String PostCode;</span>
-<span class="nc" id="L26">    private int CostumerType; // 0 - Mindenkinek, 1 - Felnőtt, 2 - Diák, 3 - Nyugdíjjas</span>
+<span class="fc" id="L20">    private String GeneratedId;</span>
+<span class="fc" id="L21">    private String IDNumber;</span>
+<span class="fc" id="L22">    private String name;</span>
+<span class="fc" id="L23">    private String City;</span>
+<span class="fc" id="L24">    private String Street;</span>
+<span class="fc" id="L25">    private String PostCode;</span>
+<span class="fc" id="L26">    private int CostumerType; // 0 - Mindenkinek, 1 - Felnőtt, 2 - Diák, 3 - Nyugdíjjas</span>
 
     @OneToMany(mappedBy = &quot;registration&quot;, cascade = CascadeType.ALL, orphanRemoval = true)
-<span class="nc" id="L29">    private List&lt;Identification&gt; identifications;</span>
+<span class="fc" id="L29">    private List&lt;Identification&gt; identifications;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

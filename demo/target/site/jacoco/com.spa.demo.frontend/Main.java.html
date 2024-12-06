@@ -3,6 +3,7 @@
 
 import com.spa.demo.SpringManager;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -12,21 +13,30 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-<span class="fc" id="L15">public class Main extends Application {</span>
-<span class="fc" id="L16">    static Manager manager= new SpringManager();</span>
+<span class="fc" id="L16">public class Main extends Application {</span>
+<span class="fc" id="L17">    static Manager manager= new SpringManager();</span>
 
     @Override
     public void start(Stage stage) throws Exception {
-<span class="nc" id="L20">        Parent root = FXMLLoader.load(getClass().getResource(&quot;/fxml/main.fxml&quot;));</span>
-<span class="nc" id="L21">        stage.setScene(new Scene(root));</span>
-<span class="nc" id="L22">        manager.startBackend();</span>
-<span class="nc" id="L23">        stage.show();</span>
-<span class="nc" id="L24">    }</span>
+<span class="nc" id="L21">        Parent root = FXMLLoader.load(getClass().getResource(&quot;/fxml/main.fxml&quot;));</span>
+<span class="nc" id="L22">        stage.setScene(new Scene(root));</span>
+<span class="nc" id="L23">        stage.setOnCloseRequest(event -&gt; {</span>
+            try {
+<span class="nc" id="L25">                stop(); //</span>
+<span class="nc" id="L26">            } catch (Exception e) {</span>
+<span class="nc" id="L27">                e.printStackTrace();</span>
+<span class="nc" id="L28">            }</span>
+<span class="nc" id="L29">        });</span>
+
+<span class="nc" id="L31">        manager.startBackend();</span>
+<span class="nc" id="L32">        stage.show();</span>
+<span class="nc" id="L33">    }</span>
 
     @Override
     public void stop() throws Exception {
-<span class="nc" id="L28">        manager.stopBackend();</span>
-<span class="nc" id="L29">        super.stop();</span>
-<span class="nc" id="L30">    }</span>
+<span class="nc" id="L37">        manager.stopBackend();</span>
+<span class="nc" id="L38">        Platform.exit();</span>
+<span class="nc" id="L39">        super.stop();</span>
+<span class="nc" id="L40">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
