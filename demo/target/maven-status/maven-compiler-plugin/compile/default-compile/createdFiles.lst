@@ -28,6 +28,7 @@ com\spa\demo\frontend\Cassa\addcustomerControllers\AddCustomerController$2.class
 com\spa\demo\frontend\Cassa\Models\PersonId.class
 com\spa\demo\backend\Restaurant.class
 com\spa\demo\frontend\Restaurant\Restaurant$Type.class
+com\spa\demo\web\WebController.class
 com\spa\demo\frontend\Cassa\Utils\JavaFxElementModifier.class
 com\spa\demo\backend\Services.class
 com\spa\demo\backend\Registration.class

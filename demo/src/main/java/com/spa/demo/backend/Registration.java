@@ -1,6 +1,8 @@
 package com.spa.demo.backend;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,7 +26,7 @@ public class Registration {
     private String Street;
     private String PostCode;
     private int CostumerType; // 0 - Mindenkinek, 1 - Felnőtt, 2 - Diák, 3 - Nyugdíjjas
-
+    @JsonBackReference
     @OneToMany(mappedBy = "registration", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Identification> identifications;
 }

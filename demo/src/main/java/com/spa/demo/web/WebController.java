@@ -21,15 +21,17 @@ public class WebController {
     private IdentificationRepository identificationRepository;
     @Autowired
     private RegistrationRepository registrationRepository;
+    @Autowired
+    private CupboardRepository cupboardRepository;
 
     @GetMapping("/")
     public String showHomePage(Model model){
-      //  List<Registration> registrationList=registrationRepository.findAll();
-        List<Identification>  identificationList=identificationRepository.findAll();
-      model.addAttribute("identificationList", identificationList);
-     //   model.addAttribute("registrationList", registrationList);
-     //   System.out.println("Identifications: " + identificationList);
-        System.out.println("Betölt");
+       List<Registration> registrationList=registrationRepository.findAll();
+       List<Identification>  identificationList=identificationRepository.findAll();
+       List<Cupboard> cupboardList=cupboardRepository.findAll();
+       model.addAttribute("registrationList", registrationList)
+               .addAttribute("identificationList", identificationList)
+               .addAttribute("cupboardList", cupboardList);
         return "index";
 
     }
@@ -44,7 +46,7 @@ public class WebController {
 
     @GetMapping ("/refresh")
     public String addIdentification() {
-
+        System.out.println("Refresh");
         return "redirect:/";  // A főoldal újra megjeleníti az adatokat
     }
 

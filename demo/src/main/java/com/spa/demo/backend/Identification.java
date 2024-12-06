@@ -1,6 +1,9 @@
 package com.spa.demo.backend;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,6 +20,7 @@ import java.util.List;
 @Entity
 public class Identification {
     //----------Kapcsolat a Reg. táblával---
+    @JsonManagedReference
     @ManyToOne
     @JoinColumn( name = "registration_GeneratedId")
     private Registration registration;

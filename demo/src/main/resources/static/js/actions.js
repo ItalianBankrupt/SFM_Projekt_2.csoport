@@ -1,4 +1,4 @@
-console.log("actions.js betöltve!");
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Akkor kezdjük el az eseményfigyelőt, amikor a DOM teljesen betöltődött
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function findId() {
-    console.log("Lekérdezés indult...");
+
 
     // Az eseményfigyelőt csak akkor adjuk hozzá, amikor a DOM teljesen betöltődött
     document.getElementById('codeForm').addEventListener('submit', function (event) {
@@ -14,6 +14,7 @@ function findId() {
 
         var inputpersonId = document.getElementById('codeInput').value.trim();
         var resultDiv = document.getElementById('result');
+        const mapElement = document.getElementById('map');
         resultDiv.innerHTML = ''; // Ürítsük ki az eredmény mezőt
 
 
@@ -22,9 +23,10 @@ function findId() {
 
         if (record) {
             let output = `<h3>Talált azonosító:</h3>
-                          <p>Person ID: ${record.personId}</p>
-                          <p>Money: ${record.money}</p>`;
-
+                          <p> ${record.personId}</p>
+                          <p>Egyenleg: ${record.money}</p>`;
+            //Map megjelenítése
+            mapElement.style.display = 'block';
             // Jegyek kiírása
             let ticketOutput = '<h4>Belépők:</h4>';
             let hasTickets = false;
@@ -43,11 +45,10 @@ function findId() {
                 "aquaParkTicket": "Aqua Park belépő",
                 "premiumTicket": "Prémium belépő"
             };
-            console.log("record:", record);
             // Jegyek megjelenítése
             for (const [ticket, name] of Object.entries(tickets)) {
                 if (record[ticket] > 0) {
-                    ticketOutput += `<p>${name}: ${record[ticket]}</p>`;
+                    ticketOutput += `<li>${name},</li>`;
                     hasTickets = true;
                 }
             }
@@ -72,7 +73,7 @@ function findId() {
             // Szolgáltatások megjelenítése
             for (const [service, name] of Object.entries(services)) {
                 if (record[service] > 0) {
-                    serviceOutput += `<p>${name}: ${record[service]}</p>`;
+                    serviceOutput += `<li>${name}: ${record[service]}</li>`;
                     hasServices = true;
                 }
             }
@@ -84,6 +85,8 @@ function findId() {
             resultDiv.innerHTML = output + ticketOutput + serviceOutput;
         } else {
             resultDiv.innerHTML = '<p>Nem található adat az adott azonosítóval!</p>';
+            //Map rejtve marad
+            mapElement.style.display = 'none';
         }
     });
 }

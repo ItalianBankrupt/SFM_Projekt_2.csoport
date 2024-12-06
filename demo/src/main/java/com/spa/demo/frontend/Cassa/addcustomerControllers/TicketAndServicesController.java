@@ -153,7 +153,7 @@ public class TicketAndServicesController {
 
             registration.getIdentifications().add(identification);
 
-            WebController webController=new WebController();
+           WebController webController=new WebController();
             identificationRepository.save(identification);
             webController.addIdentification();
             //----------Szekrények személyhez rendelése------
@@ -165,7 +165,6 @@ public class TicketAndServicesController {
                             .status(1)
                             .identification(identification)
                             .build();
-
 
                     cupboardRepository.save(cupboard);
                 }
