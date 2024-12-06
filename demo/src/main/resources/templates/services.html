@@ -4,38 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" />
   <title>Szolgáltatások Kezelése</title>
 </head>
 <body>
-
-<div class="container">
-  <h1 class="h3">Szolgáltatások kezelése</h1>
-  <a href="/" class="btn btn-primary mb-3">Vissza a főoldalra</a>
-
-  <table class="table table-bordered">
-    <thead class="table-dark">
-    <tr>
-      <th>ID</th>
-      <th>Szolgáltatás neve</th>
-      <th>Ár</th>
-      <th>Típus</th>
-      <th>Jegy típusa</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!-- Iterálunk a 'servicesList' változón, amit a controller ad át -->
-    <th:block th:each="service : ${servicesList}">
+  <div class="container">
+    <h1 class="h3">Árlista</h1>
+    <a href="/" class="btn btn-primary mb-3">Vissza a főoldalra</a>
+    <table class="table table-bordered table-hover shadow-sm rounded border">
+      <thead class="bg-primary text-white">
       <tr>
-        <td th:text="${service.id}">1</td>
-        <td th:text="${service.name}">Szolgáltatás neve</td>
-        <td th:text="${service.price}">1000</td>
-        <td th:text="${service.type}">Típus</td>
-        <td th:text="${service.ticketType}">Jegy típus</td>
+        <th>Jegy típusa</th>
+        <th>Ár (Ft)</th>
       </tr>
-    </th:block>
-    </tbody>
-  </table>
-</div>
-
+      </thead>
+      <tbody>
+      <th:block th:each="service : ${servicesList}">
+        <tr>
+          <td th:text="${service.name}">Jegy</td>
+          <td th:text="${service.price}">1000</td>
+        </tr>
+      </th:block>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
