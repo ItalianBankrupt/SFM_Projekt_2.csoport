@@ -1,9 +1,33 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="hu" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
     <title>Karszalag lekérdezés</title>
+    <script>
+        // Amikor az oldal betöltődik, küld egy GET kérést a "/refresh" útvonalra
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("/refresh")
+                .then(response => {
+                    if (!response.ok) {
+                        console.error("Error refreshing the page.");
+                    } else {
+                        console.log("Refreshed successfully.");
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+        });
+    </script>
+
+    <script type="text/javascript" th:src="@{/js/actions.js}"></script>
+    <script defer th:inline="javascript">
+       const identificationData = /*[[${identificationList}]]*/ [];
+    //    const registrationData = /*[[${registrationList}}]]*/ [];
+     //   console.log(identificationData);
+      //  console.log(registrationData);
+    </script>
+
     <style>
         body {
             background-image: url('/bgimage.jpg');
@@ -66,13 +90,13 @@
     </style>
 </head>
 <body>
-
 <div class="container">
+
     <h1>Karszalag Beírás</h1>
     <form id="codeForm">
-        <input type="text" id="codeInput" placeholder="Írd be az azonosítót" required>
+        <input type="text" id="codeInput" placeholder="Írja be az azonosítót" required>
         <br><br>
-        <input type="submit" value="Küldés">
+        <input type="submit" value="Keresés" th:onclick="findId()">
     </form>
 
     <div id="result"></div>
@@ -80,28 +104,9 @@
         <img src="/map.jpg" alt="Térkép">
     </div>
     <a href="https://hungarospa.hu/" target="_blank" > Forrás</a>
+    <a href="https://chatgpt.com/" th:href="@{/services}">Services List</a>
+
 </div>
-
-<script>
-    document.getElementById('codeForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var code = document.getElementById('codeInput').value.trim();
-
-        var resultDiv = document.getElementById('result');
-        var mapDiv = document.getElementById('map');
-        mapDiv.style.display = 'none';
-        resultDiv.innerHTML = '';
-
-        if (code === "LK23W4X2") {
-            resultDiv.innerHTML = "<p><strong>Karszalaghoz tartozó adatok:</strong></p>" +
-                "<p>Egyenleg: 1450 Ft</p>" +
-                "<p>Belépési jogosultság: Strandfürdő, Aquapark</p>";
-            mapDiv.style.display = 'block';
-        } else {
-            resultDiv.innerHTML = "<p>Érvénytelen karszalag azonosító! Kérlek próbáld újra.</p>";
-        }
-    });
-</script>
 
 </body>
 </html>

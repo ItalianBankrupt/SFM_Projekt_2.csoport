@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Update_at_2024__11__24__15_22_[Changes]" date="1732458138340" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024__11__24__15_22_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2024. 11. 24. 15:22 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="demo/target/classes/com/spa/demo/backend/IdentificationRepository.class" />
+    <option name="AFTER_PATH" value="demo/target/classes/com/spa/demo/backend/IdentificationRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024__11__24__15_22_[Changes]/IdentificationRepository.class" />
+  </binary>
+</changelist>

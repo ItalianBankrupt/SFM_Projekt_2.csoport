@@ -15,6 +15,7 @@ public class SpringManager implements Manager {
     @Override
     public void startBackend() {
         context = SpringApplication.run(SpaApplication.class);
+       // test();
     }
 
     public static  ConfigurableApplicationContext getApplicationContext() {
@@ -25,4 +26,13 @@ public class SpringManager implements Manager {
     public void stopBackend() {
         context.close();
     }
+  /*  public static void test() {
+        Registration reg=Registration.builder().City("asd").name("asd").Street("asd").PostCode("1232").GeneratedId("alma").build();
+        RegistrationRepository regRepo=context.getBean(RegistrationRepository.class);
+        regRepo.save(reg);
+        Identification identification=Identification.builder().personId("korte").money(0).registration(reg).build();
+        IdentificationRepository idRepo=context.getBean(IdentificationRepository.class);
+        idRepo.save(identification);
+
+    }*/
 }

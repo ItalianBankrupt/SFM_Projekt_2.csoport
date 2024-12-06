@@ -6,6 +6,7 @@ import com.spa.demo.frontend.Cassa.Models.Buyer;
 import com.spa.demo.frontend.Cassa.Models.PersonId;
 import com.spa.demo.frontend.Cassa.Utils.PopUpWindows;
 import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import com.spa.demo.web.WebController;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -151,7 +152,10 @@ public class TicketAndServicesController {
                     .build();
 
             registration.getIdentifications().add(identification);
+
+            WebController webController=new WebController();
             identificationRepository.save(identification);
+            webController.addIdentification();
             //----------Szekrények személyhez rendelése------
             if(personId.getLocker() != 0)
             {
