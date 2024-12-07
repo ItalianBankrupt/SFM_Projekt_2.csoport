@@ -4,40 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant buttons">
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant image load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/identificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/identificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/csv/restaurant.csv" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/csv/restaurant.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/bellevuekriek.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Belle-Vue kriek.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/bolognaispagetti.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Bolognai spagetti.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/buffalomozzarella.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Buffalo mozzarella caprese.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/cappuccino.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Cappuccino.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/cappy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Cappy.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/cocacola.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Coca-Cola.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/csikostagliatelle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Csirkemell csíkos tagliatelle.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/csokisouffle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Csoki soufflé vaníillia öntettel.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/eperkremleves.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Eperkrémleves.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/espresso.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Espresso.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/feherborsosfeketekagylo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Fehérboros fekete kagyló.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/forrocsoki.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Forró csoki.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/gezakonyhajagrilltal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Géza konyhája grill tál.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/grillcamambert.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Grill camambert.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/huslevesgazdagon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Húsleves gazdagon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/kinleygyomber.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Kinley Gyömbér.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/limonade.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Limonádé.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/mentes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Szentkirályi mentes.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/pannacocusananas.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Kókuszos-ananászos Panna cotta.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/pulledpork.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Pulled Pork szendvics.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/sajtsonka.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Sajt-Sonka izelítő.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/sousevidekacsamell.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Sous vide kacsamell steak.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/sousvidecsirkemell.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Provance sous vide csirkemell.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/sprite.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/staropramen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Staropramen.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/sultzoldseg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Mediterrán sültzöldség-krémleves.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/szenvsavas.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Szentkirályi szénsavas.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/tarjasteak.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Tarja steak.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/tengergyumolcseispegtti.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/sampleImages/Tenger gyümölcsei spagetti.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/identificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/identificationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/ItemBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/ItemBox.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/ItemBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/ItemBox.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +126,7 @@
       <workItem from="1732968624951" duration="9391000" />
       <workItem from="1733587218018" duration="11900000" />
       <workItem from="1733599349909" duration="2489000" />
-      <workItem from="1733602083369" duration="213000" />
+      <workItem from="1733602083369" duration="1417000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -245,7 +216,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733601374546</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Restaurant image load">
+      <option name="closed" value="true" />
+      <created>1733602387529</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733602387529</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Restaurant image load">
+      <option name="closed" value="true" />
+      <created>1733602411582</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733602411582</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +260,7 @@
     <MESSAGE value="Restaurant JPA connected data received" />
     <MESSAGE value="Restaurant grids" />
     <MESSAGE value="Restaurant buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant buttons" />
+    <MESSAGE value="Restaurant image load" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant image load" />
   </component>
 </project>

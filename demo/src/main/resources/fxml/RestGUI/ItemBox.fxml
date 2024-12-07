@@ -12,23 +12,23 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="cardForm" maxHeight="200.0" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Restaurant.ItemBoxController">
+<AnchorPane fx:id="cardForm" maxHeight="200.0" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" styleClass="item-box" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Restaurant.ItemBoxController">
    <children>
       <VBox maxHeight="200.0" maxWidth="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: blue; -fx-background-color: lightblue;">
                <children>
-                  <Label fx:id="prodName" alignment="TOP_LEFT" text="Étel név">
+                  <Label fx:id="prodName" alignment="TOP_LEFT" text="Étel név" textFill="#002fff">
                      <font>
-                        <Font size="16.0" />
+                        <Font size="15.0" />
                      </font>
                      <rotationAxis>
                         <Point3D />
                      </rotationAxis>
                   </Label>
-                  <Label fx:id="prodPrice" alignment="TOP_RIGHT" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0ft" textAlignment="RIGHT">
+                  <Label fx:id="prodPrice" alignment="TOP_RIGHT" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0ft" textAlignment="RIGHT" textFill="#002fff">
                      <font>
-                        <Font size="16.0" />
+                        <Font size="15.0" />
                      </font>
                      <padding>
                         <Insets left="7.0" />
@@ -48,7 +48,7 @@
             <HBox alignment="CENTER_LEFT" fillHeight="false">
                <children>
                   <Spinner fx:id="prodQuantity" editable="true" prefHeight="49.0" prefWidth="220.0" scaleShape="false" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" text="Hozzáad" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" styleClass="tab-label" text="Hozzáad" />
                </children>
             </HBox>
          </children>
