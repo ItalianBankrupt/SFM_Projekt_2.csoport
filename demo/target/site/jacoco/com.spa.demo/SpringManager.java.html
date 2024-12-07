@@ -15,15 +15,25 @@ import java.util.stream.Collectors;
     @Override
     public void startBackend() {
 <span class="nc" id="L17">        context = SpringApplication.run(SpaApplication.class);</span>
-<span class="nc" id="L18">    }</span>
+       // test();
+<span class="nc" id="L19">    }</span>
 
     public static  ConfigurableApplicationContext getApplicationContext() {
-<span class="nc" id="L21">        return context;</span>
+<span class="nc" id="L22">        return context;</span>
     }
 
     @Override
     public void stopBackend() {
-<span class="nc" id="L26">        context.close();</span>
-<span class="nc" id="L27">    }</span>
+<span class="nc" id="L27">        context.close();</span>
+<span class="nc" id="L28">    }</span>
+    public static void test() {
+<span class="nc" id="L30">        Registration reg=Registration.builder().City(&quot;asd&quot;).name(&quot;asd&quot;).Street(&quot;asd&quot;).PostCode(&quot;1232&quot;).GeneratedId(&quot;alma&quot;).build();</span>
+<span class="nc" id="L31">        RegistrationRepository regRepo=context.getBean(RegistrationRepository.class);</span>
+<span class="nc" id="L32">        regRepo.save(reg);</span>
+<span class="nc" id="L33">        Identification identification=Identification.builder().personId(&quot;korte&quot;).money(0).registration(reg).build();</span>
+<span class="nc" id="L34">        IdentificationRepository idRepo=context.getBean(IdentificationRepository.class);</span>
+<span class="nc" id="L35">        idRepo.save(identification);</span>
+
+<span class="nc" id="L37">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

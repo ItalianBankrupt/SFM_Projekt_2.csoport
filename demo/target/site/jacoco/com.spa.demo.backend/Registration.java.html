@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Registration.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.backend</a> &gt; <span class="el_source">Registration.java</span></div><h1>Registration.java</h1><pre class="source lang-java linenums">package com.spa.demo.backend;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,22 +12,22 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
-<span class="pc bpc" id="L13" title="44 of 64 branches missed.">@Data</span>
-<span class="fc" id="L14">@AllArgsConstructor</span>
-<span class="fc" id="L15">@NoArgsConstructor</span>
-<span class="pc" id="L16">@Builder</span>
+<span class="pc bpc" id="L15" title="44 of 64 branches missed.">@Data</span>
+<span class="fc" id="L16">@AllArgsConstructor</span>
+<span class="fc" id="L17">@NoArgsConstructor</span>
+<span class="pc" id="L18">@Builder</span>
 @Entity
 public class Registration {
     @Id
-<span class="fc" id="L20">    private String GeneratedId;</span>
-<span class="fc" id="L21">    private String IDNumber;</span>
-<span class="fc" id="L22">    private String name;</span>
-<span class="fc" id="L23">    private String City;</span>
-<span class="fc" id="L24">    private String Street;</span>
-<span class="fc" id="L25">    private String PostCode;</span>
-<span class="fc" id="L26">    private int CostumerType; // 0 - Mindenkinek, 1 - Felnőtt, 2 - Diák, 3 - Nyugdíjjas</span>
-
+<span class="fc" id="L22">    private String GeneratedId;</span>
+<span class="fc" id="L23">    private String IDNumber;</span>
+<span class="fc" id="L24">    private String name;</span>
+<span class="fc" id="L25">    private String City;</span>
+<span class="fc" id="L26">    private String Street;</span>
+<span class="fc" id="L27">    private String PostCode;</span>
+<span class="fc" id="L28">    private int CostumerType; // 0 - Mindenkinek, 1 - Felnőtt, 2 - Diák, 3 - Nyugdíjjas</span>
+    @JsonBackReference
     @OneToMany(mappedBy = &quot;registration&quot;, cascade = CascadeType.ALL, orphanRemoval = true)
-<span class="fc" id="L29">    private List&lt;Identification&gt; identifications;</span>
+<span class="fc" id="L31">    private List&lt;Identification&gt; identifications;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

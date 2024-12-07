@@ -5,7 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8d962ef-6f4e-4a0c-850c-9b8c8a07f89d" name="Changes" comment="&#10;IdentificationRepositoryTest base">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/frontend/Cassa/Models/BuyerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/frontend/Cassa/Models/PersonIdTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/spa/demo/frontend/Cassa/addcustomerControllers/AddCustomerControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/Models/PersonId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/Models/PersonId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/addcustomerControllers/AddCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spa/demo/frontend/Cassa/addcustomerControllers/AddCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/spa/demo/SpaApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/Models/PersonId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/Models/PersonId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/AddCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/AddCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Cupboard$CupboardBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Cupboard$CupboardBuilder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Cupboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Cupboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Cupboard.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Cupboard.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Identification$IdentificationBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Identification$IdentificationBuilder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Identification.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Identification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Identification.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Identification.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Registration$RegistrationBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Registration$RegistrationBuilder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Registration.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Registration.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Restaurant.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Restaurant.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Services.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.backend/Services.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/Buyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/Buyer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/Buyer.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/Buyer.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/PersonId.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/PersonId.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/PersonId.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/PersonId.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Models/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Utils/JavaFxElementModifier.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Utils/JavaFxElementModifier.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Utils/PopUpWindows.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Utils/PopUpWindows.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Utils/WindowHandlerUtils.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.Utils/WindowHandlerUtils.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/AddCustomerController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/AddCustomerController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/AddCustomerController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/AddCustomerController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/IdHandlerController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/IdHandlerController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/ServicesAddController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/ServicesAddController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/SummaryController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/SummaryController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/TicketAndServicesController$1.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/TicketAndServicesController$1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/TicketAndServicesController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/TicketAndServicesController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/TicketAndServicesController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/TicketAndServicesController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/TicketsAddController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/TicketsAddController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa.addcustomerControllers/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/CheckID.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/CheckID.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/MainPageController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/MainPageController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/RemoveCustomer.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/RemoveCustomer.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/UploadBalance.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Cassa/UploadBalance.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Restaurant/Food.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Restaurant/Food.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Restaurant/Restaurant.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Restaurant/Restaurant.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Restaurant/RestaurantUtils.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Restaurant/RestaurantUtils.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Restaurant/identificationController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend.Restaurant/identificationController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend/IndexController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend/IndexController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend/Main.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.frontend/Main.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.web/WebController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.web/WebController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.web/WebController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.web/WebController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.web/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo.web/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpaApplication.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpaApplication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpaApplication.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpaApplication.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpringManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpringManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpringManager.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/SpringManager.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.spa.demo/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.SpaApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.SpaApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.IdentificationRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.IdentificationRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.RegistrationRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.RegistrationRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.RestaurantRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.RestaurantRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.ServicesRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.spa.demo.backend.ServicesRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.SpaApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.SpaApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.IdentificationRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.IdentificationRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.RegistrationRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.RegistrationRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.RestaurantRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.RestaurantRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.ServicesRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.spa.demo.backend.ServicesRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/testdb.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdb.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/testdb.trace.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,30 +138,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.IdentificationRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.IdentificationRepositoryTest.testSave.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.com.spa.demo.backend in demo.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.java in demo.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev__ati&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Ati_mappa/egyetem/5.félév/msf/demo/SFM_Projekt_2.csoport/demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.BuyerTest.executor": "Run",
+    "JUnit.IdentificationRepositoryTest.executor": "Run",
+    "JUnit.IdentificationRepositoryTest.testSave.executor": "Run",
+    "JUnit.com.spa.demo.backend in demo.executor": "Coverage",
+    "JUnit.java in demo.executor": "Run",
+    "Maven.demo [org.jacoco:jacoco-maven-plugin:0.8.12:report].executor": "Run",
+    "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "Maven.demo [test].executor": "Run",
+    "Maven.demo [verify].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "dev__ati",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Ati_mappa/egyetem/5.félév/msf/demo/SFM_Projekt_2.csoport/demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Ati_mappa\egyetem\5.félév\msf\demo\SFM_Projekt_2.csoport\demo\src\main\resources\fxml\CassaGUI\addCustomerViews" />
@@ -90,7 +174,22 @@
       <recent name="com.spa.demo.frontend.Cassa.addcustomerControllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.spa.demo.backend in demo">
+  <component name="RunManager" selected="JUnit.BuyerTest">
+    <configuration name="BuyerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spa.demo.frontend.Cassa.Models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.spa.demo.frontend.Cassa.Models" />
+      <option name="MAIN_CLASS_NAME" value="com.spa.demo.frontend.Cassa.Models.BuyerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.spa.demo.backend in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -118,13 +217,17 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.BuyerTest" />
       <item itemvalue="JUnit.com.spa.demo.backend in demo" />
       <item itemvalue="JUnit.java in demo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BuyerTest" />
+        <item itemvalue="JUnit.java in demo" />
         <item itemvalue="JUnit.com.spa.demo.backend in demo" />
         <item itemvalue="JUnit.java in demo" />
+        <item itemvalue="JUnit.com.spa.demo.backend in demo" />
       </list>
     </recent_temporary>
   </component>

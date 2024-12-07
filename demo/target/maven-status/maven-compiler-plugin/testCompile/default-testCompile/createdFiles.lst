@@ -1,3 +1,6 @@
 com\spa\demo\backend\RestaurantRepositoryTest.class
+com\spa\demo\frontend\Cassa\addcustomerControllers\AddCustomerControllerTest.class
+com\spa\demo\frontend\Cassa\Models\PersonIdTest.class
 com\spa\demo\backend\RegistrationRepositoryTest.class
 com\spa\demo\backend\IdentificationRepositoryTest.class
+com\spa\demo\frontend\Cassa\Models\BuyerTest.class

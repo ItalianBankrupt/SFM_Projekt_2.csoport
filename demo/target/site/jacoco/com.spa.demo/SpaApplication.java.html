@@ -46,8 +46,8 @@ import java.util.List;
 
 <span class="fc" id="L47">				servicesRepository.save(service);</span>
 <span class="fc" id="L48">			}</span>
-<span class="nc" id="L49">		} catch (Exception e) {</span>
-<span class="nc" id="L50">			throw new RuntimeException(&quot;Hiba történt a szolgáltatások beolvasásakor&quot;, e);</span>
+<span class="fc" id="L49">		} catch (Exception e) {</span>
+<span class="fc" id="L50">			throw new RuntimeException(&quot;Hiba történt a szolgáltatások beolvasásakor&quot;, e);</span>
 <span class="fc" id="L51">		}</span>
 		//-----------Ételek, italok és üdítők beolvasása---
 <span class="fc" id="L53">		try (BufferedReader br = new BufferedReader(new FileReader(&quot;src/main/resources/csv/restaurant.csv&quot;))) {</span>
