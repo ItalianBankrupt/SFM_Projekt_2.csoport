@@ -1,10 +1,17 @@
 package com.spa.demo.frontend.Restaurant;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.Spinner;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.fxml.FXMLLoader;
+
+import java.io.IOException;
 
 public class ItemBoxController {
 
@@ -21,7 +28,13 @@ public class ItemBoxController {
     private Label prodPrice;
 
     @FXML
-    private Spinner<?> prodQuantity;
+    private Spinner<Integer> prodQuantity;
+
+    public void initialize(){
+      SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 8);
+      valueFactory.setValue(0);
+      prodQuantity.setValueFactory(valueFactory);
+    }
 
     public ItemBoxController() {
 
@@ -63,7 +76,21 @@ public class ItemBoxController {
         return prodQuantity;
     }
 
-    public void setProdQuantity(Spinner<?> prodQuantity) {
+    public void setProdQuantity(Spinner<Integer> prodQuantity) {
         this.prodQuantity = prodQuantity;
     }
+
+    @FXML
+    void addToCart(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RestGUI/restMainScreen.fxml"));
+        AnchorPane pane = loader.load();
+        restMainScreenController controller = loader.getController();
+
+        CartManager.getInstance().addItemToCart(prodName.getText(), prodQuantity.getValue(), Integer.parseInt(prodPrice.getText().replace("Ft", ""))*prodQuantity.getValue());
+
+
+
+    }
+
 }
+

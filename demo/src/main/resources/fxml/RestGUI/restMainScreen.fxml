@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="770.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Restaurant.identificationController">
+<AnchorPane fx:id="mainScreen" prefHeight="770.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Restaurant.restMainScreenController">
 <TabPane prefHeight="770.0" prefWidth="1090.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
    <tabs>
       <Tab closable="false" text="Azonosítás">
@@ -138,9 +138,9 @@
                         <right>
                            <TableView fx:id="smallBasket" prefHeight="334.0" prefWidth="320.0" BorderPane.alignment="CENTER">
                              <columns>
-                               <TableColumn prefWidth="136.0001220703125" text="Étel" />
-                               <TableColumn prefWidth="78.39990234375" text="Mennyiség" />
-                                 <TableColumn prefWidth="104.800048828125" text="Ár" />
+                               <TableColumn fx:id="smallBasketFood" prefWidth="136.0001220703125" text="Étel" />
+                               <TableColumn fx:id="smallBasketAmount" prefWidth="78.39990234375" text="Mennyiség" />
+                                 <TableColumn fx:id="smallBasketPrice" prefWidth="104.800048828125" text="Ár" />
                              </columns>
                            </TableView>
                         </right>
@@ -272,7 +272,7 @@
                                              <RowConstraints minHeight="200.0" prefHeight="200.0" valignment="CENTER" vgrow="SOMETIMES" />
                                          </rowConstraints>
                                           <padding>
-                                             <Insets left="25.0" right="10.0" />
+                                             <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
                                           </padding>
                                        </GridPane>
                                     </content>
@@ -291,11 +291,11 @@
                <children>
                   <TableView layoutX="24.0" layoutY="15.0" prefHeight="291.0" prefWidth="1050.0">
                     <columns>
-                      <TableColumn prefWidth="158.0" text="Étel" />
-                      <TableColumn prefWidth="142.0" text="Étel ára" />
-                        <TableColumn prefWidth="86.0" text="Mennyiség" />
-                        <TableColumn prefWidth="200.0" text="Megjegyzés" />
-                        <TableColumn prefWidth="236.0" text="Karszalag" />
+                      <TableColumn prefWidth="203.0" text="Étel" />
+                      <TableColumn prefWidth="150.0" text="Étel ára" />
+                        <TableColumn prefWidth="129.0" text="Mennyiség" />
+                        <TableColumn prefWidth="215.0" text="Megjegyzés" />
+                        <TableColumn prefWidth="193.0" text="Karszalag" />
                     </columns>
                   </TableView>
                   <Label layoutX="31.0" layoutY="309.0" text="Teljes összeg :" textFill="#04aea9">

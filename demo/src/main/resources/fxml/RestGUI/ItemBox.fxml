@@ -47,8 +47,8 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" fillHeight="false">
                <children>
-                  <Spinner fx:id="prodQuantity" editable="true" prefHeight="49.0" prefWidth="220.0" scaleShape="false" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" styleClass="tab-label" text="Hozzáad" />
+                  <Spinner fx:id="prodQuantity" prefHeight="49.0" prefWidth="220.0" scaleShape="false" />
+                  <Button mnemonicParsing="false" onAction="#addToCart" prefHeight="50.0" styleClass="tab-label" text="Hozzáad" />
                </children>
             </HBox>
          </children>

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="cardForm" maxHeight="200.0" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-image-width: 13;" styleClass="item-box" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Restaurant.ItemBoxController">
+<AnchorPane fx:id="cardForm" maxHeight="200.0" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" styleClass="item-box" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Restaurant.ItemBoxController">
    <children>
       <VBox maxHeight="200.0" maxWidth="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -47,8 +47,8 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" fillHeight="false">
                <children>
-                  <Spinner fx:id="prodQuantity" editable="true" prefHeight="49.0" prefWidth="220.0" scaleShape="false" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" styleClass="tab-label" text="Hozzáad" />
+                  <Spinner fx:id="prodQuantity" prefHeight="49.0" prefWidth="220.0" scaleShape="false" />
+                  <Button mnemonicParsing="false" onAction="#addToCart" prefHeight="50.0" styleClass="tab-label" text="Hozzáad" />
                </children>
             </HBox>
          </children>

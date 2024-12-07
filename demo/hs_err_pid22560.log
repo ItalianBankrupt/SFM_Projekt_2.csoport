@@ -71,8 +71,8 @@ j  com.sun.javafx.tk.quantum.QuantumToolkit.loadImage(Ljava/io/InputStream;DDZZ)
 j  javafx.scene.image.Image.loadImage(Ljava/io/InputStream;DDZZ)Lcom/sun/javafx/tk/ImageLoader;+10 javafx.graphics@23.0.1
 j  javafx.scene.image.Image.initialize(Ljava/lang/Object;)V+65 javafx.graphics@23.0.1
 j  javafx.scene.image.Image.<init>(Ljava/io/InputStream;)V+16 javafx.graphics@23.0.1
-j  com.spa.demo.frontend.Restaurant.identificationController.loadFoodGrid(Ljava/lang/String;)V+212
-j  com.spa.demo.frontend.Restaurant.identificationController.loadDrinks(Ljavafx/event/ActionEvent;)V+3
+j  com.spa.demo.frontend.Restaurant.restMainScreenController.loadFoodGrid(Ljava/lang/String;)V+212
+j  com.spa.demo.frontend.Restaurant.restMainScreenController.loadDrinks(Ljavafx/event/ActionEvent;)V+3
 j  java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V+11 java.base@21.0.4
 j  java.lang.invoke.LambdaForm$MH+0x0000025d04112c00.invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+52 java.base@21.0.4
 J 5905 c1 jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; java.base@21.0.4 (92 bytes) @ 0x0000025d6b9a8764 [0x0000025d6b9a7400+0x0000000000001364]
