@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_07_12_2024_12_32_[Changes]1" date="1733571132478" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_12_2024_12_32_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 07/12/2024 12:32 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" />
+    <option name="AFTER_PATH" value="target/classes/com/spa/demo/frontend/Cassa/RemoveCustomer.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_12_2024_12_32_[Changes]1/RemoveCustomer.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/backend/IdentificationRepository.class" />
+    <option name="AFTER_PATH" value="target/classes/com/spa/demo/backend/IdentificationRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_12_2024_12_32_[Changes]1/IdentificationRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" />
+    <option name="AFTER_PATH" value="target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_12_2024_12_32_[Changes]1/TicketAndServicesController.class" />
+  </binary>
+</changelist>
