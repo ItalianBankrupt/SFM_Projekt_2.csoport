@@ -20,9 +20,7 @@ public class MainPageController {
     void checkId(ActionEvent event) throws IOException {
         node = (Node) event.getSource();
         loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGUI/checkID.fxml");
-        CheckID checkID = loader.getController();
-        checkID.initialize();
-        WindowHandlerUtils.OpenScene(loader, "Id ellenőrzés");
+        WindowHandlerUtils.OpenScene(loader, "Id ellenőrzés",node);
     }
 
     //Gomb nyomására betölti a newCustomer-hoz tartozó fxml-t és meghívja a initalize metodusát
@@ -31,8 +29,6 @@ public class MainPageController {
     void newCustomer(ActionEvent event) throws IOException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         node = (Node) event.getSource();
         loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGUI/addCustomerViews/addCustomer.fxml");
-        AddCustomerController addCustomerController = loader.getController();
-        addCustomerController.initialize();
         WindowHandlerUtils.OpenScene(loader, "Új vásárló hozzáadása", node);
     }
 
@@ -42,9 +38,7 @@ public class MainPageController {
     void removeCustomer(ActionEvent event) throws IOException{
         node = (Node) event.getSource();
         loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGUI/removeCustomer.fxml");
-        RemoveCustomer removeCustomer = loader.getController();
-        removeCustomer.initialize();
-        WindowHandlerUtils.OpenScene(loader, "Vásárló kiléptetése");
+        WindowHandlerUtils.OpenScene(loader, "Vásárló kiléptetése",node);
     }
 
     //Gomb nyomására betölti a uploadBalance-hoz tartozó fxml-t és meghívja a initalize metodusát
@@ -53,9 +47,7 @@ public class MainPageController {
     void uploadBalance(ActionEvent event) throws IOException{
         node = (Node) event.getSource();
         loader = WindowHandlerUtils.getFXMLoader("/fxml/CassaGui/uploadBalance.fxml");
-        UploadBalance uploadBalance = loader.getController();
-        uploadBalance.initialize();
-        WindowHandlerUtils.OpenScene(loader, "Egyenleg feltöltése");
+        WindowHandlerUtils.OpenScene(loader, "Egyenleg feltöltése",node);
     }
 
 }

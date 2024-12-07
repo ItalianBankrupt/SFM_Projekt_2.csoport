@@ -1,0 +1,17 @@
+Index: demo/src/main/java/com/spa/demo/backend/IdentificationRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.spa.demo.backend;\r\n\r\nimport jakarta.persistence.Id;\r\nimport org.springframework.data.jpa.repository.JpaRepository;\r\nimport org.springframework.stereotype.Repository;\r\n\r\nimport java.util.List;\r\n\r\n@Repository\r\npublic interface IdentificationRepository extends JpaRepository<Identification, String> {\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/demo/src/main/java/com/spa/demo/backend/IdentificationRepository.java b/demo/src/main/java/com/spa/demo/backend/IdentificationRepository.java
+--- a/demo/src/main/java/com/spa/demo/backend/IdentificationRepository.java	(revision 34510cf3646e82c3557b87355ff106b9a0b03519)
++++ b/demo/src/main/java/com/spa/demo/backend/IdentificationRepository.java	(date 1732458091727)
+@@ -8,5 +8,5 @@
+ 
+ @Repository
+ public interface IdentificationRepository extends JpaRepository<Identification, String> {
+-
++    List<Identification> findByPersonId(String personId);
+ }

@@ -1,9 +1,6 @@
 package com.spa.demo;
 
-import com.spa.demo.backend.Restaurant;
-import com.spa.demo.backend.RestaurantRepository;
-import com.spa.demo.backend.Services;
-import com.spa.demo.backend.ServicesRepository;
+import com.spa.demo.backend.*;
 import com.spa.demo.frontend.Manager;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +15,7 @@ public class SpringManager implements Manager {
     @Override
     public void startBackend() {
         context = SpringApplication.run(SpaApplication.class);
-
+       // test();
     }
 
     public static  ConfigurableApplicationContext getApplicationContext() {
@@ -27,22 +24,15 @@ public class SpringManager implements Manager {
 
     @Override
     public void stopBackend() {
-        context.stop();
+        context.close();
     }
+    public static void test() {
+        Registration reg=Registration.builder().City("asd").name("asd").Street("asd").PostCode("1232").GeneratedId("alma").build();
+        RegistrationRepository regRepo=context.getBean(RegistrationRepository.class);
+        regRepo.save(reg);
+        Identification identification=Identification.builder().personId("korte").money(0).registration(reg).build();
+        IdentificationRepository idRepo=context.getBean(IdentificationRepository.class);
+        idRepo.save(identification);
 
-    public String getItemName() {
-        ServicesRepository repo = context.getBean(ServicesRepository.class);
-        return repo.findByName("Test").get(0).getName();
     }
-
-    public List<String> getServicesItemType(String type) {
-        ServicesRepository servRepo = context.getBean(ServicesRepository.class);
-        return servRepo.findByType(type).stream().map(Services::getName).collect(Collectors.toList());
-    }
-
-    public List<String> getRestaurantItemType(String type) {
-        RestaurantRepository restRepo = context.getBean(RestaurantRepository.class);
-        return restRepo.findByType(type).stream().map(Restaurant::getName).collect(Collectors.toList());
-    }
-
 }

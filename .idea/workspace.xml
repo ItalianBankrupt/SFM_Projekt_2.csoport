@@ -4,22 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant image load">
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v7? js4?.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/ItemBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/ItemBox.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/ItemBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/ItemBox.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/js/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="TypeScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -39,13 +46,10 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git&quot;,
-    &quot;accountId&quot;: &quot;52032e0b-e70b-419c-b931-6f193b99de91&quot;
+    &quot;url&quot;: &quot;https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport&quot;,
+    &quot;accountId&quot;: &quot;9b2d5faa-b6a1-4134-ba2d-1350e8b8c383&quot;
   }
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -59,44 +63,53 @@
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.demo [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev__gergo&quot;,
+    &quot;Spring Boot.SpaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev__kristof&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rakge/IdeaProjects/SFM_Projekt_2.csoport/demo/src/main/resources/fxml/RestGUI&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lorin/Desktop/Egyetem/5 félév/SFM/Projekt/SFM_Projekt_2.csoport/demo/src/main/resources/templates&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rakge\IdeaProjects\SFM_Projekt_2.csoport\demo\src\main\resources\fxml\RestGUI" />
+      <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\static" />
+      <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\static\js" />
       <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\templates" />
+      <recent name="C:\Users\lorin\Desktop\Egyetem\5 félév\SFM\Projekt\SFM_Projekt_2.csoport\demo\src\main\resources\static" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
+    <configuration name="SpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.spa.demo.SpaApplication" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spa.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,8 +118,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -122,11 +135,19 @@
       <workItem from="1731957050985" duration="307000" />
       <workItem from="1732007204842" duration="2803000" />
       <workItem from="1732010039890" duration="402000" />
-      <workItem from="1732411834171" duration="9876000" />
-      <workItem from="1732968624951" duration="9391000" />
-      <workItem from="1733587218018" duration="11900000" />
-      <workItem from="1733599349909" duration="2489000" />
-      <workItem from="1733602083369" duration="1417000" />
+      <workItem from="1732293993647" duration="5616000" />
+      <workItem from="1732300614258" duration="181000" />
+      <workItem from="1732307584572" duration="5135000" />
+      <workItem from="1732457266653" duration="1014000" />
+      <workItem from="1732458311788" duration="7287000" />
+      <workItem from="1732466406201" duration="7746000" />
+      <workItem from="1732543616377" duration="5956000" />
+      <workItem from="1732556409654" duration="97000" />
+      <workItem from="1732556980042" duration="1576000" />
+      <workItem from="1732558587699" duration="695000" />
+      <workItem from="1732559315719" duration="489000" />
+      <workItem from="1733485598556" duration="3390000" />
+      <workItem from="1733489054126" duration="1366000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -160,107 +181,108 @@
       <option name="project" value="LOCAL" />
       <updated>1732008708095</updated>
     </task>
-    <task id="LOCAL-00005" summary="Itembox added">
+    <task id="LOCAL-00005" summary="Web .v4?">
       <option name="closed" value="true" />
-      <created>1732411783219</created>
+      <created>1732284261779</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1732411783220</updated>
+      <updated>1732284261779</updated>
     </task>
-    <task id="LOCAL-00006" summary="Restaurant update">
+    <task id="LOCAL-00006" summary="Web .v4?">
       <option name="closed" value="true" />
-      <created>1732436831059</created>
+      <created>1732284267363</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1732436831059</updated>
+      <updated>1732284267363</updated>
     </task>
-    <task id="LOCAL-00007" summary="Restaurant food images + database name fix">
+    <task id="LOCAL-00007" summary="Web .v4?">
       <option name="closed" value="true" />
-      <created>1732982774155</created>
+      <created>1732284356299</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1732982774155</updated>
+      <updated>1732284356299</updated>
     </task>
-    <task id="LOCAL-00008" summary="Restaurant food images + database name fix">
+    <task id="LOCAL-00008" summary="Web .v5?">
       <option name="closed" value="true" />
-      <created>1732982792097</created>
+      <created>1732457931884</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1732982792097</updated>
+      <updated>1732457931884</updated>
     </task>
-    <task id="LOCAL-00009" summary="Restaurant JPA connected data received">
+    <task id="LOCAL-00009" summary="Web .v6? js 1.0">
       <option name="closed" value="true" />
-      <created>1732990576462</created>
+      <created>1732465541409</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1732990576462</updated>
+      <updated>1732465541409</updated>
     </task>
-    <task id="LOCAL-00010" summary="Restaurant grids">
+    <task id="LOCAL-00010" summary="Web .v6? js2.0">
       <option name="closed" value="true" />
-      <created>1733599183918</created>
+      <created>1732552747444</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1733599183918</updated>
+      <updated>1732552747444</updated>
     </task>
-    <task id="LOCAL-00011" summary="Restaurant buttons">
+    <task id="LOCAL-00011" summary="Web .v6? js2.0">
       <option name="closed" value="true" />
-      <created>1733601374545</created>
+      <created>1732552769687</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1733601374546</updated>
+      <updated>1732552769687</updated>
     </task>
-    <task id="LOCAL-00012" summary="Restaurant image load">
+    <task id="LOCAL-00012" summary="Web .v6? js3.0">
       <option name="closed" value="true" />
-      <created>1733602387529</created>
+      <created>1732556495223</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1733602387529</updated>
+      <updated>1732556495223</updated>
     </task>
-    <task id="LOCAL-00013" summary="Restaurant image load">
+    <task id="LOCAL-00013" summary="Web .v7? js4.0">
       <option name="closed" value="true" />
-      <created>1733602411582</created>
+      <created>1733488525905</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1733602411582</updated>
+      <updated>1733488525905</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Web .v7? js4?.0">
+      <option name="closed" value="true" />
+      <created>1733489470856</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1733489470856</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />
     <MESSAGE value="Guess whos back" />
     <MESSAGE value="Web .v1" />
     <MESSAGE value="Web .v2" />
-    <MESSAGE value="Itembox added" />
-    <MESSAGE value="Restaurant update" />
-    <MESSAGE value="Restaurant food images + database name fix" />
-    <MESSAGE value="Restaurant JPA connected data received" />
-    <MESSAGE value="Restaurant grids" />
-    <MESSAGE value="Restaurant buttons" />
-    <MESSAGE value="Restaurant image load" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant image load" />
+    <MESSAGE value="Web .v4?" />
+    <MESSAGE value="Web .v5?" />
+    <MESSAGE value="Web .v6? js 1.0" />
+    <MESSAGE value="Web .v6? js2.0" />
+    <MESSAGE value="Web .v6? js3.0" />
+    <MESSAGE value="Web .v7? js4.0" />
+    <MESSAGE value="Web .v7? js4?.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web .v7? js4?.0" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,11 +1,16 @@
 package com.spa.demo.backend;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 
 @AllArgsConstructor
@@ -15,12 +20,13 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Identification {
     //----------Kapcsolat a Reg. táblával---
+    @JsonManagedReference
     @ManyToOne
     @JoinColumn( name = "registration_GeneratedId")
     private Registration registration;
     //----------Egyedi azonosító------------
     @Id
-    private String PersonId;
+    private String personId;
     //----------Jegyek----------------------
     private int AdultFellingTicket;
     private int StudentFellingTicket;
@@ -41,7 +47,8 @@ public class Identification {
     private int SunBedAtTheBeach;
     private int Baldachin;
     //----------Kapcsolat a Cupb. táblával--
-    @OneToOne(mappedBy = "identification", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Cupboard locker;
-    private int Money;
+
+    @OneToMany(mappedBy = "identification", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Cupboard> locker;
+    private int money;
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MainPageController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa</a> &gt; <span class="el_source">MainPageController.java</span></div><h1>MainPageController.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa;
+
+import com.spa.demo.frontend.Cassa.Utils.WindowHandlerUtils;
+import com.spa.demo.frontend.Cassa.addcustomerControllers.AddCustomerController;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+
+<span class="nc" id="L12">public class MainPageController {</span>
+
+    private FXMLLoader loader;
+    private Node node;
+
+    //Gomb nyomására betölti a checkId-hoz tartozó fxml-t és meghívja a initalize metodusát
+    //Bezárja a MainPage scene-t is
+    @FXML
+    void checkId(ActionEvent event) throws IOException {
+<span class="nc" id="L21">        node = (Node) event.getSource();</span>
+<span class="nc" id="L22">        loader = WindowHandlerUtils.getFXMLoader(&quot;/fxml/CassaGUI/checkID.fxml&quot;);</span>
+<span class="nc" id="L23">        WindowHandlerUtils.OpenScene(loader, &quot;Id ellenőrzés&quot;,node);</span>
+<span class="nc" id="L24">    }</span>
+
+    //Gomb nyomására betölti a newCustomer-hoz tartozó fxml-t és meghívja a initalize metodusát
+    //Bezárja a MainPage scene-t is
+    @FXML
+    void newCustomer(ActionEvent event) throws IOException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+<span class="nc" id="L30">        node = (Node) event.getSource();</span>
+<span class="nc" id="L31">        loader = WindowHandlerUtils.getFXMLoader(&quot;/fxml/CassaGUI/addCustomerViews/addCustomer.fxml&quot;);</span>
+<span class="nc" id="L32">        WindowHandlerUtils.OpenScene(loader, &quot;Új vásárló hozzáadása&quot;, node);</span>
+<span class="nc" id="L33">    }</span>
+
+    //Gomb nyomására betölti a removeCustomer-hoz tartozó fxml-t és meghívja a initalize metodusát
+    //Bezárja a MainPage scene-t is
+    @FXML
+    void removeCustomer(ActionEvent event) throws IOException{
+<span class="nc" id="L39">        node = (Node) event.getSource();</span>
+<span class="nc" id="L40">        loader = WindowHandlerUtils.getFXMLoader(&quot;/fxml/CassaGUI/removeCustomer.fxml&quot;);</span>
+<span class="nc" id="L41">        WindowHandlerUtils.OpenScene(loader, &quot;Vásárló kiléptetése&quot;,node);</span>
+<span class="nc" id="L42">    }</span>
+
+    //Gomb nyomására betölti a uploadBalance-hoz tartozó fxml-t és meghívja a initalize metodusát
+    //Bezárja a MainPage scene-t is
+    @FXML
+    void uploadBalance(ActionEvent event) throws IOException{
+<span class="nc" id="L48">        node = (Node) event.getSource();</span>
+<span class="nc" id="L49">        loader = WindowHandlerUtils.getFXMLoader(&quot;/fxml/CassaGui/uploadBalance.fxml&quot;);</span>
+<span class="nc" id="L50">        WindowHandlerUtils.OpenScene(loader, &quot;Egyenleg feltöltése&quot;,node);</span>
+<span class="nc" id="L51">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

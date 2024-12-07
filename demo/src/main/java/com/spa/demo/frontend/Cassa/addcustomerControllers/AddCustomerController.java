@@ -219,7 +219,7 @@ public class AddCustomerController {
     //Paraméterként két Stringet vár, az első az irányítószám a második a személyigazolvány szám
     //Visszatérési értéke Irányítószám és személyigazolványszám, ha az irányítószám nem 4 karakter hosszúságú illerve az Id nem 8
     //Irányítószám-ot add vissza ha csak az irányítószám hossza nem jó, Személyigazolványszám-t ha az ID hossza hibás, none-t ha minden jó
-    private static String checkInfos(String postCode, String ID)
+    public String checkInfos(String postCode, String ID)
     {
         if (postCode.length() != 4 && ID.length() != 8)
             return "Irányítószám és személyigazolványszám";

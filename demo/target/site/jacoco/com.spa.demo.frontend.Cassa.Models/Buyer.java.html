@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Buyer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Spa Application</a> &gt; <a href="index.source.html" class="el_package">com.spa.demo.frontend.Cassa.Models</a> &gt; <span class="el_source">Buyer.java</span></div><h1>Buyer.java</h1><pre class="source lang-java linenums">package com.spa.demo.frontend.Cassa.Models;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.*;
+
+@Getter
+<span class="pc" id="L12">@Setter</span>
+
+public class Buyer {
+<span class="fc" id="L15">    private String Id;</span>
+<span class="fc" id="L16">    private String Name;</span>
+<span class="fc" id="L17">    private String City;</span>
+<span class="fc" id="L18">    private String Street;</span>
+<span class="fc" id="L19">    private String PostCode;</span>
+<span class="fc" id="L20">    private int Status; //1-adult 2-student 3-pensioner</span>
+<span class="fc" id="L21">    private int NumberOfGeneratedId = 0;</span>
+<span class="fc" id="L22">    public ObservableList&lt;String&gt; Ids = FXCollections.observableArrayList();</span>
+
+    //Konstruktor a NumberOfGeneratedId és IDs lista nélkül.
+    //NumberOfGeneratedId inicializáláskor mindig 0, az IDs meg majd a GenerateId metodus fogja feltölteni
+<span class="fc" id="L26">    public Buyer(String id, String name, String city, String street, String postCode, int status) {</span>
+<span class="fc" id="L27">        Id = id;</span>
+<span class="fc" id="L28">        Name = name;</span>
+<span class="fc" id="L29">        City = city;</span>
+<span class="fc" id="L30">        Street = street;</span>
+<span class="fc" id="L31">        PostCode = postCode;</span>
+<span class="fc" id="L32">        Status = status;</span>
+<span class="fc" id="L33">    }</span>
+
+    //első paramétere a lista mérete, második paraméter egy kapcsoló
+    //ha a kapcsoló All akkor a listába lévő összes azonosítót újragenerálja
+    //ha a kapcsolóFirstOnly akkor csak az első a buyer saját id-ját generálja újra
+    //A buyer példányhoz tartozó Ids listát generálja újra a megváltozott adatokhoz
+    public void UpdateList(int size, String option)
+    {
+<span class="fc" id="L41">        List&lt;String&gt; helperList = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if(option.equals(&quot;All&quot;))</span>
+        {
+<span class="fc" id="L44">            helperList.addAll(Ids);</span>
+<span class="fc" id="L45">            Ids.clear();</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">            for (String s : helperList) {</span>
+<span class="fc" id="L47">                String status = s.substring(0, 2);</span>
+                //Ha a régi azonosító első 2 karakter FE akkor újrageneráláskor a felnőtthöz tartozó 1-es paraméterrel generál új id-t
+                //Ha NY akkor 3-as akkor nyugdíjas és ezzel generál új id-t, ha DI akkor 2 és diák
+<span class="pc bpc" id="L50" title="1 of 4 branches missed.">                switch (status) {</span>
+                    case &quot;FE&quot; -&gt; {
+<span class="fc" id="L52">                        GenerateId(1);</span>
+<span class="fc" id="L53">                    }</span>
+                    case &quot;NY&quot; -&gt; {
+<span class="fc" id="L55">                        GenerateId(3);</span>
+<span class="fc" id="L56">                    }</span>
+                    case &quot;DI&quot; -&gt; {
+<span class="fc" id="L58">                        GenerateId(2);</span>
+                    }
+                }
+<span class="fc" id="L61">            }</span>
+
+        }
+<span class="pc bpc" id="L64" title="1 of 2 branches missed.">        else if(option.equals(&quot;FirstOnly&quot;))</span>
+        {
+<span class="fc bfc" id="L66" title="All 2 branches covered.">            for (int i = 1; i &lt; Ids.size(); i++)</span>
+            {
+<span class="fc" id="L68">                helperList.add(Ids.get(i));</span>
+            }
+<span class="fc" id="L70">            Ids.clear();</span>
+<span class="fc" id="L71">            GenerateId(this.Status);</span>
+<span class="fc" id="L72">            Ids.addAll(helperList);</span>
+        }
+<span class="fc" id="L74">    }</span>
+
+    //kitörli a paraméterül kapott id-t az IDS listből
+    public void RemoveId(String id)
+    {
+<span class="fc" id="L79">        this.Ids.remove(id);</span>
+<span class="fc" id="L80">    }</span>
+
+    //Paraméter egy szám, ha 1 akkor adult, ha 2 akkor student, ha 3-pensioner tipusú azonosítót generál
+    //Az azonosító első 2 karaktere az azonosító tipusát határozza meg
+    //következő 2 karakter a hónap, utána lévő 2 a napot. Majd az egyediség miatt a személyigazolványszáma a vevőnek
+    //következő 2 az óra ,majd perc, utolsó karakter a buyer-hez tartozó jegyeket azonosítja, az első jegy A utána B, C és így tovább
+    //az utolsó karakterrel van biztosítva hogy az azonosító biztos mindig egyedi lesz
+    //A legenerált azonosítót hozzáadja az Ids listához
+    public void GenerateId(int status)
+    {
+<span class="fc" id="L90">        Date date = new Date();</span>
+<span class="fc" id="L91">        Calendar calendar = new GregorianCalendar();</span>
+<span class="fc" id="L92">        String month = (calendar.get(Calendar.MONTH)+1) + &quot;&quot;;</span>
+<span class="pc bpc" id="L93" title="1 of 2 branches missed.">        month = (month.length() == 1) ? &quot;0&quot;.concat(month) : month;</span>
+<span class="fc" id="L94">        String day = calendar.get(Calendar.DAY_OF_MONTH) + &quot;&quot;;</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">        day = (day.length() == 1) ? &quot;0&quot;.concat(day) : day;</span>
+<span class="fc" id="L96">        String hour = calendar.get(Calendar.HOUR_OF_DAY) + &quot;&quot;;</span>
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">        hour = (hour.length() == 1) ? &quot;0&quot;.concat(hour) : hour;</span>
+<span class="fc" id="L98">        String min = calendar.get(Calendar.MINUTE) + &quot;&quot;;</span>
+<span class="fc bfc" id="L99" title="All 2 branches covered.">        min = (min.length() == 1) ? &quot;0&quot;.concat(min) : min;</span>
+<span class="fc" id="L100">        String sec = calendar.get(Calendar.SECOND) + &quot;&quot;;</span>
+<span class="fc" id="L101">        String lastChar = (char)(this.NumberOfGeneratedId + 'A')+ &quot;&quot;;</span>
+<span class="fc" id="L102">        String statusChar = &quot;&quot;;</span>
+<span class="fc bfc" id="L103" title="All 2 branches covered.">        if (status == 1)</span>
+        {
+<span class="fc" id="L105">            statusChar = &quot;FE&quot;;</span>
+        }
+<span class="fc bfc" id="L107" title="All 2 branches covered.">        else if (status == 2)</span>
+        {
+<span class="fc" id="L109">            statusChar = &quot;DI&quot;;</span>
+        }
+<span class="pc bpc" id="L111" title="1 of 2 branches missed.">        else if (status == 3)</span>
+        {
+<span class="fc" id="L113">            statusChar = &quot;NY&quot;;</span>
+        }
+<span class="fc" id="L115">        String id = &quot;&quot;;</span>
+<span class="fc" id="L116">        id = statusChar + month + day + this.Id + hour + min  + lastChar;</span>
+<span class="fc" id="L117">        NumberOfGeneratedId++;</span>
+<span class="fc" id="L118">        Ids.add(id);</span>
+<span class="fc" id="L119">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

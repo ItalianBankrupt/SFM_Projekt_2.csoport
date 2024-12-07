@@ -1,10 +1,15 @@
 package com.spa.demo.frontend.Cassa.Models;
 
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.Cupboard;
+import com.spa.demo.backend.CupboardRepository;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
+
+import com.spa.demo.backend.Identification;
+import org.springframework.context.ConfigurableApplicationContext;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +54,42 @@ public class PersonId
         this.buyerId = buyerId;
     }
 
+    public PersonId(Identification identification)
+    {
+        ConfigurableApplicationContext context = SpringManager.getApplicationContext();
+        CupboardRepository cupboardRepository = context.getBean(CupboardRepository.class);
+        List<Cupboard> lockers = cupboardRepository.findAll();
+        this.Locker = 0;
+        for(Cupboard locker : lockers)
+        {
+            if(locker.getIdentification().getPersonId().equals(id))
+            {
+                Locker++;
+            }
+        }
+
+        this.id = identification.getPersonId();
+        this.buyerId = identification.getPersonId();
+        this.AdultBeachTicket = identification.getAdultBeachTicket();
+        this.StudentBeachTicket = identification.getStudentBeachTicket();
+        this.PensionerBeachTicket = identification.getPensionerBeachTicket();
+        this.FeelingPensionerTicket = identification.getFeelingPensionerTicket();
+        this.AdultFellingTicket = identification.getAdultFellingTicket();
+        this.StudentFellingTicket = identification.getStudentFellingTicket();
+        this.AdultThermalTicket = identification.getAdultThermalTicket();
+        this.StudentThermalTicket = identification.getStudentThermalTicket();
+        this.PensionerThermalTicket = identification.getPensionerThermalTicket();
+        this.PremiumTicket = identification.getPremiumTicket();
+        this.AquaParkTicket = identification.getAquaParkTicket();
+        this.Sauna = identification.getSauna();
+        this.SafeDeposit = identification.getSafeDeposit();
+        this.Lounger = identification.getLounger();
+        this.SunBed = identification.getSunBed();
+        this.Baldachin = identification.getBaldachin();
+        this.SunBedAtBeach = identification.getSunBedAtTheBeach();
+        this.Balance.setValue(identification.getMoney());
+    }
+
     //Listázza a personId-hoz tartózó szolgáltatások darabszámát szolgáltatásnév:darabszám szerint egy listába, de csak azokat aminek nem 0 a darabszáma
     //Visszatérési értéke egy lista
     public List<String> listServicesInfo()
@@ -78,7 +119,7 @@ public class PersonId
         infoList.add("Nyugdíjas belépő:" + getPensionerBeachTicket());
         infoList.add("Diák Thermal belépő:" + getStudentThermalTicket());
         infoList.add("Felnőtt Thermal belépő:" + getAdultThermalTicket());
-        infoList.add("Nyugdíjas Thermal belépő:" + getPensionerBeachTicket());
+        infoList.add("Nyugdíjas Thermal belépő:" + getPensionerThermalTicket());
         infoList.add("Aquapark belépő:" +  getAquaParkTicket());
         infoList.add("Prémium belépőjegy:" + getPremiumTicket());
         return infoList;
