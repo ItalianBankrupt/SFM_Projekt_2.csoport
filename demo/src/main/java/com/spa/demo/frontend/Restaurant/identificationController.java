@@ -97,7 +97,7 @@ public class identificationController {
             System.out.println(name);
             ImageView imageView = controller.getProdImage();
             imageView.fitWidthProperty().bind(controller.getCardForm().widthProperty());
-            imageView.setImage(new Image(getClass().getResourceAsStream("/fxml/RestGUI/backg.png")));
+            imageView.setImage(new Image(getClass().getResourceAsStream("/fxml/RestGUI/sampleImages/" + name + ".jpg")));
 
             Label foodPrice = controller.getProdPrice();
             foodPrice.setText(price+"Ft");
