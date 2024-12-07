@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -16,6 +17,7 @@ import javafx.scene.layout.GridPane;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
+
 
 import java.io.IOException;
 import java.util.List;
@@ -70,15 +72,19 @@ public class identificationController {
     @FXML
     private TableView<?> smallBasket;
 
+    @FXML
+    private ScrollPane scrollPane;
+
 
     void loadFoodGrid(String itemType) throws IOException {
         panelGridPane.getChildren().clear();
+        panelGridPane.setPrefWidth(ScrollPane.USE_COMPUTED_SIZE);
         context = SpringManager.getApplicationContext();
         restaurantRepository = context.getBean(RestaurantRepository.class);
-        List<Restaurant> Items = restaurantRepository.findByType(itemType);
+        List<Restaurant> items = restaurantRepository.findByType(itemType);
         int col = 0;
         int row = 0;
-        for (Restaurant item : Items) {
+        for (Restaurant item : items) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RestGUI/ItemBox.fxml"));
             AnchorPane pane = loader.load();
 
@@ -89,16 +95,19 @@ public class identificationController {
 
             Label foodName = controller.getProdName();
             foodName.setText(name);
-            System.out.println(name);//teszt
+            System.out.println(name);
             ImageView imageView = controller.getProdImage();
+            imageView.fitWidthProperty().bind(controller.getCardForm().widthProperty());
             imageView.setImage(new Image(getClass().getResourceAsStream("/fxml/RestGUI/backg.png")));
             Label foodPrice = controller.getProdPrice();
             foodPrice.setText(String.valueOf(price));
-            panelGridPane.add(pane, row, col++);
+            pane.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+            panelGridPane.add(pane, col, row);
 
+            col++;
             if (col == 2){
                 col = 0;
-                row+=2;
+                row++;
             }
         }
     }

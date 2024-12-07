@@ -4,27 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant food images + database name fix">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo.iml" afterDir="false" />
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant JPA connected data received">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/ItemBoxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/ItemBoxController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/identificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/identificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/ItemBoxController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/ItemBoxController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/ItemBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/ItemBox.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/identification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/identification.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/identificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/identificationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/csv/restaurant.csv" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/csv/restaurant.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/IdHandler.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/ServicesAdd.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/Summary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/TicketAdd.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/TicketsAndServices.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/addCustomer.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/checkID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/checkID.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/removeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/removeCustomer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/uploadBalance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/CassaGUI/uploadBalance.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/identification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/identification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/temporary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/test-classes/com/spa/demo/SpaApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +45,11 @@
     &quot;accountId&quot;: &quot;52032e0b-e70b-419c-b931-6f193b99de91&quot;
   }
 }</component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="MavenRunConfiguration" name="demo [org.openjfx:javafx-maven-plugin:0.0.8:run]" />
+    </enabled-run-configurations>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -76,6 +67,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.index.html.executor": "Run",
     "Maven.demo [clean].executor": "Run",
+    "Maven.demo [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
     "Maven.demo [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -138,7 +130,8 @@
       <workItem from="1732007204842" duration="2803000" />
       <workItem from="1732010039890" duration="402000" />
       <workItem from="1732411834171" duration="9876000" />
-      <workItem from="1732968624951" duration="9176000" />
+      <workItem from="1732968624951" duration="9391000" />
+      <workItem from="1733587218018" duration="11851000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -204,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732982792097</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Restaurant JPA connected data received">
+      <option name="closed" value="true" />
+      <created>1732990576462</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732990576462</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +230,7 @@
     <MESSAGE value="Itembox added" />
     <MESSAGE value="Restaurant update" />
     <MESSAGE value="Restaurant food images + database name fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant food images + database name fix" />
+    <MESSAGE value="Restaurant JPA connected data received" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant JPA connected data received" />
   </component>
 </project>
