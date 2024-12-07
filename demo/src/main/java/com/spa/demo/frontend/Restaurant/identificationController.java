@@ -92,15 +92,16 @@ public class identificationController {
             String name = item.getName();
             String type = item.getType();
             int price = item.getPrice();
-
             Label foodName = controller.getProdName();
             foodName.setText(name);
             System.out.println(name);
             ImageView imageView = controller.getProdImage();
             imageView.fitWidthProperty().bind(controller.getCardForm().widthProperty());
             imageView.setImage(new Image(getClass().getResourceAsStream("/fxml/RestGUI/backg.png")));
+
             Label foodPrice = controller.getProdPrice();
-            foodPrice.setText(String.valueOf(price));
+            foodPrice.setText(price+"Ft");
+
             pane.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
             panelGridPane.add(pane, col, row);
 
@@ -134,10 +135,27 @@ public class identificationController {
 
     @FXML
     void loadPreFood(ActionEvent event) throws IOException{
+        loadFoodGrid("Eloetel");
     }
 
     @FXML
     void loadSoup(ActionEvent event) throws IOException{
+        loadFoodGrid("Leves");
+    }
+
+    @FXML
+    void loadFish(ActionEvent event) throws IOException{
+        loadFoodGrid("Hal_etel");
+    }
+
+    @FXML
+    void loadPasta(ActionEvent event) throws IOException{
+        loadFoodGrid("Teszta");
+    }
+
+    @FXML
+    void loadAlcohol(ActionEvent event) throws IOException{
+        loadFoodGrid("Sor");
     }
 
     @FXML
