@@ -3,6 +3,7 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Spinner?>
@@ -237,6 +238,9 @@
                                           <GridPane.margin>
                                              <Insets left="5.0" right="5.0" />
                                           </GridPane.margin>
+                                          <font>
+                                             <Font name="System Bold" size="9.0" />
+                                          </font>
                                        </Button>
                                        <Button mnemonicParsing="false" onAction="#loadCoffe" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Kávé" GridPane.rowIndex="1">
                                           <opaqueInsets>
@@ -245,10 +249,13 @@
                                           <GridPane.margin>
                                              <Insets left="5.0" right="5.0" />
                                           </GridPane.margin>
+                                          <font>
+                                             <Font name="System Bold" size="9.0" />
+                                          </font>
                                        </Button>
                                        <Button mnemonicParsing="false" onAction="#loadDessert" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Desszertek" GridPane.rowIndex="2">
                                           <font>
-                                             <Font size="9.0" />
+                                             <Font name="System Bold" size="9.0" />
                                           </font>
                                           <opaqueInsets>
                                              <Insets />
@@ -259,7 +266,7 @@
                                        </Button>
                                        <Button mnemonicParsing="false" onAction="#loadMainCourse" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Főételek" GridPane.rowIndex="3">
                                           <font>
-                                             <Font size="11.0" />
+                                             <Font name="System Bold" size="9.0" />
                                           </font>
                                           <opaqueInsets>
                                              <Insets />
@@ -275,10 +282,13 @@
                                           <GridPane.margin>
                                              <Insets left="5.0" right="5.0" />
                                           </GridPane.margin>
+                                          <font>
+                                             <Font name="System Bold" size="9.0" />
+                                          </font>
                                        </Button>
                                        <Button mnemonicParsing="false" onAction="#loadPreFood" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Előételek" textAlignment="CENTER" GridPane.rowIndex="5">
                                           <font>
-                                             <Font size="11.0" />
+                                             <Font name="System Bold" size="9.0" />
                                           </font>
                                           <opaqueInsets>
                                              <Insets />
@@ -294,6 +304,9 @@
                                           <GridPane.margin>
                                              <Insets left="5.0" right="5.0" />
                                           </GridPane.margin>
+                                          <font>
+                                             <Font name="System Bold" size="9.0" />
+                                          </font>
                                        </Button>
                                        <Button mnemonicParsing="false" onAction="#loadPasta" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Tészták" GridPane.rowIndex="7">
                                           <opaqueInsets>
@@ -302,6 +315,9 @@
                                           <GridPane.margin>
                                              <Insets left="5.0" right="5.0" />
                                           </GridPane.margin>
+                                          <font>
+                                             <Font name="System Bold" size="9.0" />
+                                          </font>
                                        </Button>
                                        <Button mnemonicParsing="false" onAction="#loadAlcohol" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Alkohol" GridPane.rowIndex="8">
                                           <opaqueInsets>
@@ -310,6 +326,9 @@
                                           <GridPane.margin>
                                              <Insets left="5.0" right="5.0" />
                                           </GridPane.margin>
+                                          <font>
+                                             <Font name="System Bold" size="9.0" />
+                                          </font>
                                        </Button>
                                     </children>
                                  </GridPane>
@@ -361,14 +380,24 @@
                                    <items>
                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="316.0">
                                           <children>
-                                             <Button layoutX="184.0" layoutY="14.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="70.0" prefWidth="123.0" styleClass="remove-button" text="Törlés" />
+                                             <Button layoutX="184.0" layoutY="14.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="70.0" prefWidth="123.0" styleClass="remove-button" text="Törlés">
+                                                <font>
+                                                   <Font name="Verdana Bold" size="23.0" />
+                                                </font></Button>
                                              <Spinner fx:id="removeSpinner" layoutX="13.0" layoutY="14.0" prefHeight="70.0" prefWidth="171.0" />
                                           </children>
                                        </AnchorPane>
                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="131.0" prefWidth="319.0">
                                           <children>
-                                             <TextField fx:id="noteBox" layoutX="19.0" layoutY="59.0" prefHeight="50.0" prefWidth="220.0" />
-                                             <Button layoutX="239.0" layoutY="60.0" mnemonicParsing="false" onAction="#sendNoteToCart" prefHeight="50.0" prefWidth="63.0" styleClass="add-button" text="Küldés" />
+                                             <TextField fx:id="noteBox" layoutX="14.0" layoutY="59.0" prefHeight="50.0" prefWidth="287.0" promptText="Étel sorszáma" text="0">
+                                                <font>
+                                                   <Font size="28.0" />
+                                                </font></TextField>
+                                             <Button layoutX="13.0" layoutY="127.0" mnemonicParsing="false" onAction="#sendNoteToCart" prefHeight="50.0" prefWidth="289.0" styleClass="add-button" text="Küldés">
+                                                <font>
+                                                   <Font name="Verdana Bold" size="30.0" />
+                                                </font></Button>
+                                             <ComboBox fx:id="dropDownID" layoutX="14.0" layoutY="14.0" prefHeight="39.0" prefWidth="287.0" />
                                           </children>
                                        </AnchorPane>
                                    </items>
@@ -399,9 +428,9 @@
                         <bottom>
                            <HBox prefHeight="100.0" prefWidth="1016.0" BorderPane.alignment="CENTER">
                               <children>
-                              <Label text="Teljes összeg :">
+                              <Label text="Teljes összeg:">
                                     <font>
-                                       <Font name="Verdana" size="70.0" />
+                                       <Font name="Verdana Bold" size="69.0" />
                                     </font>
                                     <styleClass>
                                        <String fx:value="text" />
@@ -444,18 +473,18 @@
                                          <items>
                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                                 <children>
-                                                   <Button layoutX="15.0" layoutY="91.0" mnemonicParsing="false" prefHeight="135.0" prefWidth="335.0" style="-fx-border-color: black;" styleClass="remove-button" text="Törlés">
+                                                   <Button layoutX="15.0" layoutY="91.0" mnemonicParsing="false" onAction="#clearScene" prefHeight="135.0" prefWidth="335.0" style="-fx-border-color: black;" styleClass="remove-button" text="Törlés">
                                                       <font>
-                                                         <Font name="Verdana" size="64.0" />
+                                                         <Font name="Verdana Bold" size="64.0" />
                                                       </font>
                                                    </Button>
                                                 </children>
                                              </AnchorPane>
                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                                 <children>
-                                                   <Button layoutX="15.0" layoutY="84.0" mnemonicParsing="false" prefHeight="135.0" prefWidth="335.0" style="-fx-border-color: black;" styleClass="add-button" text="Fizetés">
+                                                   <Button layoutX="15.0" layoutY="84.0" mnemonicParsing="false" onAction="#checkoutPay" prefHeight="135.0" prefWidth="335.0" style="-fx-border-color: black;" styleClass="add-button" text="Fizetés">
                                                       <font>
-                                                         <Font name="Verdana" size="64.0" />
+                                                         <Font name="Verdana Bold" size="62.0" />
                                                       </font>
                                                    </Button>
                                                 </children>

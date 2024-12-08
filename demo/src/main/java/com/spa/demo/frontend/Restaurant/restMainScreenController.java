@@ -45,9 +45,6 @@ public class restMainScreenController {
     @FXML
     private TextField noteBox;
 
-    @FXML
-    private AnchorPane mainScreen;
-
     Set<String> bandIDs = new HashSet<>();
 
     @FXML
@@ -89,6 +86,9 @@ public class restMainScreenController {
     @FXML
     private TextField idBox;
 
+    @FXML
+    private ComboBox<String> dropDownID;
+
 
     @FXML
     private TableColumn<CheckOutFinal, Integer> checkoutAmount;
@@ -120,9 +120,6 @@ public class restMainScreenController {
     @FXML
     private TableColumn<Checkout, Integer> smallBasketPrice;
 
-    @FXML
-    private ScrollPane scrollPane;
-
     void loadFoodGrid(String itemType) throws IOException {
 
         panelGridPane.getChildren().clear();
@@ -139,7 +136,6 @@ public class restMainScreenController {
             AnchorPane pane = loader.load();
             ItemBoxController controller = loader.getController();
             String name = item.getName();
-            String type = item.getType();
             int price = item.getPrice();
             Label foodName = controller.getProdName();
             foodName.setText(name);
@@ -230,6 +226,9 @@ public class restMainScreenController {
                 int index = bandIDs.size()-1;
                 bandIDLabels.get(index).setText(idBox.getText());
                 bandValueLabels.get(index).setText(personId.getBalance().getValue().toString());
+
+                dropDownID.getItems().add(idBox.getText());
+
             }
 
         }
@@ -240,13 +239,16 @@ public class restMainScreenController {
             String title = "Hiba";
             PopUpWindows.AlertWindow(contentText, headerText, title);
         }
+
+
+        idBox.setText("");
     }
 
     @FXML
     void sendNoteToCart(ActionEvent event) {
         String poz = noteBox.getText();
         CheckOutFinal item = CartManager.getInstance().getCheckOutItems().get(Integer.parseInt(poz));
-        item.setID(poz);
+        item.setID(dropDownID.getValue());
         CartManager.getInstance().getCheckOutItems().set(Integer.parseInt(poz), item);
     }
 
@@ -296,7 +298,6 @@ public class restMainScreenController {
         ObservableList<Checkout> cartItems = CartManager.getInstance().getCartItems();
         if (!cartItems.isEmpty() && removeSpinner.getValue() <= cartItems.size()) {
             int index = cartItems.size() - (cartItems.size() - removeSpinner.getValue()+1);
-            int cost = cartItems.get(index).getFoodPrice() * cartItems.get(index).getFoodAmount();
             cartItems.remove(index);
             CartManager.getInstance().getCheckOutItems().remove(index);
         } else {
@@ -304,4 +305,20 @@ public class restMainScreenController {
         }
     }
 
+    @FXML
+    void clearScene(ActionEvent event) {
+        CartManager.getInstance().getCartItems().clear();
+        CartManager.getInstance().getCheckOutItems().clear();
+        List<Label> bandIDLabels = List.of(bandID1, bandID2, bandID3, bandID4, bandID5);
+        List<Label> bandValueLabels = List.of(bandValue1, bandValue2, bandValue3, bandValue4, bandValue5);
+        for(int iteration = 0; iteration < 5; iteration++) {
+            bandIDLabels.get(iteration).setText("");
+            bandValueLabels.get(iteration).setText("");
+        }
+    }
+
+    @FXML
+    void checkoutPay(ActionEvent event) {
+
+    }
 }
