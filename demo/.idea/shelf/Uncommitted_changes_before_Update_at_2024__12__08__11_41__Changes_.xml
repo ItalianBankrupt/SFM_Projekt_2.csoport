@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_2024__12__08__11_41_[Changes]" date="1733654512536" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024__12__08__11_41_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2024. 12. 08. 11:41 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="testdb.mv.db" />
+    <option name="AFTER_PATH" value="testdb.mv.db" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024__12__08__11_41_[Changes]/testdb.mv.db" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/spa/demo/frontend/Main.class" />
+    <option name="AFTER_PATH" value="target/classes/com/spa/demo/frontend/Main.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024__12__08__11_41_[Changes]/Main.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/jacoco.exec" />
+    <option name="AFTER_PATH" value="target/jacoco.exec" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024__12__08__11_41_[Changes]/jacoco.exec" />
+  </binary>
+</changelist>
