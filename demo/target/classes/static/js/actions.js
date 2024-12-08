@@ -57,7 +57,7 @@ function findId() {
             }
 
             // Szolgáltatások kiírása
-            let serviceOutput = '<h4>Szolgáltatások:</h4>';
+            let serviceOutput = '<h4>Szolgáltatások:</h4> <ul>';
             let hasServices = false;
 
             // Szolgáltatások listája
@@ -76,6 +76,7 @@ function findId() {
                     serviceOutput += `<li>${name}: ${record[service]}</li>`;
                     hasServices = true;
                 }
+                serviceOutput += '</ul>';
             }
             if (!hasServices) {
                 serviceOutput = '<h4>Nem rendelkezik szolgáltatással!</h4>';
@@ -84,7 +85,7 @@ function findId() {
             // Összegzés
             resultDiv.innerHTML = output + ticketOutput + serviceOutput;
         } else {
-            resultDiv.innerHTML = '<p>Nem !!!!található adat az adott azonosítóval!</p>';
+            resultDiv.innerHTML = '<p>Nem található adat az adott azonosítóval!</p>';
             //Map rejtve marad
             mapElement.style.display = 'none';
         }

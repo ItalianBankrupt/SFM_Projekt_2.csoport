@@ -119,7 +119,7 @@ public class PersonId
         infoList.add("Nyugdíjas belépő:" + getPensionerBeachTicket());
         infoList.add("Diák Thermal belépő:" + getStudentThermalTicket());
         infoList.add("Felnőtt Thermal belépő:" + getAdultThermalTicket());
-        infoList.add("Nyugdíjas Thermal belépő:" + getPensionerBeachTicket());
+        infoList.add("Nyugdíjas Thermal belépő:" + getPensionerThermalTicket());
         infoList.add("Aquapark belépő:" +  getAquaParkTicket());
         infoList.add("Prémium belépőjegy:" + getPremiumTicket());
         return infoList;
