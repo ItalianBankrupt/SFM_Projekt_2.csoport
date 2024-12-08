@@ -18,10 +18,10 @@
 <div class="container">
 
     <h1>Karszalag lekérdezés</h1>
-    <form id="codeForm">
+    <form id="codeForm" >
         <input type="text" id="codeInput" placeholder="Írja be az azonosítót" required>
         <br><br>
-        <input type="submit" value="Keresés" th:onclick="findId()">
+       <button type="submit" th:action="@{/refresh}" class="btn btn-primary" >Keresés</button>
     </form>
 
     <div id="result"></div>

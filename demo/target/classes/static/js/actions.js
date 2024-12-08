@@ -24,11 +24,11 @@ function findId() {
         if (record) {
             let output = `<h3>Talált azonosító:</h3>
                           <p> ${record.personId}</p>
-                          <p>Egyenleg: ${record.money}</p>`;
+                          <p>Egyenleg: ${record.money}</p> <p>`;
             //Map megjelenítése
             mapElement.style.display = 'block';
             // Jegyek kiírása
-            let ticketOutput = '<h4>Belépők:</h4>';
+            let ticketOutput = '<h4 style="margin-left: 0;">Belépők:</h4> <ul>';
             let hasTickets = false;
 
             // Jegyek listája
@@ -52,12 +52,13 @@ function findId() {
                     hasTickets = true;
                 }
             }
+            ticketOutput += '</ul>';
             if (!hasTickets) {
                 ticketOutput = '<h4>Nem rendelkezik jeggyel!</h4>';
             }
 
             // Szolgáltatások kiírása
-            let serviceOutput = '<h4>Szolgáltatások:</h4> <ul>';
+            let serviceOutput = '<h4 style="margin-left: 0;">Szolgáltatások:</h4> <ul>';
             let hasServices = false;
 
             // Szolgáltatások listája
@@ -78,12 +79,20 @@ function findId() {
                 }
                 serviceOutput += '</ul>';
             }
+            serviceOutput += '</ul> </p>';
             if (!hasServices) {
                 serviceOutput = '<h4>Nem rendelkezik szolgáltatással!</h4>';
             }
+         /*   // Szekrény megjelenítése
+            const cupboardRecord = cupboardData.find(item => item.personId === inputpersonId);
+            let cupboardOutput = '';
+            if (cupboardRecord) {
+                cupboardOutput = `<h4 style="margin-left: 0;">Szekrény száma:</h4>
+                                  <p style="margin-left: 20px;">${cupboardRecord.cupboardNumber}</p>`;
+            }*/
 
             // Összegzés
-            resultDiv.innerHTML = output + ticketOutput + serviceOutput;
+            resultDiv.innerHTML = output + ticketOutput + serviceOutput;//+cupboardOutput;
         } else {
             resultDiv.innerHTML = '<p>Nem található adat az adott azonosítóval!</p>';
             //Map rejtve marad

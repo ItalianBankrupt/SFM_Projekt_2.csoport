@@ -155,7 +155,7 @@ public class TicketAndServicesController {
 
            WebController webController=new WebController();
             identificationRepository.save(identification);
-            webController.addIdentification();
+           // webController.addIdentification();
             //----------Szekrények személyhez rendelése------
             if(personId.getLocker() != 0)
             {

@@ -24,8 +24,9 @@ public class WebController {
     @Autowired
     private CupboardRepository cupboardRepository;
 
-    @GetMapping("/")
+    @GetMapping("")
     public String showHomePage(Model model){
+        System.out.println("showHomePage");
        List<Registration> registrationList=registrationRepository.findAll();
        List<Identification>  identificationList=identificationRepository.findAll();
        List<Cupboard> cupboardList=cupboardRepository.findAll();

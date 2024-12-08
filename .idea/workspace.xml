@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v7? js4?.0">
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web done!? 1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/web/WebController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/js/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Cassa/addcustomerControllers/TicketAndServicesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/web/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/web/WebController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/static/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/static/js/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,6 +156,10 @@
       <workItem from="1732559315719" duration="489000" />
       <workItem from="1733485598556" duration="3390000" />
       <workItem from="1733489054126" duration="1366000" />
+      <workItem from="1733494011053" duration="245000" />
+      <workItem from="1733671493581" duration="3382000" />
+      <workItem from="1733674974639" duration="356000" />
+      <workItem from="1733675354260" duration="274000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
