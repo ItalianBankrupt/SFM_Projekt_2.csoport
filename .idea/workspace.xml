@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant checksum">
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant reset">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/restMainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/restMainScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/restMainScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/restMainScreenController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/restMainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/restMainScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/testdb.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.trace.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +147,7 @@
       <workItem from="1732559315719" duration="489000" />
       <workItem from="1733485598556" duration="3390000" />
       <workItem from="1733489054126" duration="1366000" />
-      <workItem from="1733638061803" duration="17879000" />
+      <workItem from="1733638061803" duration="22657000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -310,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733654273811</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Restaurant reset">
+      <option name="closed" value="true" />
+      <created>1733656958986</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733656958986</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +340,8 @@
     <MESSAGE value="Restaurant ID connected styled" />
     <MESSAGE value="Restaurant ID bands to foods" />
     <MESSAGE value="Restaurant checksum" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant checksum" />
+    <MESSAGE value="Restaurant reset" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant reset" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

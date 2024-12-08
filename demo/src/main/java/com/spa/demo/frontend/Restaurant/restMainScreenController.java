@@ -24,10 +24,7 @@ import org.springframework.stereotype.Component;
 
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 
 @Component
@@ -311,14 +308,32 @@ public class restMainScreenController {
         CartManager.getInstance().getCheckOutItems().clear();
         List<Label> bandIDLabels = List.of(bandID1, bandID2, bandID3, bandID4, bandID5);
         List<Label> bandValueLabels = List.of(bandValue1, bandValue2, bandValue3, bandValue4, bandValue5);
+        dropDownID.setItems(null);
         for(int iteration = 0; iteration < 5; iteration++) {
             bandIDLabels.get(iteration).setText("");
             bandValueLabels.get(iteration).setText("");
+
+
         }
     }
 
     @FXML
     void checkoutPay(ActionEvent event) {
+        ConfigurableApplicationContext context = SpringManager.getApplicationContext();
+        identificationRepository = context.getBean(IdentificationRepository.class);
+        List<Identification> IDs = identificationRepository.findAll();
+        ObservableList<CheckOutFinal> items = CartManager.getInstance().getCheckOutItems();
+        Map<String,Integer> idBalance = new HashMap<>();
 
+        for(CheckOutFinal item : items) {
+
+        }
+
+
+
+//        identificationRepository.updateByPersonId(IDs.get().getPersonId(),2);
+
+
+        clearScene(event);
     }
 }
