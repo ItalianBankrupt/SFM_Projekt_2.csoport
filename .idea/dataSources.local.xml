@@ -5,6 +5,20 @@
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="H2" />
       <schema-mapping />
     </data-source>
+    <data-source name="h2-mem" uuid="75bae7d1-0fb4-4f93-9126-a456dbbb2d8a">
+      <database-info product="H2" version="2.2.220 (2023-07-04)" jdbc-version="4.2" driver-name="H2 JDBC Driver" driver-version="2.2.220 (2023-07-04)" dbms="H2" exact-version="2.2.220" exact-driver-version="2.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <user-name>sa</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
     <data-source name="h2-mem" uuid="f4588be9-9f67-4164-b415-25fac27bdb9c">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="H2" />
       <user-name>sa</user-name>

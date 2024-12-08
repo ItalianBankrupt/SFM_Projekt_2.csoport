@@ -1,7 +1,5 @@
 package com.spa.demo.frontend;
 
-import com.spa.demo.SpaApplication;
-import com.spa.demo.SpringManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,7 +24,7 @@ public class IndexController {
     }
     @FXML
     public void openRestaurantMainPageGUI(ActionEvent actionEvent) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RestGUI/identification.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RestGUI/restMainScreen.fxml"));
 
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
