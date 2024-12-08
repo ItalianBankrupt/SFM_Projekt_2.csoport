@@ -389,7 +389,7 @@
                                        </AnchorPane>
                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="131.0" prefWidth="319.0">
                                           <children>
-                                             <TextField fx:id="noteBox" layoutX="14.0" layoutY="59.0" prefHeight="50.0" prefWidth="287.0" promptText="Étel sorszáma" text="0">
+                                             <TextField fx:id="noteBox" layoutX="14.0" layoutY="59.0" prefHeight="50.0" prefWidth="287.0" promptText="Étel sorszáma" text="1">
                                                 <font>
                                                    <Font size="28.0" />
                                                 </font></TextField>

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant pay in progress">
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant payment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/restMainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/restMainScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/restMainScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/restMainScreenController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.mv.db" afterDir="false" />
     </list>
@@ -147,7 +148,7 @@
       <workItem from="1733485598556" duration="3390000" />
       <workItem from="1733489054126" duration="1366000" />
       <workItem from="1733638061803" duration="22676000" />
-      <workItem from="1733673023576" duration="3168000" />
+      <workItem from="1733673023576" duration="3896000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -325,7 +326,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733661780715</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Restaurant payment">
+      <option name="closed" value="true" />
+      <created>1733676472611</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1733676472611</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Restaurant payment">
+      <option name="closed" value="true" />
+      <created>1733676481891</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1733676481891</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Restaurant payment">
+      <option name="closed" value="true" />
+      <created>1733676485129</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733676485129</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +375,8 @@
     <MESSAGE value="Restaurant checksum" />
     <MESSAGE value="Restaurant reset" />
     <MESSAGE value="Restaurant pay in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant pay in progress" />
+    <MESSAGE value="Restaurant payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant payment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

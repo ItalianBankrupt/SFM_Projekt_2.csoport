@@ -242,10 +242,12 @@ public class restMainScreenController {
 
     @FXML
     void sendNoteToCart(ActionEvent event) {
-        String poz = noteBox.getText();
-        CheckOutFinal item = CartManager.getInstance().getCheckOutItems().get(Integer.parseInt(poz));
+        String index = noteBox.getText();
+        int value = Integer.parseInt(index);
+        noteBox.setText(++value + "");
+        CheckOutFinal item = CartManager.getInstance().getCheckOutItems().get(Integer.parseInt(index)-1);
         item.setID(dropDownID.getValue());
-        CartManager.getInstance().getCheckOutItems().set(Integer.parseInt(poz), item);
+        CartManager.getInstance().getCheckOutItems().set(Integer.parseInt(index)-1, item);
     }
 
     public void initialize() {
@@ -313,6 +315,7 @@ public class restMainScreenController {
         }
         dropDownID.getItems().clear();
         bandIDs.clear();
+        noteBox.setText("1");
     }
 
     @FXML
@@ -332,11 +335,15 @@ public class restMainScreenController {
             if(idBalance.containsKey(ID.getPersonId())){
                 if(idBalance.get(ID.getPersonId()) < ID.getMoney())
                     identificationRepository.updateByPersonId(ID.getPersonId(),ID.getMoney()-idBalance.get(ID.getPersonId()));
+                else {
+                    String contentText = "Nincs elegendő összeg";
+                    String headerText = "Kevés egyenleg";
+                    String title = "Hiba";
+                    PopUpWindows.AlertWindow(contentText, headerText, title);
+                }
+
+
             }
-            else{
-                System.out.println("Error");
-            }
-            System.out.println(ID.getMoney());
         }
         clearScene(event);
     }
