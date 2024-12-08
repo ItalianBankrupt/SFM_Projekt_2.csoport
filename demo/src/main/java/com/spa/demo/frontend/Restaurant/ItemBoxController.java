@@ -1,5 +1,7 @@
 package com.spa.demo.frontend.Restaurant;
 
+import com.spa.demo.SpringManager;
+import com.spa.demo.backend.IdentificationRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,6 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.IOException;
 
@@ -82,13 +85,10 @@ public class ItemBoxController {
 
     @FXML
     void addToCart(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RestGUI/restMainScreen.fxml"));
-        AnchorPane pane = loader.load();
-        restMainScreenController controller = loader.getController();
-
-        CartManager.getInstance().addItemToCart(prodName.getText(), prodQuantity.getValue(), Integer.parseInt(prodPrice.getText().replace("Ft", ""))*prodQuantity.getValue());
-
-
+        if(prodQuantity.getValue()>0){
+            CartManager.getInstance().addItemToCart(prodName.getText(), prodQuantity.getValue(),
+                    Integer.parseInt(prodPrice.getText().replace("Ft", ""))*prodQuantity.getValue());
+        }
 
     }
 

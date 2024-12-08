@@ -18,6 +18,6 @@ public class CartManager {
     }
 
     public void addItemToCart(String foodName, Integer foodAmount, Integer foodPrice) {
-        cartItems.add(new Checkout(foodName, foodAmount, foodPrice)); // Add items to the list
+        cartItems.add(new Checkout(foodName, foodAmount, foodPrice));
     }
 }

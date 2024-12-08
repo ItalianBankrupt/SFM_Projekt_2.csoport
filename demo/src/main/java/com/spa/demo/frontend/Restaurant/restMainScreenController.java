@@ -1,9 +1,12 @@
 package com.spa.demo.frontend.Restaurant;
 
 import com.spa.demo.SpringManager;
+import com.spa.demo.backend.Identification;
+import com.spa.demo.backend.IdentificationRepository;
 import com.spa.demo.backend.Restaurant;
 import com.spa.demo.backend.RestaurantRepository;
-import javafx.collections.FXCollections;
+import com.spa.demo.frontend.Cassa.Models.PersonId;
+import com.spa.demo.frontend.Cassa.Utils.PopUpWindows;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,8 +24,10 @@ import org.springframework.stereotype.Component;
 
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
-
+import java.util.Objects;
+import java.util.Set;
 
 
 @Component
@@ -33,6 +38,12 @@ public class restMainScreenController {
 
     @Autowired
     private RestaurantRepository restaurantRepository;
+
+    @Autowired
+    private IdentificationRepository identificationRepository;
+
+    @FXML
+    private TextField noteBox;
 
     @FXML
     private AnchorPane mainScreen;
@@ -71,26 +82,13 @@ public class restMainScreenController {
     private GridPane panelGridPane;
 
     @FXML
-    private TextField idBox;
+    private Spinner<Integer> removeSpinner;
 
-    public TableView<Checkout> getSmallBasket() {
-        return smallBasket;
-    }
+    @FXML
+    private TextField idBox;
 
     @FXML
     private TableView<Checkout> smallBasket;
-
-    public TableColumn<Checkout, String> getSmallBasketFood() {
-        return smallBasketFood;
-    }
-
-    public TableColumn<Checkout, Integer> getSmallBasketAmount() {
-        return smallBasketAmount;
-    }
-
-    public TableColumn<Checkout, Integer> getSmallBasketPrice() {
-        return smallBasketPrice;
-    }
 
     @FXML
     private TableColumn<Checkout, String> smallBasketFood;
@@ -124,16 +122,13 @@ public class restMainScreenController {
             int price = item.getPrice();
             Label foodName = controller.getProdName();
             foodName.setText(name);
-            System.out.println(name);
             ImageView imageView = controller.getProdImage();
             imageView.fitWidthProperty().bind(controller.getCardForm().widthProperty());
             imageView.setImage(new Image(getClass().getResourceAsStream("/fxml/RestGUI/sampleImages/" + name + ".jpg")));
             Label foodPrice = controller.getProdPrice();
             foodPrice.setText(price+"Ft");
-
             pane.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
             panelGridPane.add(pane, col, row);
-
             col++;
             if (col == 2){
                 col = 0;
@@ -189,15 +184,54 @@ public class restMainScreenController {
 
     @FXML
     void idCheck(ActionEvent event) {
-        //ID ellenőrzés
+
+        ConfigurableApplicationContext context = SpringManager.getApplicationContext();
+        identificationRepository = context.getBean(IdentificationRepository.class);
+        List<Identification> IDs = identificationRepository.findAll();
+
+        PersonId personId = null;
+
+        for (Identification id : IDs) {
+            if(Objects.equals(id.getPersonId(), idBox.getText())) {
+                personId = new PersonId(id);
+            }
+        }
+        if(personId != null) {
+            int k=0;
+
+            Set<String> bandIDs = new HashSet<>();
+            List<Label> bandIDLabels = List.of(bandID1, bandID2, bandID3, bandID4, bandID5);
+            List<Label> bandValueLabels = List.of(bandValue1, bandValue2, bandValue3, bandValue4, bandValue5);
+
+            if(!bandIDs.contains(idBox.getText())){
+                bandIDs.add(idBox.getText());
+                bandIDLabels.get(k).setText(idBox.getText());
+                bandValueLabels.get(k).setText(personId.getBalance().getValue().toString());
+            }
+
+        }
+
+        if(idBox.getText().isEmpty() || personId == null) {
+            String contentText = "Hibás azonosító";
+            String headerText = "Azonosító hiba";
+            String title = "Hiba";
+            PopUpWindows.AlertWindow(contentText, headerText, title);
+        }
+    }
+
+    @FXML
+    void sendNoteToCart(ActionEvent event) {
+
     }
 
     public void initialize() {
-        updateBasketTable();
 
         CartManager.getInstance().getCartItems().addListener((ListChangeListener<? super Checkout>) (change) -> {
             updateBasketTable();
         });
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20);
+        valueFactory.setValue(1);
+        removeSpinner.setValueFactory(valueFactory);
     }
 
     public void updateBasketTable() {
@@ -209,5 +243,14 @@ public class restMainScreenController {
         smallBasketPrice.setCellValueFactory(new PropertyValueFactory<>("foodPrice"));
     }
 
+    @FXML
+    void removeItem(ActionEvent event){
+        ObservableList<Checkout> cartItems = CartManager.getInstance().getCartItems();
+        if (!cartItems.isEmpty() && removeSpinner.getValue() <= cartItems.size()) {
+            cartItems.remove(cartItems.size() - (cartItems.size() - removeSpinner.getValue()+1));
+        } else {
+            System.out.println("The cart is empty. No item to remove.");
+        }
+    }
 
 }

@@ -57,3 +57,8 @@
 .item-box{
     -fx-stroke: lightblue;
 }
+
+.remove-button{
+    -fx-background-color: linear-gradient(indianred,lightpink);
+    -fx-text-fill: white;
+}
