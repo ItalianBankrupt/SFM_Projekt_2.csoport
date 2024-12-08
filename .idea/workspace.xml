@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Web .v7? js4?.0">
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant payment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/js/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/restMainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/restMainScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/restMainScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/restMainScreenController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,9 +23,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="TypeScript File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,8 +45,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport&quot;,
-    &quot;accountId&quot;: &quot;9b2d5faa-b6a1-4134-ba2d-1350e8b8c383&quot;
+    &quot;url&quot;: &quot;https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git&quot;,
+    &quot;accountId&quot;: &quot;52032e0b-e70b-419c-b931-6f193b99de91&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -71,7 +70,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.SpaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev__kristof&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev__gergo&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/lorin/Desktop/Egyetem/5 félév/SFM/Projekt/SFM_Projekt_2.csoport/demo/src/main/resources/templates&quot;,
@@ -118,8 +117,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -148,6 +147,8 @@
       <workItem from="1732559315719" duration="489000" />
       <workItem from="1733485598556" duration="3390000" />
       <workItem from="1733489054126" duration="1366000" />
+      <workItem from="1733638061803" duration="22676000" />
+      <workItem from="1733673023576" duration="3896000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -261,7 +262,95 @@
       <option name="project" value="LOCAL" />
       <updated>1733489470856</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Restaurant working table">
+      <option name="closed" value="true" />
+      <created>1733614516136</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733614516136</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Restaurant ID connected">
+      <option name="closed" value="true" />
+      <created>1733642952370</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1733642952370</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Restaurant ID connected styled">
+      <option name="closed" value="true" />
+      <created>1733644660113</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733644660113</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Restaurant ID bands to foods">
+      <option name="closed" value="true" />
+      <created>1733651033592</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1733651033592</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Restaurant ID bands to foods">
+      <option name="closed" value="true" />
+      <created>1733651075801</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1733651075801</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Restaurant checksum">
+      <option name="closed" value="true" />
+      <created>1733654273811</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733654273811</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Restaurant reset">
+      <option name="closed" value="true" />
+      <created>1733656958986</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733656958986</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Restaurant pay in progress">
+      <option name="closed" value="true" />
+      <created>1733661780715</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1733661780715</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Restaurant payment">
+      <option name="closed" value="true" />
+      <created>1733676472611</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1733676472611</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Restaurant payment">
+      <option name="closed" value="true" />
+      <created>1733676481891</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1733676481891</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Restaurant payment">
+      <option name="closed" value="true" />
+      <created>1733676485129</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733676485129</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +368,15 @@
     <MESSAGE value="Web .v6? js3.0" />
     <MESSAGE value="Web .v7? js4.0" />
     <MESSAGE value="Web .v7? js4?.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Web .v7? js4?.0" />
+    <MESSAGE value="Restaurant working table" />
+    <MESSAGE value="Restaurant ID connected" />
+    <MESSAGE value="Restaurant ID connected styled" />
+    <MESSAGE value="Restaurant ID bands to foods" />
+    <MESSAGE value="Restaurant checksum" />
+    <MESSAGE value="Restaurant reset" />
+    <MESSAGE value="Restaurant pay in progress" />
+    <MESSAGE value="Restaurant payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant payment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
