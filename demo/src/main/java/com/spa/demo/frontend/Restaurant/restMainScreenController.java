@@ -256,6 +256,8 @@ public class restMainScreenController {
             updateBasketTable();
         });
         CartManager.getInstance().getCheckOutItems().addListener((ListChangeListener<? super CheckOutFinal>) (change) -> {
+            updateBasketTable();
+            checkoutSum();
         });
 
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20);
@@ -281,14 +283,22 @@ public class restMainScreenController {
     }
 
     public void checkoutSum(){
-
+        int finalCost = 0;
+        ObservableList<Checkout> cartItems = CartManager.getInstance().getCartItems();
+        for (Checkout item : cartItems) {
+            finalCost = finalCost + item.getFoodPrice();
+        }
+        checkoutSum.setText(finalCost+"Ft");
     }
 
     @FXML
     void removeItem(ActionEvent event){
         ObservableList<Checkout> cartItems = CartManager.getInstance().getCartItems();
         if (!cartItems.isEmpty() && removeSpinner.getValue() <= cartItems.size()) {
-            cartItems.remove(cartItems.size() - (cartItems.size() - removeSpinner.getValue()+1));
+            int index = cartItems.size() - (cartItems.size() - removeSpinner.getValue()+1);
+            int cost = cartItems.get(index).getFoodPrice() * cartItems.get(index).getFoodAmount();
+            cartItems.remove(index);
+            CartManager.getInstance().getCheckOutItems().remove(index);
         } else {
             System.out.println("The cart is empty. No item to remove.");
         }

@@ -25,6 +25,8 @@ public class ItemBoxController {
     @FXML
     private Spinner<Integer> prodQuantity;
 
+    private restMainScreenController mainController;
+
     public void initialize(){
       SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 8);
       valueFactory.setValue(0);

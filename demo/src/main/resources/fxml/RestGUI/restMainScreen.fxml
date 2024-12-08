@@ -391,7 +391,7 @@
                           <columns>
                             <TableColumn fx:id="checkoutFood" prefWidth="249.0" text="Étel" />
                               <TableColumn fx:id="checkoutAmount" prefWidth="121.0" text="Mennyiség" />
-                            <TableColumn fx:id="checkoutPrice" prefWidth="112.0" text="Étel ára" />
+                            <TableColumn fx:id="checkoutPrice" prefWidth="112.0" text="Ár" />
                               <TableColumn fx:id="checkoutID" prefWidth="250.0" text="Karszalag" />
                           </columns>
                         </TableView>
@@ -424,7 +424,7 @@
                                        </LinearGradient>
                                     </textFill>
                                  </Label>
-                              <Label fx:id="checkoutSum" text="0 ft">
+                              <Label fx:id="checkoutSum" text="0 Ft">
                                     <font>
                                        <Font name="Verdana" size="70.0" />
                                     </font>

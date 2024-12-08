@@ -1,5 +1,6 @@
 package com.spa.demo.frontend.Restaurant;
 
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
