@@ -122,29 +122,29 @@
                                  </LinearGradient>
                               </textFill>
                            </Label>
-                        <Label fx:id="bandID1" alignment="CENTER" contentDisplay="CENTER" GridPane.rowIndex="1">
+                        <Label fx:id="bandID1" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="1">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                            </Label>
-                        <Label fx:id="bandID2" GridPane.rowIndex="2">
+                        <Label fx:id="bandID2" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="2">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                            </Label>
-                        <Label fx:id="bandID3" GridPane.rowIndex="3">
+                        <Label fx:id="bandID3" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="3">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                            </Label>
-                        <Label fx:id="bandID4" GridPane.rowIndex="4">
+                        <Label fx:id="bandID4" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="4">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                         </Label>
-                        <Label fx:id="bandID5" prefHeight="22.0" prefWidth="67.0" GridPane.rowIndex="5">
+                        <Label fx:id="bandID5" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="5">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                         </Label>
                         <Label alignment="CENTER" prefHeight="56.0" prefWidth="525.0" styleClass="outline" text="Egyenleg" textAlignment="CENTER" GridPane.columnIndex="1">
@@ -168,29 +168,29 @@
                                  </LinearGradient>
                               </textFill>
                            </Label>
-                        <Label fx:id="bandValue1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label fx:id="bandValue1" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                            </Label>
-                        <Label fx:id="bandValue2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Label fx:id="bandValue2" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                            </Label>
-                        <Label fx:id="bandValue3" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Label fx:id="bandValue3" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                            </Label>
-                        <Label fx:id="bandValue4" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <Label fx:id="bandValue4" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                            </Label>
-                        <Label fx:id="bandValue5" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Label fx:id="bandValue5" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Tahoma" size="40.0" />
                            </font>
                         </Label>
                      </children>

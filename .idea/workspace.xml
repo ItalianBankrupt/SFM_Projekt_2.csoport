@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant working table">
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant ID connected">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/CartManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/CartManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/Checkout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/ItemBoxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/ItemBoxController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/restMainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/restMainScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/fxml/RestGUI/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/ItemBoxController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/ItemBoxController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/fxml/RestGUI/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +146,7 @@
       <workItem from="1732559315719" duration="489000" />
       <workItem from="1733485598556" duration="3390000" />
       <workItem from="1733489054126" duration="1366000" />
-      <workItem from="1733638061803" duration="4777000" />
+      <workItem from="1733638061803" duration="6302000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -274,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733614516136</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Restaurant ID connected">
+      <option name="closed" value="true" />
+      <created>1733642952370</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1733642952370</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +295,8 @@
     <MESSAGE value="Web .v7? js4.0" />
     <MESSAGE value="Web .v7? js4?.0" />
     <MESSAGE value="Restaurant working table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant working table" />
+    <MESSAGE value="Restaurant ID connected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant ID connected" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

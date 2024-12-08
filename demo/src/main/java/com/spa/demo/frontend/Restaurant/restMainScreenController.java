@@ -203,6 +203,7 @@ public class restMainScreenController {
             List<Label> bandIDLabels = List.of(bandID1, bandID2, bandID3, bandID4, bandID5);
             List<Label> bandValueLabels = List.of(bandValue1, bandValue2, bandValue3, bandValue4, bandValue5);
 
+
             if(!bandIDs.contains(idBox.getText())){
                 bandIDs.add(idBox.getText());
                 bandIDLabels.get(k).setText(idBox.getText());
