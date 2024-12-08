@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="770.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spa.demo.frontend.Restaurant.restMainScreenController">
+<TabPane prefHeight="770.0" prefWidth="1090.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <tabs>
+      <Tab closable="false" text="Azonosítás">
+         <content>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1089.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="56.0" prefHeight="93.0" prefWidth="768.0" text="Éttermi azonosító" textAlignment="CENTER">
+                     <font>
+                        <Font name="Verdana Bold Italic" size="72.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="text" />
+                        <String fx:value="outline" />
+                     </styleClass>
+                        <textFill>
+                           <LinearGradient endX="0.3364928909952607" endY="1.0" startX="0.33649289099526064">
+                              <stops>
+                                 <Stop>
+                                    <color>
+                                       <Color red="0.22499999403953552" green="0.28125" blue="0.8999999761581421" opacity="0.7984732985496521" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="1.0">
+                                    <color>
+                                       <Color red="0.2846003770828247" green="0.7802793979644775" blue="0.9605262875556946" />
+                                    </color>
+                                 </Stop>
+                              </stops>
+                           </LinearGradient>
+                        </textFill>
+                     </Label>
+                  <TextField fx:id="idBox" layoutX="522.0" layoutY="585.0" prefHeight="32.0" prefWidth="350.0" promptText="karszalag azonosító">
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets></TextField>
+                  <Label layoutX="19.0" layoutY="575.0" prefHeight="34.0" prefWidth="493.0" styleClass="outline" text="Karszalag azonosító :" textAlignment="CENTER">
+                     <font>
+                        <Font name="Verdana Bold" size="41.0" />
+                     </font>
+                        <textFill>
+                           <LinearGradient endX="0.3364928909952607" endY="1.0" startX="0.33649289099526064">
+                              <stops>
+                                 <Stop>
+                                    <color>
+                                       <Color red="0.22499999403953552" green="0.28125" blue="0.8999999761581421" opacity="0.7984732985496521" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="1.0">
+                                    <color>
+                                       <Color red="0.2846003770828247" green="0.7802793979644775" blue="0.9605262875556946" />
+                                    </color>
+                                 </Stop>
+                              </stops>
+                           </LinearGradient>
+                        </textFill>
+                     </Label>
+                  <Button layoutX="872.0" layoutY="586.0" mnemonicParsing="false" onAction="#idCheck" prefHeight="30.0" prefWidth="149.0" style="-fx-border-color: black;" text="Hozzáadás" textFill="#04aea9">
+                     <font>
+                        <Font name="Verdana Bold" size="12.0" />
+                     </font>
+                        <styleClass>
+                           <String fx:value="add-button" />
+                           <String fx:value="text" />
+                        </styleClass>
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets>
+                     </Button>
+                  <GridPane layoutX="19.0" layoutY="179.0" prefHeight="375.0" prefWidth="1042.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="397.0" minWidth="10.0" percentWidth="50.0" prefWidth="290.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="3.0" percentWidth="50.0" prefWidth="222.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="41.0" minHeight="10.0" percentHeight="17.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="57.0" minHeight="10.0" percentHeight="17.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="102.0" minHeight="10.0" percentHeight="17.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="102.0" minHeight="10.0" percentHeight="17.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="104.0" minHeight="10.0" percentHeight="17.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.0" minHeight="10.0" percentHeight="17.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="56.0" prefWidth="658.0" styleClass="outline" text="Hozzáadott karszalagok">
+                           <font>
+                              <Font name="Verdana Bold" size="38.0" />
+                           </font>
+                              <textFill>
+                                 <LinearGradient endX="0.3364928909952607" endY="1.0" startX="0.33649289099526064">
+                                    <stops>
+                                       <Stop>
+                                          <color>
+                                             <Color red="0.22499999403953552" green="0.28125" blue="0.8999999761581421" opacity="0.7984732985496521" />
+                                          </color>
+                                       </Stop>
+                                       <Stop offset="1.0">
+                                          <color>
+                                             <Color red="0.2846003770828247" green="0.7802793979644775" blue="0.9605262875556946" />
+                                          </color>
+                                       </Stop>
+                                    </stops>
+                                 </LinearGradient>
+                              </textFill>
+                           </Label>
+                        <Label fx:id="bandID1" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                           </Label>
+                        <Label fx:id="bandID2" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                           </Label>
+                        <Label fx:id="bandID3" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                           </Label>
+                        <Label fx:id="bandID4" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="bandID5" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="56.0" prefWidth="525.0" styleClass="outline" text="Egyenleg" textAlignment="CENTER" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Verdana Bold" size="44.0" />
+                           </font>
+                              <textFill>
+                                 <LinearGradient endX="0.3364928909952607" endY="1.0" startX="0.33649289099526064">
+                                    <stops>
+                                       <Stop>
+                                          <color>
+                                             <Color red="0.22499999403953552" green="0.28125" blue="0.8999999761581421" opacity="0.7984732985496521" />
+                                          </color>
+                                       </Stop>
+                                       <Stop offset="1.0">
+                                          <color>
+                                             <Color red="0.2846003770828247" green="0.7802793979644775" blue="0.9605262875556946" />
+                                          </color>
+                                       </Stop>
+                                    </stops>
+                                 </LinearGradient>
+                              </textFill>
+                           </Label>
+                        <Label fx:id="bandValue1" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                           </Label>
+                        <Label fx:id="bandValue2" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                           </Label>
+                        <Label fx:id="bandValue3" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                           </Label>
+                        <Label fx:id="bandValue4" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                           </Label>
+                        <Label fx:id="bandValue5" alignment="CENTER" prefHeight="50.0" prefWidth="520.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Tahoma" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Ételek">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="631.0" prefWidth="1146.0">
+               <children>
+                     <BorderPane prefHeight="719.0" prefWidth="1090.0">
+                        <left>
+                           <VBox prefHeight="600.0" prefWidth="110.0">
+                              <children>
+                                 <GridPane prefHeight="719.0">
+                                   <columnConstraints>
+                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" prefWidth="40.0" />
+                                   </columnConstraints>
+                                   <rowConstraints>
+                                     <RowConstraints minHeight="10.0" percentHeight="11.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                     <RowConstraints minHeight="10.0" percentHeight="11.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                     <RowConstraints minHeight="10.0" percentHeight="11.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       <RowConstraints minHeight="10.0" percentHeight="11.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       <RowConstraints minHeight="10.0" percentHeight="11.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       <RowConstraints minHeight="10.0" percentHeight="11.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       <RowConstraints minHeight="10.0" percentHeight="11.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       <RowConstraints minHeight="10.0" percentHeight="11.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       <RowConstraints minHeight="10.0" percentHeight="11.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                   </rowConstraints>
+                                    <children>
+                                       <Button mnemonicParsing="false" onAction="#loadDrinks" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Italok">
+                                          <opaqueInsets>
+                                             <Insets />
+                                          </opaqueInsets>
+                                          <GridPane.margin>
+                                             <Insets left="5.0" right="5.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                       <Button mnemonicParsing="false" onAction="#loadCoffe" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Kávé" GridPane.rowIndex="1">
+                                          <opaqueInsets>
+                                             <Insets />
+                                          </opaqueInsets>
+                                          <GridPane.margin>
+                                             <Insets left="5.0" right="5.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                       <Button mnemonicParsing="false" onAction="#loadDessert" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Desszertek" GridPane.rowIndex="2">
+                                          <font>
+                                             <Font size="9.0" />
+                                          </font>
+                                          <opaqueInsets>
+                                             <Insets />
+                                          </opaqueInsets>
+                                          <GridPane.margin>
+                                             <Insets left="5.0" right="5.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                       <Button mnemonicParsing="false" onAction="#loadMainCourse" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Főételek" GridPane.rowIndex="3">
+                                          <font>
+                                             <Font size="11.0" />
+                                          </font>
+                                          <opaqueInsets>
+                                             <Insets />
+                                          </opaqueInsets>
+                                          <GridPane.margin>
+                                             <Insets left="5.0" right="5.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                       <Button mnemonicParsing="false" onAction="#loadSoup" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Levesek" GridPane.rowIndex="4">
+                                          <opaqueInsets>
+                                             <Insets />
+                                          </opaqueInsets>
+                                          <GridPane.margin>
+                                             <Insets left="5.0" right="5.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                       <Button mnemonicParsing="false" onAction="#loadPreFood" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Előételek" textAlignment="CENTER" GridPane.rowIndex="5">
+                                          <font>
+                                             <Font size="11.0" />
+                                          </font>
+                                          <opaqueInsets>
+                                             <Insets />
+                                          </opaqueInsets>
+                                          <GridPane.margin>
+                                             <Insets left="5.0" right="5.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                       <Button mnemonicParsing="false" onAction="#loadFish" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Halak" GridPane.rowIndex="6">
+                                          <opaqueInsets>
+                                             <Insets />
+                                          </opaqueInsets>
+                                          <GridPane.margin>
+                                             <Insets left="5.0" right="5.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                       <Button mnemonicParsing="false" onAction="#loadPasta" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Tészták" GridPane.rowIndex="7">
+                                          <opaqueInsets>
+                                             <Insets />
+                                          </opaqueInsets>
+                                          <GridPane.margin>
+                                             <Insets left="5.0" right="5.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                       <Button mnemonicParsing="false" onAction="#loadAlcohol" prefHeight="25.0" prefWidth="58.0" scaleX="2.0" scaleY="2.0" styleClass="add-button" text="Alkohol" GridPane.rowIndex="8">
+                                          <opaqueInsets>
+                                             <Insets />
+                                          </opaqueInsets>
+                                          <GridPane.margin>
+                                             <Insets left="5.0" right="5.0" />
+                                          </GridPane.margin>
+                                       </Button>
+                                    </children>
+                                 </GridPane>
+                              </children>
+                              <BorderPane.margin>
+                                 <Insets />
+                              </BorderPane.margin>
+                              <padding>
+                                 <Insets left="30.0" />
+                              </padding>
+                           </VBox>
+                        </left>
+                        <center>
+                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="719.0" prefWidth="770.0" BorderPane.alignment="CENTER">
+                              <children>
+                                 <ScrollPane layoutX="28.0" layoutY="14.0" prefHeight="687.0" prefWidth="628.0">
+                                    <content>
+                                       <GridPane fx:id="panelGridPane" alignment="CENTER" hgap="10.0" prefHeight="800.0" prefWidth="594.0" scaleShape="false" vgap="10.0">
+                                         <columnConstraints>
+                                           <ColumnConstraints halignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="280.0" percentWidth="50.0" />
+                                           <ColumnConstraints halignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="280.0" />
+                                         </columnConstraints>
+                                         <rowConstraints>
+                                           <RowConstraints minHeight="200.0" prefHeight="200.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                           <RowConstraints minHeight="200.0" prefHeight="200.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                           <RowConstraints minHeight="200.0" prefHeight="200.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                             <RowConstraints minHeight="200.0" prefHeight="200.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                         </rowConstraints>
+                                          <padding>
+                                             <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
+                                          </padding>
+                                       </GridPane>
+                                    </content>
+                                 </ScrollPane>
+                              </children>
+                           </AnchorPane>
+                        </center>
+                        <right>
+                           <VBox prefHeight="719.0" prefWidth="321.0" BorderPane.alignment="CENTER">
+                              <children>
+                                 <TableView fx:id="smallBasket" prefHeight="406.0" prefWidth="321.0">
+                                   <columns>
+                                     <TableColumn fx:id="smallBasketFood" prefWidth="136.0001220703125" text="Étel" />
+                                     <TableColumn fx:id="smallBasketAmount" prefWidth="68.0" text="Mennyiség" />
+                                       <TableColumn fx:id="smallBasketPrice" prefWidth="116.0" text="Ár" />
+                                   </columns>
+                                 </TableView>
+                                 <SplitPane dividerPositions="0.3104575163398693" orientation="VERTICAL" prefHeight="308.0" prefWidth="321.0">
+                                   <items>
+                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="316.0">
+                                          <children>
+                                             <Button layoutX="184.0" layoutY="14.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="70.0" prefWidth="123.0" styleClass="remove-button" text="Törlés" />
+                                             <Spinner fx:id="removeSpinner" layoutX="13.0" layoutY="14.0" prefHeight="70.0" prefWidth="171.0" />
+                                          </children>
+                                       </AnchorPane>
+                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="131.0" prefWidth="319.0">
+                                          <children>
+                                             <TextField fx:id="noteBox" layoutX="19.0" layoutY="59.0" prefHeight="50.0" prefWidth="220.0" />
+                                             <Button layoutX="239.0" layoutY="60.0" mnemonicParsing="false" onAction="#sendNoteToCart" prefHeight="50.0" prefWidth="63.0" styleClass="add-button" text="Küldés" />
+                                          </children>
+                                       </AnchorPane>
+                                   </items>
+                                 </SplitPane>
+                              </children>
+                           </VBox>
+                        </right>
+                     </BorderPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" text="Kosár">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                     <BorderPane prefHeight="717.0" prefWidth="1090.0">
+                        <center>
+                        <TableView fx:id="checkoutTable" prefHeight="529.0" prefWidth="697.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="checkoutFood" prefWidth="249.0" text="Étel" />
+                              <TableColumn fx:id="checkoutAmount" prefWidth="121.0" text="Mennyiség" />
+                            <TableColumn fx:id="checkoutPrice" prefWidth="112.0" text="Étel ára" />
+                              <TableColumn fx:id="checkoutID" prefWidth="250.0" text="Karszalag" />
+                          </columns>
+                        </TableView>
+                        </center>
+                        <bottom>
+                           <HBox prefHeight="100.0" prefWidth="1016.0" BorderPane.alignment="CENTER">
+                              <children>
+                              <Label text="Teljes összeg :">
+                                    <font>
+                                       <Font name="Verdana" size="70.0" />
+                                    </font>
+                                    <styleClass>
+                                       <String fx:value="text" />
+                                       <String fx:value="outline" />
+                                    </styleClass>
+                                    <textFill>
+                                       <LinearGradient endX="0.3364928909952607" endY="1.0" startX="0.33649289099526064">
+                                          <stops>
+                                             <Stop>
+                                                <color>
+                                                   <Color red="0.22499999403953552" green="0.28125" blue="0.8999999761581421" opacity="0.7984732985496521" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="1.0">
+                                                <color>
+                                                   <Color red="0.2846003770828247" green="0.7802793979644775" blue="0.9605262875556946" />
+                                                </color>
+                                             </Stop>
+                                          </stops>
+                                       </LinearGradient>
+                                    </textFill>
+                                 </Label>
+                              <Label fx:id="checkoutSum" text="0 ft">
+                                    <font>
+                                       <Font name="Verdana" size="70.0" />
+                                    </font>
+                                    <HBox.margin>
+                                       <Insets left="3.0" />
+                                    </HBox.margin>
+                                 </Label>
+                              </children>
+                           </HBox>
+                        </bottom>
+                        <right>
+                           <VBox prefHeight="617.0" prefWidth="357.0" BorderPane.alignment="CENTER">
+                              <children>
+                                 <AnchorPane prefHeight="637.0" prefWidth="357.0">
+                                    <children>
+                                       <SplitPane dividerPositions="0.5097087378640777" layoutX="-7.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="627.0" prefWidth="366.0">
+                                         <items>
+                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                <children>
+                                                   <Button layoutX="15.0" layoutY="91.0" mnemonicParsing="false" prefHeight="135.0" prefWidth="335.0" style="-fx-border-color: black;" styleClass="remove-button" text="Törlés">
+                                                      <font>
+                                                         <Font name="Verdana" size="64.0" />
+                                                      </font>
+                                                   </Button>
+                                                </children>
+                                             </AnchorPane>
+                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                <children>
+                                                   <Button layoutX="15.0" layoutY="84.0" mnemonicParsing="false" prefHeight="135.0" prefWidth="335.0" style="-fx-border-color: black;" styleClass="add-button" text="Fizetés">
+                                                      <font>
+                                                         <Font name="Verdana" size="64.0" />
+                                                      </font>
+                                                   </Button>
+                                                </children>
+                                             </AnchorPane>
+                                         </items>
+                                       </SplitPane>
+                                    </children>
+                                 </AnchorPane>
+                              </children>
+                           </VBox>
+                        </right>
+                     </BorderPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
+</AnchorPane>
