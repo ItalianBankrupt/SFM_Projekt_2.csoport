@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant reset">
+    <list default="true" id="94faa4e2-9401-4c54-ad14-dce7b5d83590" name="Changes" comment="Restaurant pay in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/spa/demo/frontend/Restaurant/restMainScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/restMainScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/spa/demo/frontend/Restaurant/restMainScreenController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/testdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/testdb.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/demo/testdb.trace.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +42,12 @@
     &quot;assignee&quot;: &quot;LKristof7&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git",
-    "accountId": "52032e0b-e70b-419c-b931-6f193b99de91"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ItalianBankrupt/SFM_Projekt_2.csoport.git&quot;,
+    &quot;accountId&quot;: &quot;52032e0b-e70b-419c-b931-6f193b99de91&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -147,7 +146,8 @@
       <workItem from="1732559315719" duration="489000" />
       <workItem from="1733485598556" duration="3390000" />
       <workItem from="1733489054126" duration="1366000" />
-      <workItem from="1733638061803" duration="22657000" />
+      <workItem from="1733638061803" duration="22676000" />
+      <workItem from="1733673023576" duration="3168000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -317,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733656958986</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Restaurant pay in progress">
+      <option name="closed" value="true" />
+      <created>1733661780715</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1733661780715</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +349,8 @@
     <MESSAGE value="Restaurant ID bands to foods" />
     <MESSAGE value="Restaurant checksum" />
     <MESSAGE value="Restaurant reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restaurant reset" />
+    <MESSAGE value="Restaurant pay in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restaurant pay in progress" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

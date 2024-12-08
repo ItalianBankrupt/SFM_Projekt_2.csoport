@@ -223,7 +223,6 @@ public class restMainScreenController {
                 int index = bandIDs.size()-1;
                 bandIDLabels.get(index).setText(idBox.getText());
                 bandValueLabels.get(index).setText(personId.getBalance().getValue().toString());
-
                 dropDownID.getItems().add(idBox.getText());
 
             }
@@ -308,13 +307,12 @@ public class restMainScreenController {
         CartManager.getInstance().getCheckOutItems().clear();
         List<Label> bandIDLabels = List.of(bandID1, bandID2, bandID3, bandID4, bandID5);
         List<Label> bandValueLabels = List.of(bandValue1, bandValue2, bandValue3, bandValue4, bandValue5);
-        dropDownID.setItems(null);
         for(int iteration = 0; iteration < 5; iteration++) {
             bandIDLabels.get(iteration).setText("");
             bandValueLabels.get(iteration).setText("");
-
-
         }
+        dropDownID.getItems().clear();
+        bandIDs.clear();
     }
 
     @FXML
@@ -324,16 +322,22 @@ public class restMainScreenController {
         List<Identification> IDs = identificationRepository.findAll();
         ObservableList<CheckOutFinal> items = CartManager.getInstance().getCheckOutItems();
         Map<String,Integer> idBalance = new HashMap<>();
-
         for(CheckOutFinal item : items) {
-
+            String id = item.getID();
+            Integer price = item.getFoodPrice();
+            idBalance.put(id, idBalance.getOrDefault(id, 0) + price);
         }
 
-
-
-//        identificationRepository.updateByPersonId(IDs.get().getPersonId(),2);
-
-
+        for(Identification ID : IDs) {
+            if(idBalance.containsKey(ID.getPersonId())){
+                if(idBalance.get(ID.getPersonId()) < ID.getMoney())
+                    identificationRepository.updateByPersonId(ID.getPersonId(),ID.getMoney()-idBalance.get(ID.getPersonId()));
+            }
+            else{
+                System.out.println("Error");
+            }
+            System.out.println(ID.getMoney());
+        }
         clearScene(event);
     }
 }
