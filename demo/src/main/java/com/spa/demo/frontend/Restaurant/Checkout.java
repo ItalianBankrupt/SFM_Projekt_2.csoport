@@ -5,35 +5,10 @@ public class Checkout {
     int foodAmount;
     int foodPrice;
 
-    public String getFoodMessage() {
-        return foodMessage;
-    }
-
-    public void setFoodMessage(String foodMessage) {
-        this.foodMessage = foodMessage;
-    }
-
-    public int getBandID() {
-        return bandID;
-    }
-
-    public void setBandID(int bandID) {
-        this.bandID = bandID;
-    }
-
-    String foodMessage;
-    int bandID;
-
     public Checkout(String foodName, int foodAmount, int foodPrice) {
         this.foodName = foodName;
         this.foodAmount = foodAmount;
         this.foodPrice = foodPrice;
-    }
-
-    public void finalCheckout(String foodMessage, int bandID)
-    {
-        this.foodMessage = foodMessage;
-        this.bandID = bandID;
     }
 
     public String getFoodName() {

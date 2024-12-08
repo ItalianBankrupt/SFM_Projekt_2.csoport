@@ -1,18 +1,10 @@
 package com.spa.demo.frontend.Restaurant;
 
-import com.spa.demo.SpringManager;
-import com.spa.demo.backend.IdentificationRepository;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.fxml.FXMLLoader;
-import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.IOException;
 

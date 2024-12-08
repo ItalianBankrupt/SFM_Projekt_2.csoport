@@ -48,6 +48,8 @@ public class restMainScreenController {
     @FXML
     private AnchorPane mainScreen;
 
+    Set<String> bandIDs = new HashSet<>();
+
     @FXML
     private Label bandID1;
 
@@ -86,6 +88,25 @@ public class restMainScreenController {
 
     @FXML
     private TextField idBox;
+
+
+    @FXML
+    private TableColumn<CheckOutFinal, Integer> checkoutAmount;
+
+    @FXML
+    private TableColumn<CheckOutFinal, String> checkoutFood;
+
+    @FXML
+    private TableColumn<CheckOutFinal, String> checkoutID;
+
+    @FXML
+    private TableColumn<CheckOutFinal, Integer> checkoutPrice;
+
+    @FXML
+    private Label checkoutSum;
+
+    @FXML
+    private TableView<CheckOutFinal> checkoutTable;
 
     @FXML
     private TableView<Checkout> smallBasket;
@@ -196,18 +217,19 @@ public class restMainScreenController {
                 personId = new PersonId(id);
             }
         }
-        if(personId != null) {
-            int k=0;
 
-            Set<String> bandIDs = new HashSet<>();
+        if(personId != null) {
+
+
             List<Label> bandIDLabels = List.of(bandID1, bandID2, bandID3, bandID4, bandID5);
             List<Label> bandValueLabels = List.of(bandValue1, bandValue2, bandValue3, bandValue4, bandValue5);
 
 
-            if(!bandIDs.contains(idBox.getText())){
+            if (!bandIDs.contains(idBox.getText()) && bandIDs.size() < bandIDLabels.size()) {
                 bandIDs.add(idBox.getText());
-                bandIDLabels.get(k).setText(idBox.getText());
-                bandValueLabels.get(k).setText(personId.getBalance().getValue().toString());
+                int index = bandIDs.size()-1;
+                bandIDLabels.get(index).setText(idBox.getText());
+                bandValueLabels.get(index).setText(personId.getBalance().getValue().toString());
             }
 
         }
@@ -222,7 +244,10 @@ public class restMainScreenController {
 
     @FXML
     void sendNoteToCart(ActionEvent event) {
-
+        String poz = noteBox.getText();
+        CheckOutFinal item = CartManager.getInstance().getCheckOutItems().get(Integer.parseInt(poz));
+        item.setID(poz);
+        CartManager.getInstance().getCheckOutItems().set(Integer.parseInt(poz), item);
     }
 
     public void initialize() {
@@ -230,6 +255,9 @@ public class restMainScreenController {
         CartManager.getInstance().getCartItems().addListener((ListChangeListener<? super Checkout>) (change) -> {
             updateBasketTable();
         });
+        CartManager.getInstance().getCheckOutItems().addListener((ListChangeListener<? super CheckOutFinal>) (change) -> {
+        });
+
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20);
         valueFactory.setValue(1);
         removeSpinner.setValueFactory(valueFactory);
@@ -237,11 +265,23 @@ public class restMainScreenController {
 
     public void updateBasketTable() {
         ObservableList<Checkout> cartItems = CartManager.getInstance().getCartItems();
+        ObservableList<CheckOutFinal> checkOutItems = CartManager.getInstance().getCheckOutItems();
+
+        checkoutTable.setItems(checkOutItems);
         smallBasket.setItems(cartItems);
+
+        checkoutFood.setCellValueFactory(new PropertyValueFactory<>("foodName"));
+        checkoutAmount.setCellValueFactory(new PropertyValueFactory<>("foodAmount"));
+        checkoutPrice.setCellValueFactory(new PropertyValueFactory<>("foodPrice"));
+        checkoutID.setCellValueFactory(new PropertyValueFactory<>("ID"));
 
         smallBasketFood.setCellValueFactory(new PropertyValueFactory<>("foodName"));
         smallBasketAmount.setCellValueFactory(new PropertyValueFactory<>("foodAmount"));
         smallBasketPrice.setCellValueFactory(new PropertyValueFactory<>("foodPrice"));
+    }
+
+    public void checkoutSum(){
+
     }
 
     @FXML

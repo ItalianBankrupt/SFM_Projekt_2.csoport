@@ -16,6 +16,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
@@ -56,8 +57,11 @@
                            </LinearGradient>
                         </textFill>
                      </Label>
-                  <TextField fx:id="idBox" layoutX="507.0" layoutY="584.0" prefHeight="32.0" prefWidth="350.0" promptText="karszalag azonosító" />
-                  <Label layoutX="6.0" layoutY="528.0" prefHeight="136.0" prefWidth="565.0" styleClass="outline" text="Karszalag azonosító :" textAlignment="CENTER">
+                  <TextField fx:id="idBox" layoutX="522.0" layoutY="585.0" prefHeight="32.0" prefWidth="350.0" promptText="karszalag azonosító">
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets></TextField>
+                  <Label layoutX="19.0" layoutY="575.0" prefHeight="34.0" prefWidth="493.0" styleClass="outline" text="Karszalag azonosító :" textAlignment="CENTER">
                      <font>
                         <Font name="Verdana Bold" size="41.0" />
                      </font>
@@ -78,7 +82,7 @@
                            </LinearGradient>
                         </textFill>
                      </Label>
-                  <Button layoutX="857.0" layoutY="585.0" mnemonicParsing="false" onAction="#idCheck" prefHeight="30.0" prefWidth="149.0" text="Hozzáadás" textFill="#04aea9">
+                  <Button layoutX="872.0" layoutY="586.0" mnemonicParsing="false" onAction="#idCheck" prefHeight="30.0" prefWidth="149.0" style="-fx-border-color: black;" text="Hozzáadás" textFill="#04aea9">
                      <font>
                         <Font name="Verdana Bold" size="12.0" />
                      </font>
@@ -86,6 +90,9 @@
                            <String fx:value="add-button" />
                            <String fx:value="text" />
                         </styleClass>
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets>
                      </Button>
                   <GridPane layoutX="19.0" layoutY="179.0" prefHeight="375.0" prefWidth="1042.0">
                     <columnConstraints>
@@ -350,23 +357,18 @@
                                        <TableColumn fx:id="smallBasketPrice" prefWidth="116.0" text="Ár" />
                                    </columns>
                                  </TableView>
-                                 <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="296.0" prefWidth="321.0">
+                                 <SplitPane dividerPositions="0.3104575163398693" orientation="VERTICAL" prefHeight="308.0" prefWidth="321.0">
                                    <items>
-                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="319.0">
+                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="316.0">
                                           <children>
-                                             <Button layoutX="181.0" layoutY="37.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="70.0" prefWidth="107.0" styleClass="remove-button" text="Törlés" />
-                                             <Spinner fx:id="removeSpinner" layoutX="32.0" layoutY="37.0" prefHeight="70.0" prefWidth="149.0" />
+                                             <Button layoutX="184.0" layoutY="14.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="70.0" prefWidth="123.0" styleClass="remove-button" text="Törlés" />
+                                             <Spinner fx:id="removeSpinner" layoutX="13.0" layoutY="14.0" prefHeight="70.0" prefWidth="171.0" />
                                           </children>
                                        </AnchorPane>
                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="131.0" prefWidth="319.0">
                                           <children>
                                              <TextField fx:id="noteBox" layoutX="19.0" layoutY="59.0" prefHeight="50.0" prefWidth="220.0" />
-                                             <Button layoutX="239.0" layoutY="60.0" mnemonicParsing="false" onAction="#sendNoteToCart" prefHeight="50.0" prefWidth="61.0" styleClass="add-button" text="Küldés" />
-                                             <Label layoutX="107.0" layoutY="23.0" text="Megjegyzés">
-                                                <font>
-                                                   <Font size="20.0" />
-                                                </font>
-                                             </Label>
+                                             <Button layoutX="239.0" layoutY="60.0" mnemonicParsing="false" onAction="#sendNoteToCart" prefHeight="50.0" prefWidth="63.0" styleClass="add-button" text="Küldés" />
                                           </children>
                                        </AnchorPane>
                                    </items>
@@ -383,30 +385,89 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TableView layoutX="24.0" layoutY="15.0" prefHeight="291.0" prefWidth="677.0">
-                    <columns>
-                      <TableColumn prefWidth="203.0" text="Étel" />
-                      <TableColumn prefWidth="150.0" text="Étel ára" />
-                        <TableColumn prefWidth="129.0" text="Mennyiség" />
-                        <TableColumn prefWidth="193.0" text="Karszalag" />
-                    </columns>
-                  </TableView>
-                  <Label layoutX="43.0" layoutY="566.0" text="Teljes összeg :" textFill="#04aea9">
-                        <font>
-                           <Font size="43.0" />
-                        </font>
-                        <styleClass>
-                           <String fx:value="text" />
-                           <String fx:value="outline" />
-                        </styleClass></Label>
-                  <Label layoutX="350.0" layoutY="566.0" text="0 ft" textFill="#04aea9">
-                        <font>
-                           <Font size="43.0" />
-                        </font>
-                        <styleClass>
-                           <String fx:value="text" />
-                           <String fx:value="outline" />
-                        </styleClass></Label>
+                     <BorderPane prefHeight="717.0" prefWidth="1090.0">
+                        <center>
+                        <TableView fx:id="checkoutTable" prefHeight="529.0" prefWidth="697.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="checkoutFood" prefWidth="249.0" text="Étel" />
+                              <TableColumn fx:id="checkoutAmount" prefWidth="121.0" text="Mennyiség" />
+                            <TableColumn fx:id="checkoutPrice" prefWidth="112.0" text="Étel ára" />
+                              <TableColumn fx:id="checkoutID" prefWidth="250.0" text="Karszalag" />
+                          </columns>
+                        </TableView>
+                        </center>
+                        <bottom>
+                           <HBox prefHeight="100.0" prefWidth="1016.0" BorderPane.alignment="CENTER">
+                              <children>
+                              <Label text="Teljes összeg :">
+                                    <font>
+                                       <Font name="Verdana" size="70.0" />
+                                    </font>
+                                    <styleClass>
+                                       <String fx:value="text" />
+                                       <String fx:value="outline" />
+                                    </styleClass>
+                                    <textFill>
+                                       <LinearGradient endX="0.3364928909952607" endY="1.0" startX="0.33649289099526064">
+                                          <stops>
+                                             <Stop>
+                                                <color>
+                                                   <Color red="0.22499999403953552" green="0.28125" blue="0.8999999761581421" opacity="0.7984732985496521" />
+                                                </color>
+                                             </Stop>
+                                             <Stop offset="1.0">
+                                                <color>
+                                                   <Color red="0.2846003770828247" green="0.7802793979644775" blue="0.9605262875556946" />
+                                                </color>
+                                             </Stop>
+                                          </stops>
+                                       </LinearGradient>
+                                    </textFill>
+                                 </Label>
+                              <Label fx:id="checkoutSum" text="0 ft">
+                                    <font>
+                                       <Font name="Verdana" size="70.0" />
+                                    </font>
+                                    <HBox.margin>
+                                       <Insets left="3.0" />
+                                    </HBox.margin>
+                                 </Label>
+                              </children>
+                           </HBox>
+                        </bottom>
+                        <right>
+                           <VBox prefHeight="617.0" prefWidth="357.0" BorderPane.alignment="CENTER">
+                              <children>
+                                 <AnchorPane prefHeight="637.0" prefWidth="357.0">
+                                    <children>
+                                       <SplitPane dividerPositions="0.5097087378640777" layoutX="-7.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="627.0" prefWidth="366.0">
+                                         <items>
+                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                <children>
+                                                   <Button layoutX="15.0" layoutY="91.0" mnemonicParsing="false" prefHeight="135.0" prefWidth="335.0" style="-fx-border-color: black;" styleClass="remove-button" text="Törlés">
+                                                      <font>
+                                                         <Font name="Verdana" size="64.0" />
+                                                      </font>
+                                                   </Button>
+                                                </children>
+                                             </AnchorPane>
+                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                <children>
+                                                   <Button layoutX="15.0" layoutY="84.0" mnemonicParsing="false" prefHeight="135.0" prefWidth="335.0" style="-fx-border-color: black;" styleClass="add-button" text="Fizetés">
+                                                      <font>
+                                                         <Font name="Verdana" size="64.0" />
+                                                      </font>
+                                                   </Button>
+                                                </children>
+                                             </AnchorPane>
+                                         </items>
+                                       </SplitPane>
+                                    </children>
+                                 </AnchorPane>
+                              </children>
+                           </VBox>
+                        </right>
+                     </BorderPane>
                </children>
             </AnchorPane>
         </content>

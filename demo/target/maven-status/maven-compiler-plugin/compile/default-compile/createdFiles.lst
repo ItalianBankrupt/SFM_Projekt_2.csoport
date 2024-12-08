@@ -1,3 +1,10 @@
+com\spa\demo\SpaApplication.class
 com\spa\demo\frontend\Restaurant\restMainScreenController.class
+com\spa\demo\frontend\Restaurant\Restaurant$Type.class
+com\spa\demo\SpringManager.class
 com\spa\demo\frontend\Restaurant\Checkout.class
+com\spa\demo\frontend\Restaurant\Restaurant.class
+com\spa\demo\web\WebController.class
 com\spa\demo\frontend\Restaurant\ItemBoxController.class
+com\spa\demo\frontend\Restaurant\RestaurantUtils.class
+com\spa\demo\frontend\Restaurant\Food.class
